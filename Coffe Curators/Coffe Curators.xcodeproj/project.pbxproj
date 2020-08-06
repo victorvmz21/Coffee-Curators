@@ -1,0 +1,842 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184AE8FD0F9FD4F434191AC9 /* Pods_Coffe_CuratorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4493B43603F925F6165BDC06 /* Pods_Coffe_CuratorsTests.framework */; };
+		5295D8F024DC656C002434F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8EF24DC656C002434F8 /* AppDelegate.swift */; };
+		5295D8F224DC656C002434F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8F124DC656C002434F8 /* SceneDelegate.swift */; };
+		5295D8F424DC656C002434F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8F324DC656C002434F8 /* ViewController.swift */; };
+		5295D8F724DC656C002434F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5295D8F524DC656C002434F8 /* Main.storyboard */; };
+		5295D8F924DC656E002434F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5295D8F824DC656E002434F8 /* Assets.xcassets */; };
+		5295D8FC24DC656E002434F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5295D8FA24DC656E002434F8 /* LaunchScreen.storyboard */; };
+		5295D90724DC656E002434F8 /* Coffe_CuratorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D90624DC656E002434F8 /* Coffe_CuratorsTests.swift */; };
+		5295D91224DC656E002434F8 /* Coffe_CuratorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D91124DC656E002434F8 /* Coffe_CuratorsUITests.swift */; };
+		7A57CB2692802C05C7E49E12 /* Pods_Coffe_Curators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 883373676EE6DEEB397E6976 /* Pods_Coffe_Curators.framework */; };
+		9430E6011005F80C078E0F48 /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F903EBD7CD935DE6126E8E60 /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5295D90324DC656E002434F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5295D8E424DC656C002434F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5295D8EB24DC656C002434F8;
+			remoteInfo = "Coffe Curators";
+		};
+		5295D90E24DC656E002434F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5295D8E424DC656C002434F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5295D8EB24DC656C002434F8;
+			remoteInfo = "Coffe Curators";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A1C879DFC9E9D9F739155B9 /* Pods-Coffe Curators.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators.release.xcconfig"; path = "Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators.release.xcconfig"; sourceTree = "<group>"; };
+		4493B43603F925F6165BDC06 /* Pods_Coffe_CuratorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffe_CuratorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F38F113A98A2F0395BC56E /* Pods-Coffe CuratorsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe CuratorsTests.release.xcconfig"; path = "Target Support Files/Pods-Coffe CuratorsTests/Pods-Coffe CuratorsTests.release.xcconfig"; sourceTree = "<group>"; };
+		5295D8EC24DC656C002434F8 /* Coffe Curators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffe Curators.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5295D8EF24DC656C002434F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5295D8F124DC656C002434F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5295D8F324DC656C002434F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5295D8F624DC656C002434F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5295D8F824DC656E002434F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5295D8FB24DC656E002434F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5295D8FD24DC656E002434F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5295D90224DC656E002434F8 /* Coffe CuratorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffe CuratorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5295D90624DC656E002434F8 /* Coffe_CuratorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffe_CuratorsTests.swift; sourceTree = "<group>"; };
+		5295D90824DC656E002434F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5295D90D24DC656E002434F8 /* Coffe CuratorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffe CuratorsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5295D91124DC656E002434F8 /* Coffe_CuratorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffe_CuratorsUITests.swift; sourceTree = "<group>"; };
+		5295D91324DC656E002434F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CD4F4EE58418200E307B8D4 /* Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		883373676EE6DEEB397E6976 /* Pods_Coffe_Curators.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffe_Curators.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C73A7B5844FC0DF195700EA /* Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig"; path = "Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2AD20FE7F5C3734901A9797 /* Pods-Coffe Curators.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators.debug.xcconfig"; path = "Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators.debug.xcconfig"; sourceTree = "<group>"; };
+		F6B435A653AA068D0B0A501F /* Pods-Coffe CuratorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe CuratorsTests.debug.xcconfig"; path = "Target Support Files/Pods-Coffe CuratorsTests/Pods-Coffe CuratorsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F903EBD7CD935DE6126E8E60 /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffe_Curators_Coffe_CuratorsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5295D8E924DC656C002434F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A57CB2692802C05C7E49E12 /* Pods_Coffe_Curators.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5295D8FF24DC656E002434F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184AE8FD0F9FD4F434191AC9 /* Pods_Coffe_CuratorsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5295D90A24DC656E002434F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9430E6011005F80C078E0F48 /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FAFA329AB01C751640AD7B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				883373676EE6DEEB397E6976 /* Pods_Coffe_Curators.framework */,
+				F903EBD7CD935DE6126E8E60 /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework */,
+				4493B43603F925F6165BDC06 /* Pods_Coffe_CuratorsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5295D8E324DC656C002434F8 = {
+			isa = PBXGroup;
+			children = (
+				5295D8EE24DC656C002434F8 /* Coffe Curators */,
+				5295D90524DC656E002434F8 /* Coffe CuratorsTests */,
+				5295D91024DC656E002434F8 /* Coffe CuratorsUITests */,
+				5295D8ED24DC656C002434F8 /* Products */,
+				E2E76D458CA8D5EFEBDC99E1 /* Pods */,
+				1FAFA329AB01C751640AD7B3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5295D8ED24DC656C002434F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5295D8EC24DC656C002434F8 /* Coffe Curators.app */,
+				5295D90224DC656E002434F8 /* Coffe CuratorsTests.xctest */,
+				5295D90D24DC656E002434F8 /* Coffe CuratorsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5295D8EE24DC656C002434F8 /* Coffe Curators */ = {
+			isa = PBXGroup;
+			children = (
+				5295D92524DC65E5002434F8 /* Model */,
+				5295D92124DC65B4002434F8 /* View */,
+				5295D92324DC65C5002434F8 /* Controller */,
+				5295D91F24DC6584002434F8 /* Resources */,
+			);
+			path = "Coffe Curators";
+			sourceTree = "<group>";
+		};
+		5295D90524DC656E002434F8 /* Coffe CuratorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5295D90624DC656E002434F8 /* Coffe_CuratorsTests.swift */,
+				5295D90824DC656E002434F8 /* Info.plist */,
+			);
+			path = "Coffe CuratorsTests";
+			sourceTree = "<group>";
+		};
+		5295D91024DC656E002434F8 /* Coffe CuratorsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5295D91124DC656E002434F8 /* Coffe_CuratorsUITests.swift */,
+				5295D91324DC656E002434F8 /* Info.plist */,
+			);
+			path = "Coffe CuratorsUITests";
+			sourceTree = "<group>";
+		};
+		5295D91F24DC6584002434F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5295D8EF24DC656C002434F8 /* AppDelegate.swift */,
+				5295D8F124DC656C002434F8 /* SceneDelegate.swift */,
+				5295D8F824DC656E002434F8 /* Assets.xcassets */,
+				5295D8FA24DC656E002434F8 /* LaunchScreen.storyboard */,
+				5295D8FD24DC656E002434F8 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5295D92024DC65A8002434F8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5295D8F524DC656C002434F8 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		5295D92124DC65B4002434F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5295D92024DC65A8002434F8 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5295D92224DC65BD002434F8 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5295D8F324DC656C002434F8 /* ViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		5295D92324DC65C5002434F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5295D92424DC65D2002434F8 /* Model Controller */,
+				5295D92224DC65BD002434F8 /* View Controller */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5295D92424DC65D2002434F8 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		5295D92524DC65E5002434F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2E76D458CA8D5EFEBDC99E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2AD20FE7F5C3734901A9797 /* Pods-Coffe Curators.debug.xcconfig */,
+				1A1C879DFC9E9D9F739155B9 /* Pods-Coffe Curators.release.xcconfig */,
+				7CD4F4EE58418200E307B8D4 /* Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig */,
+				8C73A7B5844FC0DF195700EA /* Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig */,
+				F6B435A653AA068D0B0A501F /* Pods-Coffe CuratorsTests.debug.xcconfig */,
+				49F38F113A98A2F0395BC56E /* Pods-Coffe CuratorsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5295D8EB24DC656C002434F8 /* Coffe Curators */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5295D91624DC656E002434F8 /* Build configuration list for PBXNativeTarget "Coffe Curators" */;
+			buildPhases = (
+				F27B410B2AFA4DD9C57B7C87 /* [CP] Check Pods Manifest.lock */,
+				5295D8E824DC656C002434F8 /* Sources */,
+				5295D8E924DC656C002434F8 /* Frameworks */,
+				5295D8EA24DC656C002434F8 /* Resources */,
+				C4DC863AD63629CDCD908010 /* [CP] Embed Pods Frameworks */,
+				FB6D5FE8DB0E4BF994352BD2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Coffe Curators";
+			productName = "Coffe Curators";
+			productReference = 5295D8EC24DC656C002434F8 /* Coffe Curators.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5295D90124DC656E002434F8 /* Coffe CuratorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5295D91924DC656E002434F8 /* Build configuration list for PBXNativeTarget "Coffe CuratorsTests" */;
+			buildPhases = (
+				140AE0D9A2B8195E3D97E70E /* [CP] Check Pods Manifest.lock */,
+				5295D8FE24DC656E002434F8 /* Sources */,
+				5295D8FF24DC656E002434F8 /* Frameworks */,
+				5295D90024DC656E002434F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5295D90424DC656E002434F8 /* PBXTargetDependency */,
+			);
+			name = "Coffe CuratorsTests";
+			productName = "Coffe CuratorsTests";
+			productReference = 5295D90224DC656E002434F8 /* Coffe CuratorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5295D90C24DC656E002434F8 /* Coffe CuratorsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5295D91C24DC656E002434F8 /* Build configuration list for PBXNativeTarget "Coffe CuratorsUITests" */;
+			buildPhases = (
+				B92241EC1AC9410471BCD777 /* [CP] Check Pods Manifest.lock */,
+				5295D90924DC656E002434F8 /* Sources */,
+				5295D90A24DC656E002434F8 /* Frameworks */,
+				5295D90B24DC656E002434F8 /* Resources */,
+				3573C03C5664B49A1CB11B05 /* [CP] Embed Pods Frameworks */,
+				EE12AAA0CD8EFD2279088C2C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5295D90F24DC656E002434F8 /* PBXTargetDependency */,
+			);
+			name = "Coffe CuratorsUITests";
+			productName = "Coffe CuratorsUITests";
+			productReference = 5295D90D24DC656E002434F8 /* Coffe CuratorsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5295D8E424DC656C002434F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Atomuz;
+				TargetAttributes = {
+					5295D8EB24DC656C002434F8 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					5295D90124DC656E002434F8 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 5295D8EB24DC656C002434F8;
+					};
+					5295D90C24DC656E002434F8 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 5295D8EB24DC656C002434F8;
+					};
+				};
+			};
+			buildConfigurationList = 5295D8E724DC656C002434F8 /* Build configuration list for PBXProject "Coffe Curators" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5295D8E324DC656C002434F8;
+			productRefGroup = 5295D8ED24DC656C002434F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5295D8EB24DC656C002434F8 /* Coffe Curators */,
+				5295D90124DC656E002434F8 /* Coffe CuratorsTests */,
+				5295D90C24DC656E002434F8 /* Coffe CuratorsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5295D8EA24DC656C002434F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5295D8FC24DC656E002434F8 /* LaunchScreen.storyboard in Resources */,
+				5295D8F924DC656E002434F8 /* Assets.xcassets in Resources */,
+				5295D8F724DC656C002434F8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5295D90024DC656E002434F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5295D90B24DC656E002434F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		140AE0D9A2B8195E3D97E70E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coffe CuratorsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3573C03C5664B49A1CB11B05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B92241EC1AC9410471BCD777 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coffe Curators-Coffe CuratorsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4DC863AD63629CDCD908010 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE12AAA0CD8EFD2279088C2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F27B410B2AFA4DD9C57B7C87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coffe Curators-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB6D5FE8DB0E4BF994352BD2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5295D8E824DC656C002434F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5295D8F424DC656C002434F8 /* ViewController.swift in Sources */,
+				5295D8F024DC656C002434F8 /* AppDelegate.swift in Sources */,
+				5295D8F224DC656C002434F8 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5295D8FE24DC656E002434F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5295D90724DC656E002434F8 /* Coffe_CuratorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5295D90924DC656E002434F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5295D91224DC656E002434F8 /* Coffe_CuratorsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5295D90424DC656E002434F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5295D8EB24DC656C002434F8 /* Coffe Curators */;
+			targetProxy = 5295D90324DC656E002434F8 /* PBXContainerItemProxy */;
+		};
+		5295D90F24DC656E002434F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5295D8EB24DC656C002434F8 /* Coffe Curators */;
+			targetProxy = 5295D90E24DC656E002434F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5295D8F524DC656C002434F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5295D8F624DC656C002434F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5295D8FA24DC656E002434F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5295D8FB24DC656E002434F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5295D91424DC656E002434F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5295D91524DC656E002434F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5295D91724DC656E002434F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2AD20FE7F5C3734901A9797 /* Pods-Coffe Curators.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
+				INFOPLIST_FILE = "Coffe Curators/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-Curators";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5295D91824DC656E002434F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1C879DFC9E9D9F739155B9 /* Pods-Coffe Curators.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
+				INFOPLIST_FILE = "Coffe Curators/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-Curators";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5295D91A24DC656E002434F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6B435A653AA068D0B0A501F /* Pods-Coffe CuratorsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
+				INFOPLIST_FILE = "Coffe CuratorsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-CuratorsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coffe Curators.app/Coffe Curators";
+			};
+			name = Debug;
+		};
+		5295D91B24DC656E002434F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49F38F113A98A2F0395BC56E /* Pods-Coffe CuratorsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
+				INFOPLIST_FILE = "Coffe CuratorsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-CuratorsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coffe Curators.app/Coffe Curators";
+			};
+			name = Release;
+		};
+		5295D91D24DC656E002434F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CD4F4EE58418200E307B8D4 /* Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
+				INFOPLIST_FILE = "Coffe CuratorsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-CuratorsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coffe Curators";
+			};
+			name = Debug;
+		};
+		5295D91E24DC656E002434F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C73A7B5844FC0DF195700EA /* Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
+				INFOPLIST_FILE = "Coffe CuratorsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-CuratorsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Coffe Curators";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5295D8E724DC656C002434F8 /* Build configuration list for PBXProject "Coffe Curators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5295D91424DC656E002434F8 /* Debug */,
+				5295D91524DC656E002434F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5295D91624DC656E002434F8 /* Build configuration list for PBXNativeTarget "Coffe Curators" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5295D91724DC656E002434F8 /* Debug */,
+				5295D91824DC656E002434F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5295D91924DC656E002434F8 /* Build configuration list for PBXNativeTarget "Coffe CuratorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5295D91A24DC656E002434F8 /* Debug */,
+				5295D91B24DC656E002434F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5295D91C24DC656E002434F8 /* Build configuration list for PBXNativeTarget "Coffe CuratorsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5295D91D24DC656E002434F8 /* Debug */,
+				5295D91E24DC656E002434F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5295D8E424DC656C002434F8 /* Project object */;
+}
