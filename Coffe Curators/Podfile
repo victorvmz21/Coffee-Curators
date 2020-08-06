@@ -11,6 +11,7 @@ target 'Coffe Curators' do
      pod 'FirebaseFirestoreSwift'
      pod 'Firebase/Auth'
      pod 'GoogleSignIn'
+     pod 'Firebase/Analytics'
 
   target 'Coffe CuratorsTests' do
     inherit! :search_paths
