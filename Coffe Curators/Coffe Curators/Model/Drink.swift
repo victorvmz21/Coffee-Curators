@@ -25,4 +25,3 @@ struct Measurements {
     var measurement: String
 }
 
-var string: String

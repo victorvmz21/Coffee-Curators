@@ -22,4 +22,3 @@ struct Comment {
     var comment: String
 }
 
-var string: String
