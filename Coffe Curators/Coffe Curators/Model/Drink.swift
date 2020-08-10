@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Drink {
+struct Drink: Codable {
     var title: String
     var drinkPicture: String
     var machineType: String
@@ -21,7 +21,7 @@ struct Drink {
     var measurements: Measurements
 }
 
-struct Measurements {
+struct Measurements: Codable {
     var measurement: String
 }
 
