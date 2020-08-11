@@ -16,6 +16,7 @@
 		5295D8FC24DC656E002434F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5295D8FA24DC656E002434F8 /* LaunchScreen.storyboard */; };
 		5295D90724DC656E002434F8 /* Coffe_CuratorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D90624DC656E002434F8 /* Coffe_CuratorsTests.swift */; };
 		5295D91224DC656E002434F8 /* Coffe_CuratorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D91124DC656E002434F8 /* Coffe_CuratorsUITests.swift */; };
+		52B09B3324E332A300241B38 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B09B3224E332A300241B38 /* SignUpViewController.swift */; };
 		766A4BB773568341ABB0756F /* Pods_Coffe_CuratorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A670F7071B6B545A6795B4AA /* Pods_Coffe_CuratorsTests.framework */; };
 		905E8B372EC18DA148974956 /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DD8F3691205FFF0C3C725E /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework */; };
 		DE010BA124DDC0B500576B12 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE010BA024DDC0B500576B12 /* User.swift */; };
@@ -61,6 +62,7 @@
 		5295D90D24DC656E002434F8 /* Coffe CuratorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffe CuratorsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5295D91124DC656E002434F8 /* Coffe_CuratorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffe_CuratorsUITests.swift; sourceTree = "<group>"; };
 		5295D91324DC656E002434F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B09B3224E332A300241B38 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		638CD0C1A9C6D1D44BC7CE11 /* Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig"; path = "Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		71A8E2C8AE9640047DE29615 /* Pods-Coffe CuratorsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe CuratorsTests.release.xcconfig"; path = "Target Support Files/Pods-Coffe CuratorsTests/Pods-Coffe CuratorsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A670F7071B6B545A6795B4AA /* Pods_Coffe_CuratorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffe_CuratorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		522701EC24E3106600461ECF /* Helper & Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Helper & Extensions";
+			sourceTree = "<group>";
+		};
 		5295D8E324DC656C002434F8 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +142,7 @@
 				5295D92524DC65E5002434F8 /* Model */,
 				5295D92124DC65B4002434F8 /* View */,
 				5295D92324DC65C5002434F8 /* Controller */,
+				522701EC24E3106600461ECF /* Helper & Extensions */,
 				5295D91F24DC6584002434F8 /* Resources */,
 			);
 			path = "Coffe Curators";
@@ -190,6 +200,8 @@
 			children = (
 				5295D8F324DC656C002434F8 /* ViewController.swift */,
 				DE60204224E2FB4C00AB8DE6 /* SignInViewController.swift */,
+				52B09B3224E332A300241B38 /* SignUpViewController.swift */,
+
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -522,6 +534,7 @@
 			files = (
 				DE010BA524DDC51E00576B12 /* UserController.swift in Sources */,
 				DE010BA124DDC0B500576B12 /* User.swift in Sources */,
+				52B09B3324E332A300241B38 /* SignUpViewController.swift in Sources */,
 				5295D8F424DC656C002434F8 /* ViewController.swift in Sources */,
 				DE010BA724DDC52900576B12 /* DrinkController.swift in Sources */,
 				DE60204324E2FB4C00AB8DE6 /* SignInViewController.swift in Sources */,
@@ -705,6 +718,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 265HY58XK9;
 				INFOPLIST_FILE = "Coffe Curators/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -712,7 +726,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-Curators";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -725,6 +739,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 265HY58XK9;
 				INFOPLIST_FILE = "Coffe Curators/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -732,7 +747,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-Curators";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
