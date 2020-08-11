@@ -106,6 +106,13 @@ struct UserController {
         }
     } // End of fetch function
     
+    //Drink update Test
+    func updateDrink(title: String) {
+        db.collection("users").document("50").collection("drinks").document("Toddy").updateData([
+            "title": title
+        ])
+    }
+    
 }
 
 struct StringConstants {
