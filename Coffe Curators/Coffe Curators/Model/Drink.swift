@@ -21,7 +21,3 @@ struct Drink {
     var measurements: Measurements
 }
 
-struct Measurements {
-    var measurement: String
-}
-
