@@ -81,6 +81,19 @@ struct UserController {
     
     // MARK: - Helper Methods
     
+    //Check if User exists
+    func checkUser(uid: String, firstName: String, lastName: String, email: String) {
+        let ref = db.collection("users").document(uid)
+        ref.getDocument { (document, error) in
+            if let document = document, document.exists {
+                print("Exists")
+            } else {
+                print("Added new User")
+                UserController.sharedUserController.createUser(uid: uid, firstName: firstName, lastName: lastName, email: email)
+            }
+        }
+    }
+    
     //fetchCurrentUser
     func fetchCurrentUser(uid: String, completion: @escaping (Result<User, Error>) -> Void) {
 //        guard let userId = Auth.auth().currentUser?.uid else {return}

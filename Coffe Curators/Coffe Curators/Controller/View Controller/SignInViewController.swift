@@ -22,9 +22,21 @@ class SignInViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()
         setUpSignInAppleButton()
+        checkUser()
     }
     
     // MARK: - Helper Methods
+    
+    //setup userCheck
+    func checkUser() {
+        guard let user = Auth.auth().currentUser else {return}
+        let firstName = user.displayName?.components(separatedBy: " ")[0] ?? ""
+        let lastName = user.displayName?.components(separatedBy: " ")[1] ?? ""
+        let email = user.email ?? ""
+        let uid = user.uid
+        UserController.sharedUserController.checkUser(uid: uid, firstName: firstName, lastName: lastName, email: email)
+    }
+    
     //this function Creates the button!
     func setUpSignInAppleButton() {
         
@@ -135,7 +147,8 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
             
             Auth.auth().signIn(with: credential) { (result, error) in
                 if let user = result?.user {
-                    print("you're now signed in as \(user.uid) emial: \(user.email), name: \(user.displayName)")
+                    print("you're now signed in as \(user.uid) email: \(user.email), name: \(user.displayName)")
+                    
                 }
             }
         }

@@ -23,7 +23,7 @@ class ViewController: UIViewController {
 //                print(error.localizedDescription)
 //            }
 //        }
-        UserController.sharedUserController.updateDrink(title: "Connor")
+    
     }
 
 
