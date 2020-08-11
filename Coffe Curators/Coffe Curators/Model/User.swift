@@ -7,18 +7,15 @@
 //
 
 import Foundation
+import Firebase
 
-struct User {
+struct User: Codable {
+    
+    let uid: String
     var firstName: String
     var lastName: String
     var email: String
-    var password: String
     var profilePic: String?
-    var favorites: [Drink]?
-    var comments: [Comment]?
 }
 
-struct Comment {
-    var comment: String
-}
 
