@@ -118,6 +118,15 @@ class SignInViewController: UIViewController {
         
         return hashString
     }
+    
+    //MARK: - IBOutlet
+    @IBAction func signInWithEmailButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
+        
+    }
 }
 
 
