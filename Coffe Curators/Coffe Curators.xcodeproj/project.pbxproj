@@ -201,7 +201,6 @@
 				5295D8F324DC656C002434F8 /* ViewController.swift */,
 				DE60204224E2FB4C00AB8DE6 /* SignInViewController.swift */,
 				52B09B3224E332A300241B38 /* SignUpViewController.swift */,
-
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
