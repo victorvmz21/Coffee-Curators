@@ -42,9 +42,15 @@ class SignInViewController: UIViewController {
         
         let authorizationButton = ASAuthorizationAppleIDButton()
         authorizationButton.addTarget(self, action: #selector(handleAppleIdRequestTapped), for: .touchUpInside)
-        authorizationButton.center = view.center
+        authorizationButton.center = appleSignInButton.center
         
-        self.view.addSubview(authorizationButton)
+        self.appleSignInButton.addSubview(authorizationButton)
+        NSLayoutConstraint.activate([
+            authorizationButton.centerXAnchor.constraint(equalTo: self.appleSignInButton.centerXAnchor),
+            authorizationButton.centerYAnchor.constraint(equalTo: self.appleSignInButton.centerYAnchor),
+            authorizationButton.widthAnchor.constraint(equalToConstant: self.appleSignInButton.frame.width),
+            authorizationButton.heightAnchor.constraint(equalToConstant: 44)
+        ])
     }
     
     @objc func handleAppleIdRequestTapped() {
@@ -153,7 +159,10 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
             Auth.auth().signIn(with: credential) { (result, error) in
                 if let user = result?.user {
                     print("you're now signed in as \(user.uid) email: \(user.email), name: \(user.displayName)")
-                    
+                    let firstName = user.displayName?.components(separatedBy: " ")[0] ?? "\(user.uid)"
+                    let lastName = user.displayName?.components(separatedBy: " ")[1] ?? "N/A"
+                    let email = user.email ?? ""
+                    UserController.sharedUserController.checkUser(uid: user.uid, firstName: firstName, lastName: lastName, email: email)
                 }
             }
         }

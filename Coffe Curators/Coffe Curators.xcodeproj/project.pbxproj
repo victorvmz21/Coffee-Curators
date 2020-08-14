@@ -230,6 +230,7 @@
 				52B09B3224E332A300241B38 /* SignUpViewController.swift */,
 				52B09B3424E3440600241B38 /* LoginViewController.swift */,
 				52B09B4524E5A46500241B38 /* HomeViewController.swift */,
+
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
