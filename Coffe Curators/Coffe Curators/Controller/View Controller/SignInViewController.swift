@@ -123,10 +123,6 @@ class SignInViewController: UIViewController {
     @IBAction func signInWithEmailButtonTapped(_ sender: UIButton) {
         
     }
-    
-    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        
-    }
 }
 
 
