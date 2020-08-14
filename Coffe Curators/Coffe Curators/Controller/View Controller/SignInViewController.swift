@@ -129,7 +129,6 @@ class SignInViewController: UIViewController {
     @IBAction func signInWithEmailButtonTapped(_ sender: UIButton) {
         
     }
-    
 }
 
 

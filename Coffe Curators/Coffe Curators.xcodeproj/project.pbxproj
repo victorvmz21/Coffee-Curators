@@ -17,6 +17,17 @@
 		5295D90724DC656E002434F8 /* Coffe_CuratorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D90624DC656E002434F8 /* Coffe_CuratorsTests.swift */; };
 		5295D91224DC656E002434F8 /* Coffe_CuratorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D91124DC656E002434F8 /* Coffe_CuratorsUITests.swift */; };
 		52B09B3324E332A300241B38 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B09B3224E332A300241B38 /* SignUpViewController.swift */; };
+		52B09B3524E3440600241B38 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B09B3424E3440600241B38 /* LoginViewController.swift */; };
+		52B09B3724E44CCF00241B38 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B09B3624E44CCF00241B38 /* Colors.xcassets */; };
+		52B09B3A24E44F6100241B38 /* Petrona-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B09B3924E44F6100241B38 /* Petrona-Medium.ttf */; };
+		52B09B3C24E44F7100241B38 /* Petrona-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B09B3B24E44F7000241B38 /* Petrona-Regular.ttf */; };
+		52B09B3E24E44F8300241B38 /* Petrona-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B09B3D24E44F8300241B38 /* Petrona-Light.ttf */; };
+		52B09B4024E44F8D00241B38 /* Petrona-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B09B3F24E44F8D00241B38 /* Petrona-ExtraLight.ttf */; };
+		52B09B4224E450D500241B38 /* Petrona-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B09B4124E450D500241B38 /* Petrona-SemiBold.ttf */; };
+		52B09B4424E463FD00241B38 /* Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B09B4324E463FD00241B38 /* Borders.swift */; };
+		52B09B4624E5A46500241B38 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B09B4524E5A46500241B38 /* HomeViewController.swift */; };
+		52B09B4824E5AA2C00241B38 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B09B4724E5AA2C00241B38 /* ViewExtension.swift */; };
+		52B09B4B24E5AAD100241B38 /* homeScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B09B4A24E5AAD100241B38 /* homeScreenTableViewCell.swift */; };
 		766A4BB773568341ABB0756F /* Pods_Coffe_CuratorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A670F7071B6B545A6795B4AA /* Pods_Coffe_CuratorsTests.framework */; };
 		905E8B372EC18DA148974956 /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DD8F3691205FFF0C3C725E /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework */; };
 		DE010BA124DDC0B500576B12 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE010BA024DDC0B500576B12 /* User.swift */; };
@@ -63,6 +74,17 @@
 		5295D91124DC656E002434F8 /* Coffe_CuratorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffe_CuratorsUITests.swift; sourceTree = "<group>"; };
 		5295D91324DC656E002434F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B09B3224E332A300241B38 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		52B09B3424E3440600241B38 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		52B09B3624E44CCF00241B38 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		52B09B3924E44F6100241B38 /* Petrona-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-Medium.ttf"; path = "../../../../Assets/Petrona/static/Petrona-Medium.ttf"; sourceTree = "<group>"; };
+		52B09B3B24E44F7000241B38 /* Petrona-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-Regular.ttf"; path = "../../../../Assets/Petrona/static/Petrona-Regular.ttf"; sourceTree = "<group>"; };
+		52B09B3D24E44F8300241B38 /* Petrona-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-Light.ttf"; path = "../../../../Assets/Petrona/static/Petrona-Light.ttf"; sourceTree = "<group>"; };
+		52B09B3F24E44F8D00241B38 /* Petrona-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-ExtraLight.ttf"; path = "../../../../Assets/Petrona/static/Petrona-ExtraLight.ttf"; sourceTree = "<group>"; };
+		52B09B4124E450D500241B38 /* Petrona-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-SemiBold.ttf"; path = "../../../../Assets/Petrona/static/Petrona-SemiBold.ttf"; sourceTree = "<group>"; };
+		52B09B4324E463FD00241B38 /* Borders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Borders.swift; sourceTree = "<group>"; };
+		52B09B4524E5A46500241B38 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52B09B4724E5AA2C00241B38 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		52B09B4A24E5AAD100241B38 /* homeScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreenTableViewCell.swift; sourceTree = "<group>"; };
 		638CD0C1A9C6D1D44BC7CE11 /* Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig"; path = "Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		71A8E2C8AE9640047DE29615 /* Pods-Coffe CuratorsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe CuratorsTests.release.xcconfig"; path = "Target Support Files/Pods-Coffe CuratorsTests/Pods-Coffe CuratorsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A670F7071B6B545A6795B4AA /* Pods_Coffe_CuratorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffe_CuratorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +131,8 @@
 		522701EC24E3106600461ECF /* Helper & Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				52B09B4324E463FD00241B38 /* Borders.swift */,
+				52B09B4724E5AA2C00241B38 /* ViewExtension.swift */,
 			);
 			path = "Helper & Extensions";
 			sourceTree = "<group>";
@@ -169,12 +193,14 @@
 		5295D91F24DC6584002434F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				52B09B3824E44F5200241B38 /* Fonts */,
 				5295D8EF24DC656C002434F8 /* AppDelegate.swift */,
 				5295D8F124DC656C002434F8 /* SceneDelegate.swift */,
 				5295D8F824DC656E002434F8 /* Assets.xcassets */,
 				5295D8FA24DC656E002434F8 /* LaunchScreen.storyboard */,
 				5295D8FD24DC656E002434F8 /* Info.plist */,
 				DE957B8E24DC71E3004F2919 /* GoogleService-Info.plist */,
+				52B09B3624E44CCF00241B38 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -190,6 +216,7 @@
 		5295D92124DC65B4002434F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52B09B4924E5AAB100241B38 /* Custom Cell */,
 				5295D92024DC65A8002434F8 /* Storyboard */,
 			);
 			path = View;
@@ -201,6 +228,9 @@
 				5295D8F324DC656C002434F8 /* ViewController.swift */,
 				DE60204224E2FB4C00AB8DE6 /* SignInViewController.swift */,
 				52B09B3224E332A300241B38 /* SignUpViewController.swift */,
+				52B09B3424E3440600241B38 /* LoginViewController.swift */,
+				52B09B4524E5A46500241B38 /* HomeViewController.swift */,
+
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -230,6 +260,26 @@
 				DE010BA224DDC16600576B12 /* Drink.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52B09B3824E44F5200241B38 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52B09B3F24E44F8D00241B38 /* Petrona-ExtraLight.ttf */,
+				52B09B3924E44F6100241B38 /* Petrona-Medium.ttf */,
+				52B09B3D24E44F8300241B38 /* Petrona-Light.ttf */,
+				52B09B4124E450D500241B38 /* Petrona-SemiBold.ttf */,
+				52B09B3B24E44F7000241B38 /* Petrona-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		52B09B4924E5AAB100241B38 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				52B09B4A24E5AAD100241B38 /* homeScreenTableViewCell.swift */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 		8391BBD5126191ED421B14F5 /* Frameworks */ = {
@@ -366,10 +416,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B09B3724E44CCF00241B38 /* Colors.xcassets in Resources */,
+				52B09B4024E44F8D00241B38 /* Petrona-ExtraLight.ttf in Resources */,
 				5295D8FC24DC656E002434F8 /* LaunchScreen.storyboard in Resources */,
+				52B09B4224E450D500241B38 /* Petrona-SemiBold.ttf in Resources */,
 				DE957B8F24DC71E3004F2919 /* GoogleService-Info.plist in Resources */,
+				52B09B3E24E44F8300241B38 /* Petrona-Light.ttf in Resources */,
 				5295D8F924DC656E002434F8 /* Assets.xcassets in Resources */,
 				5295D8F724DC656C002434F8 /* Main.storyboard in Resources */,
+				52B09B3A24E44F6100241B38 /* Petrona-Medium.ttf in Resources */,
+				52B09B3C24E44F7100241B38 /* Petrona-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +595,12 @@
 				DE60204324E2FB4C00AB8DE6 /* SignInViewController.swift in Sources */,
 				5295D8F024DC656C002434F8 /* AppDelegate.swift in Sources */,
 				DE010BA324DDC16600576B12 /* Drink.swift in Sources */,
+				52B09B3524E3440600241B38 /* LoginViewController.swift in Sources */,
 				5295D8F224DC656C002434F8 /* SceneDelegate.swift in Sources */,
+				52B09B4B24E5AAD100241B38 /* homeScreenTableViewCell.swift in Sources */,
+				52B09B4424E463FD00241B38 /* Borders.swift in Sources */,
+				52B09B4624E5A46500241B38 /* HomeViewController.swift in Sources */,
+				52B09B4824E5AA2C00241B38 /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,14 +776,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Coffe Curators/Coffe Curators.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 265HY58XK9;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
 				INFOPLIST_FILE = "Coffe Curators/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-Curators";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.atomuz.Coffe-Curators";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -736,14 +797,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Coffe Curators/Coffe Curators.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 265HY58XK9;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
 				INFOPLIST_FILE = "Coffe Curators/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.atomuz.Coffe-Curators";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.atomuz.Coffe-Curators";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
