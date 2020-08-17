@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Drink Title View Controller-->
         <scene sceneID="M6W-sr-QD8">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="tSE-ns-Eg4" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="tSE-ns-Eg4" customClass="DrinkTitleViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qWc-bj-MuJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,17 +63,26 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
                                         <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5E-k4-px9">
-                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="tSE-ns-Eg4" eventType="touchUpInside" id="8s0-DF-VK1"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-iz-Z7o">
-                                <rect key="frame" x="20" y="431" width="374" height="44"/>
+                                <rect key="frame" x="20" y="432" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Oo1-5D-fLq"/>
                                 </constraints>
@@ -81,7 +90,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1t-zf-89a">
-                                <rect key="frame" x="20" y="260" width="374" height="41"/>
+                                <rect key="frame" x="20" y="260" width="374" height="42"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
@@ -110,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="-684.05797101449275" y="171.42857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Drink Type View Controller-->
         <scene sceneID="s9Z-Pf-i72">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Znh-Vb-DV8" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Znh-Vb-DV8" customClass="DrinkTypeViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EM8-Ho-xIJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,8 +131,8 @@
                                 <rect key="frame" x="224" y="824" width="160" height="48"/>
                                 <color key="backgroundColor" name="orange_jolt"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="oZ2-xd-oMu"/>
-                                    <constraint firstAttribute="width" constant="160" id="ym0-Pb-Q5N"/>
+                                    <constraint firstAttribute="width" constant="160" id="gjE-68-er5"/>
+                                    <constraint firstAttribute="height" constant="48" id="z79-8M-EvH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Petrona-SemiBold" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Add Type">
@@ -154,30 +163,39 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of Drink is this?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-NK-7bs">
-                                <rect key="frame" x="20" y="260" width="374" height="81.5"/>
+                                <rect key="frame" x="20" y="260" width="374" height="84"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-2H-VAZ">
-                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="Znh-Vb-DV8" eventType="touchUpInside" id="tlh-kZ-NoB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yih-LO-8Oa">
-                                <rect key="frame" x="20" y="832" width="36" height="32"/>
+                                <rect key="frame" x="20" y="832" width="39" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="N5z-J5-0b1">
-                                <rect key="frame" x="20" y="383" width="135" height="188"/>
+                                <rect key="frame" x="20" y="385.5" width="135" height="188"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-Nc-FLf">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="54"/>
@@ -207,16 +225,16 @@
                         <constraints>
                             <constraint firstItem="UpO-NK-7bs" firstAttribute="top" secondItem="rDj-Fa-cSa" secondAttribute="bottom" constant="140" id="2qm-uz-GHz"/>
                             <constraint firstItem="N5z-J5-0b1" firstAttribute="height" secondItem="EM8-Ho-xIJ" secondAttribute="height" multiplier="0.209821" id="7kR-UI-CuP"/>
+                            <constraint firstAttribute="bottom" secondItem="BW0-d9-3cd" secondAttribute="bottom" constant="24" id="87Q-kP-1JJ"/>
                             <constraint firstItem="EjT-2H-VAZ" firstAttribute="leading" secondItem="duf-ap-a5n" secondAttribute="leading" constant="20" id="Byz-gL-hS1"/>
                             <constraint firstItem="yih-LO-8Oa" firstAttribute="leading" secondItem="duf-ap-a5n" secondAttribute="leading" constant="20" id="D3y-e9-0kg"/>
-                            <constraint firstItem="yih-LO-8Oa" firstAttribute="centerY" secondItem="BW0-d9-3cd" secondAttribute="centerY" id="E6H-bG-zIp"/>
-                            <constraint firstItem="BW0-d9-3cd" firstAttribute="bottom" secondItem="duf-ap-a5n" secondAttribute="bottom" constant="10" id="Mel-di-H35"/>
                             <constraint firstAttribute="trailing" secondItem="UpO-NK-7bs" secondAttribute="trailing" constant="20" id="WuM-bh-gNq"/>
                             <constraint firstItem="EjT-2H-VAZ" firstAttribute="top" secondItem="duf-ap-a5n" secondAttribute="top" constant="10" id="hJe-mo-raz"/>
-                            <constraint firstItem="duf-ap-a5n" firstAttribute="trailing" secondItem="BW0-d9-3cd" secondAttribute="trailing" constant="30" id="kTr-3g-gW9"/>
+                            <constraint firstItem="duf-ap-a5n" firstAttribute="trailing" secondItem="BW0-d9-3cd" secondAttribute="trailing" constant="30" id="k70-wi-Bt5"/>
                             <constraint firstItem="N5z-J5-0b1" firstAttribute="leading" secondItem="duf-ap-a5n" secondAttribute="leading" constant="20" id="mxw-Xk-5hI"/>
                             <constraint firstItem="UpO-NK-7bs" firstAttribute="leading" secondItem="rDj-Fa-cSa" secondAttribute="leading" id="ogc-u8-vh3"/>
                             <constraint firstItem="duf-ap-a5n" firstAttribute="trailing" secondItem="rDj-Fa-cSa" secondAttribute="trailing" constant="20" id="p53-Vv-Wd8"/>
+                            <constraint firstItem="yih-LO-8Oa" firstAttribute="centerY" secondItem="BW0-d9-3cd" secondAttribute="centerY" id="pVd-rj-2Fx"/>
                             <constraint firstItem="N5z-J5-0b1" firstAttribute="top" secondItem="UpO-NK-7bs" secondAttribute="bottom" constant="41.5" id="sLK-Gb-KFP"/>
                             <constraint firstItem="rDj-Fa-cSa" firstAttribute="leading" secondItem="duf-ap-a5n" secondAttribute="leading" constant="20" id="tjj-KL-sjt"/>
                             <constraint firstItem="rDj-Fa-cSa" firstAttribute="top" secondItem="EjT-2H-VAZ" secondAttribute="bottom" constant="4" id="zx7-iW-SVC"/>
@@ -229,33 +247,16 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="170.75892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Drink Photo View Controller-->
         <scene sceneID="JUN-3T-Njh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="1jv-Zl-nrk" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="1jv-Zl-nrk" customClass="DrinkPhotoViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qkc-nA-ZJ7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-il-5Xs">
-                                <rect key="frame" x="440" y="824" width="160" height="48"/>
-                                <color key="backgroundColor" name="orange_jolt"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="eMf-bP-Y9f"/>
-                                    <constraint firstAttribute="height" constant="48" id="rRN-RZ-8dx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Petrona-SemiBold" family="Petrona" pointSize="17"/>
-                                <state key="normal" title="Add Photo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2V7-pA-8cD" customClass="StepIndicatorView" customModule="StepIndicator">
-                                <rect key="frame" x="20" y="90" width="590" height="30"/>
+                                <rect key="frame" x="20" y="90" width="591.5" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vhX-Pi-nIZ"/>
@@ -270,30 +271,39 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
                                         <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a photo for (drink name here)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KI-0I-GgL">
-                                <rect key="frame" x="20" y="260" width="590" height="41"/>
+                                <rect key="frame" x="20" y="260" width="591.5" height="42"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-tg-dre">
-                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="1jv-Zl-nrk" eventType="touchUpInside" id="cmH-qf-Ief"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-DB-K0I">
-                                <rect key="frame" x="20" y="832" width="36" height="32"/>
+                                <rect key="frame" x="20" y="807" width="39" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-Gm-bYv">
-                                <rect key="frame" x="20" y="343.5" width="590" height="203"/>
+                                <rect key="frame" x="20" y="344.5" width="591.5" height="203"/>
                                 <color key="backgroundColor" name="orange_jolt"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -302,16 +312,36 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload New Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3a-RG-QJG">
-                                <rect key="frame" x="20" y="554.5" width="194" height="29"/>
+                                <rect key="frame" x="20" y="555.5" width="194" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-cT-Atd">
-                                <rect key="frame" x="575" y="338.5" width="30" height="30"/>
+                                <rect key="frame" x="576.5" y="339.5" width="30" height="30"/>
                                 <state key="normal" title="...">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-il-5Xs">
+                                <rect key="frame" x="451.5" y="799" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="gUD-xg-meE"/>
+                                    <constraint firstAttribute="height" constant="48" id="lJt-7Q-jW8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Petrona-SemiBold" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Add Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="TIL-oQ-1yh" kind="show" id="XRE-7q-HtN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -325,16 +355,16 @@
                             <constraint firstItem="kHQ-Gm-bYv" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="Bf6-oZ-5eQ"/>
                             <constraint firstItem="1vc-cT-Atd" firstAttribute="leading" secondItem="kHQ-Gm-bYv" secondAttribute="trailing" constant="-35" id="CM0-P0-FlA"/>
                             <constraint firstItem="2V7-pA-8cD" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="CPG-bP-MNY"/>
-                            <constraint firstItem="e6P-DB-K0I" firstAttribute="centerY" secondItem="Sb9-il-5Xs" secondAttribute="centerY" id="DVX-IR-BUa"/>
-                            <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="Sb9-il-5Xs" secondAttribute="trailing" constant="30" id="DXX-8H-3W6"/>
                             <constraint firstItem="2KI-0I-GgL" firstAttribute="top" secondItem="2V7-pA-8cD" secondAttribute="bottom" constant="140" id="P2o-iN-o2n"/>
+                            <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="Sb9-il-5Xs" secondAttribute="trailing" constant="20" id="Stb-BX-b1S"/>
                             <constraint firstItem="Egg-tg-dre" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="Tmf-M7-lHU"/>
                             <constraint firstItem="2KI-0I-GgL" firstAttribute="leading" secondItem="2V7-pA-8cD" secondAttribute="leading" id="Vc6-TL-e0I"/>
-                            <constraint firstItem="Sb9-il-5Xs" firstAttribute="bottom" secondItem="kQC-3V-dUq" secondAttribute="bottom" constant="10" id="d9O-Ty-lZf"/>
                             <constraint firstItem="kHQ-Gm-bYv" firstAttribute="top" secondItem="1vc-cT-Atd" secondAttribute="bottom" constant="-25" id="dpf-gP-9OD"/>
+                            <constraint firstItem="e6P-DB-K0I" firstAttribute="centerY" secondItem="Sb9-il-5Xs" secondAttribute="centerY" id="hx5-rv-4rY"/>
                             <constraint firstItem="kHQ-Gm-bYv" firstAttribute="top" secondItem="2KI-0I-GgL" secondAttribute="bottom" constant="42.5" id="jLg-fH-HRI"/>
                             <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="kHQ-Gm-bYv" secondAttribute="trailing" constant="20" id="n9v-gb-bpg"/>
                             <constraint firstItem="kHQ-Gm-bYv" firstAttribute="height" secondItem="qkc-nA-ZJ7" secondAttribute="height" multiplier="0.226562" id="pej-xC-Dts"/>
+                            <constraint firstItem="Sb9-il-5Xs" firstAttribute="bottom" secondItem="kQC-3V-dUq" secondAttribute="bottom" constant="-15" id="pgQ-Zo-YyJ"/>
                             <constraint firstAttribute="trailing" secondItem="2KI-0I-GgL" secondAttribute="trailing" constant="20" id="xEd-EO-ID9"/>
                             <constraint firstItem="Egg-tg-dre" firstAttribute="top" secondItem="kQC-3V-dUq" secondAttribute="top" constant="10" id="xtM-cx-BMS"/>
                         </constraints>
@@ -344,10 +374,1054 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gny-JN-TeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.71014492753625" y="170.75892857142856"/>
+            <point key="canvasLocation" x="928.98550724637687" y="158.70535714285714"/>
+        </scene>
+        <!--Drink Appliance View Controller-->
+        <scene sceneID="J4o-It-WdA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="TIL-oQ-1yh" customClass="DrinkApplianceViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wZV-LD-C6H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aof-kt-lR0">
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="TIL-oQ-1yh" eventType="touchUpInside" id="c5G-OQ-XgH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drG-IH-ygV">
+                                <rect key="frame" x="20" y="774" width="34" height="98"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqE-if-9OQ" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="91" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8bn-QU-7fc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Coffe appliance" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smc-F6-hvM">
+                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Appliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1T-x5-iFW">
+                                <rect key="frame" x="20" y="309" width="111" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGb-kG-uyA">
+                                <rect key="frame" x="234" y="799" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="1zU-mP-7K0"/>
+                                    <constraint firstAttribute="height" constant="48" id="4ae-4b-pvR"/>
+                                </constraints>
+                                <state key="normal" title="Add Applicance">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ndf-f2-Sw5" kind="show" id="bUK-DP-qdL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmQ-O1-K1h">
+                                <rect key="frame" x="148" y="309.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="keo-Xq-FbL"/>
+                                    <constraint firstAttribute="height" constant="20" id="mmm-Ut-GKQ"/>
+                                </constraints>
+                                <color key="tintColor" name="orange_jolt"/>
+                                <state key="normal" image="plus.circle" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAh-ai-5ux">
+                                <rect key="frame" x="20" y="357" width="66" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-EU-utP">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Drip"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-M5-vHN">
+                                        <rect key="frame" x="0.0" y="50" width="63" height="30"/>
+                                        <state key="normal" title="Espresso"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfs-G9-sTK">
+                                        <rect key="frame" x="0.0" y="100" width="66" height="30"/>
+                                        <state key="normal" title="Pour over"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CAh-ai-5ux" firstAttribute="leading" secondItem="h1T-x5-iFW" secondAttribute="leading" id="2vY-ha-haU"/>
+                            <constraint firstItem="drG-IH-ygV" firstAttribute="centerY" secondItem="bGb-kG-uyA" secondAttribute="centerY" id="3We-RF-0xi"/>
+                            <constraint firstItem="smc-F6-hvM" firstAttribute="top" secondItem="sqE-if-9OQ" secondAttribute="bottom" constant="79" id="77W-iL-1dW"/>
+                            <constraint firstItem="Aof-kt-lR0" firstAttribute="top" secondItem="VhG-72-kS1" secondAttribute="top" constant="10" id="FRc-L4-APt"/>
+                            <constraint firstItem="bGb-kG-uyA" firstAttribute="bottom" secondItem="VhG-72-kS1" secondAttribute="bottom" constant="-15" id="HZ7-7z-giB"/>
+                            <constraint firstItem="sqE-if-9OQ" firstAttribute="top" secondItem="Aof-kt-lR0" secondAttribute="bottom" constant="5" id="On5-i0-SSK"/>
+                            <constraint firstItem="drG-IH-ygV" firstAttribute="leading" secondItem="VhG-72-kS1" secondAttribute="leading" constant="20" id="TTp-k5-Zkm"/>
+                            <constraint firstItem="sqE-if-9OQ" firstAttribute="leading" secondItem="VhG-72-kS1" secondAttribute="leading" constant="20" id="Ujn-Pd-WQw"/>
+                            <constraint firstItem="VhG-72-kS1" firstAttribute="trailing" secondItem="smc-F6-hvM" secondAttribute="trailing" constant="20" id="UuS-7V-qFn"/>
+                            <constraint firstItem="EmQ-O1-K1h" firstAttribute="leading" secondItem="h1T-x5-iFW" secondAttribute="trailing" constant="17" id="VER-gX-4tB"/>
+                            <constraint firstItem="h1T-x5-iFW" firstAttribute="top" secondItem="smc-F6-hvM" secondAttribute="bottom" constant="25" id="eXb-IA-Twk"/>
+                            <constraint firstItem="VhG-72-kS1" firstAttribute="trailing" secondItem="bGb-kG-uyA" secondAttribute="trailing" constant="20" id="fPM-53-ZvX"/>
+                            <constraint firstItem="CAh-ai-5ux" firstAttribute="top" secondItem="h1T-x5-iFW" secondAttribute="bottom" constant="27.5" id="hhr-NG-dg5"/>
+                            <constraint firstItem="smc-F6-hvM" firstAttribute="leading" secondItem="VhG-72-kS1" secondAttribute="leading" constant="20" id="hva-2P-7D9"/>
+                            <constraint firstItem="Aof-kt-lR0" firstAttribute="leading" secondItem="VhG-72-kS1" secondAttribute="leading" constant="20" id="oPu-cZ-mY5"/>
+                            <constraint firstItem="drG-IH-ygV" firstAttribute="bottom" secondItem="VhG-72-kS1" secondAttribute="bottom" constant="10" id="tBs-kf-hSa"/>
+                            <constraint firstItem="h1T-x5-iFW" firstAttribute="leading" secondItem="smc-F6-hvM" secondAttribute="leading" id="vqq-hu-bfS"/>
+                            <constraint firstItem="VhG-72-kS1" firstAttribute="trailing" secondItem="sqE-if-9OQ" secondAttribute="trailing" constant="20" id="xt7-0e-FrU"/>
+                            <constraint firstItem="EmQ-O1-K1h" firstAttribute="centerY" secondItem="h1T-x5-iFW" secondAttribute="centerY" id="yJL-RT-Z9h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VhG-72-kS1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RcC-y4-Ehf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZP-4J-vdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1690" y="159"/>
+        </scene>
+        <!--Drink Coffee Type View Controller-->
+        <scene sceneID="FbE-Ko-6Md">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="ndf-f2-Sw5" customClass="DrinkCoffeeTypeViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="You-zR-zga">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztA-Qv-DWR">
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="eBm-9R-6Kl"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldg-5Z-Dvi" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="91" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Ie-at-7v4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Coffee do you use?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETk-gb-Ec5">
+                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Roast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKV-KF-EOa">
+                                <rect key="frame" x="20" y="309" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Roast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUM-Rw-nDX">
+                                <rect key="frame" x="198" y="309" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2p-VE-O9o">
+                                <rect key="frame" x="234" y="799" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="39E-ds-FTB"/>
+                                    <constraint firstAttribute="width" constant="160" id="FEs-hk-dSS"/>
+                                </constraints>
+                                <state key="normal" title="Add Coffee">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="qDq-Fz-GVh" kind="show" id="9g7-DZ-Pgz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfV-Lf-MNg">
+                                <rect key="frame" x="136" y="309.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0ss-hn-seT"/>
+                                    <constraint firstAttribute="width" constant="20" id="51U-gi-F9o"/>
+                                </constraints>
+                                <color key="tintColor" name="orange_jolt"/>
+                                <state key="normal" image="plus.circle" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KZ-uG-AXT">
+                                <rect key="frame" x="312" y="309.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="00g-Hk-9bx"/>
+                                    <constraint firstAttribute="width" constant="20" id="WC7-LK-I81"/>
+                                </constraints>
+                                <color key="tintColor" name="orange_jolt"/>
+                                <state key="normal" image="plus.circle" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S1N-wq-M1X">
+                                <rect key="frame" x="20" y="357" width="72" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-R6-OBE">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
+                                        <state key="normal" title="Light"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wo-TF-CCs">
+                                        <rect key="frame" x="0.0" y="50" width="55" height="30"/>
+                                        <state key="normal" title="Medium"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-C0-XoU">
+                                        <rect key="frame" x="0.0" y="100" width="33" height="30"/>
+                                        <state key="normal" title="Dark"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbc-qW-WLJ">
+                                        <rect key="frame" x="0.0" y="150" width="72" height="30"/>
+                                        <state key="normal" title="Extra Dark"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ndh-QJ-uO8">
+                                <rect key="frame" x="198" y="357" width="53" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drs-iy-54F">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="30"/>
+                                        <state key="normal" title="1 Shot"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qV-Er-c7U">
+                                        <rect key="frame" x="0.0" y="50" width="53" height="30"/>
+                                        <state key="normal" title="2 Shots"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-A3-K86">
+                                        <rect key="frame" x="0.0" y="100" width="53" height="30"/>
+                                        <state key="normal" title="3 Shots"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35f-Bi-Sss">
+                                        <rect key="frame" x="0.0" y="150" width="53" height="30"/>
+                                        <state key="normal" title="4 Shots"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya1-cZ-VDK">
+                                <rect key="frame" x="20" y="774" width="34" height="98"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ETk-gb-Ec5" firstAttribute="top" secondItem="ldg-5Z-Dvi" secondAttribute="bottom" constant="79" id="0Jz-hM-QFh"/>
+                            <constraint firstItem="tUM-Rw-nDX" firstAttribute="centerY" secondItem="dfV-Lf-MNg" secondAttribute="centerY" id="0Lj-ev-cqD"/>
+                            <constraint firstItem="4KZ-uG-AXT" firstAttribute="centerY" secondItem="tUM-Rw-nDX" secondAttribute="centerY" id="0ss-fS-HsH"/>
+                            <constraint firstItem="SbL-B8-XOG" firstAttribute="trailing" secondItem="ETk-gb-Ec5" secondAttribute="trailing" constant="20" id="3lk-BQ-grK"/>
+                            <constraint firstItem="dfV-Lf-MNg" firstAttribute="leading" secondItem="bKV-KF-EOa" secondAttribute="trailing" constant="17" id="5rx-S2-b3S"/>
+                            <constraint firstItem="ztA-Qv-DWR" firstAttribute="leading" secondItem="SbL-B8-XOG" secondAttribute="leading" constant="20" id="61I-Z8-dTO"/>
+                            <constraint firstItem="bKV-KF-EOa" firstAttribute="leading" secondItem="ETk-gb-Ec5" secondAttribute="leading" id="DVe-PE-wZw"/>
+                            <constraint firstItem="S1N-wq-M1X" firstAttribute="top" secondItem="bKV-KF-EOa" secondAttribute="bottom" constant="27.5" id="DoE-i9-wcI"/>
+                            <constraint firstItem="S1N-wq-M1X" firstAttribute="leading" secondItem="bKV-KF-EOa" secondAttribute="leading" id="Hzy-lP-rwC"/>
+                            <constraint firstItem="ldg-5Z-Dvi" firstAttribute="leading" secondItem="SbL-B8-XOG" secondAttribute="leading" constant="20" id="N3g-bv-xmf"/>
+                            <constraint firstItem="bKV-KF-EOa" firstAttribute="top" secondItem="ETk-gb-Ec5" secondAttribute="bottom" constant="25" id="Qoe-rY-B1t"/>
+                            <constraint firstItem="ldg-5Z-Dvi" firstAttribute="top" secondItem="ztA-Qv-DWR" secondAttribute="bottom" constant="5" id="V7w-Yp-iFh"/>
+                            <constraint firstItem="ETk-gb-Ec5" firstAttribute="leading" secondItem="SbL-B8-XOG" secondAttribute="leading" constant="20" id="WPN-CY-Nyn"/>
+                            <constraint firstItem="dfV-Lf-MNg" firstAttribute="centerY" secondItem="bKV-KF-EOa" secondAttribute="centerY" id="Xec-Zz-fky"/>
+                            <constraint firstItem="4KZ-uG-AXT" firstAttribute="leading" secondItem="tUM-Rw-nDX" secondAttribute="trailing" constant="15" id="Zdc-Ib-cna"/>
+                            <constraint firstItem="ya1-cZ-VDK" firstAttribute="centerY" secondItem="Q2p-VE-O9o" secondAttribute="centerY" id="aNU-4J-bNF"/>
+                            <constraint firstItem="tUM-Rw-nDX" firstAttribute="leading" secondItem="dfV-Lf-MNg" secondAttribute="trailing" constant="42" id="fQw-u3-UdL"/>
+                            <constraint firstItem="Ndh-QJ-uO8" firstAttribute="top" secondItem="tUM-Rw-nDX" secondAttribute="bottom" constant="27.5" id="hbJ-8M-THo"/>
+                            <constraint firstItem="SbL-B8-XOG" firstAttribute="trailing" secondItem="Q2p-VE-O9o" secondAttribute="trailing" constant="20" id="huC-CE-iEH"/>
+                            <constraint firstItem="Ndh-QJ-uO8" firstAttribute="leading" secondItem="tUM-Rw-nDX" secondAttribute="leading" id="k9o-xS-5ZB"/>
+                            <constraint firstItem="SbL-B8-XOG" firstAttribute="trailing" secondItem="ldg-5Z-Dvi" secondAttribute="trailing" constant="20" id="o0b-9C-FWn"/>
+                            <constraint firstItem="ya1-cZ-VDK" firstAttribute="leading" secondItem="SbL-B8-XOG" secondAttribute="leading" constant="20" id="txG-RC-HFB"/>
+                            <constraint firstItem="ya1-cZ-VDK" firstAttribute="bottom" secondItem="SbL-B8-XOG" secondAttribute="bottom" constant="10" id="wKf-0r-Yzk"/>
+                            <constraint firstItem="Q2p-VE-O9o" firstAttribute="bottom" secondItem="SbL-B8-XOG" secondAttribute="bottom" constant="-15" id="xPB-qq-bkI"/>
+                            <constraint firstItem="ztA-Qv-DWR" firstAttribute="top" secondItem="SbL-B8-XOG" secondAttribute="top" constant="10" id="zkW-zi-EGk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SbL-B8-XOG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LJ9-qf-wmn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bwZ-LG-0Wd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2396" y="159"/>
+        </scene>
+        <!--Drink Dairy View Controller-->
+        <scene sceneID="AdD-T7-mBe">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="qDq-Fz-GVh" customClass="DrinkDairyViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cxn-Tn-9Vk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNX-ab-JMK">
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="qDq-Fz-GVh" eventType="touchUpInside" id="ciz-a7-CFW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YX-w5-ltw">
+                                <rect key="frame" x="20" y="774" width="34" height="98"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-Yj-32j" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="91" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lwb-it-lv8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Dairy product do you use?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yK-6i-t7A">
+                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dairy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joc-Zq-gRD">
+                                <rect key="frame" x="20" y="309" width="40" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZS-Ao-a0X">
+                                <rect key="frame" x="234" y="799" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Vh8-VB-xvW"/>
+                                    <constraint firstAttribute="height" constant="48" id="hOW-c0-cR1"/>
+                                </constraints>
+                                <state key="normal" title="Add Dairy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Ze4-kM-Wt8" kind="show" id="fWB-bm-lHf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikX-HH-9qb">
+                                <rect key="frame" x="77" y="309.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="R36-aG-E2k"/>
+                                    <constraint firstAttribute="height" constant="20" id="cu4-hW-sdM"/>
+                                </constraints>
+                                <color key="tintColor" name="orange_jolt"/>
+                                <state key="normal" image="plus.circle" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lBi-Kq-0u6">
+                                <rect key="frame" x="20" y="357" width="73" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ki-us-NA8">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
+                                        <state key="normal" title="whole milk"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JE-ha-Mr8">
+                                        <rect key="frame" x="0.0" y="50" width="57" height="30"/>
+                                        <state key="normal" title="Oat Milk"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nk-2l-QwC">
+                                        <rect key="frame" x="0.0" y="100" width="53" height="30"/>
+                                        <state key="normal" title="2% milk"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gZS-Ao-a0X" firstAttribute="bottom" secondItem="CDs-5h-hNk" secondAttribute="bottom" constant="-15" id="0Zr-L3-cBd"/>
+                            <constraint firstItem="joc-Zq-gRD" firstAttribute="leading" secondItem="0yK-6i-t7A" secondAttribute="leading" id="7kc-hh-g8z"/>
+                            <constraint firstItem="SNX-ab-JMK" firstAttribute="top" secondItem="CDs-5h-hNk" secondAttribute="top" constant="10" id="8P2-Zk-ZYi"/>
+                            <constraint firstItem="SNX-ab-JMK" firstAttribute="leading" secondItem="CDs-5h-hNk" secondAttribute="leading" constant="20" id="DCP-ts-gcg"/>
+                            <constraint firstItem="7YX-w5-ltw" firstAttribute="bottom" secondItem="CDs-5h-hNk" secondAttribute="bottom" constant="10" id="E8l-QQ-A8V"/>
+                            <constraint firstItem="CDs-5h-hNk" firstAttribute="trailing" secondItem="gZS-Ao-a0X" secondAttribute="trailing" constant="20" id="Ihy-JY-7QQ"/>
+                            <constraint firstItem="0yK-6i-t7A" firstAttribute="top" secondItem="fAe-Yj-32j" secondAttribute="bottom" constant="79" id="Lsl-eX-UMN"/>
+                            <constraint firstItem="ikX-HH-9qb" firstAttribute="leading" secondItem="joc-Zq-gRD" secondAttribute="trailing" constant="17" id="Pji-50-GXU"/>
+                            <constraint firstItem="fAe-Yj-32j" firstAttribute="top" secondItem="SNX-ab-JMK" secondAttribute="bottom" constant="5" id="RUB-lr-rcq"/>
+                            <constraint firstItem="CDs-5h-hNk" firstAttribute="trailing" secondItem="0yK-6i-t7A" secondAttribute="trailing" constant="20" id="T3g-wW-ZQR"/>
+                            <constraint firstItem="lBi-Kq-0u6" firstAttribute="top" secondItem="joc-Zq-gRD" secondAttribute="bottom" constant="27.5" id="W4f-fC-TLi"/>
+                            <constraint firstItem="ikX-HH-9qb" firstAttribute="centerY" secondItem="joc-Zq-gRD" secondAttribute="centerY" id="bO1-uY-lra"/>
+                            <constraint firstItem="joc-Zq-gRD" firstAttribute="top" secondItem="0yK-6i-t7A" secondAttribute="bottom" constant="25" id="fHG-bY-2YS"/>
+                            <constraint firstItem="lBi-Kq-0u6" firstAttribute="leading" secondItem="joc-Zq-gRD" secondAttribute="leading" id="gSK-TQ-3iT"/>
+                            <constraint firstItem="CDs-5h-hNk" firstAttribute="trailing" secondItem="fAe-Yj-32j" secondAttribute="trailing" constant="20" id="gz2-Q0-25i"/>
+                            <constraint firstItem="7YX-w5-ltw" firstAttribute="leading" secondItem="CDs-5h-hNk" secondAttribute="leading" constant="20" id="l3D-5L-W8n"/>
+                            <constraint firstItem="0yK-6i-t7A" firstAttribute="leading" secondItem="CDs-5h-hNk" secondAttribute="leading" constant="20" id="mU1-uf-hc0"/>
+                            <constraint firstItem="fAe-Yj-32j" firstAttribute="leading" secondItem="CDs-5h-hNk" secondAttribute="leading" constant="20" id="oZa-CJ-q50"/>
+                            <constraint firstItem="7YX-w5-ltw" firstAttribute="centerY" secondItem="gZS-Ao-a0X" secondAttribute="centerY" id="sSq-r1-zUJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CDs-5h-hNk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qCF-OB-ZVf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wjs-7E-XAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3110" y="159"/>
+        </scene>
+        <!--Drink Sweetener View Controller-->
+        <scene sceneID="yHn-Lb-S4B">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Ze4-kM-Wt8" customClass="DrinkSweetenerViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gjo-4p-ptO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERd-Ee-lLD">
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="krD-tS-APi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvO-QD-f1i">
+                                <rect key="frame" x="20" y="774" width="34" height="98"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VU8-ph-Tdi" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="91" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="slB-8M-m8I"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose what sweeteners youll be using for cofee recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH3-Q9-rRE">
+                                <rect key="frame" x="20" y="200" width="374" height="126"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweeteners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydp-ue-9cy">
+                                <rect key="frame" x="20" y="351" width="90" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUd-P2-kqH">
+                                <rect key="frame" x="190" y="351" width="113.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-P9-Qnl">
+                                <rect key="frame" x="234" y="799" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Vnm-cr-LBo"/>
+                                    <constraint firstAttribute="height" constant="48" id="joD-ce-Dqe"/>
+                                </constraints>
+                                <state key="normal" title="Add Sweeteners">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="tmC-zp-yYf" kind="show" id="ZSc-eE-8Il"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-R9-ovC">
+                                <rect key="frame" x="127" y="351.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="V11-05-UP7"/>
+                                    <constraint firstAttribute="width" constant="20" id="q9r-7v-9LK"/>
+                                </constraints>
+                                <color key="tintColor" name="orange_jolt"/>
+                                <state key="normal" image="plus.circle" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ftn-Hh-4wQ">
+                                <rect key="frame" x="20" y="399" width="57" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPL-Cn-CJb">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
+                                        <state key="normal" title="Sugar"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ip2-vX-cNw">
+                                        <rect key="frame" x="0.0" y="50" width="57" height="30"/>
+                                        <state key="normal" title="Caramel"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSN-be-UwY">
+                                        <rect key="frame" x="0.0" y="100" width="48" height="30"/>
+                                        <state key="normal" title="Syrups"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SCH-aU-DoT">
+                                <rect key="frame" x="190" y="399" width="50" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfm-HD-V6c">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="1 TBLS"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMP-Kg-gDx">
+                                        <rect key="frame" x="0.0" y="50" width="50" height="30"/>
+                                        <state key="normal" title="2 TBLS"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXa-44-7zF">
+                                        <rect key="frame" x="0.0" y="100" width="46" height="30"/>
+                                        <state key="normal" title="3TBLS"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zvO-QD-f1i" firstAttribute="centerY" secondItem="bVe-P9-Qnl" secondAttribute="centerY" id="54y-i9-4le"/>
+                            <constraint firstItem="zvO-QD-f1i" firstAttribute="bottom" secondItem="cFx-WW-dAs" secondAttribute="bottom" constant="10" id="5Jw-Gx-SI2"/>
+                            <constraint firstItem="Ydp-ue-9cy" firstAttribute="top" secondItem="lH3-Q9-rRE" secondAttribute="bottom" constant="25" id="6Nt-iK-Nqs"/>
+                            <constraint firstItem="zvO-QD-f1i" firstAttribute="leading" secondItem="cFx-WW-dAs" secondAttribute="leading" constant="20" id="83J-w3-wQW"/>
+                            <constraint firstItem="cFx-WW-dAs" firstAttribute="trailing" secondItem="bVe-P9-Qnl" secondAttribute="trailing" constant="20" id="AKu-d7-Pld"/>
+                            <constraint firstItem="AnV-R9-ovC" firstAttribute="leading" secondItem="Ydp-ue-9cy" secondAttribute="trailing" constant="17" id="DXN-so-bvN"/>
+                            <constraint firstItem="VU8-ph-Tdi" firstAttribute="leading" secondItem="cFx-WW-dAs" secondAttribute="leading" constant="20" id="FEn-yi-u6x"/>
+                            <constraint firstItem="ERd-Ee-lLD" firstAttribute="leading" secondItem="cFx-WW-dAs" secondAttribute="leading" constant="20" id="GXw-ZA-l6Y"/>
+                            <constraint firstItem="VU8-ph-Tdi" firstAttribute="top" secondItem="ERd-Ee-lLD" secondAttribute="bottom" constant="5" id="ODs-x0-g7m"/>
+                            <constraint firstItem="ERd-Ee-lLD" firstAttribute="top" secondItem="cFx-WW-dAs" secondAttribute="top" constant="10" id="R6K-bo-oXi"/>
+                            <constraint firstItem="cFx-WW-dAs" firstAttribute="trailing" secondItem="VU8-ph-Tdi" secondAttribute="trailing" constant="20" id="dst-jq-ShY"/>
+                            <constraint firstItem="lH3-Q9-rRE" firstAttribute="top" secondItem="VU8-ph-Tdi" secondAttribute="bottom" constant="79" id="fXs-Fm-qYu"/>
+                            <constraint firstItem="lH3-Q9-rRE" firstAttribute="leading" secondItem="cFx-WW-dAs" secondAttribute="leading" constant="20" id="fdi-T9-8Bp"/>
+                            <constraint firstItem="ftn-Hh-4wQ" firstAttribute="top" secondItem="Ydp-ue-9cy" secondAttribute="bottom" constant="27.5" id="h9i-ql-C6v"/>
+                            <constraint firstItem="cFx-WW-dAs" firstAttribute="trailing" secondItem="lH3-Q9-rRE" secondAttribute="trailing" constant="20" id="jDi-Rh-OSe"/>
+                            <constraint firstItem="SCH-aU-DoT" firstAttribute="top" secondItem="GUd-P2-kqH" secondAttribute="bottom" constant="27.5" id="k8a-Pg-Whs"/>
+                            <constraint firstItem="AnV-R9-ovC" firstAttribute="centerY" secondItem="Ydp-ue-9cy" secondAttribute="centerY" id="lY3-7c-EQ2"/>
+                            <constraint firstItem="SCH-aU-DoT" firstAttribute="leading" secondItem="GUd-P2-kqH" secondAttribute="leading" id="oQO-ab-Z6M"/>
+                            <constraint firstItem="GUd-P2-kqH" firstAttribute="centerY" secondItem="AnV-R9-ovC" secondAttribute="centerY" id="oll-ch-udy"/>
+                            <constraint firstItem="ftn-Hh-4wQ" firstAttribute="leading" secondItem="Ydp-ue-9cy" secondAttribute="leading" id="pMZ-Io-6FK"/>
+                            <constraint firstItem="GUd-P2-kqH" firstAttribute="leading" secondItem="AnV-R9-ovC" secondAttribute="trailing" constant="43" id="qsU-Vw-7cD"/>
+                            <constraint firstItem="bVe-P9-Qnl" firstAttribute="bottom" secondItem="cFx-WW-dAs" secondAttribute="bottom" constant="-15" id="t6Z-jc-7Zp"/>
+                            <constraint firstItem="Ydp-ue-9cy" firstAttribute="leading" secondItem="lH3-Q9-rRE" secondAttribute="leading" id="wPE-mm-q8a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cFx-WW-dAs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xhw-BL-iXx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5n4-rH-UhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3816" y="159"/>
+        </scene>
+        <!--Drink Toppings View Controller-->
+        <scene sceneID="9iA-sI-jag">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="tmC-zp-yYf" customClass="DrinkToppingsViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="14f-uC-K14">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZf-eM-WBe">
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="dor-cd-Qab"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-eN-hVp">
+                                <rect key="frame" x="20" y="774" width="34" height="98"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilp-uG-DQQ" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="91" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Wes-tY-Zha"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose what toppings youll be using for cofee recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-LW-LXI">
+                                <rect key="frame" x="20" y="200" width="374" height="126"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toppings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lha-0r-lp2">
+                                <rect key="frame" x="20" y="351" width="70.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUd-rs-YMM">
+                                <rect key="frame" x="170.5" y="351" width="113.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tux-V9-EPP">
+                                <rect key="frame" x="234" y="799" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="PzQ-9J-UGL"/>
+                                    <constraint firstAttribute="width" constant="160" id="St8-LZ-16V"/>
+                                </constraints>
+                                <state key="normal" title="Add Toppings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Miq-MR-hg5" kind="show" id="iyq-Ht-Xju"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-Sd-lNv">
+                                <rect key="frame" x="107.5" y="351.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="dWf-oJ-eJW"/>
+                                    <constraint firstAttribute="height" constant="20" id="ov6-8P-tWI"/>
+                                </constraints>
+                                <color key="tintColor" name="orange_jolt"/>
+                                <state key="normal" image="plus.circle" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QOO-Gf-SP7">
+                                <rect key="frame" x="20" y="399" width="88" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WM-at-4YA">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
+                                        <state key="normal" title="whipe cream"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKn-9Q-D7V">
+                                        <rect key="frame" x="0.0" y="50" width="67" height="30"/>
+                                        <state key="normal" title="cinnamon"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgY-3R-Xou">
+                                        <rect key="frame" x="0.0" y="100" width="44" height="30"/>
+                                        <state key="normal" title="m&amp;ms"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hQF-HW-uog">
+                                <rect key="frame" x="170.5" y="399" width="50" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlD-wp-aRU">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                        <state key="normal" title="1 TBLS"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCv-m7-URe">
+                                        <rect key="frame" x="0.0" y="50" width="50" height="30"/>
+                                        <state key="normal" title="2 TBLS"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnE-Iq-yNT">
+                                        <rect key="frame" x="0.0" y="100" width="46" height="30"/>
+                                        <state key="normal" title="3TBLS"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xtd-LW-LXI" firstAttribute="leading" secondItem="HYO-mc-d8a" secondAttribute="leading" constant="20" id="3Nw-nK-mP1"/>
+                            <constraint firstItem="QOO-Gf-SP7" firstAttribute="top" secondItem="Lha-0r-lp2" secondAttribute="bottom" constant="27.5" id="4iW-4F-REv"/>
+                            <constraint firstItem="ilp-uG-DQQ" firstAttribute="top" secondItem="fZf-eM-WBe" secondAttribute="bottom" constant="5" id="6PO-qz-Ju6"/>
+                            <constraint firstItem="Lha-0r-lp2" firstAttribute="leading" secondItem="Xtd-LW-LXI" secondAttribute="leading" id="97I-fy-wtV"/>
+                            <constraint firstItem="Lha-0r-lp2" firstAttribute="top" secondItem="Xtd-LW-LXI" secondAttribute="bottom" constant="25" id="BIW-MB-yKG"/>
+                            <constraint firstItem="HYO-mc-d8a" firstAttribute="trailing" secondItem="tux-V9-EPP" secondAttribute="trailing" constant="20" id="Btd-HH-ep4"/>
+                            <constraint firstItem="tux-V9-EPP" firstAttribute="bottom" secondItem="HYO-mc-d8a" secondAttribute="bottom" constant="-15" id="FXn-vX-Cdx"/>
+                            <constraint firstItem="dUd-rs-YMM" firstAttribute="leading" secondItem="xTs-Sd-lNv" secondAttribute="trailing" constant="43" id="FaW-BV-YXX"/>
+                            <constraint firstItem="B1w-eN-hVp" firstAttribute="leading" secondItem="HYO-mc-d8a" secondAttribute="leading" constant="20" id="Kg0-9d-zjH"/>
+                            <constraint firstItem="B1w-eN-hVp" firstAttribute="centerY" secondItem="tux-V9-EPP" secondAttribute="centerY" id="NAj-3v-hK8"/>
+                            <constraint firstItem="B1w-eN-hVp" firstAttribute="bottom" secondItem="HYO-mc-d8a" secondAttribute="bottom" constant="10" id="PbH-UI-h6M"/>
+                            <constraint firstItem="xTs-Sd-lNv" firstAttribute="leading" secondItem="Lha-0r-lp2" secondAttribute="trailing" constant="17" id="VD8-kT-miF"/>
+                            <constraint firstItem="HYO-mc-d8a" firstAttribute="trailing" secondItem="Xtd-LW-LXI" secondAttribute="trailing" constant="20" id="XI4-4h-EOu"/>
+                            <constraint firstItem="hQF-HW-uog" firstAttribute="top" secondItem="dUd-rs-YMM" secondAttribute="bottom" constant="27.5" id="YBj-2I-qnX"/>
+                            <constraint firstItem="fZf-eM-WBe" firstAttribute="top" secondItem="HYO-mc-d8a" secondAttribute="top" constant="10" id="YTV-su-vZW"/>
+                            <constraint firstItem="ilp-uG-DQQ" firstAttribute="leading" secondItem="HYO-mc-d8a" secondAttribute="leading" constant="20" id="bH9-9T-lgb"/>
+                            <constraint firstItem="HYO-mc-d8a" firstAttribute="trailing" secondItem="ilp-uG-DQQ" secondAttribute="trailing" constant="20" id="d5N-L1-8is"/>
+                            <constraint firstItem="fZf-eM-WBe" firstAttribute="leading" secondItem="HYO-mc-d8a" secondAttribute="leading" constant="20" id="h8n-mP-JHt"/>
+                            <constraint firstItem="hQF-HW-uog" firstAttribute="leading" secondItem="dUd-rs-YMM" secondAttribute="leading" id="mxi-DL-RXw"/>
+                            <constraint firstItem="dUd-rs-YMM" firstAttribute="centerY" secondItem="xTs-Sd-lNv" secondAttribute="centerY" id="oDN-gC-Wc3"/>
+                            <constraint firstItem="Xtd-LW-LXI" firstAttribute="top" secondItem="ilp-uG-DQQ" secondAttribute="bottom" constant="79" id="qpb-h3-qrO"/>
+                            <constraint firstItem="QOO-Gf-SP7" firstAttribute="leading" secondItem="Lha-0r-lp2" secondAttribute="leading" id="vbL-cE-c8h"/>
+                            <constraint firstItem="xTs-Sd-lNv" firstAttribute="centerY" secondItem="Lha-0r-lp2" secondAttribute="centerY" id="zbd-Ej-ocT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HYO-mc-d8a"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D1O-yB-leb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qzm-yT-9lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4516" y="159"/>
+        </scene>
+        <!--Drink Instructions View Controller-->
+        <scene sceneID="hfC-5l-Ane">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Miq-MR-hg5" customClass="DrinkInstructionsViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bt8-bC-JfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crx-5P-iEj">
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="Miq-MR-hg5" eventType="touchUpInside" id="91t-pb-W0e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXF-KY-Rvz">
+                                <rect key="frame" x="20" y="774" width="34" height="98"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PB1-Ir-DYT" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="91" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qhy-fw-19Z"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lineTintColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Instructions for your Recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsg-W9-Qfd">
+                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqm-JO-pYg">
+                                <rect key="frame" x="20" y="438" width="125.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5e-9C-YOt">
+                                <rect key="frame" x="234" y="799" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="oPK-ll-sRC"/>
+                                    <constraint firstAttribute="width" constant="160" id="qJa-Wd-TyS"/>
+                                </constraints>
+                                <state key="normal" title="Add Instructions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BRv-Kb-UIL" kind="show" id="Jek-nb-hWe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-CQ-Qfl">
+                                <rect key="frame" x="166" y="438.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="Cqx-6m-0r5"/>
+                                    <constraint firstAttribute="height" constant="20" id="Y1c-lh-Jav"/>
+                                </constraints>
+                                <color key="tintColor" name="orange_jolt"/>
+                                <state key="normal" image="plus.circle" catalog="system"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-mD-894">
+                                <rect key="frame" x="20" y="315" width="374" height="91"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3G3-ib-6mJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMt-fV-9Qf">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Medium Rost"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4J-ex-lxb">
+                                                <rect key="frame" x="110" y="0.0" width="53" height="30"/>
+                                                <state key="normal" title="2 Shots"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbY-1J-pag">
+                                                <rect key="frame" x="183" y="0.0" width="111" height="30"/>
+                                                <state key="normal" title="Oat Milk 1/2 cup"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-S8-evv">
+                                        <rect key="frame" x="0.0" y="61" width="268" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrs-et-swA">
+                                                <rect key="frame" x="0.0" y="0.0" width="155" height="30"/>
+                                                <state key="normal" title="Caramel Syrup 3 TBLS"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnL-EF-0wT">
+                                                <rect key="frame" x="175" y="0.0" width="93" height="30"/>
+                                                <state key="normal" title="Whipe Cream"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZF-Tl-QQq">
+                                <rect key="frame" x="43" y="495.5" width="351" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm5-Nw-cAF">
+                                <rect key="frame" x="20" y="502" width="8" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="V8S-CQ-Qfl" firstAttribute="centerY" secondItem="Zqm-JO-pYg" secondAttribute="centerY" id="3r2-Wm-NGp"/>
+                            <constraint firstItem="V8S-CQ-Qfl" firstAttribute="leading" secondItem="Zqm-JO-pYg" secondAttribute="trailing" constant="20.5" id="85j-e9-kVu"/>
+                            <constraint firstItem="Qm5-Nw-cAF" firstAttribute="leading" secondItem="Zqm-JO-pYg" secondAttribute="leading" id="AiE-oc-Hpi"/>
+                            <constraint firstItem="OZF-Tl-QQq" firstAttribute="leading" secondItem="Qm5-Nw-cAF" secondAttribute="trailing" constant="15" id="CBe-Kj-naw"/>
+                            <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="T5e-9C-YOt" secondAttribute="trailing" constant="20" id="DQH-9j-CQC"/>
+                            <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="PB1-Ir-DYT" secondAttribute="trailing" constant="20" id="EYn-4c-bEc"/>
+                            <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="EYq-mD-894" secondAttribute="trailing" constant="20" id="FuC-JA-piV"/>
+                            <constraint firstItem="AXF-KY-Rvz" firstAttribute="bottom" secondItem="49j-qK-xEb" secondAttribute="bottom" constant="10" id="MxN-ME-dOC"/>
+                            <constraint firstItem="Zqm-JO-pYg" firstAttribute="leading" secondItem="Mrs-et-swA" secondAttribute="leading" id="Pzo-Gt-ulh"/>
+                            <constraint firstItem="Jsg-W9-Qfd" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="QDR-iz-Ex0"/>
+                            <constraint firstItem="crx-5P-iEj" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="UK5-cR-sKe"/>
+                            <constraint firstItem="PB1-Ir-DYT" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="ZWe-xs-spV"/>
+                            <constraint firstItem="Jsg-W9-Qfd" firstAttribute="top" secondItem="PB1-Ir-DYT" secondAttribute="bottom" constant="79" id="bXg-oA-di3"/>
+                            <constraint firstItem="AXF-KY-Rvz" firstAttribute="centerY" secondItem="T5e-9C-YOt" secondAttribute="centerY" id="d3V-9Y-r81"/>
+                            <constraint firstItem="crx-5P-iEj" firstAttribute="top" secondItem="49j-qK-xEb" secondAttribute="top" constant="10" id="dR6-t8-Ywf"/>
+                            <constraint firstItem="Qm5-Nw-cAF" firstAttribute="top" secondItem="Zqm-JO-pYg" secondAttribute="bottom" constant="43.5" id="gOp-33-kgU"/>
+                            <constraint firstItem="PB1-Ir-DYT" firstAttribute="top" secondItem="crx-5P-iEj" secondAttribute="bottom" constant="5" id="hYe-Yv-RS9"/>
+                            <constraint firstItem="AXF-KY-Rvz" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="iWk-rE-o5g"/>
+                            <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="OZF-Tl-QQq" secondAttribute="trailing" constant="20" id="njN-s2-siQ"/>
+                            <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="Jsg-W9-Qfd" secondAttribute="trailing" constant="20" id="oXs-9g-F5I"/>
+                            <constraint firstItem="T5e-9C-YOt" firstAttribute="bottom" secondItem="49j-qK-xEb" secondAttribute="bottom" constant="-15" id="pig-Cw-tQV"/>
+                            <constraint firstItem="Zqm-JO-pYg" firstAttribute="top" secondItem="Mrs-et-swA" secondAttribute="bottom" constant="32" id="pui-sQ-Bbk"/>
+                            <constraint firstItem="EYq-mD-894" firstAttribute="top" secondItem="Jsg-W9-Qfd" secondAttribute="bottom" constant="31" id="vWb-w5-P6f"/>
+                            <constraint firstItem="EYq-mD-894" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="z4t-Qs-WLm"/>
+                            <constraint firstItem="OZF-Tl-QQq" firstAttribute="centerY" secondItem="Qm5-Nw-cAF" secondAttribute="centerY" id="zrK-7Y-6hO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="49j-qK-xEb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Gp4-uf-cAm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CX-rZ-oCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5207.2463768115949" y="158.70535714285714"/>
+        </scene>
+        <!--Post Drink View Controller-->
+        <scene sceneID="WM8-ay-mAO">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BRv-Kb-UIL" customClass="PostDrinkViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A31-h1-ZNt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEG-Hi-kOd">
+                                <rect key="frame" x="20" y="817" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="BRv-Kb-UIL" eventType="touchUpInside" id="QfO-3v-FYO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-7T-vuU">
+                                <rect key="frame" x="127" y="304" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="B71-og-eyg"/>
+                                    <constraint firstAttribute="height" constant="48" id="aln-yD-irT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-eO-q5D">
+                                <rect key="frame" x="98.5" y="386" width="217" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="T1U-bM-btD"/>
+                                    <constraint firstAttribute="height" constant="48" id="mot-su-wZX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Make new Recipes">
+                                    <color key="titleColor" name="orange_jolt"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KlI-eO-q5D" firstAttribute="centerX" secondItem="ZsQ-7T-vuU" secondAttribute="centerX" id="9PE-qV-CXi"/>
+                            <constraint firstItem="ZsQ-7T-vuU" firstAttribute="centerX" secondItem="hfT-om-4X9" secondAttribute="centerX" id="9qW-PQ-aS2"/>
+                            <constraint firstItem="KlI-eO-q5D" firstAttribute="top" secondItem="ZsQ-7T-vuU" secondAttribute="bottom" constant="34" id="MIG-1T-Yf8"/>
+                            <constraint firstItem="oEG-Hi-kOd" firstAttribute="bottom" secondItem="hfT-om-4X9" secondAttribute="bottom" constant="-15" id="dBi-VF-YtK"/>
+                            <constraint firstItem="ZsQ-7T-vuU" firstAttribute="top" secondItem="hfT-om-4X9" secondAttribute="top" constant="260" id="geM-Df-W4v"/>
+                            <constraint firstItem="oEG-Hi-kOd" firstAttribute="leading" secondItem="hfT-om-4X9" secondAttribute="leading" constant="20" id="ioC-oM-9Hk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hfT-om-4X9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V66-Fi-1SU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywb-Vy-6IH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5927.536231884058" y="158.70535714285714"/>
         </scene>
     </scenes>
     <resources>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
         <namedColor name="black_jolt">
             <color red="0.23529411764705882" green="0.10588235294117647" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
