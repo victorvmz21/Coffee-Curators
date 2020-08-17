@@ -348,6 +348,7 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.9)
+  - StepIndicator (1.0.8)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -355,6 +356,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - FirebaseFirestoreSwift
   - GoogleSignIn
+  - StepIndicator (~> 1.0.8)
 
 SPEC REPOS:
   trunk:
@@ -380,6 +382,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - StepIndicator
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -404,7 +407,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
+  StepIndicator: 748b293f671355b021253f82031ac002f153dc81
 
-PODFILE CHECKSUM: f13d5ac6ee2400d641874cba5306ee86b77baa34
+PODFILE CHECKSUM: af74ba6d39deeb778c8e58581effb576c5743645
 
 COCOAPODS: 1.9.3
