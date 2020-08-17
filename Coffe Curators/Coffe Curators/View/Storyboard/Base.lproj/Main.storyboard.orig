@@ -25,7 +25,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="signIn" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signIn" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,16 +49,16 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Recipe, Craft a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUl-rZ-YXf">
-                                <rect key="frame" x="68.5" y="866" width="277" height="27.5"/>
+                                <rect key="frame" x="59" y="238" width="296.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeScreen" translatesAutoresizingMaskIntoConstraints="NO" id="yzM-kZ-MJ9">
-                                <rect key="frame" x="87" y="66" width="240" height="800"/>
+                                <rect key="frame" x="87" y="110" width="240" height="128"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="N1S-Is-iPB" userLabel="Sign in stack view">
-                                <rect key="frame" x="87" y="939" width="240" height="1362.5"/>
+                                <rect key="frame" x="87" y="311.5" width="240" height="218"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TG1-zr-Vzk">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
@@ -85,7 +85,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqY-Co-9Ky">
-                                        <rect key="frame" x="0.0" y="174" width="240" height="1188.5"/>
+                                        <rect key="frame" x="0.0" y="174" width="240" height="44"/>
                                         <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="KDN-05-zaa"/>
@@ -102,7 +102,6 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signInWithEmailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="joF-sf-bTJ"/>
-                                            <segue destination="wSF-pf-4Be" kind="show" id="EcQ-aW-JP1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -144,13 +143,13 @@
                                 <rect key="frame" x="50" y="258.5" width="314" height="379"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2c-Ut-pu6">
-                                        <rect key="frame" x="3" y="149" width="93" height="28"/>
+                                        <rect key="frame" x="3" y="149" width="106.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtG-mW-X9k">
-                                        <rect key="frame" x="3" y="287" width="184" height="28"/>
+                                        <rect key="frame" x="3" y="287" width="206.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -254,7 +253,7 @@
                                         <rect key="frame" x="165.5" y="52" width="103" height="84"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Recipe, Craft a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1je-GQ-1v0">
-                                        <rect key="frame" x="78.5" y="191.5" width="277" height="28"/>
+                                        <rect key="frame" x="69" y="191.5" width="296.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
@@ -340,7 +339,7 @@
                                 <rect key="frame" x="50" y="306" width="314" height="284"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXd-7p-8XO">
-                                        <rect key="frame" x="3" y="150" width="93" height="28"/>
+                                        <rect key="frame" x="3" y="150" width="106.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -390,7 +389,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW6-nL-u03">
-                                        <rect key="frame" x="169" y="247.5" width="118" height="32"/>
+                                        <rect key="frame" x="157" y="247.5" width="130" height="32"/>
                                         <fontDescription key="fontDescription" name="Petrona-Light" family="Petrona" pointSize="17"/>
                                         <state key="normal" title="Forgot Password">
                                             <color key="titleColor" name="black_jolt"/>
@@ -452,7 +451,7 @@
                                         <rect key="frame" x="165.5" y="52" width="103" height="84"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Recipe, Craft a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG1-NG-p6W">
-                                        <rect key="frame" x="78.5" y="191.5" width="277" height="28"/>
+                                        <rect key="frame" x="69" y="191.5" width="296.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
@@ -544,13 +543,21 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn more about coffee" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-SM-GBC">
-                                                <rect key="frame" x="20" y="543" width="374" height="84"/>
+<<<<<<< HEAD
+                                                <rect key="frame" x="20" y="563" width="374" height="84"/>
+=======
+                                                <rect key="frame" x="20" y="543" width="374" height="81.5"/>
+>>>>>>> b90a3a24e2b4d09d53724681f1acf25b8ba9d06a
                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="36"/>
                                                 <color key="textColor" red="0.23529411759999999" green="0.1058823529" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Gm-MM-qw9">
-                                                <rect key="frame" x="14" y="765.5" width="386" height="634.5"/>
+<<<<<<< HEAD
+                                                <rect key="frame" x="14" y="785.5" width="386" height="614.5"/>
+=======
+                                                <rect key="frame" x="14" y="760.5" width="386" height="639.5"/>
+>>>>>>> b90a3a24e2b4d09d53724681f1acf25b8ba9d06a
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
@@ -670,7 +677,11 @@
                                                 <sections/>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZh-bH-8au">
-                                                <rect key="frame" x="32" y="654" width="350" height="79.5"/>
+<<<<<<< HEAD
+                                                <rect key="frame" x="32" y="674" width="350" height="79.5"/>
+=======
+                                                <rect key="frame" x="32" y="651.5" width="350" height="77"/>
+>>>>>>> b90a3a24e2b4d09d53724681f1acf25b8ba9d06a
                                                 <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</string>
                                                 <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="17"/>
                                                 <color key="textColor" name="black_jolt"/>
@@ -778,7 +789,6 @@
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="signUpButtonTapped:" destination="AqI-5G-iiL" eventType="touchUpInside" id="pBT-z0-HDT"/>
-                                                                    <segue destination="vgQ-SV-WSS" kind="show" id="EFh-r9-cIc"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fm-Vr-dxB">
@@ -793,7 +803,7 @@
                                                                 </state>
                                                                 <connections>
                                                                     <action selector="signInButtonTapped:" destination="AqI-5G-iiL" eventType="touchUpInside" id="xkf-J0-FIA"/>
-                                                                    <segue destination="BYZ-38-t0r" kind="show" id="Qiq-cE-KtG"/>
+                                                                    <segue destination="wSF-pf-4Be" kind="show" id="fA2-3a-Ll3"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>

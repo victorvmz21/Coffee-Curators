@@ -255,6 +255,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                          
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-il-5Xs">
+                                <rect key="frame" x="441.5" y="824" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="eMf-bP-Y9f"/>
+                                    <constraint firstAttribute="height" constant="48" id="rRN-RZ-8dx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Petrona-SemiBold" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Add Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2V7-pA-8cD" customClass="StepIndicatorView" customModule="StepIndicator">
                                 <rect key="frame" x="20" y="90" width="591.5" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -296,7 +315,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-DB-K0I">
+
                                 <rect key="frame" x="20" y="807" width="39" height="32"/>
+
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>

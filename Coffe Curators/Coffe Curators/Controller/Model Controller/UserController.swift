@@ -9,6 +9,8 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import FirebaseAuth
+import FirebaseFirestore
 
 struct UserController {
     // MARK: - Shared Instance
@@ -93,6 +95,27 @@ struct UserController {
             }
         }
     }
+    
+    //checks if email exists
+    func emailCheck(email: String) {
+        let query = db.collection("users").whereField("email", isEqualTo: email)
+        
+        query.getDocuments { (snapshot, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                UserController.sharedUserController.updatePassword(email: email)
+            }
+        }
+    } // End of email check and update func
+    
+//    func invalidEmailAlert() {
+//        let alertController = UIAlertController(title: nil, message: "Invalid Email", preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "Ok", style: .default)
+//        alertController.addAction(okAction)
+//        present(alertController, animated: true)
+//    }
+    
     
     //fetchCurrentUser
     func fetchCurrentUser(uid: String, completion: @escaping (Result<User, Error>) -> Void) {
