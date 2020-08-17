@@ -66,14 +66,14 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5E-k4-px9">
-                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-iz-Z7o">
-                                <rect key="frame" x="20" y="431" width="374" height="44"/>
+                                <rect key="frame" x="20" y="432" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Oo1-5D-fLq"/>
                                 </constraints>
@@ -81,7 +81,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1t-zf-89a">
-                                <rect key="frame" x="20" y="260" width="374" height="41"/>
+                                <rect key="frame" x="20" y="260" width="374" height="42"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
@@ -157,27 +157,27 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of Drink is this?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-NK-7bs">
-                                <rect key="frame" x="20" y="260" width="374" height="81.5"/>
+                                <rect key="frame" x="20" y="260" width="374" height="84"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-2H-VAZ">
-                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yih-LO-8Oa">
-                                <rect key="frame" x="20" y="832" width="36" height="32"/>
+                                <rect key="frame" x="20" y="832" width="39" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="N5z-J5-0b1">
-                                <rect key="frame" x="20" y="383" width="135" height="188"/>
+                                <rect key="frame" x="20" y="385.5" width="135" height="188"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-Nc-FLf">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="54"/>
@@ -238,7 +238,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-il-5Xs">
-                                <rect key="frame" x="440" y="824" width="160" height="48"/>
+                                <rect key="frame" x="441.5" y="824" width="160" height="48"/>
                                 <color key="backgroundColor" name="orange_jolt"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="eMf-bP-Y9f"/>
@@ -255,7 +255,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2V7-pA-8cD" customClass="StepIndicatorView" customModule="StepIndicator">
-                                <rect key="frame" x="20" y="90" width="590" height="30"/>
+                                <rect key="frame" x="20" y="90" width="591.5" height="30"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="vhX-Pi-nIZ"/>
@@ -273,27 +273,27 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a photo for (drink name here)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KI-0I-GgL">
-                                <rect key="frame" x="20" y="260" width="590" height="41"/>
+                                <rect key="frame" x="20" y="260" width="591.5" height="42"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-tg-dre">
-                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <rect key="frame" x="20" y="54" width="53" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-DB-K0I">
-                                <rect key="frame" x="20" y="832" width="36" height="32"/>
+                                <rect key="frame" x="20" y="832" width="39" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-Gm-bYv">
-                                <rect key="frame" x="20" y="343.5" width="590" height="203"/>
+                                <rect key="frame" x="20" y="344.5" width="591.5" height="203"/>
                                 <color key="backgroundColor" name="orange_jolt"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -302,13 +302,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload New Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3a-RG-QJG">
-                                <rect key="frame" x="20" y="554.5" width="194" height="29"/>
+                                <rect key="frame" x="20" y="555.5" width="194" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-cT-Atd">
-                                <rect key="frame" x="575" y="338.5" width="30" height="30"/>
+                                <rect key="frame" x="576.5" y="339.5" width="30" height="30"/>
                                 <state key="normal" title="...">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>

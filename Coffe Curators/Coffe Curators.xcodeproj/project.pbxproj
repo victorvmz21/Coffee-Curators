@@ -78,11 +78,11 @@
 		52B09B3224E332A300241B38 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		52B09B3424E3440600241B38 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52B09B3624E44CCF00241B38 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		52B09B3924E44F6100241B38 /* Petrona-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-Medium.ttf"; path = "../../../../Assets/Petrona/static/Petrona-Medium.ttf"; sourceTree = "<group>"; };
-		52B09B3B24E44F7000241B38 /* Petrona-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-Regular.ttf"; path = "../../../../Assets/Petrona/static/Petrona-Regular.ttf"; sourceTree = "<group>"; };
-		52B09B3D24E44F8300241B38 /* Petrona-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-Light.ttf"; path = "../../../../Assets/Petrona/static/Petrona-Light.ttf"; sourceTree = "<group>"; };
-		52B09B3F24E44F8D00241B38 /* Petrona-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-ExtraLight.ttf"; path = "../../../../Assets/Petrona/static/Petrona-ExtraLight.ttf"; sourceTree = "<group>"; };
-		52B09B4124E450D500241B38 /* Petrona-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Petrona-SemiBold.ttf"; path = "../../../../Assets/Petrona/static/Petrona-SemiBold.ttf"; sourceTree = "<group>"; };
+		52B09B3924E44F6100241B38 /* Petrona-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-Medium.ttf"; sourceTree = "<group>"; };
+		52B09B3B24E44F7000241B38 /* Petrona-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-Regular.ttf"; sourceTree = "<group>"; };
+		52B09B3D24E44F8300241B38 /* Petrona-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-Light.ttf"; sourceTree = "<group>"; };
+		52B09B3F24E44F8D00241B38 /* Petrona-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-ExtraLight.ttf"; sourceTree = "<group>"; };
+		52B09B4124E450D500241B38 /* Petrona-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-SemiBold.ttf"; sourceTree = "<group>"; };
 		52B09B4324E463FD00241B38 /* Borders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Borders.swift; sourceTree = "<group>"; };
 		52B09B4524E5A46500241B38 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52B09B4724E5AA2C00241B38 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -233,7 +233,6 @@
 				52B09B3224E332A300241B38 /* SignUpViewController.swift */,
 				52B09B3424E3440600241B38 /* LoginViewController.swift */,
 				52B09B4524E5A46500241B38 /* HomeViewController.swift */,
-
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
