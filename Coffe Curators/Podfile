@@ -12,6 +12,7 @@ target 'Coffe Curators' do
      pod 'Firebase/Auth'
      pod 'GoogleSignIn'
      pod 'Firebase/Analytics'
+     pod 'StepIndicator', '~> 1.0.8'
 
   target 'Coffe CuratorsTests' do
     inherit! :search_paths

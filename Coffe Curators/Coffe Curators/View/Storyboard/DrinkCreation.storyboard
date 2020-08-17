@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tSE-ns-Eg4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Petrona-Medium.ttf">
+            <string>Petrona-Medium</string>
+        </array>
+        <array key="Petrona-Regular.ttf">
+            <string>Petrona-Regular</string>
+        </array>
+        <array key="Petrona-SemiBold.ttf">
+            <string>Petrona-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="M6W-sr-QD8">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="tSE-ns-Eg4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qWc-bj-MuJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1a-Pz-VNM">
+                                <rect key="frame" x="224" y="818" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="CR4-GZ-MyE"/>
+                                    <constraint firstAttribute="width" constant="160" id="Jwg-bf-D5A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Petrona-SemiBold" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Add Title">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Znh-Vb-DV8" kind="show" id="7hZ-89-mR7"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Og4-ko-3tF" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="90" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="f1a-aQ-Vyd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5E-k4-px9">
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-iz-Z7o">
+                                <rect key="frame" x="20" y="431" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Oo1-5D-fLq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1t-zf-89a">
+                                <rect key="frame" x="20" y="260" width="374" height="41"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wZ1-5r-oPk" firstAttribute="trailing" secondItem="v1t-zf-89a" secondAttribute="trailing" constant="20" id="1tL-JN-1am"/>
+                            <constraint firstItem="zHr-iz-Z7o" firstAttribute="top" secondItem="v1t-zf-89a" secondAttribute="bottom" constant="130" id="5Cy-j7-FXh"/>
+                            <constraint firstItem="q5E-k4-px9" firstAttribute="top" secondItem="wZ1-5r-oPk" secondAttribute="top" constant="10" id="AyH-Fp-kIj"/>
+                            <constraint firstItem="zHr-iz-Z7o" firstAttribute="leading" secondItem="wZ1-5r-oPk" secondAttribute="leading" constant="20" id="CA5-Kp-8z8"/>
+                            <constraint firstItem="Og4-ko-3tF" firstAttribute="leading" secondItem="wZ1-5r-oPk" secondAttribute="leading" constant="20" id="ELa-cQ-KeR"/>
+                            <constraint firstAttribute="bottom" secondItem="C1a-Pz-VNM" secondAttribute="bottom" constant="30" id="Gj1-ce-i7F"/>
+                            <constraint firstItem="Og4-ko-3tF" firstAttribute="top" secondItem="q5E-k4-px9" secondAttribute="bottom" constant="4" id="brn-U6-JoO"/>
+                            <constraint firstItem="wZ1-5r-oPk" firstAttribute="trailing" secondItem="C1a-Pz-VNM" secondAttribute="trailing" constant="30" id="hMC-xR-AnC"/>
+                            <constraint firstItem="wZ1-5r-oPk" firstAttribute="trailing" secondItem="zHr-iz-Z7o" secondAttribute="trailing" constant="20" id="mYF-RH-TVS"/>
+                            <constraint firstItem="q5E-k4-px9" firstAttribute="leading" secondItem="wZ1-5r-oPk" secondAttribute="leading" constant="20" id="n4X-Lo-rcP"/>
+                            <constraint firstItem="v1t-zf-89a" firstAttribute="top" secondItem="Og4-ko-3tF" secondAttribute="bottom" constant="140" id="nE4-3Y-4bY"/>
+                            <constraint firstItem="wZ1-5r-oPk" firstAttribute="trailing" secondItem="Og4-ko-3tF" secondAttribute="trailing" constant="20" id="p2d-KE-4m1"/>
+                            <constraint firstItem="v1t-zf-89a" firstAttribute="leading" secondItem="Og4-ko-3tF" secondAttribute="leading" id="qI6-RP-DPA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wZ1-5r-oPk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usn-Vx-vlo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684.05797101449275" y="171.42857142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="s9Z-Pf-i72">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Znh-Vb-DV8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EM8-Ho-xIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BW0-d9-3cd">
+                                <rect key="frame" x="224" y="824" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="oZ2-xd-oMu"/>
+                                    <constraint firstAttribute="width" constant="160" id="ym0-Pb-Q5N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Petrona-SemiBold" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Add Type">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="1jv-Zl-nrk" kind="show" id="286-Hc-ebY"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDj-Fa-cSa" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="90" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IrY-5f-tfF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of Drink is this?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-NK-7bs">
+                                <rect key="frame" x="20" y="260" width="374" height="81.5"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-2H-VAZ">
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yih-LO-8Oa">
+                                <rect key="frame" x="20" y="832" width="36" height="32"/>
+                                <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="N5z-J5-0b1">
+                                <rect key="frame" x="20" y="383" width="135" height="188"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-Nc-FLf">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="54"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                        <state key="normal" title="Hot">
+                                            <color key="titleColor" name="black_jolt"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="702-2k-1Ho">
+                                        <rect key="frame" x="0.0" y="67" width="76" height="54"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                        <state key="normal" title="Cold">
+                                            <color key="titleColor" name="black_jolt"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUe-dQ-Jfm">
+                                        <rect key="frame" x="0.0" y="134" width="135" height="54"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                        <state key="normal" title="Blended">
+                                            <color key="titleColor" name="black_jolt"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UpO-NK-7bs" firstAttribute="top" secondItem="rDj-Fa-cSa" secondAttribute="bottom" constant="140" id="2qm-uz-GHz"/>
+                            <constraint firstItem="N5z-J5-0b1" firstAttribute="height" secondItem="EM8-Ho-xIJ" secondAttribute="height" multiplier="0.209821" id="7kR-UI-CuP"/>
+                            <constraint firstItem="EjT-2H-VAZ" firstAttribute="leading" secondItem="duf-ap-a5n" secondAttribute="leading" constant="20" id="Byz-gL-hS1"/>
+                            <constraint firstItem="yih-LO-8Oa" firstAttribute="leading" secondItem="duf-ap-a5n" secondAttribute="leading" constant="20" id="D3y-e9-0kg"/>
+                            <constraint firstItem="yih-LO-8Oa" firstAttribute="centerY" secondItem="BW0-d9-3cd" secondAttribute="centerY" id="E6H-bG-zIp"/>
+                            <constraint firstItem="BW0-d9-3cd" firstAttribute="bottom" secondItem="duf-ap-a5n" secondAttribute="bottom" constant="10" id="Mel-di-H35"/>
+                            <constraint firstAttribute="trailing" secondItem="UpO-NK-7bs" secondAttribute="trailing" constant="20" id="WuM-bh-gNq"/>
+                            <constraint firstItem="EjT-2H-VAZ" firstAttribute="top" secondItem="duf-ap-a5n" secondAttribute="top" constant="10" id="hJe-mo-raz"/>
+                            <constraint firstItem="duf-ap-a5n" firstAttribute="trailing" secondItem="BW0-d9-3cd" secondAttribute="trailing" constant="30" id="kTr-3g-gW9"/>
+                            <constraint firstItem="N5z-J5-0b1" firstAttribute="leading" secondItem="duf-ap-a5n" secondAttribute="leading" constant="20" id="mxw-Xk-5hI"/>
+                            <constraint firstItem="UpO-NK-7bs" firstAttribute="leading" secondItem="rDj-Fa-cSa" secondAttribute="leading" id="ogc-u8-vh3"/>
+                            <constraint firstItem="duf-ap-a5n" firstAttribute="trailing" secondItem="rDj-Fa-cSa" secondAttribute="trailing" constant="20" id="p53-Vv-Wd8"/>
+                            <constraint firstItem="N5z-J5-0b1" firstAttribute="top" secondItem="UpO-NK-7bs" secondAttribute="bottom" constant="41.5" id="sLK-Gb-KFP"/>
+                            <constraint firstItem="rDj-Fa-cSa" firstAttribute="leading" secondItem="duf-ap-a5n" secondAttribute="leading" constant="20" id="tjj-KL-sjt"/>
+                            <constraint firstItem="rDj-Fa-cSa" firstAttribute="top" secondItem="EjT-2H-VAZ" secondAttribute="bottom" constant="4" id="zx7-iW-SVC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="duf-ap-a5n"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ixD-a8-czj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ye1-hQ-eKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="170.75892857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JUN-3T-Njh">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="1jv-Zl-nrk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qkc-nA-ZJ7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb9-il-5Xs">
+                                <rect key="frame" x="440" y="824" width="160" height="48"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="eMf-bP-Y9f"/>
+                                    <constraint firstAttribute="height" constant="48" id="rRN-RZ-8dx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Petrona-SemiBold" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Add Photo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2V7-pA-8cD" customClass="StepIndicatorView" customModule="StepIndicator">
+                                <rect key="frame" x="20" y="90" width="590" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vhX-Pi-nIZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
+                                        <color key="value" name="orange_jolt"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a photo for (drink name here)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KI-0I-GgL">
+                                <rect key="frame" x="20" y="260" width="590" height="41"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-tg-dre">
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
+                                <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-DB-K0I">
+                                <rect key="frame" x="20" y="832" width="36" height="32"/>
+                                <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" name="black_jolt"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-Gm-bYv">
+                                <rect key="frame" x="20" y="343.5" width="590" height="203"/>
+                                <color key="backgroundColor" name="orange_jolt"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload New Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3a-RG-QJG">
+                                <rect key="frame" x="20" y="554.5" width="194" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" name="black_jolt"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-cT-Atd">
+                                <rect key="frame" x="575" y="338.5" width="30" height="30"/>
+                                <state key="normal" title="...">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e6P-DB-K0I" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="1zj-Uo-htK"/>
+                            <constraint firstItem="2V7-pA-8cD" firstAttribute="top" secondItem="Egg-tg-dre" secondAttribute="bottom" constant="4" id="3B3-k6-Xv0"/>
+                            <constraint firstItem="e3a-RG-QJG" firstAttribute="leading" secondItem="kHQ-Gm-bYv" secondAttribute="leading" id="3Da-i8-ug6"/>
+                            <constraint firstItem="e3a-RG-QJG" firstAttribute="top" secondItem="kHQ-Gm-bYv" secondAttribute="bottom" constant="8" id="8pr-gy-xNL"/>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="width" secondItem="qkc-nA-ZJ7" secondAttribute="width" multiplier="0.903382" id="BE9-X5-tPl"/>
+                            <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="2V7-pA-8cD" secondAttribute="trailing" constant="20" id="BdA-uL-Drv"/>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="Bf6-oZ-5eQ"/>
+                            <constraint firstItem="1vc-cT-Atd" firstAttribute="leading" secondItem="kHQ-Gm-bYv" secondAttribute="trailing" constant="-35" id="CM0-P0-FlA"/>
+                            <constraint firstItem="2V7-pA-8cD" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="CPG-bP-MNY"/>
+                            <constraint firstItem="e6P-DB-K0I" firstAttribute="centerY" secondItem="Sb9-il-5Xs" secondAttribute="centerY" id="DVX-IR-BUa"/>
+                            <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="Sb9-il-5Xs" secondAttribute="trailing" constant="30" id="DXX-8H-3W6"/>
+                            <constraint firstItem="2KI-0I-GgL" firstAttribute="top" secondItem="2V7-pA-8cD" secondAttribute="bottom" constant="140" id="P2o-iN-o2n"/>
+                            <constraint firstItem="Egg-tg-dre" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="Tmf-M7-lHU"/>
+                            <constraint firstItem="2KI-0I-GgL" firstAttribute="leading" secondItem="2V7-pA-8cD" secondAttribute="leading" id="Vc6-TL-e0I"/>
+                            <constraint firstItem="Sb9-il-5Xs" firstAttribute="bottom" secondItem="kQC-3V-dUq" secondAttribute="bottom" constant="10" id="d9O-Ty-lZf"/>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="top" secondItem="1vc-cT-Atd" secondAttribute="bottom" constant="-25" id="dpf-gP-9OD"/>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="top" secondItem="2KI-0I-GgL" secondAttribute="bottom" constant="42.5" id="jLg-fH-HRI"/>
+                            <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="kHQ-Gm-bYv" secondAttribute="trailing" constant="20" id="n9v-gb-bpg"/>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="height" secondItem="qkc-nA-ZJ7" secondAttribute="height" multiplier="0.226562" id="pej-xC-Dts"/>
+                            <constraint firstAttribute="trailing" secondItem="2KI-0I-GgL" secondAttribute="trailing" constant="20" id="xEd-EO-ID9"/>
+                            <constraint firstItem="Egg-tg-dre" firstAttribute="top" secondItem="kQC-3V-dUq" secondAttribute="top" constant="10" id="xtM-cx-BMS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kQC-3V-dUq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3S6-tc-78g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gny-JN-TeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="170.75892857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="black_jolt">
+            <color red="0.23529411764705882" green="0.10588235294117647" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="orange_jolt">
+            <color red="0.96862745098039216" green="0.59215686274509804" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186B25E8FF6AEBAA407F284A /* Pods_Coffe_Curators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD0479E7DEF0EE3924A71F3 /* Pods_Coffe_Curators.framework */; };
+		524FB7EA24EA4DD70077E812 /* DrinkCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524FB7E924EA4DD70077E812 /* DrinkCreation.storyboard */; };
 		5295D8F024DC656C002434F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8EF24DC656C002434F8 /* AppDelegate.swift */; };
 		5295D8F224DC656C002434F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8F124DC656C002434F8 /* SceneDelegate.swift */; };
 		5295D8F424DC656C002434F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8F324DC656C002434F8 /* ViewController.swift */; };
@@ -59,6 +60,7 @@
 		1E3316C022856FF527F6B641 /* Pods-Coffe CuratorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe CuratorsTests.debug.xcconfig"; path = "Target Support Files/Pods-Coffe CuratorsTests/Pods-Coffe CuratorsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		27E7B8BB71DB33313A07DE6C /* Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		41DD8F3691205FFF0C3C725E /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffe_Curators_Coffe_CuratorsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		524FB7E924EA4DD70077E812 /* DrinkCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrinkCreation.storyboard; sourceTree = "<group>"; };
 		5295D8EC24DC656C002434F8 /* Coffe Curators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffe Curators.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5295D8EF24DC656C002434F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5295D8F124DC656C002434F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				5295D8F524DC656C002434F8 /* Main.storyboard */,
+				524FB7E924EA4DD70077E812 /* DrinkCreation.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				52B09B4224E450D500241B38 /* Petrona-SemiBold.ttf in Resources */,
 				DE957B8F24DC71E3004F2919 /* GoogleService-Info.plist in Resources */,
 				52B09B3E24E44F8300241B38 /* Petrona-Light.ttf in Resources */,
+				524FB7EA24EA4DD70077E812 /* DrinkCreation.storyboard in Resources */,
 				5295D8F924DC656E002434F8 /* Assets.xcassets in Resources */,
 				5295D8F724DC656C002434F8 /* Main.storyboard in Resources */,
 				52B09B3A24E44F6100241B38 /* Petrona-Medium.ttf in Resources */,
