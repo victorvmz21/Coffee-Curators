@@ -37,6 +37,10 @@ class LoginViewController: UIViewController {
             
             if result != nil {
                 print("signed in")
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
+                viewController.modalPresentationStyle = .fullScreen
+                self.present(viewController, animated: true, completion: nil)
             } else {
                 print("No user")
             }
