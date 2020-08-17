@@ -75,6 +75,15 @@ class HomeViewController: UIViewController {
     }
     
     //MARK: - Methods
+//    func toSignInPage() {
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        guard let viewController = storyBoard.instantiateViewController(identifier: "signIn") as? SignInViewController  else {return}
+//        viewController.modalPresentationStyle = .fullScreen
+//        self.present(viewController, animated: true, completion: nil)
+//    }
+    
+    
+    
     func tableViewSetup() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
