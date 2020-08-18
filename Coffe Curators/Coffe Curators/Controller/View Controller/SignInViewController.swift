@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import CryptoKit
+import FirebaseAuth
 import AuthenticationServices
 
 class SignInViewController: UIViewController {
@@ -22,15 +23,15 @@ class SignInViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()
         setUpSignInAppleButton()
-        checkUser()
+        SignInViewController.checkUser()
     }
     
     // MARK: - Helper Methods
     
     //setup userCheck
-    func checkUser() {
+    static func checkUser() {
         guard let user = Auth.auth().currentUser else {return}
-        let firstName = user.displayName?.components(separatedBy: " ")[0] ?? ""
+        let firstName = user.displayName?.components(separatedBy: " ")[0] ?? "User: \(user.uid)"
         let lastName = user.displayName?.components(separatedBy: " ")[1] ?? ""
         let email = user.email ?? ""
         let uid = user.uid

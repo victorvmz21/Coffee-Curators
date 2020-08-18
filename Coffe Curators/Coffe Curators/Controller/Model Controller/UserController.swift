@@ -91,7 +91,22 @@ struct UserController {
                 print("Exists")
             } else {
                 print("Added new User")
-                UserController.sharedUserController.createUser(uid: uid, firstName: firstName, lastName: lastName, email: email)
+//                UserController.sharedUserController.createUser(uid: uid, firstName: firstName, lastName: lastName, email: email)
+                
+                 //Test
+                                    if Auth.auth().currentUser?.displayName != nil {
+                                        guard let displayName = Auth.auth().currentUser?.displayName?.components(separatedBy: " ") else {return}
+                                        UserController.sharedUserController.createUser(uid: uid, firstName: displayName[0], lastName: displayName[1], email: email)
+                                    } else {
+                                        UserController.sharedUserController.createUser(uid: uid, firstName: "User: \(uid)", lastName: "", email: email)
+                                    }
+                
+                
+                //                    // Test
+                
+                
+                
+                
             }
         }
     }
@@ -108,15 +123,7 @@ struct UserController {
             }
         }
     } // End of email check and update func
-    
-//    func invalidEmailAlert() {
-//        let alertController = UIAlertController(title: nil, message: "Invalid Email", preferredStyle: .alert)
-//        let okAction = UIAlertAction(title: "Ok", style: .default)
-//        alertController.addAction(okAction)
-//        present(alertController, animated: true)
-//    }
-    
-    
+
     //fetchCurrentUser
     func fetchCurrentUser(uid: String, completion: @escaping (Result<User, Error>) -> Void) {
 //        guard let userId = Auth.auth().currentUser?.uid else {return}
@@ -141,13 +148,6 @@ struct UserController {
             }
         }
     } // End of fetch function
-    
-    //Drink update Test
-    func updateDrink(title: String) {
-        db.collection("users").document("50").collection("drinks").document("Toddy").updateData([
-            "title": title
-        ])
-    }
     
 }
 
