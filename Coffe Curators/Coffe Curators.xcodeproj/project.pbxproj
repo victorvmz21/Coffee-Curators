@@ -39,6 +39,15 @@
 		52B2C5E124EB344B00B4C6CA /* DrinkToppingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2C5E024EB344B00B4C6CA /* DrinkToppingsViewController.swift */; };
 		52B2C5E324EB348E00B4C6CA /* DrinkInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2C5E224EB348E00B4C6CA /* DrinkInstructionsViewController.swift */; };
 		52B2C5E524EB34A100B4C6CA /* PostDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B2C5E424EB34A100B4C6CA /* PostDrinkViewController.swift */; };
+		52B2C5E724EB5AC200B4C6CA /* BrowserDrinks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B2C5E624EB5AC200B4C6CA /* BrowserDrinks.storyboard */; };
+		52DBBC0124EC30D3008D510D /* ParentDrinkBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBBC0024EC30D3008D510D /* ParentDrinkBrowserViewController.swift */; };
+		52DBBC0A24EC36C4008D510D /* PopularDrinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBBC0924EC36C4008D510D /* PopularDrinkTableViewController.swift */; };
+		52DBBC0C24EC375B008D510D /* DripCoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBBC0B24EC375B008D510D /* DripCoffeeTableViewController.swift */; };
+		52DBBC0E24EC380E008D510D /* EspressoDrinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBBC0D24EC380E008D510D /* EspressoDrinkTableViewController.swift */; };
+		52DBBC1224EC4A93008D510D /* PopularDrinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBBC1124EC4A93008D510D /* PopularDrinkCollectionViewCell.swift */; };
+		52DBBC1424EC4AA0008D510D /* DripCoffeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBBC1324EC4AA0008D510D /* DripCoffeeCollectionViewCell.swift */; };
+		52DBBC1624EC4AAC008D510D /* EspressoCoffeeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBBC1524EC4AAC008D510D /* EspressoCoffeeCollectionViewCell.swift */; };
+		52DBBC1824EC4D13008D510D /* CollectionPopularDrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DBBC1724EC4D13008D510D /* CollectionPopularDrinksTableViewCell.swift */; };
 		766A4BB773568341ABB0756F /* Pods_Coffe_CuratorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A670F7071B6B545A6795B4AA /* Pods_Coffe_CuratorsTests.framework */; };
 		905E8B372EC18DA148974956 /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41DD8F3691205FFF0C3C725E /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework */; };
 		DE010BA124DDC0B500576B12 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE010BA024DDC0B500576B12 /* User.swift */; };
@@ -88,13 +97,10 @@
 		52B09B3224E332A300241B38 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		52B09B3424E3440600241B38 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52B09B3624E44CCF00241B38 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-
 		52B09B3924E44F6100241B38 /* Petrona-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-Medium.ttf"; sourceTree = "<group>"; };
 		52B09B3B24E44F7000241B38 /* Petrona-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-Regular.ttf"; sourceTree = "<group>"; };
 		52B09B3D24E44F8300241B38 /* Petrona-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-Light.ttf"; sourceTree = "<group>"; };
-		52B09B3F24E44F8D00241B38 /* Petrona-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-ExtraLight.ttf"; sourceTree = "<group>"; };
 		52B09B4124E450D500241B38 /* Petrona-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Petrona-SemiBold.ttf"; sourceTree = "<group>"; };
-
 		52B09B4324E463FD00241B38 /* Borders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Borders.swift; sourceTree = "<group>"; };
 		52B09B4524E5A46500241B38 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52B09B4724E5AA2C00241B38 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
@@ -110,6 +116,15 @@
 		52B2C5E024EB344B00B4C6CA /* DrinkToppingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkToppingsViewController.swift; sourceTree = "<group>"; };
 		52B2C5E224EB348E00B4C6CA /* DrinkInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkInstructionsViewController.swift; sourceTree = "<group>"; };
 		52B2C5E424EB34A100B4C6CA /* PostDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDrinkViewController.swift; sourceTree = "<group>"; };
+		52B2C5E624EB5AC200B4C6CA /* BrowserDrinks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BrowserDrinks.storyboard; sourceTree = "<group>"; };
+		52DBBC0024EC30D3008D510D /* ParentDrinkBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDrinkBrowserViewController.swift; sourceTree = "<group>"; };
+		52DBBC0924EC36C4008D510D /* PopularDrinkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDrinkTableViewController.swift; sourceTree = "<group>"; };
+		52DBBC0B24EC375B008D510D /* DripCoffeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripCoffeeTableViewController.swift; sourceTree = "<group>"; };
+		52DBBC0D24EC380E008D510D /* EspressoDrinkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoDrinkTableViewController.swift; sourceTree = "<group>"; };
+		52DBBC1124EC4A93008D510D /* PopularDrinkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularDrinkCollectionViewCell.swift; sourceTree = "<group>"; };
+		52DBBC1324EC4AA0008D510D /* DripCoffeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DripCoffeeCollectionViewCell.swift; sourceTree = "<group>"; };
+		52DBBC1524EC4AAC008D510D /* EspressoCoffeeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EspressoCoffeeCollectionViewCell.swift; sourceTree = "<group>"; };
+		52DBBC1724EC4D13008D510D /* CollectionPopularDrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPopularDrinksTableViewCell.swift; sourceTree = "<group>"; };
 		638CD0C1A9C6D1D44BC7CE11 /* Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig"; path = "Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		71A8E2C8AE9640047DE29615 /* Pods-Coffe CuratorsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe CuratorsTests.release.xcconfig"; path = "Target Support Files/Pods-Coffe CuratorsTests/Pods-Coffe CuratorsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A670F7071B6B545A6795B4AA /* Pods_Coffe_CuratorsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffe_CuratorsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -235,6 +250,7 @@
 			children = (
 				5295D8F524DC656C002434F8 /* Main.storyboard */,
 				524FB7E924EA4DD70077E812 /* DrinkCreation.storyboard */,
+				52B2C5E624EB5AC200B4C6CA /* BrowserDrinks.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -251,7 +267,8 @@
 		5295D92224DC65BD002434F8 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				52B2C5D124EB30C900B4C6CA /* Drinks */,
+				52DBBBFF24EC30B6008D510D /* Browser Drinks */,
+				52B2C5D124EB30C900B4C6CA /* Drinks Creation */,
 				5295D8F324DC656C002434F8 /* ViewController.swift */,
 				DE60204224E2FB4C00AB8DE6 /* SignInViewController.swift */,
 				52B09B3224E332A300241B38 /* SignUpViewController.swift */,
@@ -304,11 +321,15 @@
 			isa = PBXGroup;
 			children = (
 				52B09B4A24E5AAD100241B38 /* homeScreenTableViewCell.swift */,
+				52DBBC1124EC4A93008D510D /* PopularDrinkCollectionViewCell.swift */,
+				52DBBC1324EC4AA0008D510D /* DripCoffeeCollectionViewCell.swift */,
+				52DBBC1524EC4AAC008D510D /* EspressoCoffeeCollectionViewCell.swift */,
+				52DBBC1724EC4D13008D510D /* CollectionPopularDrinksTableViewCell.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
-		52B2C5D124EB30C900B4C6CA /* Drinks */ = {
+		52B2C5D124EB30C900B4C6CA /* Drinks Creation */ = {
 			isa = PBXGroup;
 			children = (
 				52B2C5D224EB30E600B4C6CA /* DrinkTitleViewController.swift */,
@@ -322,7 +343,18 @@
 				52B2C5E224EB348E00B4C6CA /* DrinkInstructionsViewController.swift */,
 				52B2C5E424EB34A100B4C6CA /* PostDrinkViewController.swift */,
 			);
-			path = Drinks;
+			path = "Drinks Creation";
+			sourceTree = "<group>";
+		};
+		52DBBBFF24EC30B6008D510D /* Browser Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				52DBBC0024EC30D3008D510D /* ParentDrinkBrowserViewController.swift */,
+				52DBBC0924EC36C4008D510D /* PopularDrinkTableViewController.swift */,
+				52DBBC0B24EC375B008D510D /* DripCoffeeTableViewController.swift */,
+				52DBBC0D24EC380E008D510D /* EspressoDrinkTableViewController.swift */,
+			);
+			path = "Browser Drinks";
 			sourceTree = "<group>";
 		};
 		8391BBD5126191ED421B14F5 /* Frameworks */ = {
@@ -461,6 +493,7 @@
 			files = (
 				52B09B3724E44CCF00241B38 /* Colors.xcassets in Resources */,
 				5295D8FC24DC656E002434F8 /* LaunchScreen.storyboard in Resources */,
+				52B2C5E724EB5AC200B4C6CA /* BrowserDrinks.storyboard in Resources */,
 				52B2C5D024EB2B5F00B4C6CA /* Petrona-ExtraLight.ttf in Resources */,
 				52B09B4224E450D500241B38 /* Petrona-SemiBold.ttf in Resources */,
 				DE957B8F24DC71E3004F2919 /* GoogleService-Info.plist in Resources */,
@@ -632,6 +665,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE010BA524DDC51E00576B12 /* UserController.swift in Sources */,
+				52DBBC1424EC4AA0008D510D /* DripCoffeeCollectionViewCell.swift in Sources */,
+				52DBBC1824EC4D13008D510D /* CollectionPopularDrinksTableViewCell.swift in Sources */,
 				52B2C5D524EB33D700B4C6CA /* DrinkTypeViewController.swift in Sources */,
 				52B2C5D324EB30E600B4C6CA /* DrinkTitleViewController.swift in Sources */,
 				52B2C5DB24EB340B00B4C6CA /* DrinkCoffeeTypeViewController.swift in Sources */,
@@ -639,9 +674,11 @@
 				52B2C5DD24EB341D00B4C6CA /* DrinkDairyViewController.swift in Sources */,
 				52B09B3324E332A300241B38 /* SignUpViewController.swift in Sources */,
 				5295D8F424DC656C002434F8 /* ViewController.swift in Sources */,
+				52DBBC0A24EC36C4008D510D /* PopularDrinkTableViewController.swift in Sources */,
 				DE010BA724DDC52900576B12 /* DrinkController.swift in Sources */,
 				DE60204324E2FB4C00AB8DE6 /* SignInViewController.swift in Sources */,
 				5295D8F024DC656C002434F8 /* AppDelegate.swift in Sources */,
+				52DBBC0C24EC375B008D510D /* DripCoffeeTableViewController.swift in Sources */,
 				52B2C5E124EB344B00B4C6CA /* DrinkToppingsViewController.swift in Sources */,
 				52B2C5DF24EB343900B4C6CA /* DrinkSweetenerViewController.swift in Sources */,
 				DE010BA324DDC16600576B12 /* Drink.swift in Sources */,
@@ -649,10 +686,14 @@
 				52B2C5E324EB348E00B4C6CA /* DrinkInstructionsViewController.swift in Sources */,
 				5295D8F224DC656C002434F8 /* SceneDelegate.swift in Sources */,
 				52B09B4B24E5AAD100241B38 /* homeScreenTableViewCell.swift in Sources */,
+				52DBBC0E24EC380E008D510D /* EspressoDrinkTableViewController.swift in Sources */,
 				52B09B4424E463FD00241B38 /* Borders.swift in Sources */,
+				52DBBC1624EC4AAC008D510D /* EspressoCoffeeCollectionViewCell.swift in Sources */,
+				52DBBC0124EC30D3008D510D /* ParentDrinkBrowserViewController.swift in Sources */,
 				52B09B4624E5A46500241B38 /* HomeViewController.swift in Sources */,
 				52B2C5D924EB33F700B4C6CA /* DrinkApplianceViewController.swift in Sources */,
 				52B2C5E524EB34A100B4C6CA /* PostDrinkViewController.swift in Sources */,
+				52DBBC1224EC4A93008D510D /* PopularDrinkCollectionViewCell.swift in Sources */,
 				52B09B4824E5AA2C00241B38 /* ViewExtension.swift in Sources */,
 				52B2C5D724EB33E300B4C6CA /* DrinkPhotoViewController.swift in Sources */,
 			);
@@ -830,7 +871,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Coffe Curators/Coffe Curators.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 265HY58XK9;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
 				INFOPLIST_FILE = "Coffe Curators/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -851,7 +892,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Coffe Curators/Coffe Curators.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 265HY58XK9;
+				DEVELOPMENT_TEAM = 9P92JGZ383;
 				INFOPLIST_FILE = "Coffe Curators/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

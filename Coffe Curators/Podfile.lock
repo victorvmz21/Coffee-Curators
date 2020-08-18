@@ -349,6 +349,7 @@ PODS:
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.9)
   - StepIndicator (1.0.8)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -357,6 +358,7 @@ DEPENDENCIES:
   - FirebaseFirestoreSwift
   - GoogleSignIn
   - StepIndicator (~> 1.0.8)
+  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
@@ -383,6 +385,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - StepIndicator
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -408,7 +411,8 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   StepIndicator: 748b293f671355b021253f82031ac002f153dc81
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: af74ba6d39deeb778c8e58581effb576c5743645
+PODFILE CHECKSUM: 4788bb4f9def028fc4011948cc38843e595f162f
 
 COCOAPODS: 1.9.3
