@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var menuLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var logOutButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
     
     //MARK: - Properties
     let reusableIdentifier = "coffeeType"
@@ -29,6 +32,12 @@ class HomeViewController: UIViewController {
         tableViewSetup()
         setupViews()
         customMenu()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        SignInViewController.checkUser()
+        nameAndButtonSetup()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -74,13 +83,40 @@ class HomeViewController: UIViewController {
     @IBAction func personalSettingsButtonTapped(_ sender: UIButton) {
     }
     
+    //Log out action
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                print("signed out")
+                loadView()
+                nameAndButtonSetup()
+            } catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+    }
+    
     //MARK: - Methods
-//    func toSignInPage() {
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let viewController = storyBoard.instantiateViewController(identifier: "signIn") as? SignInViewController  else {return}
-//        viewController.modalPresentationStyle = .fullScreen
-//        self.present(viewController, animated: true, completion: nil)
-//    }
+    
+    func nameAndButtonSetup() {
+        let currentUser = Auth.auth().currentUser
+        if currentUser?.uid == nil {
+            self.nameLabel.text = ""
+            self.logOutButton.isHidden = true
+        } else if currentUser?.uid != nil {
+            guard let uid = currentUser?.uid else {return}
+            _ = UserController.sharedUserController.fetchCurrentUser(uid: uid) { (result) in
+                switch result {
+                case .success(let user):
+                    self.nameLabel.text = "\(user.firstName) \(user.lastName)"  //user.firstName + user.lastName
+                    self.signUpButton.isHidden = true
+                    self.signInButton.isHidden = true
+                case .failure(let err):
+                    print(err.localizedDescription)
+                }
+            }
+        }
+    }
     
     
     

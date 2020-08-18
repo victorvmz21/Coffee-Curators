@@ -39,8 +39,23 @@ class SignUpViewController: UIViewController {
                     print(err.localizedDescription)
                     self.emailAlert()
                 } else {
-                    guard let uid = Auth.auth().currentUser?.uid else {return}
-                    UserController.sharedUserController.createUser(uid: uid, firstName: "User:\(uid)", lastName: "", email: email)
+                    print("created")
+//                    guard let uid = Auth.auth().currentUser?.uid else {return}
+                    
+//                    //Test
+//                    if Auth.auth().currentUser?.displayName != nil {
+//                        guard let displayName = Auth.auth().currentUser?.displayName?.components(separatedBy: " ") else {return}
+//                        UserController.sharedUserController.createUser(uid: uid, firstName: displayName[0], lastName: displayName[1], email: email)
+//                    } else {
+//                        UserController.sharedUserController.createUser(uid: uid, firstName: "User: \(uid)", lastName: "", email: email)
+//                    }
+//
+//
+//                    // Test
+                    
+                    
+                    
+//                    UserController.sharedUserController.createUser(uid: uid, firstName: "User:\(uid)", lastName: "", email: email)
                 }
             }
         } else {
