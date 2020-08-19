@@ -25,7 +25,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="signIn" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signIn" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="OuN-X4-zv9">
             <objects>
-                <viewController storyboardIdentifier="signUp" modalPresentationStyle="fullScreen" id="vgQ-SV-WSS" customClass="SignUpViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signUp" modalPresentationStyle="fullScreen" id="vgQ-SV-WSS" customClass="SignUpViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7GE-vu-zb1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,7 +334,7 @@
         <!--Login View Controller-->
         <scene sceneID="aZu-6b-p03">
             <objects>
-                <viewController storyboardIdentifier="login" modalPresentationStyle="fullScreen" id="wSF-pf-4Be" customClass="LoginViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" modalPresentationStyle="fullScreen" id="wSF-pf-4Be" customClass="LoginViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hnf-P5-QfG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -343,7 +343,7 @@
                                 <rect key="frame" x="50" y="306" width="314" height="284"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXd-7p-8XO">
-                                        <rect key="frame" x="3" y="150" width="93" height="28"/>
+                                        <rect key="frame" x="3" y="150" width="106.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -393,7 +393,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW6-nL-u03">
-                                        <rect key="frame" x="169" y="247.5" width="118" height="32"/>
+                                        <rect key="frame" x="157" y="247.5" width="130" height="32"/>
                                         <fontDescription key="fontDescription" name="Petrona-Light" family="Petrona" pointSize="17"/>
                                         <state key="normal" title="Forgot Password">
                                             <color key="titleColor" name="black_jolt"/>
@@ -457,7 +457,7 @@
                                         <rect key="frame" x="165.5" y="52" width="103" height="84"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Recipe, Craft a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG1-NG-p6W">
-                                        <rect key="frame" x="78.5" y="191.5" width="277" height="28"/>
+                                        <rect key="frame" x="69" y="191.5" width="296.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
@@ -513,7 +513,7 @@
         <!--Home View Controller-->
         <scene sceneID="o0j-NM-SbW">
             <objects>
-                <viewController storyboardIdentifier="homeScreen" id="AqI-5G-iiL" customClass="HomeViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeScreen" id="AqI-5G-iiL" customClass="HomeViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rcc-Md-Rmt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -559,7 +559,7 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="coffeeType" rowHeight="350" id="qLt-xm-GHe" customClass="homeScreenTableViewCell" customModule="Coffe_Curators" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="coffeeType" rowHeight="350" id="qLt-xm-GHe" customClass="homeScreenTableViewCell" customModule="Jolt" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="386" height="350"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qLt-xm-GHe" id="AEu-ua-3cT">
@@ -756,9 +756,7 @@
                                                             <color key="titleColor" name="black_jolt"/>
                                                         </state>
                                                         <connections>
-
                                                             <action selector="logOutButtonTapped:" destination="AqI-5G-iiL" eventType="touchUpInside" id="Oio-z8-hxp"/>
-
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victor Monteiro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-K8-izv">
@@ -935,13 +933,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="DQP-PA-c9A"/>
                     <connections>
-
                         <outlet property="logOutButton" destination="y8K-l4-bN5" id="qhq-In-Dfl"/>
                         <outlet property="mainTitleLabel" destination="hQV-SM-GBC" id="4WI-wc-MpI"/>
                         <outlet property="menuLeftConstraint" destination="aPq-Rz-A2o" id="syn-J9-NHK"/>
                         <outlet property="menuView" destination="ZP0-aO-nRI" id="8CU-55-Tzg"/>
                         <outlet property="nameLabel" destination="qsh-K8-izv" id="vqZ-3g-s6X"/>
-                      
                         <outlet property="signInButton" destination="7Fm-Vr-dxB" id="1Gv-Mu-9VL"/>
                         <outlet property="signUpButton" destination="qOv-6r-PBG" id="jO3-9O-L0Q"/>
                         <outlet property="tableView" destination="5Gm-MM-qw9" id="KIT-a1-wnN"/>
