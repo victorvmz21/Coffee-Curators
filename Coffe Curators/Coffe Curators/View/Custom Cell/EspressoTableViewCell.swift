@@ -1,21 +1,21 @@
 //
-//  CollectionPopularDrinksTableViewCell.swift
+//  EspressoTableViewCell.swift
 //  Coffe Curators
 //
-//  Created by Victor Monteiro on 8/18/20.
+//  Created by Victor Monteiro on 8/19/20.
 //  Copyright © 2020 Atomuz. All rights reserved.
 //
 
 import UIKit
 
-class CollectionPopularDrinksTableViewCell: UITableViewCell {
+class EspressoTableViewCell: UITableViewCell {
     
     //MARK:  - IBOutlet
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: - Properties
-    static let identifier = "CollectionPopularDrinksTableViewCell"
+    static let identifier = "EspressoTableViewCell"
     
     //MARK: - View Life Cycle
     override func awakeFromNib() {
@@ -30,14 +30,14 @@ class CollectionPopularDrinksTableViewCell: UITableViewCell {
     
 }
 
-extension CollectionPopularDrinksTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension EspressoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularDrinkCollectionViewCell.identifier, for: indexPath) as? PopularDrinkCollectionViewCell else { return UICollectionViewCell()}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EspressoCoffeeCollectionViewCell.identifier, for: indexPath) as? EspressoCoffeeCollectionViewCell else { return UICollectionViewCell()}
         
         return cell
     }

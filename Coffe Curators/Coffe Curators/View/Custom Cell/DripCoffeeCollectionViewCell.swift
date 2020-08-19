@@ -9,7 +9,9 @@
 import UIKit
 
 class DripCoffeeCollectionViewCell: UICollectionViewCell {
-   
+    
     @IBOutlet weak var drinkImage: UIImageView!
     @IBOutlet weak var drinkTitle: UILabel!
+    
+    static let identifier = "DripCoffeeCollectionViewCell"
 }
