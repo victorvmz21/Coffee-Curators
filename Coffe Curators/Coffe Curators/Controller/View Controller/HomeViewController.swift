@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
         tableViewSetup()
         setupViews()
         customMenu()
+        nameAndButtonSetup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,7 +109,7 @@ class HomeViewController: UIViewController {
             _ = UserController.sharedUserController.fetchCurrentUser(uid: uid) { (result) in
                 switch result {
                 case .success(let user):
-                    self.nameLabel.text = "\(user.firstName) \(user.lastName)"  //user.firstName + user.lastName
+                    self.nameLabel.text = "\(user.firstName) \(user.lastName)"
                     self.signUpButton.isHidden = true
                     self.signInButton.isHidden = true
                 case .failure(let err):
