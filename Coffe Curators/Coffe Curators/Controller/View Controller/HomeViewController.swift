@@ -32,12 +32,13 @@ class HomeViewController: UIViewController {
         tableViewSetup()
         setupViews()
         customMenu()
+        nameAndButtonSetup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         SignInViewController.checkUser()
-        //nameAndButtonSetup()
+        nameAndButtonSetup()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -98,28 +99,26 @@ class HomeViewController: UIViewController {
     
     //MARK: - Methods
     
-//    func nameAndButtonSetup() {
-//        let currentUser = Auth.auth().currentUser
-//        if currentUser?.uid == nil {
-//            self.nameLabel.text = ""
-//            self.logOutButton.isHidden = true
-//        } else if currentUser?.uid != nil {
-//            guard let uid = currentUser?.uid else {return}
-//            _ = UserController.sharedUserController.fetchCurrentUser(uid: uid) { (result) in
-//                switch result {
-//                case .success(let user):
-//                    self.nameLabel.text = "\(user.firstName) \(user.lastName)"  //user.firstName + user.lastName
-//                    self.signUpButton.isHidden = true
-//                    self.signInButton.isHidden = true
-//                case .failure(let err):
-//                    print(err.localizedDescription)
-//                }
-//            }
-//        }
-//    }
-    
-    
-    
+    func nameAndButtonSetup() {
+        let currentUser = Auth.auth().currentUser
+        if currentUser?.uid == nil {
+            self.nameLabel.text = ""
+            self.logOutButton.isHidden = true
+        } else if currentUser?.uid != nil {
+            guard let uid = currentUser?.uid else {return}
+            _ = UserController.sharedUserController.fetchCurrentUser(uid: uid) { (result) in
+                switch result {
+                case .success(let user):
+                    self.nameLabel.text = "\(user.firstName) \(user.lastName)"
+                    self.signUpButton.isHidden = true
+                    self.signInButton.isHidden = true
+                case .failure(let err):
+                    print(err.localizedDescription)
+                }
+            }
+        }
+    }
+
     func tableViewSetup() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
