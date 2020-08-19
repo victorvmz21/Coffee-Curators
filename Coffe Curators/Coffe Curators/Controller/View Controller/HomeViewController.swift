@@ -91,7 +91,7 @@ class HomeViewController: UIViewController {
                 try firebaseAuth.signOut()
                 print("signed out")
                 loadView()
-                nameAndButtonSetup()
+                //nameAndButtonSetup()
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }
@@ -118,9 +118,7 @@ class HomeViewController: UIViewController {
             }
         }
     }
-    
-    
-    
+
     func tableViewSetup() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
