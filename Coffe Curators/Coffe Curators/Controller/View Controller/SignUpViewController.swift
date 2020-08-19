@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
 
@@ -24,8 +25,45 @@ class SignUpViewController: UIViewController {
     }
     
     //MARK: - IBActions
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        createUser()
+        guard let email = emailTextField.text, !email.isEmpty else {return}
+        Auth.auth().fetchSignInMethods(forEmail: email) { (providers, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                if providers == nil {
+                    print("Empty")
+                    self.createUser()
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
+                    viewController.modalPresentationStyle = .fullScreen
+                    self.present(viewController, animated: true, completion: nil)
+                } else {
+                    print("Exists")
+                    //Alert for email already in use
+                    let controller = UIAlertController(title: nil, message: "Email is already in use", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+                        print("HI")
+                        self.emailTextField.text = ""
+                        self.passowordTextField.text = ""
+                        self.reenterPasswordTextField.text = ""
+                    }
+                    controller.addAction(okAction)
+                    self.present(controller, animated: true)
+                }
+            }
+        }
     }
     
     //MARK: - Methods
@@ -40,22 +78,8 @@ class SignUpViewController: UIViewController {
                     self.emailAlert()
                 } else {
                     print("created")
-//                    guard let uid = Auth.auth().currentUser?.uid else {return}
-                    
-//                    //Test
-//                    if Auth.auth().currentUser?.displayName != nil {
-//                        guard let displayName = Auth.auth().currentUser?.displayName?.components(separatedBy: " ") else {return}
-//                        UserController.sharedUserController.createUser(uid: uid, firstName: displayName[0], lastName: displayName[1], email: email)
-//                    } else {
-//                        UserController.sharedUserController.createUser(uid: uid, firstName: "User: \(uid)", lastName: "", email: email)
-//                    }
-//
-//
-//                    // Test
-                    
-                    
-                    
-//                    UserController.sharedUserController.createUser(uid: uid, firstName: "User:\(uid)", lastName: "", email: email)
+                    guard let uid = Auth.auth().currentUser?.uid else {return}
+                    UserController.sharedUserController.createUser(uid: uid, firstName: "User:\(uid)", lastName: "", email: email)
                 }
             }
         } else {

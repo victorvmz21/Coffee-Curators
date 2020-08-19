@@ -23,7 +23,7 @@
         <!--Parent Drink Browser View Controller-->
         <scene sceneID="pDo-TO-ang">
             <objects>
-                <viewController storyboardIdentifier="parentView" modalPresentationStyle="fullScreen" id="Ftg-R2-bWG" customClass="ParentDrinkBrowserViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="parentView" modalPresentationStyle="fullScreen" id="Ftg-R2-bWG" customClass="ParentDrinkBrowserViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uM4-sl-jyT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,20 +62,27 @@
                                 </cells>
                             </collectionView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-2C-8fU">
-                                <rect key="frame" x="0.0" y="159" width="414" height="737"/>
+                                <rect key="frame" x="0.0" y="207" width="414" height="689"/>
                             </scrollView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="67y-5k-Fl8">
+                                <rect key="frame" x="0.0" y="151" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8MJ-9j-FKb" firstAttribute="leading" secondItem="ufe-zy-gwA" secondAttribute="leading" id="2i4-92-mXK"/>
                             <constraint firstItem="Xq1-i4-lFK" firstAttribute="leading" secondItem="ufe-zy-gwA" secondAttribute="leading" constant="26" id="5JO-0V-cJW"/>
-                            <constraint firstAttribute="bottom" secondItem="Bfa-2C-8fU" secondAttribute="bottom" id="9PN-Po-eJc"/>
                             <constraint firstItem="8MJ-9j-FKb" firstAttribute="top" secondItem="Xq1-i4-lFK" secondAttribute="bottom" constant="1" id="FmV-dW-9Ys"/>
-                            <constraint firstItem="Bfa-2C-8fU" firstAttribute="leading" secondItem="ufe-zy-gwA" secondAttribute="leading" id="JAd-lq-sYx"/>
                             <constraint firstItem="Xq1-i4-lFK" firstAttribute="top" secondItem="ufe-zy-gwA" secondAttribute="top" constant="12" id="Rfh-Mp-4FB"/>
-                            <constraint firstItem="Bfa-2C-8fU" firstAttribute="trailing" secondItem="ufe-zy-gwA" secondAttribute="trailing" id="aA6-1E-3Ac"/>
+                            <constraint firstItem="Bfa-2C-8fU" firstAttribute="trailing" secondItem="ufe-zy-gwA" secondAttribute="trailing" id="Sx7-zS-V6i"/>
+                            <constraint firstItem="67y-5k-Fl8" firstAttribute="leading" secondItem="ufe-zy-gwA" secondAttribute="leading" id="UZt-8J-qcf"/>
                             <constraint firstItem="8MJ-9j-FKb" firstAttribute="trailing" secondItem="ufe-zy-gwA" secondAttribute="trailing" id="hsP-fK-wK3"/>
-                            <constraint firstItem="Bfa-2C-8fU" firstAttribute="top" secondItem="8MJ-9j-FKb" secondAttribute="bottom" id="nmG-Yw-S8t"/>
+                            <constraint firstItem="67y-5k-Fl8" firstAttribute="trailing" secondItem="ufe-zy-gwA" secondAttribute="trailing" id="mqI-sb-Cn9"/>
+                            <constraint firstItem="Bfa-2C-8fU" firstAttribute="leading" secondItem="ufe-zy-gwA" secondAttribute="leading" id="nb1-DM-Kwf"/>
+                            <constraint firstAttribute="bottom" secondItem="Bfa-2C-8fU" secondAttribute="bottom" id="rDB-Z4-CNv"/>
+                            <constraint firstItem="Bfa-2C-8fU" firstAttribute="top" secondItem="67y-5k-Fl8" secondAttribute="bottom" id="wmk-wq-Efv"/>
+                            <constraint firstItem="67y-5k-Fl8" firstAttribute="top" secondItem="8MJ-9j-FKb" secondAttribute="bottom" id="yLI-wG-DSS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ufe-zy-gwA"/>
                     </view>
@@ -91,13 +98,13 @@
         <!--Popular Drink Table View Controller-->
         <scene sceneID="P5C-R8-jj7">
             <objects>
-                <tableViewController storyboardIdentifier="child1" id="vQB-Qz-Ygq" customClass="PopularDrinkTableViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Tn-CA-yRh">
+                <tableViewController storyboardIdentifier="child1" id="vQB-Qz-Ygq" customClass="PopularDrinkTableViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Tn-CA-yRh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CollectionPopularDrinksTableViewCell" rowHeight="242" id="CA4-Xv-cCU" customClass="CollectionPopularDrinksTableViewCell" customModule="Coffe_Curators" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CollectionPopularDrinksTableViewCell" id="CA4-Xv-cCU" customClass="CollectionPopularDrinksTableViewCell" customModule="Jolt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="242"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CA4-Xv-cCU" id="yml-Pp-ip2">
@@ -110,9 +117,12 @@
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l1T-GG-0eS">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l1T-GG-0eS">
                                             <rect key="frame" x="15" y="62" width="384" height="180"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="180" id="u2o-4p-CPJ"/>
+                                            </constraints>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nT4-Gx-HOa">
                                                 <size key="itemSize" width="151" height="160"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -120,7 +130,7 @@
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularDrinkCollectionViewCell" id="Xgx-Ep-gDQ" customClass="PopularDrinkCollectionViewCell" customModule="Coffe_Curators" customModuleProvider="target">
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularDrinkCollectionViewCell" id="Xgx-Ep-gDQ" customClass="PopularDrinkCollectionViewCell" customModule="Jolt" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="10" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qr9-bS-Uii">
@@ -130,6 +140,7 @@
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pourOver" translatesAutoresizingMaskIntoConstraints="NO" id="W12-ss-BYD">
                                                                 <rect key="frame" x="0.0" y="0.0" width="151" height="93"/>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="width" constant="151" id="as3-Ob-ZTS"/>
                                                                     <constraint firstAttribute="height" constant="92" id="wZy-HQ-yVD"/>
                                                                 </constraints>
                                                             </imageView>
@@ -169,6 +180,7 @@
                                                     <connections>
                                                         <outlet property="drinkImage" destination="W12-ss-BYD" id="XjU-JI-fT0"/>
                                                         <outlet property="drinkTitle" destination="Bac-Rz-vZ8" id="YBH-xt-Wxx"/>
+                                                        <segue destination="yUB-Nd-9ib" kind="show" identifier="popularToDetail" id="ctr-7A-pa9"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -202,46 +214,47 @@
         <!--Drip Coffee Table View Controller-->
         <scene sceneID="gjM-yd-l8H">
             <objects>
-                <tableViewController storyboardIdentifier="child2" id="mUJ-ZN-4W8" customClass="DripCoffeeTableViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y8P-UP-3GS">
+                <tableViewController storyboardIdentifier="child2" id="mUJ-ZN-4W8" customClass="DripCoffeeTableViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y8P-UP-3GS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="242" id="w58-7e-sJX">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DripCoffeeTableViewCell" rowHeight="242" id="w58-7e-sJX" customClass="DripCoffeeTableViewCell" customModule="Jolt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="242"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w58-7e-sJX" id="WEa-xu-RtN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-cJ-Dw5">
-                                            <rect key="frame" x="15" y="20" width="201" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drip Coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-cJ-Dw5">
+                                            <rect key="frame" x="15" y="20" width="152" height="34"/>
                                             <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="30"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-en-dC1">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-en-dC1">
                                             <rect key="frame" x="15" y="62" width="384" height="180"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="55N-KI-eMD">
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="55N-KI-eMD">
                                                 <size key="itemSize" width="151" height="160"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="14j-6p-3z0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DripCoffeeCollectionViewCell" id="14j-6p-3z0" customClass="DripCoffeeCollectionViewCell" customModule="Jolt" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="10" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K6d-lF-zv3">
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WcH-a4-YgG">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pourOver" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-bk-dnd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="151" height="93"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="92" id="3Y3-3m-FfW"/>
+                                                                    <constraint firstAttribute="width" constant="151" id="EjS-fR-Lhd"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink Test" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfY-V0-ufg">
@@ -264,11 +277,11 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="GfY-V0-ufg" firstAttribute="top" secondItem="Mwu-bk-dnd" secondAttribute="bottom" id="MwL-S8-whk"/>
-                                                            <constraint firstItem="Mwu-bk-dnd" firstAttribute="leading" secondItem="K6d-lF-zv3" secondAttribute="leading" id="Q4O-PO-Psx"/>
+                                                            <constraint firstItem="Mwu-bk-dnd" firstAttribute="leading" secondItem="WcH-a4-YgG" secondAttribute="leading" id="Q4O-PO-Psx"/>
                                                             <constraint firstAttribute="trailing" secondItem="Mwu-bk-dnd" secondAttribute="trailing" id="Wc2-S8-W3c"/>
-                                                            <constraint firstItem="GfY-V0-ufg" firstAttribute="leading" secondItem="K6d-lF-zv3" secondAttribute="leading" id="aRC-Nt-elZ"/>
+                                                            <constraint firstItem="GfY-V0-ufg" firstAttribute="leading" secondItem="WcH-a4-YgG" secondAttribute="leading" id="aRC-Nt-elZ"/>
                                                             <constraint firstAttribute="bottom" secondItem="GfY-V0-ufg" secondAttribute="bottom" id="ccg-xB-75q"/>
-                                                            <constraint firstItem="Mwu-bk-dnd" firstAttribute="top" secondItem="K6d-lF-zv3" secondAttribute="top" id="nV0-ok-JK5"/>
+                                                            <constraint firstItem="Mwu-bk-dnd" firstAttribute="top" secondItem="WcH-a4-YgG" secondAttribute="top" id="nV0-ok-JK5"/>
                                                         </constraints>
                                                     </collectionViewCellContentView>
                                                     <size key="customSize" width="151" height="160"/>
@@ -277,6 +290,11 @@
                                                             <real key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="drinkImage" destination="Mwu-bk-dnd" id="2Dw-bu-3qX"/>
+                                                        <outlet property="drinkTitle" destination="GfY-V0-ufg" id="3Rx-Q9-ob1"/>
+                                                        <segue destination="yUB-Nd-9ib" kind="show" identifier="dripToDetail" id="BB3-8f-4hp"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -290,6 +308,10 @@
                                         <constraint firstItem="5Bu-cJ-Dw5" firstAttribute="top" secondItem="WEa-xu-RtN" secondAttribute="top" constant="20" id="rt2-gn-pSM"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="5Bu-cJ-Dw5" id="Kq8-ir-lCl"/>
+                                    <outlet property="collectionView" destination="cMA-en-dC1" id="WrX-w8-WpN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -305,46 +327,47 @@
         <!--Espresso Drink Table View Controller-->
         <scene sceneID="eAJ-4g-ITZ">
             <objects>
-                <tableViewController storyboardIdentifier="child3" id="X0X-zd-KQm" customClass="EspressoDrinkTableViewController" customModule="Coffe_Curators" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ju0-Kq-27L">
+                <tableViewController storyboardIdentifier="child3" id="X0X-zd-KQm" customClass="EspressoDrinkTableViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ju0-Kq-27L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="242" id="8XJ-a3-yPO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EspressoTableViewCell" rowHeight="242" id="8XJ-a3-yPO" customClass="EspressoTableViewCell" customModule="Jolt" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="242"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8XJ-a3-yPO" id="vFC-VG-Y7j">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjx-iL-5pc">
-                                            <rect key="frame" x="15" y="20" width="201" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espresso Coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjx-iL-5pc">
+                                            <rect key="frame" x="15" y="20" width="207.5" height="34"/>
                                             <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="30"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OST-HV-wnV">
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OST-HV-wnV">
                                             <rect key="frame" x="15" y="62" width="384" height="180"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KVL-WT-A6u">
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KVL-WT-A6u">
                                                 <size key="itemSize" width="151" height="160"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                             </collectionViewFlowLayout>
                                             <cells>
-                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iWa-oJ-sNy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EspressoCoffeeCollectionViewCell" id="iWa-oJ-sNy" customClass="EspressoCoffeeCollectionViewCell" customModule="Jolt" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="10" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bXQ-lU-mSe">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-mA-dHo">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="espresso" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-mA-dHo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="151" height="93"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="92" id="B3i-zY-elt"/>
+                                                                    <constraint firstAttribute="width" constant="151" id="KIo-dP-pu0"/>
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFI-up-laV">
@@ -380,6 +403,11 @@
                                                             <real key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="drinkImage" destination="1e4-mA-dHo" id="7bv-gg-LNV"/>
+                                                        <outlet property="drinkTitle" destination="FFI-up-laV" id="Aq5-7d-wZM"/>
+                                                        <segue destination="yUB-Nd-9ib" kind="show" identifier="espressoToDetail" id="Gi3-PZ-Czd"/>
+                                                    </connections>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -393,6 +421,10 @@
                                         <constraint firstAttribute="trailing" secondItem="OST-HV-wnV" secondAttribute="trailing" constant="15" id="urK-ku-Uo8"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="categoryLabel" destination="bjx-iL-5pc" id="3hl-lR-v6O"/>
+                                    <outlet property="collectionView" destination="OST-HV-wnV" id="bK7-ln-pV2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -405,8 +437,151 @@
             </objects>
             <point key="canvasLocation" x="686" y="141"/>
         </scene>
+        <!--Drink Detail Screen View Controller-->
+        <scene sceneID="OwB-k7-apn">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="yUB-Nd-9ib" customClass="DrinkDetailScreenViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="omL-NX-lEM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="wOJ-DW-IIe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="287"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRY-Eq-gL9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWj-vg-kxw">
+                                        <rect key="frame" x="20" y="52" width="38" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="Fad-MC-tA6"/>
+                                            <constraint firstAttribute="height" constant="38" id="HcI-J8-WDy"/>
+                                        </constraints>
+                                        <state key="normal" image="brownbackbutton "/>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nLv-1c-y4q">
+                                        <rect key="frame" x="144" y="40" width="126" height="75"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="nLv-1c-y4q" firstAttribute="height" secondItem="cRY-Eq-gL9" secondAttribute="height" multiplier="0.609756" id="End-9e-TpB"/>
+                                    <constraint firstItem="DWj-vg-kxw" firstAttribute="top" secondItem="cRY-Eq-gL9" secondAttribute="top" constant="52" id="EtX-5m-0G3"/>
+                                    <constraint firstItem="nLv-1c-y4q" firstAttribute="top" secondItem="cRY-Eq-gL9" secondAttribute="top" constant="40" id="JAn-e5-Lgk"/>
+                                    <constraint firstItem="DWj-vg-kxw" firstAttribute="leading" secondItem="cRY-Eq-gL9" secondAttribute="leading" constant="20" id="kk1-DC-kbM"/>
+                                    <constraint firstItem="nLv-1c-y4q" firstAttribute="centerX" secondItem="cRY-Eq-gL9" secondAttribute="centerX" id="lSo-5r-Ijw"/>
+                                    <constraint firstItem="nLv-1c-y4q" firstAttribute="width" secondItem="cRY-Eq-gL9" secondAttribute="width" multiplier="0.304348" id="nE1-43-GLb"/>
+                                    <constraint firstAttribute="height" constant="123" id="t2a-Vm-CPl"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cofee Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wC-1e-Gf4">
+                                <rect key="frame" x="20" y="307" width="156" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPH-5r-s4i">
+                                <rect key="frame" x="20" y="350" width="39" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="6YO-e2-95U"/>
+                                    <constraint firstAttribute="height" constant="39" id="b4A-Um-0zP"/>
+                                </constraints>
+                                <state key="normal" image="Heart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQJ-O1-9Xl">
+                                <rect key="frame" x="349" y="358" width="36" height="22"/>
+                                <state key="normal" image="optionIcon"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-A4-607">
+                                <rect key="frame" x="20" y="405" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appliance name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJY-NJ-07s">
+                                <rect key="frame" x="20" y="434" width="110" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gM3-fG-7Ed">
+                                <rect key="frame" x="20" y="487" width="96" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="list of all ingredients" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be6-XG-bBh">
+                                <rect key="frame" x="20" y="518" width="374" height="89"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkO-Ff-NqN">
+                                <rect key="frame" x="20" y="615" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="list of all ingredients" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86X-SM-TLG">
+                                <rect key="frame" x="20" y="644" width="374" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dr7-PP-sep" firstAttribute="trailing" secondItem="aQJ-O1-9Xl" secondAttribute="trailing" constant="29" id="1Ri-w7-KBD"/>
+                            <constraint firstItem="tPH-5r-s4i" firstAttribute="leading" secondItem="9wC-1e-Gf4" secondAttribute="leading" id="52g-IO-6g6"/>
+                            <constraint firstItem="Dr7-PP-sep" firstAttribute="trailing" secondItem="86X-SM-TLG" secondAttribute="trailing" constant="20" id="6AO-UL-B2B"/>
+                            <constraint firstItem="9wC-1e-Gf4" firstAttribute="top" secondItem="wOJ-DW-IIe" secondAttribute="bottom" constant="20" id="6za-cG-ezZ"/>
+                            <constraint firstItem="be6-XG-bBh" firstAttribute="top" secondItem="gM3-fG-7Ed" secondAttribute="bottom" constant="8" id="7Ms-zX-MNN"/>
+                            <constraint firstItem="cRY-Eq-gL9" firstAttribute="leading" secondItem="Dr7-PP-sep" secondAttribute="leading" id="7Yc-Fv-974"/>
+                            <constraint firstItem="Dr7-PP-sep" firstAttribute="trailing" secondItem="be6-XG-bBh" secondAttribute="trailing" constant="20" id="7tP-QG-Uu1"/>
+                            <constraint firstItem="be6-XG-bBh" firstAttribute="leading" secondItem="gM3-fG-7Ed" secondAttribute="leading" id="9fH-f0-SDI"/>
+                            <constraint firstItem="gJK-A4-607" firstAttribute="leading" secondItem="tPH-5r-s4i" secondAttribute="leading" id="DV8-n7-Ylr"/>
+                            <constraint firstItem="cRY-Eq-gL9" firstAttribute="top" secondItem="omL-NX-lEM" secondAttribute="top" id="HtJ-ob-afJ"/>
+                            <constraint firstItem="cRY-Eq-gL9" firstAttribute="trailing" secondItem="Dr7-PP-sep" secondAttribute="trailing" id="IVD-PK-chg"/>
+                            <constraint firstItem="9wC-1e-Gf4" firstAttribute="leading" secondItem="Dr7-PP-sep" secondAttribute="leading" constant="20" id="KNs-b8-JLJ"/>
+                            <constraint firstItem="gM3-fG-7Ed" firstAttribute="top" secondItem="SJY-NJ-07s" secondAttribute="bottom" constant="35" id="M9z-dl-nen"/>
+                            <constraint firstItem="wOJ-DW-IIe" firstAttribute="top" secondItem="omL-NX-lEM" secondAttribute="top" id="Nji-93-TYe"/>
+                            <constraint firstItem="wOJ-DW-IIe" firstAttribute="leading" secondItem="Dr7-PP-sep" secondAttribute="leading" id="UUR-tK-p0i"/>
+                            <constraint firstItem="86X-SM-TLG" firstAttribute="leading" secondItem="Dr7-PP-sep" secondAttribute="leading" constant="20" id="WAd-de-74h"/>
+                            <constraint firstItem="wOJ-DW-IIe" firstAttribute="height" secondItem="omL-NX-lEM" secondAttribute="height" multiplier="0.320312" id="a1b-uw-GBf"/>
+                            <constraint firstItem="86X-SM-TLG" firstAttribute="top" secondItem="RkO-Ff-NqN" secondAttribute="bottom" constant="8" id="a3a-qG-lJd"/>
+                            <constraint firstItem="tPH-5r-s4i" firstAttribute="top" secondItem="9wC-1e-Gf4" secondAttribute="bottom" constant="8" id="dDp-Aj-h1V"/>
+                            <constraint firstItem="86X-SM-TLG" firstAttribute="leading" secondItem="RkO-Ff-NqN" secondAttribute="leading" id="f9D-hf-ySB"/>
+                            <constraint firstItem="gM3-fG-7Ed" firstAttribute="leading" secondItem="SJY-NJ-07s" secondAttribute="leading" id="fsY-bM-iee"/>
+                            <constraint firstItem="86X-SM-TLG" firstAttribute="height" secondItem="omL-NX-lEM" secondAttribute="height" multiplier="0.0825893" id="jsb-RP-B0f"/>
+                            <constraint firstItem="be6-XG-bBh" firstAttribute="leading" secondItem="Dr7-PP-sep" secondAttribute="leading" constant="20" id="lOr-ds-X0M"/>
+                            <constraint firstItem="tPH-5r-s4i" firstAttribute="top" secondItem="aQJ-O1-9Xl" secondAttribute="bottom" constant="-30" id="ohi-vl-GcU"/>
+                            <constraint firstItem="RkO-Ff-NqN" firstAttribute="leading" secondItem="be6-XG-bBh" secondAttribute="leading" id="scF-3B-g9M"/>
+                            <constraint firstItem="SJY-NJ-07s" firstAttribute="leading" secondItem="gJK-A4-607" secondAttribute="leading" id="up2-nh-wOR"/>
+                            <constraint firstItem="be6-XG-bBh" firstAttribute="height" secondItem="omL-NX-lEM" secondAttribute="height" multiplier="0.0993304" id="w0C-P4-NmN"/>
+                            <constraint firstItem="gJK-A4-607" firstAttribute="top" secondItem="tPH-5r-s4i" secondAttribute="bottom" constant="16" id="wYT-9a-tWb"/>
+                            <constraint firstItem="RkO-Ff-NqN" firstAttribute="top" secondItem="be6-XG-bBh" secondAttribute="bottom" constant="8" id="xGb-ee-NZL"/>
+                            <constraint firstItem="SJY-NJ-07s" firstAttribute="top" secondItem="gJK-A4-607" secondAttribute="bottom" constant="8" id="xs1-Dc-N0Z"/>
+                            <constraint firstItem="wOJ-DW-IIe" firstAttribute="trailing" secondItem="Dr7-PP-sep" secondAttribute="trailing" id="zSH-Oi-jK3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dr7-PP-sep"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VKQ-6D-AFV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjY-D0-EOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1517" y="141"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gi3-PZ-Czd"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="Heart" width="56" height="50"/>
+        <image name="brownbackbutton " width="70" height="70"/>
+        <image name="coffee" width="350" height="324"/>
+        <image name="espresso" width="350" height="324"/>
+        <image name="logo" width="262" height="116"/>
+        <image name="optionIcon" width="36" height="12"/>
         <image name="pourOver" width="350" height="324"/>
         <namedColor name="black_jolt">
             <color red="0.23529411764705882" green="0.10588235294117647" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

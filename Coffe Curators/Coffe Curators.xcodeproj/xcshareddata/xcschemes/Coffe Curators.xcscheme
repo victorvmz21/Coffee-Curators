@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5295D8EB24DC656C002434F8"
-               BuildableName = "Coffe Curators.app"
+               BuildableName = "Jolt.app"
                BlueprintName = "Coffe Curators"
                ReferencedContainer = "container:Coffe Curators.xcodeproj">
             </BuildableReference>
@@ -51,9 +51,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-
       buildConfiguration = "Release"
-
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -67,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5295D8EB24DC656C002434F8"
-            BuildableName = "Coffe Curators.app"
+            BuildableName = "Jolt.app"
             BlueprintName = "Coffe Curators"
             ReferencedContainer = "container:Coffe Curators.xcodeproj">
          </BuildableReference>
@@ -84,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5295D8EB24DC656C002434F8"
-            BuildableName = "Coffe Curators.app"
+            BuildableName = "Jolt.app"
             BlueprintName = "Coffe Curators"
             ReferencedContainer = "container:Coffe Curators.xcodeproj">
          </BuildableReference>

@@ -10,10 +10,8 @@ import UIKit
 
 class PopularDrinkCollectionViewCell: UICollectionViewCell {
     
-    //MARK: - IBOutlet
     @IBOutlet weak var drinkImage: UIImageView!
     @IBOutlet weak var drinkTitle: UILabel!
     
     static let identifier = "PopularDrinkCollectionViewCell"
-  
 }

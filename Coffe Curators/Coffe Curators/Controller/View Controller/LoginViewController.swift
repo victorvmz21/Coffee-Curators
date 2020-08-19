@@ -23,6 +23,16 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - IBActions
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    
+    
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
         emailResetAlert()
     }
