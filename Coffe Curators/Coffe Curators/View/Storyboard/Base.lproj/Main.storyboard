@@ -144,13 +144,13 @@
                                 <rect key="frame" x="50" y="258.5" width="314" height="379"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2c-Ut-pu6">
-                                        <rect key="frame" x="3" y="149" width="93" height="28"/>
+                                        <rect key="frame" x="3" y="149" width="106.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtG-mW-X9k">
-                                        <rect key="frame" x="3" y="287" width="184" height="28"/>
+                                        <rect key="frame" x="3" y="287" width="206.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -254,7 +254,7 @@
                                         <rect key="frame" x="165.5" y="52" width="103" height="84"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Recipe, Craft a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1je-GQ-1v0">
-                                        <rect key="frame" x="78.5" y="191.5" width="277" height="28"/>
+                                        <rect key="frame" x="69" y="191.5" width="296.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
@@ -750,6 +750,9 @@
                                                         <state key="normal" title="Log out">
                                                             <color key="titleColor" name="black_jolt"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="logOutButtonTapped:" destination="AqI-5G-iiL" eventType="touchUpInside" id="Oio-z8-hxp"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victor Monteiro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-K8-izv">
                                                         <rect key="frame" x="15" y="73" width="268.5" height="32"/>
@@ -924,9 +927,11 @@
                         <viewLayoutGuide key="safeArea" id="60K-tX-dAa"/>
                     </view>
                     <connections>
+                        <outlet property="logOutButton" destination="y8K-l4-bN5" id="QQq-xe-LXq"/>
                         <outlet property="mainTitleLabel" destination="hQV-SM-GBC" id="4WI-wc-MpI"/>
                         <outlet property="menuLeftConstraint" destination="aPq-Rz-A2o" id="syn-J9-NHK"/>
                         <outlet property="menuView" destination="ZP0-aO-nRI" id="8CU-55-Tzg"/>
+                        <outlet property="nameLabel" destination="qsh-K8-izv" id="74C-Yk-y3M"/>
                         <outlet property="signInButton" destination="7Fm-Vr-dxB" id="1Gv-Mu-9VL"/>
                         <outlet property="signUpButton" destination="qOv-6r-PBG" id="jO3-9O-L0Q"/>
                         <outlet property="tableView" destination="5Gm-MM-qw9" id="KIT-a1-wnN"/>
