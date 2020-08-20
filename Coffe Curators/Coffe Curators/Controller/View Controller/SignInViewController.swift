@@ -13,10 +13,16 @@ import CryptoKit
 import FirebaseAuth
 import AuthenticationServices
 
+protocol ReloadViewDelegate {
+    func reloadHomeView()
+}
+
 class SignInViewController: UIViewController {
     
     @IBOutlet weak var googleSignInButton: GIDSignInButton!
     @IBOutlet weak var appleSignInButton: UIView!
+    
+    var refreshDelegate: ReloadViewDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -196,6 +202,9 @@ extension SignInViewController: GIDSignInDelegate {
                 print(error.localizedDescription)
             } else {
                 print("Signed In")
+                DispatchQueue.main.async {
+                    self.refreshDelegate.reloadHomeView()
+                }
                 self.navigationController?.dismiss(animated: true, completion: nil)
             }
         }
