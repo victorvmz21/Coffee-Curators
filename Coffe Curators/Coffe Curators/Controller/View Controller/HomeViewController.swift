@@ -90,8 +90,7 @@ class HomeViewController: UIViewController {
             do {
                 try firebaseAuth.signOut()
                 print("signed out")
-                loadView()
-                //nameAndButtonSetup()
+                nameAndButtonSetup()
             } catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }
@@ -103,6 +102,8 @@ class HomeViewController: UIViewController {
         let currentUser = Auth.auth().currentUser
         if currentUser?.uid == nil {
             self.nameLabel.text = ""
+            self.signInButton.isHidden = false
+            self.signUpButton.isHidden = false
             self.logOutButton.isHidden = true
         } else if currentUser?.uid != nil {
             guard let uid = currentUser?.uid else {return}
@@ -112,6 +113,7 @@ class HomeViewController: UIViewController {
                     self.nameLabel.text = "\(user.firstName) \(user.lastName)"
                     self.signUpButton.isHidden = true
                     self.signInButton.isHidden = true
+                    self.logOutButton.isHidden = false
                 case .failure(let err):
                     print(err.localizedDescription)
                 }
@@ -181,5 +183,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.beginUpdates()
         tableView.reloadRows(at: [selectedIndex], with: .none)
         tableView.endUpdates()
+    }
+}
+
+extension HomeViewController: ReloadViewDelegate {
+    func reloadHomeView() {
+        nameAndButtonSetup()
+    }
+}
+
+extension HomeViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSignIn" {
+            let destination = segue.destination as? UINavigationController
+            let signIn = destination?.viewControllers.first as? SignInViewController
+            signIn?.refreshDelegate = self
+        }
     }
 }
