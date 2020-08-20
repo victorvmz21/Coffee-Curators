@@ -24,6 +24,7 @@ class SignInViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signIn()
         setUpSignInAppleButton()
         SignInViewController.checkUser()
+        GIDSignIn.sharedInstance()?.delegate = self
     }
     
     // MARK: - Helper Methods
@@ -167,5 +168,40 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
                 }
             }
         }
+    }
+}
+
+
+extension SignInViewController: GIDSignInDelegate {
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        guard let url = GIDSignIn.sharedInstance()?.handle(url) else {return false}
+        return url
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        // ...
+        if let error = error {
+          // ...
+          return
+        }
+
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                          accessToken: authentication.accessToken)
+        // ...
+        
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("Signed In")
+                self.navigationController?.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        //...
     }
 }
