@@ -7,25 +7,58 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class PostDrinkViewController: UIViewController {
-
+    
+    //MARK: - IBOutlet
+    
+    //MARK: Properties
+    var drinkTitle        = ""
+    var drinkType         = ""
+    var image             = Data()
+    var appliance         = ""
+    var coffeeRoast       = ""
+    var coffeeShot        = 0
+    var dairy             = ""
+    var sweeteners        = ""
+    var sweetenersMeasure = ""
+    var toppings          = ""
+    var toppingsMeasure   = ""
+    var instructions      = ""
+    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - IBActions
+    @IBAction func post(_ sender: UIButton) {
+        savePost()
     }
-    */
+    
+    @IBAction func makeNewDrinkButtonTapped(_ sender: UIButton) {
+        
+        navigationController?.dismiss(animated: false, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
+        let drinkTitleVC = storyboard.instantiateViewController(identifier: "drinkTitle")
+        self.present(drinkTitleVC, animated: true)
+        
+    }
+    
+    //MARK: - Methods
+    func savePost() {
+        guard let uID = Auth.auth().currentUser?.uid else {
+            print("user not logged in")
+            return }
+        DrinkController.shared.createDrink(userId: uID, title: drinkTitle, drinkCategory: drinkType, drinkPicture: image, appliance: appliance, coofeRoast: coffeeRoast, coffeeShot: coffeeShot, dairy: dairy, sweetener: sweeteners, sweetenerMeasure: sweetenersMeasure, topping: [toppings], toppingMeasure: [toppingsMeasure], instructions: [instructions])
+        
+        navigationController?.dismiss(animated: false, completion: nil)
+        
+    }
+    
+    
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
