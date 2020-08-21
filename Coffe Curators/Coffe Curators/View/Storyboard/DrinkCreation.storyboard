@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7gv-Pr-vvn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tSE-ns-Eg4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -22,7 +22,7 @@
         <!--Drink Title View Controller-->
         <scene sceneID="M6W-sr-QD8">
             <objects>
-                <viewController storyboardIdentifier="drinkTitle" modalPresentationStyle="fullScreen" id="tSE-ns-Eg4" customClass="DrinkTitleViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="tSE-ns-Eg4" customClass="DrinkTitleViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qWc-bj-MuJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="numberOfSteps">
-                                        <integer key="value" value="8"/>
+                                        <integer key="value" value="9"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="circleTintColor">
                                         <color key="value" name="orange_jolt"/>
@@ -72,7 +72,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5E-k4-px9">
-                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-iz-Z7o">
-                                <rect key="frame" x="20" y="432" width="374" height="44"/>
+                                <rect key="frame" x="20" y="431" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Oo1-5D-fLq"/>
                                 </constraints>
@@ -90,7 +90,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1t-zf-89a">
-                                <rect key="frame" x="20" y="260" width="374" height="42"/>
+                                <rect key="frame" x="20" y="260" width="374" height="41"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
@@ -114,15 +114,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wZ1-5r-oPk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KaG-4M-EvO"/>
                     <connections>
-                        <outlet property="advanceButton" destination="C1a-Pz-VNM" id="86Y-tI-Fzh"/>
-                        <outlet property="titleTextField" destination="zHr-iz-Z7o" id="ISD-or-ZJP"/>
+                        <outlet property="advanceButton" destination="C1a-Pz-VNM" id="xJo-0y-2A5"/>
+                        <outlet property="titleTextField" destination="zHr-iz-Z7o" id="0IN-YH-w3V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usn-Vx-vlo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="226.08695652173915" y="171.42857142857142"/>
+            <point key="canvasLocation" x="-684.05797101449275" y="171.42857142857142"/>
         </scene>
         <!--Drink Type View Controller-->
         <scene sceneID="s9Z-Pf-i72">
@@ -177,13 +176,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of Drink is this?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-NK-7bs">
-                                <rect key="frame" x="20" y="260" width="374" height="84"/>
+                                <rect key="frame" x="20" y="260" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-2H-VAZ">
-                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
@@ -193,49 +192,43 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yih-LO-8Oa">
-                                <rect key="frame" x="20" y="832" width="39" height="32"/>
+                                <rect key="frame" x="20" y="832" width="36" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="N5z-J5-0b1">
-                                <rect key="frame" x="20" y="385.5" width="135" height="188"/>
+                                <rect key="frame" x="20" y="383" width="135" height="188"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-Nc-FLf">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-Nc-FLf">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="54"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="54" id="tWB-dy-Xdk"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                         <state key="normal" title="Hot">
                                             <color key="titleColor" name="black_jolt"/>
                                         </state>
                                         <connections>
-                                            <action selector="hotDrinkButtonTapped:" destination="Znh-Vb-DV8" eventType="touchUpInside" id="coB-Tm-Wfn"/>
+                                            <action selector="hotDrinkButtonTapped:" destination="Znh-Vb-DV8" eventType="touchUpInside" id="xlG-6c-lVl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="702-2k-1Ho">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="702-2k-1Ho">
                                         <rect key="frame" x="0.0" y="67" width="76" height="54"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="54" id="JvI-gq-TP1"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                         <state key="normal" title="Cold">
                                             <color key="titleColor" name="black_jolt"/>
                                         </state>
                                         <connections>
-                                            <action selector="coldDrinkButtonTapped:" destination="Znh-Vb-DV8" eventType="touchUpInside" id="0vd-Jx-ufR"/>
+                                            <action selector="coldDrinkButtonTapped:" destination="Znh-Vb-DV8" eventType="touchUpInside" id="lEf-de-0ri"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUe-dQ-Jfm">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUe-dQ-Jfm">
                                         <rect key="frame" x="0.0" y="134" width="135" height="54"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                         <state key="normal" title="Blended">
                                             <color key="titleColor" name="black_jolt"/>
                                         </state>
                                         <connections>
-                                            <action selector="blendedDrinkButtonTapped:" destination="Znh-Vb-DV8" eventType="touchUpInside" id="RY5-c3-NoZ"/>
+                                            <action selector="blendedDrinkButtonTapped:" destination="Znh-Vb-DV8" eventType="touchUpInside" id="7Lf-ey-9lC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -265,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ye1-hQ-eKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018.840579710145" y="170.75892857142856"/>
+            <point key="canvasLocation" x="108.69565217391305" y="170.75892857142856"/>
         </scene>
         <!--Drink Photo View Controller-->
         <scene sceneID="JUN-3T-Njh">
@@ -300,13 +293,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a photo for (drink name here)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KI-0I-GgL">
-                                <rect key="frame" x="20" y="260" width="374" height="84"/>
+                                <rect key="frame" x="20" y="260" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-tg-dre">
-                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
@@ -316,14 +309,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-DB-K0I">
-                                <rect key="frame" x="20" y="807" width="39" height="32"/>
+                                <rect key="frame" x="20" y="807" width="36" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-Gm-bYv">
-                                <rect key="frame" x="20" y="386.5" width="374" height="203"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kHQ-Gm-bYv">
+                                <rect key="frame" x="20" y="343" width="374" height="203"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="15"/>
@@ -337,7 +330,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload New Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3a-RG-QJG">
-                                <rect key="frame" x="20" y="595" width="194" height="29"/>
+                                <rect key="frame" x="20" y="554.5" width="194" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" name="black_jolt"/>
@@ -364,35 +357,33 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-cT-Atd">
-                                <rect key="frame" x="346" y="398.5" width="36" height="22"/>
+                                <rect key="frame" x="344" y="352" width="36" height="22"/>
                                 <state key="normal" image="optionIcon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="addPhotoButtonTapped:" destination="1jv-Zl-nrk" eventType="touchUpInside" id="td8-R9-zdP"/>
+                                    <action selector="addPhotoButtonTapped:" destination="1jv-Zl-nrk" eventType="touchUpInside" id="XTw-NQ-ChS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="top" secondItem="1vc-cT-Atd" secondAttribute="bottom" constant="-30" id="0bt-Im-Fw0"/>
                             <constraint firstItem="e6P-DB-K0I" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="1zj-Uo-htK"/>
                             <constraint firstItem="2V7-pA-8cD" firstAttribute="top" secondItem="Egg-tg-dre" secondAttribute="bottom" constant="4" id="3B3-k6-Xv0"/>
+                            <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="kHQ-Gm-bYv" secondAttribute="trailing" constant="20" id="5TV-g6-a6o"/>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="top" secondItem="2KI-0I-GgL" secondAttribute="bottom" constant="2.5" id="5W8-CB-VvB"/>
                             <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="2V7-pA-8cD" secondAttribute="trailing" constant="20" id="BdA-uL-Drv"/>
                             <constraint firstItem="2V7-pA-8cD" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="CPG-bP-MNY"/>
-                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="height" secondItem="qkc-nA-ZJ7" secondAttribute="height" multiplier="0.226562" id="G47-uk-tTS"/>
-                            <constraint firstItem="1vc-cT-Atd" firstAttribute="leading" secondItem="kHQ-Gm-bYv" secondAttribute="trailing" constant="-48" id="GSz-6J-0yd"/>
-                            <constraint firstItem="1vc-cT-Atd" firstAttribute="height" secondItem="kHQ-Gm-bYv" secondAttribute="height" multiplier="0.108374" id="JMZ-CT-djz"/>
-                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="top" secondItem="1vc-cT-Atd" secondAttribute="bottom" constant="-34" id="M6f-Je-RJa"/>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="IEk-O6-Ivq"/>
                             <constraint firstItem="2KI-0I-GgL" firstAttribute="top" secondItem="2V7-pA-8cD" secondAttribute="bottom" constant="140" id="P2o-iN-o2n"/>
-                            <constraint firstItem="1vc-cT-Atd" firstAttribute="width" secondItem="kHQ-Gm-bYv" secondAttribute="width" multiplier="0.0962567" id="R4B-ea-CiJ"/>
                             <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="Sb9-il-5Xs" secondAttribute="trailing" constant="20" id="Stb-BX-b1S"/>
                             <constraint firstItem="Egg-tg-dre" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="Tmf-M7-lHU"/>
+                            <constraint firstItem="1vc-cT-Atd" firstAttribute="leading" secondItem="kHQ-Gm-bYv" secondAttribute="trailing" constant="-50" id="URL-oF-Xng"/>
                             <constraint firstItem="2KI-0I-GgL" firstAttribute="leading" secondItem="2V7-pA-8cD" secondAttribute="leading" id="Vc6-TL-e0I"/>
-                            <constraint firstItem="kQC-3V-dUq" firstAttribute="trailing" secondItem="kHQ-Gm-bYv" secondAttribute="trailing" constant="20" id="dNJ-OS-wnx"/>
-                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="top" secondItem="2KI-0I-GgL" secondAttribute="bottom" constant="42.5" id="goF-Db-KxV"/>
                             <constraint firstItem="e6P-DB-K0I" firstAttribute="centerY" secondItem="Sb9-il-5Xs" secondAttribute="centerY" id="hx5-rv-4rY"/>
                             <constraint firstItem="Sb9-il-5Xs" firstAttribute="bottom" secondItem="kQC-3V-dUq" secondAttribute="bottom" constant="-15" id="pgQ-Zo-YyJ"/>
-                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="leading" secondItem="kQC-3V-dUq" secondAttribute="leading" constant="20" id="qSs-Ii-T7z"/>
+                            <constraint firstItem="kHQ-Gm-bYv" firstAttribute="height" secondItem="qkc-nA-ZJ7" secondAttribute="height" multiplier="0.226562" id="wjm-ZM-5Xe"/>
                             <constraint firstAttribute="trailing" secondItem="2KI-0I-GgL" secondAttribute="trailing" constant="20" id="xEd-EO-ID9"/>
                             <constraint firstItem="Egg-tg-dre" firstAttribute="top" secondItem="kQC-3V-dUq" secondAttribute="top" constant="10" id="xtM-cx-BMS"/>
                         </constraints>
@@ -400,13 +391,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="3S6-tc-78g"/>
                     <connections>
-                        <outlet property="drinkImageView" destination="kHQ-Gm-bYv" id="hlH-VR-ahd"/>
-                        <outlet property="mainTitleLabel" destination="2KI-0I-GgL" id="tq0-lw-Vjg"/>
+                        <outlet property="drinkImageView" destination="kHQ-Gm-bYv" id="yd9-bb-hDx"/>
+                        <outlet property="mainTitleLabel" destination="2KI-0I-GgL" id="jK1-wG-Otc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gny-JN-TeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768.1159420289857" y="170.75892857142856"/>
+            <point key="canvasLocation" x="928.98550724637687" y="158.70535714285714"/>
         </scene>
         <!--Drink Appliance View Controller-->
         <scene sceneID="J4o-It-WdA">
@@ -460,13 +451,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Coffe appliance" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smc-F6-hvM">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="200" width="374" height="41"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Appliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1T-x5-iFW">
-                                <rect key="frame" x="20" y="309" width="111" height="20.5"/>
+                                <rect key="frame" x="20" y="266" width="111" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -491,7 +482,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmQ-O1-K1h">
-                                <rect key="frame" x="148" y="309.5" width="20" height="20"/>
+                                <rect key="frame" x="148" y="266.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="keo-Xq-FbL"/>
                                     <constraint firstAttribute="height" constant="20" id="mmm-Ut-GKQ"/>
@@ -500,27 +491,27 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAh-ai-5ux">
-                                <rect key="frame" x="20" y="357" width="66" height="130"/>
+                                <rect key="frame" x="20" y="314" width="66" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-EU-utP">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="Drip"/>
                                         <connections>
-                                            <action selector="dripButtonTapped:" destination="TIL-oQ-1yh" eventType="touchUpInside" id="7Gu-0z-A2z"/>
+                                            <action selector="dripButtonTapped:" destination="TIL-oQ-1yh" eventType="touchUpInside" id="MTP-9G-WXL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-M5-vHN">
                                         <rect key="frame" x="0.0" y="50" width="63" height="30"/>
                                         <state key="normal" title="Espresso"/>
                                         <connections>
-                                            <action selector="espressoButtonTapped:" destination="TIL-oQ-1yh" eventType="touchUpInside" id="E7k-sB-8FI"/>
+                                            <action selector="espressoButtonTapped:" destination="TIL-oQ-1yh" eventType="touchUpInside" id="bJi-s8-T3S"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfs-G9-sTK">
                                         <rect key="frame" x="0.0" y="100" width="66" height="30"/>
                                         <state key="normal" title="Pour over"/>
                                         <connections>
-                                            <action selector="pourOverButtonTapped:" destination="TIL-oQ-1yh" eventType="touchUpInside" id="QPK-zK-HM5"/>
+                                            <action selector="pourOverButtonTapped:" destination="TIL-oQ-1yh" eventType="touchUpInside" id="0T6-3H-D31"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -554,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZP-4J-vdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2500" y="170.75892857142856"/>
+            <point key="canvasLocation" x="1690" y="159"/>
         </scene>
         <!--Drink Coffee Type View Controller-->
         <scene sceneID="FbE-Ko-6Md">
@@ -602,19 +593,19 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Coffee do you use?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETk-gb-Ec5">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="200" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Roast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKV-KF-EOa">
-                                <rect key="frame" x="20" y="309" width="99" height="20.5"/>
+                                <rect key="frame" x="20" y="306.5" width="99" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Roast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUM-Rw-nDX">
-                                <rect key="frame" x="198" y="309" width="99" height="20.5"/>
+                                <rect key="frame" x="198" y="306.5" width="99" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -639,7 +630,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfV-Lf-MNg">
-                                <rect key="frame" x="136" y="309.5" width="20" height="20"/>
+                                <rect key="frame" x="136" y="307" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0ss-hn-seT"/>
                                     <constraint firstAttribute="width" constant="20" id="51U-gi-F9o"/>
@@ -648,7 +639,7 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KZ-uG-AXT">
-                                <rect key="frame" x="312" y="309.5" width="20" height="20"/>
+                                <rect key="frame" x="312" y="307" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="00g-Hk-9bx"/>
                                     <constraint firstAttribute="width" constant="20" id="WC7-LK-I81"/>
@@ -657,67 +648,67 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S1N-wq-M1X">
-                                <rect key="frame" x="20" y="357" width="72" height="180"/>
+                                <rect key="frame" x="20" y="354.5" width="72" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-R6-OBE">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
                                         <state key="normal" title="Light"/>
                                         <connections>
-                                            <action selector="lightButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="Rms-6j-Myh"/>
+                                            <action selector="lightButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="lwr-Vr-NYw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wo-TF-CCs">
                                         <rect key="frame" x="0.0" y="50" width="55" height="30"/>
                                         <state key="normal" title="Medium"/>
                                         <connections>
-                                            <action selector="mediumButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="VNT-oH-OL6"/>
+                                            <action selector="mediumButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="dqr-47-Jdt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAc-C0-XoU">
                                         <rect key="frame" x="0.0" y="100" width="33" height="30"/>
                                         <state key="normal" title="Dark"/>
                                         <connections>
-                                            <action selector="darkButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="Dag-KN-m0Q"/>
+                                            <action selector="darkButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="YtJ-qV-60v"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbc-qW-WLJ">
                                         <rect key="frame" x="0.0" y="150" width="72" height="30"/>
                                         <state key="normal" title="Extra Dark"/>
                                         <connections>
-                                            <action selector="extraDarkButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="gC7-LR-ARs"/>
+                                            <action selector="extraDarkButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="uaR-fb-K3h"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ndh-QJ-uO8">
-                                <rect key="frame" x="198" y="357" width="53" height="180"/>
+                                <rect key="frame" x="198" y="354.5" width="53" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drs-iy-54F">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="30"/>
                                         <state key="normal" title="1 Shot"/>
                                         <connections>
-                                            <action selector="OneshotButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="HPS-XL-thK"/>
+                                            <action selector="OneshotButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="HQ0-y4-68d"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qV-Er-c7U">
                                         <rect key="frame" x="0.0" y="50" width="53" height="30"/>
                                         <state key="normal" title="2 Shots"/>
                                         <connections>
-                                            <action selector="twoshotsButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="B5v-o4-pyb"/>
+                                            <action selector="twoshotsButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="PG0-9X-0f0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8v-A3-K86">
                                         <rect key="frame" x="0.0" y="100" width="53" height="30"/>
                                         <state key="normal" title="3 Shots"/>
                                         <connections>
-                                            <action selector="threeshotsButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="l4Z-4H-Fjb"/>
+                                            <action selector="threeshotsButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="Cfq-Nl-sWt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35f-Bi-Sss">
                                         <rect key="frame" x="0.0" y="150" width="53" height="30"/>
                                         <state key="normal" title="4 Shots"/>
                                         <connections>
-                                            <action selector="fourshotsButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="fkT-6k-z7f"/>
+                                            <action selector="fourshotsButtonTapped:" destination="ndf-f2-Sw5" eventType="touchUpInside" id="URc-Zm-AT9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -763,7 +754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwZ-LG-0Wd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3305.7971014492755" y="158.70535714285714"/>
+            <point key="canvasLocation" x="2396" y="159"/>
         </scene>
         <!--Drink Dairy View Controller-->
         <scene sceneID="AdD-T7-mBe">
@@ -817,13 +808,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Dairy product do you use?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yK-6i-t7A">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="200" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dairy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joc-Zq-gRD">
-                                <rect key="frame" x="20" y="309" width="40" height="20.5"/>
+                                <rect key="frame" x="20" y="306.5" width="40" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -848,7 +839,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikX-HH-9qb">
-                                <rect key="frame" x="77" y="309.5" width="20" height="20"/>
+                                <rect key="frame" x="77" y="307" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="R36-aG-E2k"/>
                                     <constraint firstAttribute="height" constant="20" id="cu4-hW-sdM"/>
@@ -857,27 +848,27 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lBi-Kq-0u6">
-                                <rect key="frame" x="20" y="357" width="73" height="130"/>
+                                <rect key="frame" x="20" y="354.5" width="73" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ki-us-NA8">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
                                         <state key="normal" title="whole milk"/>
                                         <connections>
-                                            <action selector="wholeMilkButtonTapped:" destination="qDq-Fz-GVh" eventType="touchUpInside" id="TTb-Vp-25g"/>
+                                            <action selector="wholeMilkButtonTapped:" destination="qDq-Fz-GVh" eventType="touchUpInside" id="TXu-3w-5rk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JE-ha-Mr8">
                                         <rect key="frame" x="0.0" y="50" width="57" height="30"/>
                                         <state key="normal" title="Oat Milk"/>
                                         <connections>
-                                            <action selector="oatMilkButtonTapped:" destination="qDq-Fz-GVh" eventType="touchUpInside" id="0Tp-hQ-QyX"/>
+                                            <action selector="oatMilkButtonTapped:" destination="qDq-Fz-GVh" eventType="touchUpInside" id="VVQ-tD-EAg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nk-2l-QwC">
                                         <rect key="frame" x="0.0" y="100" width="53" height="30"/>
                                         <state key="normal" title="2% milk"/>
                                         <connections>
-                                            <action selector="twoPercentMilkButtonTapped:" destination="qDq-Fz-GVh" eventType="touchUpInside" id="iRL-ZR-zRh"/>
+                                            <action selector="twoPercentMilkButtonTapped:" destination="qDq-Fz-GVh" eventType="touchUpInside" id="9VI-bX-PDN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -911,7 +902,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wjs-7E-XAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4018.8405797101454" y="158.70535714285714"/>
+            <point key="canvasLocation" x="3110" y="159"/>
         </scene>
         <!--Drink Sweetener View Controller-->
         <scene sceneID="yHn-Lb-S4B">
@@ -965,19 +956,19 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose what sweeteners youll be using for cofee recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH3-Q9-rRE">
-                                <rect key="frame" x="20" y="200" width="374" height="126"/>
+                                <rect key="frame" x="20" y="200" width="374" height="122"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweeteners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydp-ue-9cy">
-                                <rect key="frame" x="20" y="351" width="90" height="20.5"/>
+                                <rect key="frame" x="20" y="347" width="90" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUd-P2-kqH">
-                                <rect key="frame" x="190" y="351" width="113.5" height="20.5"/>
+                                <rect key="frame" x="190" y="347" width="113.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1002,7 +993,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-R9-ovC">
-                                <rect key="frame" x="127" y="351.5" width="20" height="20"/>
+                                <rect key="frame" x="127" y="347.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="V11-05-UP7"/>
                                     <constraint firstAttribute="width" constant="20" id="q9r-7v-9LK"/>
@@ -1011,53 +1002,53 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ftn-Hh-4wQ">
-                                <rect key="frame" x="20" y="399" width="57" height="130"/>
+                                <rect key="frame" x="20" y="395" width="57" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPL-Cn-CJb">
                                         <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
                                         <state key="normal" title="Sugar"/>
                                         <connections>
-                                            <action selector="sugarButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="Byh-Hf-NAY"/>
+                                            <action selector="sugarButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="Tcw-o9-SN6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ip2-vX-cNw">
                                         <rect key="frame" x="0.0" y="50" width="57" height="30"/>
                                         <state key="normal" title="Caramel"/>
                                         <connections>
-                                            <action selector="caramelButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="9F3-8Q-WBz"/>
+                                            <action selector="caramelButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="Duu-Cm-TyF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSN-be-UwY">
                                         <rect key="frame" x="0.0" y="100" width="48" height="30"/>
                                         <state key="normal" title="Syrups"/>
                                         <connections>
-                                            <action selector="syrupButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="xVi-cW-ZTd"/>
+                                            <action selector="syrupButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="uDw-lj-a3Y"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SCH-aU-DoT">
-                                <rect key="frame" x="190" y="399" width="50" height="130"/>
+                                <rect key="frame" x="190" y="395" width="50" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfm-HD-V6c">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
                                         <state key="normal" title="1 TBLS"/>
                                         <connections>
-                                            <action selector="oneTblsButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="4An-f3-V7L"/>
+                                            <action selector="oneTblsButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="BL9-0M-HVj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMP-Kg-gDx">
                                         <rect key="frame" x="0.0" y="50" width="50" height="30"/>
                                         <state key="normal" title="2 TBLS"/>
                                         <connections>
-                                            <action selector="twoTblsButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="Rtx-1U-2df"/>
+                                            <action selector="twoTblsButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="8Gw-Q1-gqx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXa-44-7zF">
                                         <rect key="frame" x="0.0" y="100" width="46" height="30"/>
                                         <state key="normal" title="3TBLS"/>
                                         <connections>
-                                            <action selector="threeTblsButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="y3i-Oj-de1"/>
+                                            <action selector="threeTblsButtonTapped:" destination="Ze4-kM-Wt8" eventType="touchUpInside" id="EsT-1A-JDG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1095,7 +1086,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n4-rH-UhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4726.0869565217399" y="158.70535714285714"/>
+            <point key="canvasLocation" x="3816" y="159"/>
         </scene>
         <!--Drink Toppings View Controller-->
         <scene sceneID="9iA-sI-jag">
@@ -1149,19 +1140,19 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose what toppings youll be using for cofee recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-LW-LXI">
-                                <rect key="frame" x="20" y="200" width="374" height="126"/>
+                                <rect key="frame" x="20" y="200" width="374" height="122"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toppings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lha-0r-lp2">
-                                <rect key="frame" x="20" y="351" width="70.5" height="20.5"/>
+                                <rect key="frame" x="20" y="347" width="70.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUd-rs-YMM">
-                                <rect key="frame" x="170.5" y="351" width="113.5" height="20.5"/>
+                                <rect key="frame" x="170.5" y="347" width="113.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1186,7 +1177,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-Sd-lNv">
-                                <rect key="frame" x="107.5" y="351.5" width="20" height="20"/>
+                                <rect key="frame" x="107.5" y="347.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dWf-oJ-eJW"/>
                                     <constraint firstAttribute="height" constant="20" id="ov6-8P-tWI"/>
@@ -1195,53 +1186,53 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QOO-Gf-SP7">
-                                <rect key="frame" x="20" y="399" width="88" height="130"/>
+                                <rect key="frame" x="20" y="395" width="88" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WM-at-4YA">
                                         <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
                                         <state key="normal" title="whipe cream"/>
                                         <connections>
-                                            <action selector="whipeCreamButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="3V5-d9-7Ap"/>
+                                            <action selector="whipeCreamButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="bvs-z9-KJH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKn-9Q-D7V">
                                         <rect key="frame" x="0.0" y="50" width="67" height="30"/>
                                         <state key="normal" title="cinnamon"/>
                                         <connections>
-                                            <action selector="cinnamonButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="3oI-34-Ce1"/>
+                                            <action selector="cinnamonButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="aBB-5C-aOr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KgY-3R-Xou">
                                         <rect key="frame" x="0.0" y="100" width="44" height="30"/>
                                         <state key="normal" title="m&amp;ms"/>
                                         <connections>
-                                            <action selector="mmButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="C8E-g4-cSR"/>
+                                            <action selector="mmButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="4UK-F8-2xV"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hQF-HW-uog">
-                                <rect key="frame" x="170.5" y="399" width="50" height="130"/>
+                                <rect key="frame" x="170.5" y="395" width="50" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlD-wp-aRU">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
                                         <state key="normal" title="1 TBLS"/>
                                         <connections>
-                                            <action selector="oneTblsButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="nrG-cD-35c"/>
+                                            <action selector="oneTblsButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="mag-ih-S5E"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCv-m7-URe">
                                         <rect key="frame" x="0.0" y="50" width="50" height="30"/>
                                         <state key="normal" title="2 TBLS"/>
                                         <connections>
-                                            <action selector="twoTblsButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="vbg-oq-aSl"/>
+                                            <action selector="twoTblsButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="TFQ-Hf-YEf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnE-Iq-yNT">
                                         <rect key="frame" x="0.0" y="100" width="46" height="30"/>
                                         <state key="normal" title="3TBLS"/>
                                         <connections>
-                                            <action selector="threeTblsButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="4Wl-k6-3wx"/>
+                                            <action selector="threeTblsButtonTapped:" destination="tmC-zp-yYf" eventType="touchUpInside" id="XDH-KG-Ls9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1279,7 +1270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzm-yT-9lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5426.0869565217399" y="158.70535714285714"/>
+            <point key="canvasLocation" x="4516" y="159"/>
         </scene>
         <!--Drink Instructions View Controller-->
         <scene sceneID="hfC-5l-Ane">
@@ -1333,13 +1324,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Instructions for your Recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsg-W9-Qfd">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="200" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqm-JO-pYg">
-                                <rect key="frame" x="20" y="430.5" width="125.5" height="20.5"/>
+                                <rect key="frame" x="20" y="419" width="125.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1364,25 +1355,25 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-mD-894">
-                                <rect key="frame" x="20" y="315" width="374" height="72"/>
+                                <rect key="frame" x="20" y="312.5" width="374" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3G3-ib-6mJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="323" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium Rost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYH-qH-JYk">
-                                                <rect key="frame" x="0.0" y="0.0" width="100.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium Roast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvn-n6-fYl">
+                                                <rect key="frame" x="0.0" y="0.0" width="109.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 shots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiH-AM-rVe">
-                                                <rect key="frame" x="120.5" y="0.0" width="56.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Shots" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZc-UC-JLz">
+                                                <rect key="frame" x="129.5" y="0.0" width="58.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oat Milk 1/2 Cup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzf-h8-i0p">
-                                                <rect key="frame" x="197" y="0.0" width="126" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oat Milk 1/2 Cup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfK-9o-TSb">
+                                                <rect key="frame" x="208" y="0.0" width="126" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1392,13 +1383,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-S8-evv">
                                         <rect key="frame" x="0.0" y="51.5" width="297" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caramel Syrup 3 TBLS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i8-Lz-cI9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caramel Syrup 3 TBLS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-hd-43s">
                                                 <rect key="frame" x="0.0" y="0.0" width="173" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whipe Cream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVr-OT-mue">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whipe Cream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPg-8p-p7F">
                                                 <rect key="frame" x="193" y="0.0" width="104" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -1409,21 +1400,21 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZF-Tl-QQq">
-                                <rect key="frame" x="43" y="488" width="351" height="34"/>
+                                <rect key="frame" x="43" y="447" width="351" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm5-Nw-cAF">
-                                <rect key="frame" x="20" y="494.5" width="8" height="20.5"/>
+                                <rect key="frame" x="20" y="453" width="8" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-CQ-Qfl">
-                                <rect key="frame" x="160" y="430" width="20" height="22"/>
+                                <rect key="frame" x="149" y="418.5" width="22" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="Qhf-tq-OgV"/>
-                                    <constraint firstAttribute="height" constant="22" id="RXu-hG-CMn"/>
+                                    <constraint firstAttribute="height" constant="22" id="Lwh-Zp-Ir5"/>
+                                    <constraint firstAttribute="width" constant="22" id="diH-BU-2Wh"/>
                                 </constraints>
                                 <color key="tintColor" name="orange_jolt"/>
                                 <state key="normal" image="plus.circle" catalog="system"/>
@@ -1431,47 +1422,47 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Zqm-JO-pYg" firstAttribute="leading" secondItem="4i8-Lz-cI9" secondAttribute="leading" id="6qQ-y4-8Us"/>
-                            <constraint firstItem="Qm5-Nw-cAF" firstAttribute="top" secondItem="Zqm-JO-pYg" secondAttribute="bottom" constant="43.5" id="CSt-aY-ImD"/>
-                            <constraint firstItem="V8S-CQ-Qfl" firstAttribute="centerY" secondItem="Zqm-JO-pYg" secondAttribute="centerY" id="DLt-q6-vq1"/>
+                            <constraint firstItem="OZF-Tl-QQq" firstAttribute="leading" secondItem="Qm5-Nw-cAF" secondAttribute="trailing" constant="15" id="1iF-Mn-MMx"/>
+                            <constraint firstItem="V8S-CQ-Qfl" firstAttribute="centerY" secondItem="Zqm-JO-pYg" secondAttribute="centerY" id="Aa9-i2-2Ks"/>
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="T5e-9C-YOt" secondAttribute="trailing" constant="20" id="DQH-9j-CQC"/>
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="PB1-Ir-DYT" secondAttribute="trailing" constant="20" id="EYn-4c-bEc"/>
+                            <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="OZF-Tl-QQq" secondAttribute="trailing" constant="20" id="FJl-Ef-rK6"/>
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="EYq-mD-894" secondAttribute="trailing" constant="20" id="FuC-JA-piV"/>
+                            <constraint firstItem="Zqm-JO-pYg" firstAttribute="leading" secondItem="Jsg-W9-Qfd" secondAttribute="leading" id="K7b-5O-hxf"/>
+                            <constraint firstItem="OZF-Tl-QQq" firstAttribute="top" secondItem="Zqm-JO-pYg" secondAttribute="bottom" constant="7.5" id="KIa-1v-40r"/>
                             <constraint firstItem="AXF-KY-Rvz" firstAttribute="bottom" secondItem="49j-qK-xEb" secondAttribute="bottom" constant="10" id="MxN-ME-dOC"/>
+                            <constraint firstItem="Qm5-Nw-cAF" firstAttribute="top" secondItem="Zqm-JO-pYg" secondAttribute="bottom" constant="13.5" id="OZH-zA-T8K"/>
+                            <constraint firstItem="Zqm-JO-pYg" firstAttribute="top" secondItem="Jsg-W9-Qfd" secondAttribute="bottom" constant="137.5" id="PUv-GZ-x0I"/>
+                            <constraint firstItem="V8S-CQ-Qfl" firstAttribute="leading" secondItem="Zqm-JO-pYg" secondAttribute="trailing" constant="3.5" id="PXu-Z9-QcV"/>
                             <constraint firstItem="Jsg-W9-Qfd" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="QDR-iz-Ex0"/>
                             <constraint firstItem="crx-5P-iEj" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="UK5-cR-sKe"/>
                             <constraint firstItem="PB1-Ir-DYT" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="ZWe-xs-spV"/>
                             <constraint firstItem="Jsg-W9-Qfd" firstAttribute="top" secondItem="PB1-Ir-DYT" secondAttribute="bottom" constant="79" id="bXg-oA-di3"/>
-                            <constraint firstItem="Qm5-Nw-cAF" firstAttribute="leading" secondItem="Zqm-JO-pYg" secondAttribute="leading" id="bb9-wJ-wJH"/>
-                            <constraint firstItem="OZF-Tl-QQq" firstAttribute="centerY" secondItem="Qm5-Nw-cAF" secondAttribute="centerY" id="cpC-XN-1Yl"/>
+                            <constraint firstItem="Qm5-Nw-cAF" firstAttribute="leading" secondItem="Zqm-JO-pYg" secondAttribute="leading" id="csK-nA-Kn1"/>
                             <constraint firstItem="AXF-KY-Rvz" firstAttribute="centerY" secondItem="T5e-9C-YOt" secondAttribute="centerY" id="d3V-9Y-r81"/>
                             <constraint firstItem="crx-5P-iEj" firstAttribute="top" secondItem="49j-qK-xEb" secondAttribute="top" constant="10" id="dR6-t8-Ywf"/>
                             <constraint firstItem="PB1-Ir-DYT" firstAttribute="top" secondItem="crx-5P-iEj" secondAttribute="bottom" constant="5" id="hYe-Yv-RS9"/>
-                            <constraint firstItem="Zqm-JO-pYg" firstAttribute="top" secondItem="4i8-Lz-cI9" secondAttribute="bottom" constant="43.5" id="iJV-Oj-nLi"/>
                             <constraint firstItem="AXF-KY-Rvz" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="iWk-rE-o5g"/>
-                            <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="OZF-Tl-QQq" secondAttribute="trailing" constant="20" id="k5f-GZ-xk0"/>
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="Jsg-W9-Qfd" secondAttribute="trailing" constant="20" id="oXs-9g-F5I"/>
                             <constraint firstItem="T5e-9C-YOt" firstAttribute="bottom" secondItem="49j-qK-xEb" secondAttribute="bottom" constant="-15" id="pig-Cw-tQV"/>
-                            <constraint firstItem="V8S-CQ-Qfl" firstAttribute="leading" secondItem="Zqm-JO-pYg" secondAttribute="trailing" constant="14.5" id="urq-38-Czc"/>
                             <constraint firstItem="EYq-mD-894" firstAttribute="top" secondItem="Jsg-W9-Qfd" secondAttribute="bottom" constant="31" id="vWb-w5-P6f"/>
-                            <constraint firstItem="OZF-Tl-QQq" firstAttribute="leading" secondItem="Qm5-Nw-cAF" secondAttribute="trailing" constant="15" id="wRf-ws-BZv"/>
                             <constraint firstItem="EYq-mD-894" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="z4t-Qs-WLm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="49j-qK-xEb"/>
                     </view>
                     <navigationItem key="navigationItem" id="Gp4-uf-cAm"/>
                     <connections>
-                        <outlet property="cofeeRoastLabel" destination="cYH-qH-JYk" id="NUf-1l-QGq"/>
-                        <outlet property="coffeeShotLabel" destination="uiH-AM-rVe" id="G8k-7A-K9X"/>
-                        <outlet property="dairyLabel" destination="wzf-h8-i0p" id="qfu-Hl-mgX"/>
-                        <outlet property="instructionsTextField" destination="OZF-Tl-QQq" id="mjN-dW-Wkj"/>
-                        <outlet property="sweetenerLabel" destination="4i8-Lz-cI9" id="c5a-1M-mtt"/>
-                        <outlet property="toppingsLabel" destination="zVr-OT-mue" id="Acd-4j-seJ"/>
+                        <outlet property="cofeeRoastLabel" destination="pvn-n6-fYl" id="mcg-FU-5Y9"/>
+                        <outlet property="coffeeShotLabel" destination="oZc-UC-JLz" id="3Zp-I0-SsN"/>
+                        <outlet property="dairyLabel" destination="hfK-9o-TSb" id="tJG-eO-ry8"/>
+                        <outlet property="instructionsTextField" destination="OZF-Tl-QQq" id="YBR-f2-LIg"/>
+                        <outlet property="sweetenerLabel" destination="pzW-hd-43s" id="i1Z-bU-El8"/>
+                        <outlet property="toppingsLabel" destination="sPg-8p-p7F" id="ZAY-hj-aua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6CX-rZ-oCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6117.3913043478269" y="158.70535714285714"/>
+            <point key="canvasLocation" x="5207.2463768115949" y="158.70535714285714"/>
         </scene>
         <!--Post Drink View Controller-->
         <scene sceneID="WM8-ay-mAO">
@@ -1507,7 +1498,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="post:" destination="BRv-Kb-UIL" eventType="touchUpInside" id="Uy6-93-6Ly"/>
+                                    <action selector="post:" destination="BRv-Kb-UIL" eventType="touchUpInside" id="ZHX-gu-Zm9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-eO-q5D">
@@ -1532,7 +1523,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="makeNewDrinkButtonTapped:" destination="BRv-Kb-UIL" eventType="touchUpInside" id="yXe-jD-jA4"/>
+                                    <action selector="makeNewDrinkButtonTapped:" destination="BRv-Kb-UIL" eventType="touchUpInside" id="cjN-VY-lZJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1551,24 +1542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywb-Vy-6IH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6836.2318840579719" y="158.70535714285714"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="MOk-3U-hiV">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="7gv-Pr-vvn" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pna-3d-Xfd">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="tSE-ns-Eg4" kind="relationship" relationship="rootViewController" id="R4O-A0-bDT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AeC-Ic-QQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-684.05797101449275" y="171.42857142857142"/>
+            <point key="canvasLocation" x="5927.536231884058" y="158.70535714285714"/>
         </scene>
     </scenes>
     <resources>
