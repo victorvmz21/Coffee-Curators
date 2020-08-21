@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>373686806847-fijq7ucklcf0m18lgmo3q4jqckvhjp3r.apps.googleusercontent.com</string>
+	<string>373686806847-9c1jahcou2e04snoqbae41eogir6pqlr.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.373686806847-fijq7ucklcf0m18lgmo3q4jqckvhjp3r</string>
+	<string>com.googleusercontent.apps.373686806847-9c1jahcou2e04snoqbae41eogir6pqlr</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBkMZ9Qpyz9Syh55jQuwJBcY_FCXIKooqQ</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.atomuz.Coffe-Curators</string>
+	<string>io.atomuz.Coffe-Curators</string>
 	<key>PROJECT_ID</key>
 	<string>coffee-curators</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:373686806847:ios:2d9bcaf091f5bfd2dbcb8a</string>
+	<string>1:373686806847:ios:da5f5382ccbc93f7dbcb8a</string>
 	<key>DATABASE_URL</key>
 	<string>https://coffee-curators.firebaseio.com</string>
 </dict>

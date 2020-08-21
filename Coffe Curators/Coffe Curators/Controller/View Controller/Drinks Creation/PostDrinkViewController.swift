@@ -37,14 +37,8 @@ class PostDrinkViewController: UIViewController {
         savePost()
     }
     
-    @IBAction func makeNewDrinkButtonTapped(_ sender: UIButton) {
-        
+    @IBAction func cancelDrinkPostButtonTapped(_ sender: UIButton) {
         navigationController?.dismiss(animated: false, completion: nil)
-        
-        let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
-        let drinkTitleVC = storyboard.instantiateViewController(identifier: "drinkTitle")
-        self.present(drinkTitleVC, animated: true)
-        
     }
     
     //MARK: - Methods
