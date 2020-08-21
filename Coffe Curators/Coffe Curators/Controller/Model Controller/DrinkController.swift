@@ -9,21 +9,26 @@
 import Foundation
 import Firebase
 import FirebaseFirestoreSwift
+import FirebaseFirestore
+import FirebaseStorage
 
 struct drinkConstants {
     
     static let userIDKey           = "userID"
     static let collectionNamekey   = "drinks"
     static let drinkTitleKey       = "title"
+    static let drinkCategoryKey    = "drinkCategory"
     static let drinkPictureKey     = "drinkPicture"
-    static let machineTypeKey      = "machineType"
+    static let applianceKey        = "appliance"
     static let coofeRoastKey       = "coofeRoast"
-    static let cupsOfCoofeKey      = "howManyCupsOfCoffe"
+    static let coffeeShotKey       = "coffeeShot"
     static let dairyKey            = "dairy"
-    static let swetenerKey         = "swetener"
+    static let sweetenerKey        = "swetener"
+    static let sweetenerMeasureKey = "sweetenerMeasure"
     static let toppingKey          = "topping"
+    static let toppingMeasureKey   = "toppingMeasure"
     static let instructionsKey     = "instructions"
-    static let measurementKey      = "measurements"
+    
 }
 
 class DrinkController {
@@ -36,30 +41,31 @@ class DrinkController {
     
     //MARK: - CRUD
     //MARK: CREATE
-    func createDrink(userId: String, drinkUID: String = UUID().uuidString, title: String, drinkPicture: String, machineType: String,
-                     coofeRoast: String, cupsOfCoofe: Int, dairy: String,
-                     swetener: String, toppings: [String], instructions: [String],
-                     measurements: String) {
+    func createDrink(userId: String, drinkUID: String = UUID().uuidString, title: String, drinkCategory: String, drinkPicture: Data, appliance: String, coofeRoast: String, coffeeShot: Int, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String], instructions: [String]) {
         
         let newDrinkDictionary: [String: Any] = [
-            drinkConstants.userIDKey       : userId,
-            drinkConstants.drinkTitleKey   : title,
-            drinkConstants.drinkPictureKey : drinkPicture,
-            drinkConstants.machineTypeKey  : machineType,
-            drinkConstants.coofeRoastKey   : coofeRoast,
-            drinkConstants.cupsOfCoofeKey  : cupsOfCoofe,
-            drinkConstants.dairyKey        : dairy,
-            drinkConstants.swetenerKey     : swetener,
-            drinkConstants.toppingKey      : toppings,
-            drinkConstants.instructionsKey : instructions,
-            drinkConstants.measurementKey  : measurements
+            drinkConstants.userIDKey         : userId,
+            drinkConstants.drinkTitleKey     : title,
+            drinkConstants.drinkCategoryKey  : drinkCategory,
+            drinkConstants.drinkPictureKey   : drinkPicture,
+            drinkConstants.applianceKey      : appliance,
+            drinkConstants.coofeRoastKey     : coofeRoast,
+            drinkConstants.coffeeShotKey     : coffeeShot,
+            drinkConstants.dairyKey          : dairy,
+            drinkConstants.sweetenerKey      : sweetener,
+            drinkConstants.toppingKey        : topping,
+            drinkConstants.toppingMeasureKey : toppingMeasure,
+            drinkConstants.instructionsKey   : instructions
         ]
         
         //Creating drink in public collection
         db.collection(drinkConstants.collectionNamekey).document(drinkUID).setData(newDrinkDictionary) { (error) in
             if let error = error {
                 print("Error writing document: \(error) - \(error.localizedDescription)")
-            } else {print("Document successfully written!")}
+            } else {
+                //uploading Photo
+                self.uploadDrinkImage(image: drinkPicture, drinkID: drinkUID)
+                print("Document successfully written!")}
         }
         
         //Creating drink in user collection
@@ -68,6 +74,61 @@ class DrinkController {
                 print("Error writing document: \(error) - \(error.localizedDescription)")
             } else { print("Document successfully written!")}
         }
+    }
+    
+    func uploadDrinkImage(image: Data, drinkID: String) {
+        
+        
+        let imageRef = Storage.storage().reference().child("images").child("drink_\(drinkID)")
+        imageRef.putData(image, metadata: nil) {  meta, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            
+            imageRef.downloadURL { url, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
+                
+                guard let url = url else { return }
+                let dataReference = Firestore.firestore().collection("images").document()
+                let documentUid = dataReference.documentID
+                let urlString = url.absoluteString
+                
+                let data = [
+                    "uid": documentUid,
+                    "url": urlString
+                ]
+                
+                dataReference.setData(data) { (error) in
+                    if let error = error {
+                         print("Fail upload drink image.")
+                        print(error.localizedDescription)
+                    }
+                    print("drink image uploaded sucessfully!")
+                }
+                
+            }
+        }
+    }
+    
+    func fetchingDrinkImage(drinkUID: String, completion: @escaping (Result<UIImage,Error>) -> Void) {
+        let reference = Storage.storage().reference().child("images/drink_\(drinkUID)")
+        
+        reference.downloadURL { url, error in
+            if let error = error {
+                print("Error fetching drink image")
+                completion(.failure(error))
+            }
+            
+            guard let url = url else { return }
+            if let data = try? Data(contentsOf: url) {
+                guard let image = UIImage(data: data) else { return }
+                print("image fetched successfully!")
+                completion(.success(image))
+            }
+        }
+        
     }
     
     //MARK: READ (fetch)
@@ -95,21 +156,20 @@ class DrinkController {
     }
     
     //MARK: UPDATE
-    func updateDrink(uid: String, drinkUID: String, Newtitle: String, drinkPicture: String, machineType: String,
-                     coofeRoast: String, cupsOfCoofe: Int, dairy: String, swetener: String, toppings: [String],
-                     instructions: [String], measurements: String) {
+    func updateDrink(userId: String, drinkUID: String = UUID().uuidString, title: String, drinkCategory: String, drinkPicture: Data, appliance: String, coofeRoast: String, coffeeShot: Int, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String], instructions: [String]) {
         
         let updatedDrinkDictionary: [String: Any] = [
-            drinkConstants.drinkTitleKey   : Newtitle,
-            drinkConstants.drinkPictureKey : drinkPicture,
-            drinkConstants.machineTypeKey  : machineType,
-            drinkConstants.coofeRoastKey   : coofeRoast,
-            drinkConstants.cupsOfCoofeKey  : cupsOfCoofe,
-            drinkConstants.dairyKey        : dairy,
-            drinkConstants.swetenerKey     : swetener,
-            drinkConstants.toppingKey      : toppings,
-            drinkConstants.instructionsKey : instructions,
-            drinkConstants.measurementKey  : measurements
+            drinkConstants.drinkTitleKey     : title,
+            drinkConstants.drinkCategoryKey  : drinkCategory,
+            drinkConstants.drinkPictureKey   : drinkPicture,
+            drinkConstants.applianceKey      : appliance,
+            drinkConstants.coofeRoastKey     : coofeRoast,
+            drinkConstants.coffeeShotKey     : coffeeShot,
+            drinkConstants.dairyKey          : dairy,
+            drinkConstants.sweetenerKey      : sweetener,
+            drinkConstants.toppingKey        : topping,
+            drinkConstants.toppingMeasureKey : toppingMeasure,
+            drinkConstants.instructionsKey   : instructions
         ]
         
         //Update Public drinks
@@ -120,7 +180,7 @@ class DrinkController {
         }
         
         //Update User drinks
-        db.collection("users").document(uid).collection(drinkConstants.collectionNamekey).document(drinkUID).updateData(updatedDrinkDictionary) { error in
+        db.collection("users").document(userId).collection(drinkConstants.collectionNamekey).document(drinkUID).updateData(updatedDrinkDictionary) { error in
             if let error = error {
                 print("Error: Couldn't update user drink  collection \(error.localizedDescription)")
             } else { print("User drink collection updated successfully!")}
