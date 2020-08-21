@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		186B25E8FF6AEBAA407F284A /* Pods_Coffe_Curators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD0479E7DEF0EE3924A71F3 /* Pods_Coffe_Curators.framework */; };
 		524FB7EA24EA4DD70077E812 /* DrinkCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524FB7E924EA4DD70077E812 /* DrinkCreation.storyboard */; };
+		5272602F24F0508C00518886 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5272602E24F0508C00518886 /* GoogleService-Info.plist */; };
 		5295D8F024DC656C002434F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8EF24DC656C002434F8 /* AppDelegate.swift */; };
 		5295D8F224DC656C002434F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8F124DC656C002434F8 /* SceneDelegate.swift */; };
 		5295D8F424DC656C002434F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5295D8F324DC656C002434F8 /* ViewController.swift */; };
@@ -58,7 +59,6 @@
 		DE010BA524DDC51E00576B12 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE010BA424DDC51E00576B12 /* UserController.swift */; };
 		DE010BA724DDC52900576B12 /* DrinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE010BA624DDC52900576B12 /* DrinkController.swift */; };
 		DE60204324E2FB4C00AB8DE6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60204224E2FB4C00AB8DE6 /* SignInViewController.swift */; };
-		DE957B8F24DC71E3004F2919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE957B8E24DC71E3004F2919 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +83,7 @@
 		27E7B8BB71DB33313A07DE6C /* Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Coffe Curators-Coffe CuratorsUITests/Pods-Coffe Curators-Coffe CuratorsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		41DD8F3691205FFF0C3C725E /* Pods_Coffe_Curators_Coffe_CuratorsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffe_Curators_Coffe_CuratorsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		524FB7E924EA4DD70077E812 /* DrinkCreation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DrinkCreation.storyboard; sourceTree = "<group>"; };
+		5272602E24F0508C00518886 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5295D8EC24DC656C002434F8 /* Jolt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jolt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5295D8EF24DC656C002434F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5295D8F124DC656C002434F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,7 +143,6 @@
 		DE010BA624DDC52900576B12 /* DrinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkController.swift; sourceTree = "<group>"; };
 		DE60204224E2FB4C00AB8DE6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DE60204424E2FF6500AB8DE6 /* Coffe Curators.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Coffe Curators.entitlements"; sourceTree = "<group>"; };
-		DE957B8E24DC71E3004F2919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EFC4080E7CDFBA4AF65442FD /* Pods-Coffe Curators.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators.debug.xcconfig"; path = "Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,7 +245,7 @@
 				5295D8F824DC656E002434F8 /* Assets.xcassets */,
 				5295D8FA24DC656E002434F8 /* LaunchScreen.storyboard */,
 				5295D8FD24DC656E002434F8 /* Info.plist */,
-				DE957B8E24DC71E3004F2919 /* GoogleService-Info.plist */,
+				5272602E24F0508C00518886 /* GoogleService-Info.plist */,
 				52B09B3624E44CCF00241B38 /* Colors.xcassets */,
 			);
 			path = Resources;
@@ -505,7 +505,7 @@
 				52B2C5E724EB5AC200B4C6CA /* BrowserDrinks.storyboard in Resources */,
 				52B2C5D024EB2B5F00B4C6CA /* Petrona-ExtraLight.ttf in Resources */,
 				52B09B4224E450D500241B38 /* Petrona-SemiBold.ttf in Resources */,
-				DE957B8F24DC71E3004F2919 /* GoogleService-Info.plist in Resources */,
+				5272602F24F0508C00518886 /* GoogleService-Info.plist in Resources */,
 				52B09B3E24E44F8300241B38 /* Petrona-Light.ttf in Resources */,
 				524FB7EA24EA4DD70077E812 /* DrinkCreation.storyboard in Resources */,
 				5295D8F924DC656E002434F8 /* Assets.xcassets in Resources */,

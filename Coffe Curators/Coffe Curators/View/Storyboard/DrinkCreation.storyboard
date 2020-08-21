@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tSE-ns-Eg4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0xU-m4-p9v">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -114,6 +114,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wZ1-5r-oPk"/>
                     </view>
+                    <navigationItem key="navigationItem" id="OQj-NJ-0PL"/>
                     <connections>
                         <outlet property="advanceButton" destination="C1a-Pz-VNM" id="xJo-0y-2A5"/>
                         <outlet property="titleTextField" destination="zHr-iz-Z7o" id="0IN-YH-w3V"/>
@@ -121,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usn-Vx-vlo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-684.05797101449275" y="171.42857142857142"/>
+            <point key="canvasLocation" x="226.08695652173915" y="171.42857142857142"/>
         </scene>
         <!--Drink Type View Controller-->
         <scene sceneID="s9Z-Pf-i72">
@@ -258,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ye1-hQ-eKc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108.69565217391305" y="170.75892857142856"/>
+            <point key="canvasLocation" x="1018.840579710145" y="170.75892857142856"/>
         </scene>
         <!--Drink Photo View Controller-->
         <scene sceneID="JUN-3T-Njh">
@@ -397,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gny-JN-TeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="158.70535714285714"/>
+            <point key="canvasLocation" x="1839.1304347826087" y="158.70535714285714"/>
         </scene>
         <!--Drink Appliance View Controller-->
         <scene sceneID="J4o-It-WdA">
@@ -545,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZP-4J-vdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="159"/>
+            <point key="canvasLocation" x="2600" y="158.70535714285714"/>
         </scene>
         <!--Drink Coffee Type View Controller-->
         <scene sceneID="FbE-Ko-6Md">
@@ -754,7 +755,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwZ-LG-0Wd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="159"/>
+            <point key="canvasLocation" x="3305.7971014492755" y="158.70535714285714"/>
         </scene>
         <!--Drink Dairy View Controller-->
         <scene sceneID="AdD-T7-mBe">
@@ -902,7 +903,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wjs-7E-XAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3110" y="159"/>
+            <point key="canvasLocation" x="4018.8405797101454" y="158.70535714285714"/>
         </scene>
         <!--Drink Sweetener View Controller-->
         <scene sceneID="yHn-Lb-S4B">
@@ -1086,7 +1087,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5n4-rH-UhM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3816" y="159"/>
+            <point key="canvasLocation" x="4726.0869565217399" y="158.70535714285714"/>
         </scene>
         <!--Drink Toppings View Controller-->
         <scene sceneID="9iA-sI-jag">
@@ -1270,7 +1271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qzm-yT-9lu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4516" y="159"/>
+            <point key="canvasLocation" x="5426.0869565217399" y="158.70535714285714"/>
         </scene>
         <!--Drink Instructions View Controller-->
         <scene sceneID="hfC-5l-Ane">
@@ -1462,7 +1463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6CX-rZ-oCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5207.2463768115949" y="158.70535714285714"/>
+            <point key="canvasLocation" x="6117.3913043478269" y="158.70535714285714"/>
         </scene>
         <!--Post Drink View Controller-->
         <scene sceneID="WM8-ay-mAO">
@@ -1508,7 +1509,7 @@
                                     <constraint firstAttribute="height" constant="48" id="mot-su-wZX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Make new Recipes">
+                                <state key="normal" title="Cancel">
                                     <color key="titleColor" name="orange_jolt"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1523,7 +1524,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="makeNewDrinkButtonTapped:" destination="BRv-Kb-UIL" eventType="touchUpInside" id="cjN-VY-lZJ"/>
+                                    <action selector="cancelDrinkPostButtonTapped:" destination="BRv-Kb-UIL" eventType="touchUpInside" id="cjN-VY-lZJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1542,7 +1543,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywb-Vy-6IH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5927.536231884058" y="158.70535714285714"/>
+            <point key="canvasLocation" x="6836.2318840579719" y="158.70535714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rTj-mq-UNd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="0xU-m4-p9v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XfY-GO-d7i">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tSE-ns-Eg4" kind="relationship" relationship="rootViewController" id="VT2-h6-Ack"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDR-RF-2xd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684.05797101449275" y="171.42857142857142"/>
         </scene>
     </scenes>
     <resources>
