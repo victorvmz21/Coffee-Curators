@@ -11,13 +11,15 @@ import Foundation
 struct Drink: Codable {
   
     var title: String
-    var drinkPicture: String
-    var machineType: String
+    var drinkCategory: String
+    var drinkPicture: Data
+    var appliance: String
     var coofeRoast:  String
-    var howManyCupsOfCoffe: Int
+    var coffeeShot: Int
     var dairy: String
-    var swetener: String
+    var sweetener: String
+    var sweetenerMeasure: String
     var topping: [String]
+    var toppingMeasure: [String]
     var instructions: [String]
-    var measurements: String
 }

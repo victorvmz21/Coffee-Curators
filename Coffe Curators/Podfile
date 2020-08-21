@@ -14,6 +14,7 @@ target 'Coffe Curators' do
      pod 'Firebase/Analytics'
      pod 'StepIndicator', '~> 1.0.8'
      pod 'XLPagerTabStrip', '~> 9.0'
+     pod 'Firebase/Storage'
 
   target 'Coffe CuratorsTests' do
     inherit! :search_paths
