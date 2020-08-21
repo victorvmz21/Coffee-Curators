@@ -166,6 +166,10 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
             
             Auth.auth().signIn(with: credential) { (result, error) in
                 if let user = result?.user {
+                    DispatchQueue.main.async {
+                        self.refreshDelegate.reloadHomeView()
+                    }
+                    self.navigationController?.dismiss(animated: true, completion: nil)
                     print("you're now signed in as \(user.uid) email: \(user.email), name: \(user.displayName)")
                     let firstName = user.displayName?.components(separatedBy: " ")[0] ?? "\(user.uid)"
                     let lastName = user.displayName?.components(separatedBy: " ")[1] ?? "N/A"
