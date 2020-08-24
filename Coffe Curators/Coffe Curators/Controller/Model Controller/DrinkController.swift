@@ -136,29 +136,34 @@ class DrinkController {
     //MARK: READ (fetch)
     func fetchDrinks(completion: @escaping (Result<[Drink], Error>) -> Void) {
         let fetchedDoc =  db.collection(drinkConstants.collectionNamekey)
-        
+        let dispatchGroup = DispatchGroup()
+        dispatchGroup.enter()
+        var drinksArray: [Drink] = []
         fetchedDoc.getDocuments { (query, error) in
             if let error = error {
                 print("Error fetching document \(error) - \(error.localizedDescription)")
             }
             guard let documents = query?.documents else { return }
             
-            var drinksArray: [Drink] = []
             
             for document in documents {
-                
+                dispatchGroup.enter()
                 let result = Result { try document.data(as: Drink.self) }
                 switch result {
                 case .success(let drink):
                     
                     if let drink = drink {
                         drinksArray.append(drink)
+                        dispatchGroup.leave()
                     }
                 case .failure(let error):
                     print("Error: error fetching drinks \(error) - \(error.localizedDescription)")
-                    completion(.failure(error))
+                    dispatchGroup.leave()
                 }
             }
+            dispatchGroup.leave()
+        }
+        dispatchGroup.notify(queue: .main) {
             completion(.success(drinksArray))
         }
     }

@@ -20,7 +20,6 @@ class DripCoffeeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetch()
-        tableView.reloadData()
     }
     
     //MARK: - Methods
@@ -41,12 +40,12 @@ class DripCoffeeTableViewController: UITableViewController {
                     }
                 }
                 
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
             case .failure(let error):
                 print("can not fetch data")
                 print(error.localizedDescription)
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
     }
@@ -57,6 +56,7 @@ class DripCoffeeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("Hit number of rows")
         if section == 0 {
             return hotDrinks.count
         } else  if section == 1 {
@@ -83,6 +83,7 @@ class DripCoffeeTableViewController: UITableViewController {
         return cell
     }
 }
+
 extension DripCoffeeTableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Drip Coffee")
