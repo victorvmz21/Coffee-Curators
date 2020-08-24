@@ -89,6 +89,7 @@
                     <connections>
                         <outlet property="buttonBarView" destination="8MJ-9j-FKb" id="2e5-ts-hlk"/>
                         <outlet property="containerView" destination="Bfa-2C-8fU" id="sfI-OR-5ye"/>
+                        <outlet property="drinkSearchBar" destination="67y-5k-Fl8" id="kgg-y9-xpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3GR-pc-7CR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -486,7 +487,10 @@
                                     <constraint firstAttribute="width" constant="39" id="6YO-e2-95U"/>
                                     <constraint firstAttribute="height" constant="39" id="b4A-Um-0zP"/>
                                 </constraints>
-                                <state key="normal" image="Heart"/>
+                                <state key="normal" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="yUB-Nd-9ib" eventType="touchUpInside" id="3bp-Fq-n6i"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQJ-O1-9Xl">
                                 <rect key="frame" x="349" y="358" width="36" height="22"/>
@@ -566,6 +570,9 @@
                         <viewLayoutGuide key="safeArea" id="Dr7-PP-sep"/>
                     </view>
                     <navigationItem key="navigationItem" id="VKQ-6D-AFV"/>
+                    <connections>
+                        <outlet property="likeButton" destination="tPH-5r-s4i" id="Lwk-T2-l3x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjY-D0-EOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -576,10 +583,10 @@
         <segue reference="Gi3-PZ-Czd"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Heart" width="56" height="50"/>
         <image name="brownbackbutton " width="70" height="70"/>
         <image name="coffee" width="350" height="324"/>
         <image name="espresso" width="350" height="324"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="logo" width="262" height="116"/>
         <image name="optionIcon" width="36" height="12"/>
         <image name="pourOver" width="350" height="324"/>

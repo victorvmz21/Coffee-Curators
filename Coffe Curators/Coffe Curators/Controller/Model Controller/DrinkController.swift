@@ -28,7 +28,7 @@ struct drinkConstants {
     static let toppingKey          = "topping"
     static let toppingMeasureKey   = "toppingMeasure"
     static let instructionsKey     = "instructions"
-    
+    static let drinkUid = "uid"
 }
 
 class DrinkController {
@@ -38,6 +38,10 @@ class DrinkController {
     
     //MARK: - Database reference
     let db = Firestore.firestore()
+    
+    // MARK: - Arrays
+    var drinks: [Drink] = []
+    var searchedDrinks: [Drink] = []
     
     //MARK: - CRUD
     //MARK: CREATE
@@ -55,11 +59,11 @@ class DrinkController {
             drinkConstants.sweetenerKey      : sweetener,
             drinkConstants.toppingKey        : topping,
             drinkConstants.toppingMeasureKey : toppingMeasure,
-            drinkConstants.instructionsKey   : instructions
+            drinkConstants.instructionsKey   : instructions,
         ]
         
         //Creating drink in public collection
-        db.collection(drinkConstants.collectionNamekey).document(drinkUID).setData(newDrinkDictionary) { (error) in
+        db.collection(drinkConstants.collectionNamekey).document(title).setData(newDrinkDictionary) { (error) in
             if let error = error {
                 print("Error writing document: \(error) - \(error.localizedDescription)")
             } else {
@@ -132,28 +136,94 @@ class DrinkController {
     }
     
     //MARK: READ (fetch)
-    func fetchDrinks(completion: @escaping (Result<Drink, Error>) -> Void) {
-        let fetchedDoc =  db.collection(drinkConstants.collectionNamekey)
-        
-        fetchedDoc.getDocuments { (query, error) in
-            if let error = error {
-                print("Error fetching document \(error) - \(error.localizedDescription)")
-            }
-            guard let documents = query?.documents else { return }
-            
-            for document in documents {
+      func fetchDrinks(completion: @escaping (Result<Drink, Error>) -> Void) {
+            let fetchedDoc =  db.collection(drinkConstants.collectionNamekey)
+    
+        fetchedDoc.getDocuments { (snapshot, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
                 
-                let result = Result { try document.data(as: Drink.self) }
-                switch result {
-                case .success(let drinks):
-                    if let drink = drinks { completion(.success(drink)) }
-                case .failure(let error):
-                    print("Error: error fetching drinks \(error) - \(error.localizedDescription)")
-                    completion(.failure(error))
+                for document in snapshot!.documents {
+                
+                    let result = Result {
+                        try document.data(as: Drink.self)
+                    }
+                    
+                    switch result {
+                    case .success(let drink):
+                        
+                        if let drink = drink {
+                            self.drinks.append(drink)
+                            print(self.drinks.count)
+                        }
+                        
+                    case .failure(let err):
+                        print(err.localizedDescription)
+                    }
                 }
             }
         }
     }
+    
+    
+    //Fetch drink with search
+    func drinkSearch(searchTerm: String, completion: @escaping (Bool) -> Void) {
+        let query = db.collection(drinkConstants.collectionNamekey).whereField(drinkConstants.drinkTitleKey, isEqualTo: searchTerm)
+        
+        var fetchedDrinks: [Drink] = []
+        
+        query.getDocuments { (snapshot, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                for document in snapshot!.documents {
+                    let result = Result {
+                        try document.data(as: Drink.self)
+                    }
+                    
+                    switch result {
+                    case .success(let drink):
+                        if let drink = drink {
+                            fetchedDrinks.append(drink)
+                        }
+                    case .failure(let err):
+                        print(err.localizedDescription)
+                    }
+                    
+                }
+            }
+            self.searchedDrinks = []
+            self.searchedDrinks = fetchedDrinks
+            return completion(!self.drinks.isEmpty)
+        }
+        
+    }
+    
+    
+    
+//    func fetchDrinks(completion: @escaping (Result<Drink, Error>) -> Void) {
+//        let fetchedDoc =  db.collection(drinkConstants.collectionNamekey)
+//
+//        fetchedDoc.getDocuments { (query, error) in
+//            if let error = error {
+//                print("Error fetching document \(error) - \(error.localizedDescription)")
+//            }
+//            guard let documents = query?.documents else { return }
+//
+//            for document in documents {
+//
+//                let result = Result { try document.data(as: Drink.self) }
+//                switch result {
+//                case .success(let drinks):
+//                    if let drink = drinks { completion(.success(drink)) }
+//                case .failure(let error):
+//                    print("Error: error fetching drinks \(error) - \(error.localizedDescription)")
+//                    completion(.failure(error))
+//                }
+//            }
+//        }
+//    }
     
     //MARK: UPDATE
     func updateDrink(userId: String, drinkUID: String = UUID().uuidString, title: String, drinkCategory: String, drinkPicture: Data, appliance: String, coofeRoast: String, coffeeShot: Int, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String], instructions: [String]) {

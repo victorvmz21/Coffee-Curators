@@ -13,7 +13,32 @@ class PopularDrinkTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        DrinkController.shared.fetchDrinks { (result) in
+            switch result {
+            case .success(_):
+                print("Fetched")
+                print(DrinkController.shared.drinks[0])
+            case .failure(_):
+                print("Failed")
+            }
+        }
     }
+    
+    // MARK: - Methods
+
+    
+//    func fetchingPopularDrinks() {
+//        DrinkController.shared.fetchDrinks { result in
+//            switch result {
+//            case .success(let drink):
+//                <#code#>
+//            case .failure(_):
+//                <#code#>
+//            }
+//        }
+//    }
+
+    
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
