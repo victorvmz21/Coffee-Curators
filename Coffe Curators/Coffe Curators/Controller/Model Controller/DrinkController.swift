@@ -23,7 +23,7 @@ struct drinkConstants {
     static let coofeRoastKey       = "coofeRoast"
     static let coffeeShotKey       = "coffeeShot"
     static let dairyKey            = "dairy"
-    static let sweetenerKey        = "swetener"
+    static let sweetenerKey        = "sweetener"
     static let sweetenerMeasureKey = "sweetenerMeasure"
     static let toppingKey          = "topping"
     static let toppingMeasureKey   = "toppingMeasure"
@@ -41,21 +41,23 @@ class DrinkController {
     
     //MARK: - CRUD
     //MARK: CREATE
-    func createDrink(userId: String, drinkUID: String = UUID().uuidString, title: String, drinkCategory: String, drinkPicture: Data, appliance: String, coofeRoast: String, coffeeShot: Int, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String], instructions: [String]) {
+    func createDrink(userId: String, drinkUID: String = UUID().uuidString, title: String, drinkCategory: String, drinkPicture: Data,
+                     appliance: String, coofeRoast: String, coffeeShot: Int, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String], instructions: [String]) {
         
         let newDrinkDictionary: [String: Any] = [
-            drinkConstants.userIDKey         : userId,
-            drinkConstants.drinkTitleKey     : title,
-            drinkConstants.drinkCategoryKey  : drinkCategory,
-            drinkConstants.drinkPictureKey   : drinkPicture,
-            drinkConstants.applianceKey      : appliance,
-            drinkConstants.coofeRoastKey     : coofeRoast,
-            drinkConstants.coffeeShotKey     : coffeeShot,
-            drinkConstants.dairyKey          : dairy,
-            drinkConstants.sweetenerKey      : sweetener,
-            drinkConstants.toppingKey        : topping,
-            drinkConstants.toppingMeasureKey : toppingMeasure,
-            drinkConstants.instructionsKey   : instructions
+            drinkConstants.userIDKey          : userId,
+            drinkConstants.drinkTitleKey      : title,
+            drinkConstants.drinkCategoryKey   : drinkCategory,
+            drinkConstants.drinkPictureKey    : drinkPicture,
+            drinkConstants.applianceKey       : appliance,
+            drinkConstants.coofeRoastKey      : coofeRoast,
+            drinkConstants.coffeeShotKey      : coffeeShot,
+            drinkConstants.dairyKey           : dairy,
+            drinkConstants.sweetenerKey       : sweetener,
+            drinkConstants.sweetenerMeasureKey: sweetenerMeasure,
+            drinkConstants.toppingKey         : topping,
+            drinkConstants.toppingMeasureKey  : toppingMeasure,
+            drinkConstants.instructionsKey    : instructions
         ]
         
         //Creating drink in public collection
@@ -132,7 +134,7 @@ class DrinkController {
     }
     
     //MARK: READ (fetch)
-    func fetchDrinks(completion: @escaping (Result<Drink, Error>) -> Void) {
+    func fetchDrinks(completion: @escaping (Result<[Drink], Error>) -> Void) {
         let fetchedDoc =  db.collection(drinkConstants.collectionNamekey)
         
         fetchedDoc.getDocuments { (query, error) in
@@ -141,17 +143,23 @@ class DrinkController {
             }
             guard let documents = query?.documents else { return }
             
+            var drinksArray: [Drink] = []
+            
             for document in documents {
                 
                 let result = Result { try document.data(as: Drink.self) }
                 switch result {
-                case .success(let drinks):
-                    if let drink = drinks { completion(.success(drink)) }
+                case .success(let drink):
+                    
+                    if let drink = drink {
+                        drinksArray.append(drink)
+                    }
                 case .failure(let error):
                     print("Error: error fetching drinks \(error) - \(error.localizedDescription)")
                     completion(.failure(error))
                 }
             }
+            completion(.success(drinksArray))
         }
     }
     

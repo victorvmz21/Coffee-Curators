@@ -16,16 +16,24 @@ class EspressoTableViewCell: UITableViewCell {
     
     //MARK: - Properties
     static let identifier = "EspressoTableViewCell"
+    var hotCoffee     :  [Drink] = []
+    var coldCoffee    : [Drink] = []
+    var blendedCoffee : [Drink] = []
     
     //MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate   = self
         collectionView.dataSource = self
+        reloading()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func reloading() {
+        self.collectionView.reloadData()
     }
     
 }
@@ -33,17 +41,33 @@ class EspressoTableViewCell: UITableViewCell {
 extension EspressoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EspressoCoffeeCollectionViewCell.identifier, for: indexPath) as? EspressoCoffeeCollectionViewCell else { return UICollectionViewCell()}
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80, height: 160)
-    }
+           if section == 0 {
+               return hotCoffee.count
+           } else if section == 1 {
+               return coldCoffee.count
+           } else {
+               return blendedCoffee.count
+           }
+       }
+       
+       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+           guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EspressoCoffeeCollectionViewCell.identifier, for: indexPath) as? EspressoCoffeeCollectionViewCell else { return UICollectionViewCell()}
+            cell.addShadow()
+           if indexPath.section == 0 {
+              
+               self.categoryLabel.text = "Hot"
+               let hot = hotCoffee[indexPath.row]
+               cell.espressoDrink = hot
+           } else if indexPath.section == 1 {
+               self.categoryLabel.text = "Cold"
+               let cold = coldCoffee[indexPath.row]
+               cell.espressoDrink = cold
+           } else {
+               self.categoryLabel.text = "Blended"
+               let blended = blendedCoffee[indexPath.row]
+               cell.espressoDrink = blended
+           }
+           return cell
+       }
     
 }
