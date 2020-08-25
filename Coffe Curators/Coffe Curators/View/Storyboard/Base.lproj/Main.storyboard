@@ -49,16 +49,16 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Recipe, Craft a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUl-rZ-YXf">
-                                <rect key="frame" x="68.5" y="238" width="277" height="27.5"/>
+                                <rect key="frame" x="68.5" y="253.5" width="277" height="27.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="yzM-kZ-MJ9">
-                                <rect key="frame" x="87" y="122" width="240" height="116"/>
+                                <rect key="frame" x="87" y="122" width="240" height="131.5"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="N1S-Is-iPB" userLabel="Sign in stack view">
-                                <rect key="frame" x="87" y="311" width="240" height="197.5"/>
+                                <rect key="frame" x="87" y="326.5" width="240" height="224"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TG1-zr-Vzk">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
@@ -73,7 +73,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obd-9v-cEx" customClass="GIDSignInButton">
-                                        <rect key="frame" x="0.0" y="87" width="240" height="44"/>
+                                        <rect key="frame" x="0.0" y="87" width="240" height="50"/>
                                         <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Qb9-NO-lXq"/>
@@ -85,7 +85,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqY-Co-9Ky">
-                                        <rect key="frame" x="0.0" y="174" width="240" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="180" width="240" height="44"/>
                                         <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="KDN-05-zaa"/>
@@ -549,13 +549,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn more about coffee" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-SM-GBC">
-                                                <rect key="frame" x="20" y="543" width="374" height="84"/>
+                                                <rect key="frame" x="20" y="543" width="374" height="81.5"/>
                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="36"/>
                                                 <color key="textColor" red="0.23529411759999999" green="0.1058823529" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Gm-MM-qw9">
-                                                <rect key="frame" x="14" y="765.5" width="386" height="634.5"/>
+                                                <rect key="frame" x="14" y="799" width="386" height="601"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
@@ -675,8 +675,8 @@
                                                 <sections/>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZh-bH-8au">
-                                                <rect key="frame" x="32" y="654" width="350" height="79.5"/>
-                                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</string>
+                                                <rect key="frame" x="32" y="651.5" width="350" height="115.5"/>
+                                                <string key="text">To get the most out of your coffee, you need to know what impacts the taste like the types of beans, the methods of brewing and the incredients. With Jolt you will find how coffee lovers perfect thier morning cup and it might just become part of yours!</string>
                                                 <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="17"/>
                                                 <color key="textColor" name="black_jolt"/>
                                                 <nil key="highlightedColor"/>
@@ -750,7 +750,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8K-l4-bN5">
-                                                        <rect key="frame" x="15" y="592" width="59" height="32"/>
+                                                        <rect key="frame" x="15" y="592" width="55" height="32"/>
                                                         <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                         <state key="normal" title="Log out">
                                                             <color key="titleColor" name="black_jolt"/>
@@ -759,8 +759,8 @@
                                                             <action selector="logOutButtonTapped:" destination="AqI-5G-iiL" eventType="touchUpInside" id="Oio-z8-hxp"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victor Monteiro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-K8-izv">
-                                                        <rect key="frame" x="15" y="73" width="268.5" height="33"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-K8-izv">
+                                                        <rect key="frame" x="15" y="73" width="268.5" height="32"/>
                                                         <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="28"/>
                                                         <color key="textColor" name="black_jolt"/>
                                                         <nil key="highlightedColor"/>
@@ -811,7 +811,7 @@
                                                         <rect key="frame" x="15" y="204" width="263.5" height="220"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fa-bO-vNL">
-                                                                <rect key="frame" x="0.0" y="0.0" width="46" height="32"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="32"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Home">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -821,7 +821,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kx-vB-9nS">
-                                                                <rect key="frame" x="0.0" y="47" width="116" height="32"/>
+                                                                <rect key="frame" x="0.0" y="47" width="114" height="32"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Browser Drinks">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -831,7 +831,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQS-mR-AjT">
-                                                                <rect key="frame" x="0.0" y="94" width="150" height="32"/>
+                                                                <rect key="frame" x="0.0" y="94" width="145" height="32"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Make New Creation">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -841,7 +841,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeJ-87-Irj">
-                                                                <rect key="frame" x="0.0" y="141" width="81" height="32"/>
+                                                                <rect key="frame" x="0.0" y="141" width="82" height="32"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="My Library">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -851,7 +851,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2u-To-ien">
-                                                                <rect key="frame" x="0.0" y="188" width="134" height="32"/>
+                                                                <rect key="frame" x="0.0" y="188" width="127" height="32"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Personal Settings">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -946,6 +946,185 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyW-j8-1Iq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023" y="-763"/>
+        </scene>
+        <!--Personal Profile View Controller-->
+        <scene sceneID="c3n-tu-hSB">
+            <objects>
+                <viewController storyboardIdentifier="profile" modalPresentationStyle="fullScreen" id="5l3-CP-9WU" customClass="PersonalProfileViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="por-3d-fyP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-D5-8ex">
+                                <rect key="frame" x="8" y="112" width="240" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="N9c-4t-2RH"/>
+                                    <constraint firstAttribute="width" constant="240" id="oDE-aT-dRo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hqd-5y-pXI">
+                                <rect key="frame" x="8" y="190" width="200" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gs-74-uIW">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="gGd-5V-aER"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU3-cm-CeT">
+                                        <rect key="frame" x="148" y="0.0" width="52" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <action selector="editUsernameButtonTapped:" destination="5l3-CP-9WU" eventType="touchUpInside" id="MHu-xc-7Hp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="VxX-pA-J79"/>
+                                    <constraint firstAttribute="height" constant="45" id="y6D-wb-WYL"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lvb-sP-acS">
+                                <rect key="frame" x="67" y="259" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="nSb-Y6-kUn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-rd-2UZ">
+                                <rect key="frame" x="8" y="338" width="160" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-Mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbI-NL-dWq">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="orh-RB-dBf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fw-1l-NYm">
+                                        <rect key="frame" x="108" y="0.0" width="52" height="45"/>
+                                        <state key="normal" title="Edit"/>
+                                        <connections>
+                                            <action selector="editEmailButtonTapped:" destination="5l3-CP-9WU" eventType="touchUpInside" id="PTI-vn-4OH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RE7-p7-LuU"/>
+                                    <constraint firstAttribute="width" constant="160" id="eIN-Vk-SjE"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmR-s6-S2i">
+                                <rect key="frame" x="67" y="407" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8NV-GF-rmD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ml1-c5-J54">
+                                <rect key="frame" x="8" y="486" width="240" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evf-hh-gEp">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="C8S-aU-xzq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXL-ha-5im">
+                                        <rect key="frame" x="108" y="0.0" width="132" height="45"/>
+                                        <state key="normal" title="Change Password"/>
+                                        <connections>
+                                            <action selector="editPasswordButtonTapped:" destination="5l3-CP-9WU" eventType="touchUpInside" id="0ie-eh-GKg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="HWF-0m-0OM"/>
+                                    <constraint firstAttribute="height" constant="45" id="xYF-b3-Z2e"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**************" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqp-ck-IZO">
+                                <rect key="frame" x="67" y="555" width="200" height="27.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="mqG-fj-Iq5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Veo-Yf-b6P">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Personal Profile" id="Nit-UT-rFJ">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="brownbackbutton " id="wq0-Uz-QNI">
+                                            <connections>
+                                                <action selector="backButtonTapped:" destination="5l3-CP-9WU" id="AtT-SK-ALc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Veo-Yf-b6P" firstAttribute="top" secondItem="mEI-sk-ZJA" secondAttribute="top" id="96U-Tg-N7k"/>
+                            <constraint firstItem="mq9-D5-8ex" firstAttribute="leading" secondItem="mEI-sk-ZJA" secondAttribute="leading" constant="8" id="ByC-F3-DME"/>
+                            <constraint firstItem="Veo-Yf-b6P" firstAttribute="leading" secondItem="mEI-sk-ZJA" secondAttribute="leading" id="D3f-0h-QaP"/>
+                            <constraint firstItem="hqd-5y-pXI" firstAttribute="leading" secondItem="mEI-sk-ZJA" secondAttribute="leading" constant="8" id="K4J-A4-cjt"/>
+                            <constraint firstItem="LdE-rd-2UZ" firstAttribute="leading" secondItem="mEI-sk-ZJA" secondAttribute="leading" constant="8" id="KgM-9x-FG1"/>
+                            <constraint firstItem="Veo-Yf-b6P" firstAttribute="trailing" secondItem="mEI-sk-ZJA" secondAttribute="trailing" id="Mni-Ji-HNb"/>
+                            <constraint firstItem="Ml1-c5-J54" firstAttribute="leading" secondItem="mEI-sk-ZJA" secondAttribute="leading" constant="8" id="Pmv-dZ-N1g"/>
+                            <constraint firstItem="LdE-rd-2UZ" firstAttribute="top" secondItem="Lvb-sP-acS" secondAttribute="bottom" constant="45" id="U5g-7r-qFf"/>
+                            <constraint firstItem="hqd-5y-pXI" firstAttribute="top" secondItem="mq9-D5-8ex" secondAttribute="bottom" constant="24" id="V2k-ye-HAt"/>
+                            <constraint firstItem="RmR-s6-S2i" firstAttribute="leading" secondItem="mEI-sk-ZJA" secondAttribute="leading" constant="67" id="WLc-kQ-Vtb"/>
+                            <constraint firstItem="Lvb-sP-acS" firstAttribute="top" secondItem="hqd-5y-pXI" secondAttribute="bottom" constant="24" id="Wdf-YF-j41"/>
+                            <constraint firstItem="Zqp-ck-IZO" firstAttribute="top" secondItem="Ml1-c5-J54" secondAttribute="bottom" constant="24" id="Wij-Il-cbe"/>
+                            <constraint firstItem="mq9-D5-8ex" firstAttribute="top" secondItem="Veo-Yf-b6P" secondAttribute="bottom" constant="24" id="YzM-bt-5dP"/>
+                            <constraint firstItem="Zqp-ck-IZO" firstAttribute="leading" secondItem="mEI-sk-ZJA" secondAttribute="leading" constant="67" id="boy-db-PUf"/>
+                            <constraint firstItem="Ml1-c5-J54" firstAttribute="top" secondItem="RmR-s6-S2i" secondAttribute="bottom" constant="45" id="eaM-pJ-aAF"/>
+                            <constraint firstItem="RmR-s6-S2i" firstAttribute="top" secondItem="LdE-rd-2UZ" secondAttribute="bottom" constant="24" id="syF-DE-TwQ"/>
+                            <constraint firstItem="Lvb-sP-acS" firstAttribute="leading" secondItem="mEI-sk-ZJA" secondAttribute="leading" constant="67" id="tJK-uG-o5S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mEI-sk-ZJA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wfT-ZW-fbN">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="brownbackbutton " id="aVF-6S-oJc">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="5l3-CP-9WU" id="602-Xx-kWc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailButton" destination="8Fw-1l-NYm" id="Wzf-dc-T3G"/>
+                        <outlet property="emailLabel" destination="hbI-NL-dWq" id="upn-7m-i7M"/>
+                        <outlet property="emailTextField" destination="RmR-s6-S2i" id="Ys8-bU-7Fv"/>
+                        <outlet property="navBar" destination="Veo-Yf-b6P" id="ZhL-h7-ETN"/>
+                        <outlet property="passButton" destination="IXL-ha-5im" id="kRH-6L-16Y"/>
+                        <outlet property="passLabel" destination="Zqp-ck-IZO" id="Ryb-fq-8Gl"/>
+                        <outlet property="passwordLabel" destination="Evf-hh-gEp" id="Bs8-Hh-zO7"/>
+                        <outlet property="personalSettingLabel" destination="mq9-D5-8ex" id="8DD-yr-uJe"/>
+                        <outlet property="usernameButton" destination="YU3-cm-CeT" id="WEW-rj-qeG"/>
+                        <outlet property="usernameLabel" destination="7gs-74-uIW" id="rzz-ML-m9w"/>
+                        <outlet property="usernameTextField" destination="Lvb-sP-acS" id="ssN-Nu-Ilr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NqV-kY-PTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2742" y="-763"/>
         </scene>
         <!--parentView-->
         <scene sceneID="5SV-N2-gVg">

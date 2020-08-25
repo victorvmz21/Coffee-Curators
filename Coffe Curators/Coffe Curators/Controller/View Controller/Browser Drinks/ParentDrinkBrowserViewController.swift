@@ -11,11 +11,13 @@ import XLPagerTabStrip
 
 class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
 
-   
+    @IBOutlet weak var drinkSearchBar: UISearchBar!
+    
       override func viewDidLoad() {
       // change selected bar color
       menuSetup()
       super.viewDidLoad()
+        drinkSearchBar.delegate = self
       }
       
     //MARK: - Methods
@@ -53,4 +55,15 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension ParentDrinkBrowserViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = drinkSearchBar.text, !text.isEmpty else {return}
+        DrinkController.shared.drinkSearch(searchTerm: text) { (success) in
+            if success {
+                print("Fetched")
+            }
+        }
+    }
 }
