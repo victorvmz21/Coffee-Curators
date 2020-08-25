@@ -24,7 +24,7 @@ struct UserController {
     
     // MARK: - Crud Methods
     //Create user with new credentials
-    func createUser(uid: String, firstName: String, lastName: String, email: String) {
+    func createUser(uid: String, firstName: String, lastName: String, email: String, completion: @escaping (Bool) -> Void) {
         
         let userDictionary: [String: Any] = [
             StringConstants.uidKey: uid,
@@ -34,6 +34,14 @@ struct UserController {
         ]
         
         db.collection(StringConstants.userContainer).document(uid).setData(userDictionary)
+        db.collection(StringConstants.userContainer).document(uid).setData(userDictionary) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return completion(false)
+            } else {
+                return completion(true)
+            }
+        }
     }
     
     //update user
@@ -84,29 +92,36 @@ struct UserController {
     // MARK: - Helper Methods
     
     //Check if User exists
-    func checkUser(uid: String, firstName: String, lastName: String, email: String) {
+    func checkUser(uid: String, firstName: String, lastName: String, email: String, completion: @escaping (Bool) -> Void) {
         let ref = db.collection("users").document(uid)
         ref.getDocument { (document, error) in
             if let document = document, document.exists {
                 print("Exists")
+                return completion(true)
             } else {
                 print("Added new User")
 //                UserController.sharedUserController.createUser(uid: uid, firstName: firstName, lastName: lastName, email: email)
                 
                  //Test
-                                    if Auth.auth().currentUser?.displayName != nil {
-                                        guard let displayName = Auth.auth().currentUser?.displayName?.components(separatedBy: " ") else {return}
-                                        UserController.sharedUserController.createUser(uid: uid, firstName: displayName[0], lastName: displayName[1], email: email)
-                                    } else {
-                                        UserController.sharedUserController.createUser(uid: uid, firstName: "User: \(uid)", lastName: "", email: email)
-                                    }
-                
-                
-                //                    // Test
-                
-                
-                
-                
+                if Auth.auth().currentUser?.displayName != nil {
+                    guard let displayName = Auth.auth().currentUser?.displayName?.components(separatedBy: " ") else {return completion(false)}
+                    
+                    UserController.sharedUserController.createUser(uid: uid, firstName: displayName[0], lastName: displayName[1], email: email) { (success) in
+                        if success {
+                            return completion(true)
+                        } else {
+                            return completion(false)
+                        }
+                    }
+                } else {
+                    UserController.sharedUserController.createUser(uid: uid, firstName: "User: \(uid)", lastName: "", email: email) { (success) in
+                        if success {
+                            return completion(true)
+                        } else {
+                            return completion(false)
+                        }
+                    }
+                }
             }
         }
     }
@@ -136,7 +151,7 @@ struct UserController {
             let result = Result {
                 try document?.data(as: User.self)
             }
-            
+            print(result)
             switch result {
             case .success(let currentUser):
                 if let user = currentUser {

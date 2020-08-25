@@ -79,7 +79,13 @@ class SignUpViewController: UIViewController {
                 } else {
                     print("created")
                     guard let uid = Auth.auth().currentUser?.uid else {return}
-                    UserController.sharedUserController.createUser(uid: uid, firstName: "User:\(uid)", lastName: "", email: email)
+                    UserController.sharedUserController.createUser(uid: uid, firstName: "User: \(uid)", lastName: "", email: email) { (success) in
+                        if success {
+                            print("Created User")
+                        } else {
+                            print("Failed to create user")
+                        }
+                    }
                 }
             }
         } else {
