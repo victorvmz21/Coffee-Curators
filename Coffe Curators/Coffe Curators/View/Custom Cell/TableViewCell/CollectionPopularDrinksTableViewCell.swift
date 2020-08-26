@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CollectionItemTappedDelegate: AnyObject {
+    func itemWasTapped(drink: Drink)
+}
+
 class CollectionPopularDrinksTableViewCell: UITableViewCell {
     
     //MARK:  - IBOutlet
@@ -17,6 +21,7 @@ class CollectionPopularDrinksTableViewCell: UITableViewCell {
     //MARK: - Properties
     static let identifier = "CollectionPopularDrinksTableViewCell"
     var coffee: [Drink] = []
+    weak var itemTappedDelegate: CollectionItemTappedDelegate?
     
     //MARK: - View Life Cycle
     override func awakeFromNib() {
@@ -35,6 +40,7 @@ class CollectionPopularDrinksTableViewCell: UITableViewCell {
     }
     
 }
+
 extension CollectionPopularDrinksTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -54,5 +60,9 @@ extension CollectionPopularDrinksTableViewCell: UICollectionViewDelegate, UIColl
         cell.addShadow()
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let drink = coffee[indexPath.row]
+        itemTappedDelegate?.itemWasTapped(drink: drink)
     }
 }

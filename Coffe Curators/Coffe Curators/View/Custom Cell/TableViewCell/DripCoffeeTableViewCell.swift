@@ -17,6 +17,7 @@ class DripCoffeeTableViewCell: UITableViewCell {
     //MARK: - Properties
     static let identifier = "DripCoffeeTableViewCell"
     var coffee: [Drink] = []
+    weak var itemTappedDelegate: CollectionItemTappedDelegate?
     
     //MARK: - View Life Cycle
     override func awakeFromNib() {
@@ -54,6 +55,10 @@ extension DripCoffeeTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         cell.addShadow()
        
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let drink = coffee[indexPath.row]
+        itemTappedDelegate?.itemWasTapped(drink: drink)
     }
 }
 

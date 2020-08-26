@@ -15,12 +15,18 @@ class DrinkDetailScreenViewController: UIViewController {
     
     @IBOutlet weak var likeButton: UIButton!
     
+    @IBOutlet weak var drinkImageView: UIImageView!
+    @IBOutlet weak var drinkNameLabel: UILabel!
+    
+    
+    
     //Landing pad
     var drinkLandingPad: Drink?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonSetup()
+        setupViews()
         // Do any additional setup after loading the view.
     }
     
@@ -36,6 +42,15 @@ class DrinkDetailScreenViewController: UIViewController {
     }
     
     // MARK: - Methods
+    func setupViews() {
+        if let drink = drinkLandingPad {
+            self.drinkNameLabel.text = drink.title
+        }
+    }
+    
+    
+    
+    
     func buttonSetup() {
         guard let drink = drinkLandingPad, let uid = Auth.auth().currentUser?.uid else {return}
         let db = Firestore.firestore().collection(drinkConstants.collectionNamekey).document(drink.title).collection("likes").document(uid)
