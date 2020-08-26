@@ -12,8 +12,8 @@ import XLPagerTabStrip
 class DripCoffeeTableViewController: UITableViewController {
 
     //MARK: - Propertiess
-    var hotDrinks: [Drink] = []
-    var coldDrinks: [Drink] = []
+    var hotDrinks:     [Drink] = []
+    var coldDrinks:    [Drink] = []
     var blendedDrinks: [Drink] = []
     
     //MARK: - View Life Cycle
@@ -57,13 +57,7 @@ class DripCoffeeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("Hit number of rows")
-        if section == 0 {
-            return hotDrinks.count
-        } else  if section == 1 {
-            return coldDrinks.count
-        } else {
-            return blendedDrinks.count
-        }
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -73,11 +67,14 @@ class DripCoffeeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DripCoffeeTableViewCell.identifier, for: indexPath) as? DripCoffeeTableViewCell else { return UITableViewCell()}
         if indexPath.section == 0 {
-            cell.hotCoffee = hotDrinks
+            cell.coffee = hotDrinks
+            cell.reloading()
         } else if indexPath.section == 1 {
-            cell.coldCoffee = coldDrinks
+            cell.coffee = coldDrinks
+            cell.reloading()
         } else if indexPath.section == 2 {
-            cell.blendedCoffee = blendedDrinks
+            cell.coffee = blendedDrinks
+            cell.reloading()
         }
     
         return cell

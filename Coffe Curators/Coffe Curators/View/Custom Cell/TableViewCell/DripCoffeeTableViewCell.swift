@@ -16,9 +16,7 @@ class DripCoffeeTableViewCell: UITableViewCell {
     
     //MARK: - Properties
     static let identifier = "DripCoffeeTableViewCell"
-    var hotCoffee     :  [Drink] = []
-    var coldCoffee    : [Drink] = []
-    var blendedCoffee : [Drink] = []
+    var coffee: [Drink] = []
     
     //MARK: - View Life Cycle
     override func awakeFromNib() {
@@ -39,42 +37,23 @@ class DripCoffeeTableViewCell: UITableViewCell {
 }
 extension DripCoffeeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return hotCoffee.count
-        } else if section == 1 {
-            return coldCoffee.count
-        } else {
-            return blendedCoffee.count
-        }
+       return coffee.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DripCoffeeCollectionViewCell.identifier, for: indexPath) as? DripCoffeeCollectionViewCell else { return UICollectionViewCell()}
-         cell.addShadow()
-        if indexPath.section == 0 {
-           
-            self.categoryLabel.text = "Hot"
-            let hot = hotCoffee[indexPath.row]
-            cell.dripDrink = hot
-        } else if indexPath.section == 1 {
-            self.categoryLabel.text = "Cold"
-            let cold = coldCoffee[indexPath.row]
-            cell.dripDrink = cold
-        } else {
-            self.categoryLabel.text = "Blended"
-            let blended = blendedCoffee[indexPath.row]
-            cell.dripDrink = blended
-        }
+
+        let drink = coffee[indexPath.row]
+        self.categoryLabel.text = drink.drinkCategory
+        cell.dripDrink = drink
+        cell.addShadow()
+       
         return cell
     }
-    
-    
-    
 }
 

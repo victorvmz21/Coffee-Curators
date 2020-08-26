@@ -14,4 +14,14 @@ class PopularDrinkCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var drinkTitle: UILabel!
     
     static let identifier = "PopularDrinkCollectionViewCell"
+    
+    var popularDrink: Drink? {
+        didSet { updateCollectionViewCell() }
+    }
+    
+    func updateCollectionViewCell() {
+        guard let drink = popularDrink else { return }
+        self.drinkImage.image = UIImage(data: drink.drinkPicture)
+        self.drinkTitle.text = drink.title
+    }
 }

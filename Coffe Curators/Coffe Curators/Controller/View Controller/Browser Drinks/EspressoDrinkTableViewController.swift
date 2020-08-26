@@ -10,79 +10,75 @@ import UIKit
 import XLPagerTabStrip
 
 class EspressoDrinkTableViewController: UITableViewController {
-
+    
     //MARK: - Properties
     var hotDrinks: [Drink] = []
     var coldDrinks: [Drink] = []
     var blendedDrinks: [Drink] = []
     
-    
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        //fetch()
-        tableView.reloadData()
-        
+        fetch()
+    }
+    
+    //MARK: - MEthods
+    func fetch() {
+        DrinkController.shared.fetchDrinks { result in
+            switch result {
+            case .success(let drinks):
+                for drink in drinks {
+                    if  drink.appliance == "Espresso" && drink.drinkCategory == "Hot" {
+                        self.hotDrinks.append(drink)
+                        print("This is Hot Drinks \(self.hotDrinks)")
+                    } else if drink.appliance == "Espresso" && drink.drinkCategory == "Cold" {
+                        self.coldDrinks.append(drink)
+                        print("This is Cold Drinks \(self.coldDrinks)")
+                    } else if drink.appliance == "Espresso" && drink.drinkCategory == "Blended" {
+                        self.blendedDrinks.append(drink)
+                        print("This is Blended Drinks \(self.blendedDrinks)")
+                    }
+                }
+                
+            case .failure(let error):
+                print("can not fetch data")
+                print(error.localizedDescription)
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     
-    //MARK: - MEthods
-//    func fetch() {
-//           DrinkController.shared.fetchDrinks { result in
-//               switch result {
-//
-//               case .success(let drink):
-//                   if  drink.appliance == "Espresso" && drink.drinkCategory == "Hot" {
-//                       self.hotDrinks.append(drink)
-//                       print(self.hotDrinks)
-//                   } else if drink.appliance == "Espresso" && drink.drinkCategory == "Cold" {
-//                       self.coldDrinks.append(drink)
-//                       print(self.coldDrinks)
-//                   } else if drink.appliance == "Espresso" && drink.drinkCategory == "Blended" {
-//                       self.blendedDrinks.append(drink)
-//                       print(self.coldDrinks)
-//                   }
-//                   self.tableView.reloadData()
-//               case .failure(let error):
-//                   print("can not fetch data")
-//                   print(error.localizedDescription)
-//               }
-//           }
-//       }
-
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           if section == 0 {
-               return hotDrinks.count
-           } else  if section == 1 {
-               return coldDrinks.count
-           } else if section == 2 {
-               return blendedDrinks.count
-           }
-           return 0
-       }
-
-       override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-           return 242
-       }
-       
-
-       override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           guard let cell = tableView.dequeueReusableCell(withIdentifier: EspressoTableViewCell.identifier, for: indexPath) as? EspressoTableViewCell else { return UITableViewCell()}
-           if indexPath.section == 0 {
-               cell.hotCoffee = hotDrinks
-           } else if indexPath.section == 1 {
-               cell.coldCoffee = coldDrinks
-           } else if indexPath.section == 2 {
-               cell.blendedCoffee = blendedDrinks
-           }
-       
-           return cell
-       }
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 242
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: EspressoTableViewCell.identifier, for: indexPath) as? EspressoTableViewCell else { return UITableViewCell()}
+        if indexPath.section == 0 {
+            cell.coffee = hotDrinks
+            cell.reloading()
+        } else if indexPath.section == 1 {
+            cell.coffee = coldDrinks
+            cell.reloading()
+        } else if indexPath.section == 2 {
+            cell.coffee = blendedDrinks
+            cell.reloading()
+        }
+        
+        return cell
+    }
 }
 
 extension EspressoDrinkTableViewController: IndicatorInfoProvider {
