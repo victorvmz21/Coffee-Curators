@@ -114,7 +114,7 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     
     @IBAction func personalSettingsButtonTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-        let storyboard = UIStoryboard(name: "main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let createDrinkVC = storyboard.instantiateViewController(identifier: "profile")
         self.navigationController?.pushViewController(createDrinkVC, animated: true)
     }

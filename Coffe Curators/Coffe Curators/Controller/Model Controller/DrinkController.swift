@@ -68,7 +68,7 @@ class DrinkController {
         ]
         
         //Creating drink in public collection
-        db.collection(drinkConstants.collectionNamekey).document(title).setData(newDrinkDictionary) { (error) in
+        db.collection(drinkConstants.collectionNamekey).document(drinkUID).setData(newDrinkDictionary) { (error) in
             if let error = error {
                 print("Error writing document: \(error) - \(error.localizedDescription)")
             } else {
