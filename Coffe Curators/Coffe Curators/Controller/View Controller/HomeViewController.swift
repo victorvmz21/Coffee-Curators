@@ -47,9 +47,15 @@ class HomeViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func newCreationButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
+        let drinkCreation = storyboard.instantiateViewController(identifier: "drinkTitle")
+        self.navigationController?.pushViewController(drinkCreation, animated: true)
     }
     
     @IBAction func BrowserDrinksButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "BrowserDrinks", bundle: nil)
+        let browserDrinks = storyboard.instantiateViewController(identifier: "parentView")
+        self.navigationController?.pushViewController(browserDrinks, animated: true)
     }
     
     @IBAction func hamburguerMenuButtonTapped(_ sender: UIButton) {

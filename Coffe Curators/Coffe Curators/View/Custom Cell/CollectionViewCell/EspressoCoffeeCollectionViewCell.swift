@@ -14,4 +14,14 @@ class EspressoCoffeeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var drinkTitle: UILabel!
     
      static let identifier = "EspressoCoffeeCollectionViewCell"
+    
+    var espressoDrink: Drink? {
+        didSet { updateCollectionViewCell() }
+    }
+    
+    func updateCollectionViewCell() {
+        guard let drink = espressoDrink else { return }
+        self.drinkImage.image = UIImage(data: drink.drinkPicture)
+        self.drinkTitle.text = drink.title
+    }
 }

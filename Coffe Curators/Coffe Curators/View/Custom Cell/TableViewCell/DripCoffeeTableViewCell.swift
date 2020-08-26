@@ -15,31 +15,45 @@ class DripCoffeeTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: - Properties
-     static let identifier = "DripCoffeeTableViewCell"
-
+    static let identifier = "DripCoffeeTableViewCell"
+    var coffee: [Drink] = []
+    
     //MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate   = self
         collectionView.dataSource = self
+        reloading()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
+    
+    func reloading() {
+        self.collectionView.reloadData()
+    }
+    
 }
 extension DripCoffeeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+       return coffee.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DripCoffeeCollectionViewCell.identifier, for: indexPath) as? DripCoffeeCollectionViewCell else { return UICollectionViewCell()}
-        
+
+        let drink = coffee[indexPath.row]
+        self.categoryLabel.text = drink.drinkCategory
+        cell.dripDrink = drink
+        cell.addShadow()
+       
         return cell
     }
-    
 }
 
