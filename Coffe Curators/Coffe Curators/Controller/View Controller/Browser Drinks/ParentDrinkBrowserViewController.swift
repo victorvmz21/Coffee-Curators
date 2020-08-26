@@ -19,17 +19,18 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var menuBackgroundView: UIView!
-    
+    @IBOutlet weak var drinkSearchBar: UISearchBar!
+  
     //MARK: - Properties
     var isSearchBarHidden = true
-    
-    //MARK: - View Life Cycle
-    override func viewDidLoad() {
-        menuSetup()
-        super.viewDidLoad()
-        viewsSetup()
-    }
-    
+
+      override func viewDidLoad() {
+      menuSetup()
+      super.viewDidLoad()
+      drinkSearchBar.delegate = self
+       viewsSetup()
+      }
+
     //MARK: - Methods
     func menuSetup() {
         settings.style.buttonBarBackgroundColor = .clear
@@ -118,4 +119,15 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
         self.navigationController?.pushViewController(createDrinkVC, animated: true)
     }
     
+}
+
+extension ParentDrinkBrowserViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = drinkSearchBar.text, !text.isEmpty else {return}
+        DrinkController.shared.drinkSearch(searchTerm: text) { (success) in
+            if success {
+                print("Fetched")
+            }
+        }
+    }
 }

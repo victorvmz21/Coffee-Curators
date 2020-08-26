@@ -42,7 +42,14 @@ class SignInViewController: UIViewController {
         let lastName = user.displayName?.components(separatedBy: " ")[1] ?? ""
         let email = user.email ?? ""
         let uid = user.uid
-        UserController.sharedUserController.checkUser(uid: uid, firstName: firstName, lastName: lastName, email: email)
+
+        UserController.sharedUserController.checkUser(uid: uid, firstName: firstName, lastName: lastName, email: email) { (success) in
+            if success {
+                print("User found")
+            } else {
+                print("No user found")
+            }
+        }
     }
     
     //this function Creates the button!
@@ -174,7 +181,14 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
                     let firstName = user.displayName?.components(separatedBy: " ")[0] ?? "\(user.uid)"
                     let lastName = user.displayName?.components(separatedBy: " ")[1] ?? "N/A"
                     let email = user.email ?? ""
-                    UserController.sharedUserController.checkUser(uid: user.uid, firstName: firstName, lastName: lastName, email: email)
+    
+                    UserController.sharedUserController.checkUser(uid: user.uid, firstName: firstName, lastName: lastName, email: email) { (success) in
+                        if success {
+                            print("User Found")
+                        } else {
+                            print("No user found")
+                        }
+                    }
                 }
             }
         }

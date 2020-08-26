@@ -88,6 +88,10 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func personalSettingsButtonTapped(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyBoard.instantiateViewController(identifier: "profile") as? PersonalProfileViewController  else {return}
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
     }
     
     //Log out action
@@ -194,7 +198,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension HomeViewController: ReloadViewDelegate {
     func reloadHomeView() {
-        nameAndButtonSetup()
+        if Auth.auth().currentUser?.uid != nil {
+            guard let currentUser = Auth.auth().currentUser else {return}
+            print("Setup")
+            UserController.sharedUserController.checkUser(uid: currentUser.uid, firstName: "", lastName: "", email: currentUser.email!) { (success) in
+                if success {
+                    self.nameAndButtonSetup()
+                }
+            }
+        } else if Auth.auth().currentUser?.uid == nil {
+            print("Issue")
+        }
     }
 }
 

@@ -73,6 +73,7 @@
 		DE010BA524DDC51E00576B12 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE010BA424DDC51E00576B12 /* UserController.swift */; };
 		DE010BA724DDC52900576B12 /* DrinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE010BA624DDC52900576B12 /* DrinkController.swift */; };
 		DE60204324E2FB4C00AB8DE6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE60204224E2FB4C00AB8DE6 /* SignInViewController.swift */; };
+		DEBC280524F4521E002DE504 /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC280424F4521E002DE504 /* PersonalProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +172,7 @@
 		DE010BA624DDC52900576B12 /* DrinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkController.swift; sourceTree = "<group>"; };
 		DE60204224E2FB4C00AB8DE6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DE60204424E2FF6500AB8DE6 /* Coffe Curators.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Coffe Curators.entitlements"; sourceTree = "<group>"; };
+		DEBC280424F4521E002DE504 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
 		EFC4080E7CDFBA4AF65442FD /* Pods-Coffe Curators.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffe Curators.debug.xcconfig"; path = "Target Support Files/Pods-Coffe Curators/Pods-Coffe Curators.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -338,6 +340,7 @@
 				52B09B3224E332A300241B38 /* SignUpViewController.swift */,
 				52B09B3424E3440600241B38 /* LoginViewController.swift */,
 				52B09B4524E5A46500241B38 /* HomeViewController.swift */,
+				DEBC280424F4521E002DE504 /* PersonalProfileViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				52B09B4824E5AA2C00241B38 /* ViewExtension.swift in Sources */,
 				5272604924F58B9200518886 /* FrenchPressDrinkCollectionViewCell.swift in Sources */,
 				5272603524F5843300518886 /* PourOverDrinkTableViewController.swift in Sources */,
+				DEBC280524F4521E002DE504 /* PersonalProfileViewController.swift in Sources */,
 				52B2C5D724EB33E300B4C6CA /* DrinkPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,7 @@ struct drinkConstants {
     static let toppingKey          = "topping"
     static let toppingMeasureKey   = "toppingMeasure"
     static let instructionsKey     = "instructions"
-    
+    static let drinkUid = "uid"
 }
 
 class DrinkController {
@@ -39,6 +39,10 @@ class DrinkController {
     
     //MARK: - Database reference
     let db = Firestore.firestore()
+    
+    // MARK: - Arrays
+    var drinks: [Drink] = []
+    var searchedDrinks: [Drink] = []
     
     //MARK: - CRUD
     //MARK: CREATE
@@ -60,10 +64,11 @@ class DrinkController {
             drinkConstants.toppingKey         : topping,
             drinkConstants.toppingMeasureKey  : toppingMeasure,
             drinkConstants.instructionsKey    : instructions
+
         ]
         
         //Creating drink in public collection
-        db.collection(drinkConstants.collectionNamekey).document(drinkUID).setData(newDrinkDictionary) { (error) in
+        db.collection(drinkConstants.collectionNamekey).document(title).setData(newDrinkDictionary) { (error) in
             if let error = error {
                 print("Error writing document: \(error) - \(error.localizedDescription)")
             } else {
@@ -183,6 +188,38 @@ class DrinkController {
         }
         dispatchGroup.notify(queue: .main) {
             completion(.success(drinksArray))
+        }
+    }
+    
+    //Fetch drink with search
+    func drinkSearch(searchTerm: String, completion: @escaping (Bool) -> Void) {
+        let query = db.collection(drinkConstants.collectionNamekey).whereField(drinkConstants.drinkTitleKey, isEqualTo: searchTerm)
+        
+        var fetchedDrinks: [Drink] = []
+        
+        query.getDocuments { (snapshot, err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                for document in snapshot!.documents {
+                    let result = Result {
+                        try document.data(as: Drink.self)
+                    }
+                    
+                    switch result {
+                    case .success(let drink):
+                        if let drink = drink {
+                            fetchedDrinks.append(drink)
+                        }
+                    case .failure(let err):
+                        print(err.localizedDescription)
+                    }
+                    
+                }
+            }
+            self.searchedDrinks = []
+            self.searchedDrinks = fetchedDrinks
+            return completion(!self.drinks.isEmpty)
         }
     }
     
