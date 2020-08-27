@@ -15,6 +15,7 @@ class EspressoDrinkTableViewController: UITableViewController {
     var hotDrinks: [Drink] = []
     var coldDrinks: [Drink] = []
     var blendedDrinks: [Drink] = []
+    var selectedDrink: Drink?
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -67,22 +68,40 @@ class EspressoDrinkTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: EspressoTableViewCell.identifier, for: indexPath) as? EspressoTableViewCell else { return UITableViewCell()}
         if indexPath.section == 0 {
+            cell.itemTappedDelegate = self
             cell.coffee = hotDrinks
             cell.reloading()
         } else if indexPath.section == 1 {
+            cell.itemTappedDelegate = self
             cell.coffee = coldDrinks
             cell.reloading()
         } else if indexPath.section == 2 {
+            cell.itemTappedDelegate = self
             cell.coffee = blendedDrinks
             cell.reloading()
         }
         
         return cell
     }
+    
+    //Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "espressoToDetail" {
+            guard let destination = segue.destination as? DrinkDetailScreenViewController else {return}
+            destination.drinkLandingPad = selectedDrink
+        }
+    }
 }
 
 extension EspressoDrinkTableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Espresso Coffee")
+    }
+}
+
+extension EspressoDrinkTableViewController: CollectionItemTappedDelegate {
+    func itemWasTapped(drink: Drink) {
+        self.selectedDrink = drink
+        self.performSegue(withIdentifier: "espressoToDetail", sender: nil)
     }
 }
