@@ -15,6 +15,7 @@ class PopularDrinkTableViewController: UITableViewController {
     var hotDrinks:     [Drink] = []
     var coldDrinks:    [Drink] = []
     var blendedDrinks: [Drink] = []
+    var selectedDrink: Drink?
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -66,17 +67,28 @@ class PopularDrinkTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionPopularDrinksTableViewCell.identifier, for: indexPath) as? CollectionPopularDrinksTableViewCell else { return UITableViewCell()}
         if indexPath.section == 0 {
+            cell.itemTappedDelegate = self
             cell.coffee = hotDrinks
             cell.reloading()
         } else if indexPath.section == 1 {
+            cell.itemTappedDelegate = self
             cell.coffee = coldDrinks
             cell.reloading()
         } else if indexPath.section == 2 {
+            cell.itemTappedDelegate = self
             cell.coffee = blendedDrinks
             cell.reloading()
         }
         
         return cell
+    }
+    
+    //Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "popularToDetail" {
+            guard let destination = segue.destination as? DrinkDetailScreenViewController else {return}
+            destination.drinkLandingPad = selectedDrink
+        }
     }
 }
 
@@ -84,4 +96,12 @@ extension PopularDrinkTableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Popular Drinks")
     }
+}
+
+extension PopularDrinkTableViewController: CollectionItemTappedDelegate {
+    func itemWasTapped(drink: Drink) {
+        self.selectedDrink = drink
+        self.performSegue(withIdentifier: "popularToDetail", sender: nil)
+    }
+    
 }

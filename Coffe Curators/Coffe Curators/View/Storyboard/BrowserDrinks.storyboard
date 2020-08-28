@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8MJ-9j-FKb" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                                <rect key="frame" x="15" y="225" width="384" height="30"/>
+                                                <rect key="frame" x="15" y="224" width="384" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ieH-IC-Hm1"/>
@@ -74,20 +74,20 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browser Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-A9-8aS">
-                                                <rect key="frame" x="20" y="117" width="245.5" height="42"/>
+                                                <rect key="frame" x="20" y="117" width="244.5" height="41"/>
                                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                                 <color key="textColor" name="black_jolt"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-2C-8fU">
-                                                <rect key="frame" x="15" y="255" width="384" height="745"/>
+                                                <rect key="frame" x="15" y="254" width="384" height="746"/>
                                             </scrollView>
                                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Drink Title..." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67y-5k-Fl8">
-                                                <rect key="frame" x="20" y="159" width="374" height="56"/>
+                                                <rect key="frame" x="20" y="158" width="374" height="56"/>
                                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                             </searchBar>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDq-5C-09h">
-                                                <rect key="frame" x="287.5" y="117" width="20" height="42"/>
+                                                <rect key="frame" x="286.5" y="117" width="20" height="41"/>
                                                 <color key="tintColor" name="black_jolt"/>
                                                 <state key="normal" image="magnifyingglass" catalog="system"/>
                                                 <connections>
@@ -155,10 +155,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="shk-Ci-Krq">
-                                                        <rect key="frame" x="15" y="107" width="150" height="159"/>
+                                                        <rect key="frame" x="15" y="107" width="145" height="159"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zue-BY-fle">
-                                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Home">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -168,7 +168,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-Zv-zdv">
-                                                                <rect key="frame" x="0.0" y="43" width="150" height="30"/>
+                                                                <rect key="frame" x="0.0" y="43" width="145" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Make New Creation">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -178,7 +178,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-y2-LX2">
-                                                                <rect key="frame" x="0.0" y="86" width="81" height="30"/>
+                                                                <rect key="frame" x="0.0" y="86" width="82" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="My Library">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -188,7 +188,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGZ-5S-Uas">
-                                                                <rect key="frame" x="0.0" y="129" width="134" height="30"/>
+                                                                <rect key="frame" x="0.0" y="129" width="127" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Personal Settings">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -382,7 +382,6 @@
                                                     <connections>
                                                         <outlet property="drinkImage" destination="W12-ss-BYD" id="XjU-JI-fT0"/>
                                                         <outlet property="drinkTitle" destination="Bac-Rz-vZ8" id="YBH-xt-Wxx"/>
-                                                        <segue destination="yUB-Nd-9ib" kind="show" identifier="popularToDetail" id="ctr-7A-pa9"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -408,6 +407,9 @@
                             <outlet property="delegate" destination="vQB-Qz-Ygq" id="Ejr-rr-7ZH"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yUB-Nd-9ib" kind="show" identifier="popularToDetail" id="xxi-vQ-zZv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXZ-FT-jHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -525,7 +527,6 @@
                                                         <outlet property="cellBackground" destination="RFl-uJ-75i" id="GiK-PD-bMO"/>
                                                         <outlet property="drinkImage" destination="Mwu-bk-dnd" id="2Dw-bu-3qX"/>
                                                         <outlet property="drinkTitle" destination="GfY-V0-ufg" id="3Rx-Q9-ob1"/>
-                                                        <segue destination="yUB-Nd-9ib" kind="show" identifier="dripToDetail" id="BB3-8f-4hp"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -551,6 +552,9 @@
                             <outlet property="delegate" destination="mUJ-ZN-4W8" id="H8B-4A-j9r"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yUB-Nd-9ib" kind="show" identifier="dripToDetail" id="eWe-ud-AIs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfa-A8-1hj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -651,7 +655,6 @@
                                                     <connections>
                                                         <outlet property="drinkImage" destination="1e4-mA-dHo" id="7bv-gg-LNV"/>
                                                         <outlet property="drinkTitle" destination="FFI-up-laV" id="Aq5-7d-wZM"/>
-                                                        <segue destination="yUB-Nd-9ib" kind="show" identifier="espressoToDetail" id="Gi3-PZ-Czd"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -677,6 +680,9 @@
                             <outlet property="delegate" destination="X0X-zd-KQm" id="Y0u-t2-HPA"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yUB-Nd-9ib" kind="show" identifier="espressoToDetail" id="4Ag-8l-wyp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ae1-VH-pKx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -815,12 +821,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="VKQ-6D-AFV"/>
                     <connections>
+                        <outlet property="drinkImageView" destination="wOJ-DW-IIe" id="FXl-Hk-oac"/>
+                        <outlet property="drinkNameLabel" destination="9wC-1e-Gf4" id="tpl-WO-B78"/>
                         <outlet property="likeButton" destination="tPH-5r-s4i" id="Lwk-T2-l3x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjY-D0-EOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6113.04347826087" y="140.625"/>
+
+ <point key="canvasLocation" x="6113.04347826087" y="140.625"/>
+
         </scene>
         <!--My Library-->
         <scene sceneID="Ltr-7B-Ju8">
@@ -1612,7 +1622,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Gi3-PZ-Czd"/>
+        <segue reference="eWe-ud-AIs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brownbackbutton " width="70" height="70"/>

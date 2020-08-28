@@ -17,6 +17,7 @@ class EspressoTableViewCell: UITableViewCell {
     //MARK: - Properties
     static let identifier = "EspressoTableViewCell"
     var coffee: [Drink] = []
+    weak var itemTappedDelegate: CollectionItemTappedDelegate?
     
     //MARK: - View Life Cycle
     override func awakeFromNib() {
@@ -57,5 +58,8 @@ extension EspressoTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let drink = coffee[indexPath.row]
+        itemTappedDelegate?.itemWasTapped(drink: drink)
+    }
 }
