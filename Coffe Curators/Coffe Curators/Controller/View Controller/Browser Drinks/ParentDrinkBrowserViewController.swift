@@ -140,6 +140,16 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
         self.present(createDrinkVC, animated: true, completion: nil)
     }
     
+    //Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "" {
+            
+        }
+    }
+    
+    
+    
+    
 }
 
 extension ParentDrinkBrowserViewController: UISearchBarDelegate {
