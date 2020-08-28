@@ -23,6 +23,7 @@ class PersonalProfileViewController: UIViewController {
     @IBOutlet weak var personalSettingLabel: UILabel!
     @IBOutlet weak var passLabel: UILabel!
     @IBOutlet weak var passButton: UIButton!
+    @IBOutlet weak var displayNameLabel: UILabel!
     
     //MARK: - Properties
     var usernameIsEnabled = false
@@ -50,6 +51,7 @@ class PersonalProfileViewController: UIViewController {
             usernameTextField.borderStyle = .none
             usernameButton.setTitle("Edit", for: .normal)
             updateUsername()
+            self.displayNameLabel.text = usernameTextField.text
         }
     }
     
@@ -130,6 +132,7 @@ class PersonalProfileViewController: UIViewController {
                         if let user = user {
                             self.usernameTextField.text = "\(user.firstName) \(user.lastName)"
                             self.emailTextField.text = user.email
+                            self.displayNameLabel.text = "\(user.firstName) \(user.lastName)"
                         }
                     case .failure(let err):
                         print(err.localizedDescription)
