@@ -15,15 +15,10 @@ extension UIView {
         self.layer.shadowOpacity = 0.4
         self.layer.shadowOffset = .zero
         self.layer.shadowRadius = 3
-        self.layer.masksToBounds = false
     }
     
     func roundEdges() {
         self.layer.cornerRadius = self.frame.height / 2
         self.clipsToBounds = true
-    }
-    
-    func roundPartialEdges() {
-        self.layer.cornerRadius = 15
     }
 }

@@ -22,7 +22,7 @@
         <!--Drink Title View Controller-->
         <scene sceneID="M6W-sr-QD8">
             <objects>
-                <viewController storyboardIdentifier="drinkTitle" modalPresentationStyle="fullScreen" id="tSE-ns-Eg4" customClass="DrinkTitleViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="tSE-ns-Eg4" customClass="DrinkTitleViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qWc-bj-MuJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5E-k4-px9">
-                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
@@ -82,7 +82,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-iz-Z7o">
-                                <rect key="frame" x="20" y="432" width="374" height="44"/>
+                                <rect key="frame" x="20" y="431" width="374" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Oo1-5D-fLq"/>
                                 </constraints>
@@ -90,7 +90,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1t-zf-89a">
-                                <rect key="frame" x="20" y="260" width="374" height="42"/>
+                                <rect key="frame" x="20" y="260" width="374" height="41"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
@@ -177,13 +177,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What type of Drink is this?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpO-NK-7bs">
-                                <rect key="frame" x="20" y="260" width="374" height="84"/>
+                                <rect key="frame" x="20" y="260" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjT-2H-VAZ">
-                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
@@ -193,14 +193,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yih-LO-8Oa">
-                                <rect key="frame" x="20" y="832" width="39" height="32"/>
+                                <rect key="frame" x="20" y="832" width="36" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>
                                 </state>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="N5z-J5-0b1">
-                                <rect key="frame" x="20" y="385.5" width="135" height="188"/>
+                                <rect key="frame" x="20" y="383" width="135" height="188"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gb-Nc-FLf">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="54"/>
@@ -294,13 +294,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload a photo for (drink name here)" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KI-0I-GgL">
-                                <rect key="frame" x="20" y="260" width="374" height="84"/>
+                                <rect key="frame" x="20" y="260" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-tg-dre">
-                                <rect key="frame" x="20" y="54" width="53" height="32"/>
+                                <rect key="frame" x="20" y="54" width="51" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="black_jolt"/>
@@ -310,7 +310,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6P-DB-K0I">
-                                <rect key="frame" x="20" y="807" width="39" height="32"/>
+                                <rect key="frame" x="20" y="807" width="36" height="32"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" name="black_jolt"/>
@@ -358,7 +358,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vc-cT-Atd">
-                                <rect key="frame" x="344" y="354.5" width="36" height="22"/>
+                                <rect key="frame" x="344" y="352" width="36" height="22"/>
                                 <state key="normal" image="optionIcon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -452,13 +452,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Coffe appliance" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smc-F6-hvM">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="200" width="374" height="41"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Appliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1T-x5-iFW">
-                                <rect key="frame" x="20" y="309" width="111" height="20.5"/>
+                                <rect key="frame" x="20" y="266" width="111" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -483,7 +483,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EmQ-O1-K1h">
-                                <rect key="frame" x="148" y="309.5" width="20" height="20"/>
+                                <rect key="frame" x="148" y="266.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="keo-Xq-FbL"/>
                                     <constraint firstAttribute="height" constant="20" id="mmm-Ut-GKQ"/>
@@ -492,7 +492,7 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CAh-ai-5ux">
-                                <rect key="frame" x="20" y="357" width="66" height="130"/>
+                                <rect key="frame" x="20" y="314" width="66" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-EU-utP">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -594,19 +594,19 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Coffee do you use?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETk-gb-Ec5">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="200" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Roast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKV-KF-EOa">
-                                <rect key="frame" x="20" y="309" width="99" height="20.5"/>
+                                <rect key="frame" x="20" y="306.5" width="99" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee Roast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUM-Rw-nDX">
-                                <rect key="frame" x="198" y="309" width="99" height="20.5"/>
+                                <rect key="frame" x="198" y="306.5" width="99" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -631,7 +631,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfV-Lf-MNg">
-                                <rect key="frame" x="136" y="309.5" width="20" height="20"/>
+                                <rect key="frame" x="136" y="307" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="0ss-hn-seT"/>
                                     <constraint firstAttribute="width" constant="20" id="51U-gi-F9o"/>
@@ -640,7 +640,7 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KZ-uG-AXT">
-                                <rect key="frame" x="312" y="309.5" width="20" height="20"/>
+                                <rect key="frame" x="312" y="307" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="00g-Hk-9bx"/>
                                     <constraint firstAttribute="width" constant="20" id="WC7-LK-I81"/>
@@ -649,7 +649,7 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S1N-wq-M1X">
-                                <rect key="frame" x="20" y="357" width="72" height="180"/>
+                                <rect key="frame" x="20" y="354.5" width="72" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbd-R6-OBE">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
@@ -682,7 +682,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ndh-QJ-uO8">
-                                <rect key="frame" x="198" y="357" width="53" height="180"/>
+                                <rect key="frame" x="198" y="354.5" width="53" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Drs-iy-54F">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="30"/>
@@ -809,13 +809,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Dairy product do you use?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yK-6i-t7A">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="200" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dairy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joc-Zq-gRD">
-                                <rect key="frame" x="20" y="309" width="40" height="20.5"/>
+                                <rect key="frame" x="20" y="306.5" width="40" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -840,7 +840,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikX-HH-9qb">
-                                <rect key="frame" x="77" y="309.5" width="20" height="20"/>
+                                <rect key="frame" x="77" y="307" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="R36-aG-E2k"/>
                                     <constraint firstAttribute="height" constant="20" id="cu4-hW-sdM"/>
@@ -849,7 +849,7 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lBi-Kq-0u6">
-                                <rect key="frame" x="20" y="357" width="73" height="130"/>
+                                <rect key="frame" x="20" y="354.5" width="73" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ki-us-NA8">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
@@ -957,19 +957,19 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose what sweeteners youll be using for cofee recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH3-Q9-rRE">
-                                <rect key="frame" x="20" y="200" width="374" height="126"/>
+                                <rect key="frame" x="20" y="200" width="374" height="122"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweeteners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydp-ue-9cy">
-                                <rect key="frame" x="20" y="351" width="90" height="20.5"/>
+                                <rect key="frame" x="20" y="347" width="90" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUd-P2-kqH">
-                                <rect key="frame" x="190" y="351" width="113.5" height="20.5"/>
+                                <rect key="frame" x="190" y="347" width="113.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -994,7 +994,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-R9-ovC">
-                                <rect key="frame" x="127" y="351.5" width="20" height="20"/>
+                                <rect key="frame" x="127" y="347.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="V11-05-UP7"/>
                                     <constraint firstAttribute="width" constant="20" id="q9r-7v-9LK"/>
@@ -1003,7 +1003,7 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ftn-Hh-4wQ">
-                                <rect key="frame" x="20" y="399" width="57" height="130"/>
+                                <rect key="frame" x="20" y="395" width="57" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPL-Cn-CJb">
                                         <rect key="frame" x="0.0" y="0.0" width="41" height="30"/>
@@ -1029,7 +1029,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SCH-aU-DoT">
-                                <rect key="frame" x="190" y="399" width="50" height="130"/>
+                                <rect key="frame" x="190" y="395" width="50" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfm-HD-V6c">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
@@ -1141,19 +1141,19 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose what toppings youll be using for cofee recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-LW-LXI">
-                                <rect key="frame" x="20" y="200" width="374" height="126"/>
+                                <rect key="frame" x="20" y="200" width="374" height="122"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toppings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lha-0r-lp2">
-                                <rect key="frame" x="20" y="351" width="70.5" height="20.5"/>
+                                <rect key="frame" x="20" y="347" width="70.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUd-rs-YMM">
-                                <rect key="frame" x="170.5" y="351" width="113.5" height="20.5"/>
+                                <rect key="frame" x="170.5" y="347" width="113.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1178,7 +1178,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-Sd-lNv">
-                                <rect key="frame" x="107.5" y="351.5" width="20" height="20"/>
+                                <rect key="frame" x="107.5" y="347.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dWf-oJ-eJW"/>
                                     <constraint firstAttribute="height" constant="20" id="ov6-8P-tWI"/>
@@ -1187,7 +1187,7 @@
                                 <state key="normal" image="plus.circle" catalog="system"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QOO-Gf-SP7">
-                                <rect key="frame" x="20" y="399" width="88" height="130"/>
+                                <rect key="frame" x="20" y="395" width="88" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WM-at-4YA">
                                         <rect key="frame" x="0.0" y="0.0" width="88" height="30"/>
@@ -1213,7 +1213,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hQF-HW-uog">
-                                <rect key="frame" x="170.5" y="399" width="50" height="130"/>
+                                <rect key="frame" x="170.5" y="395" width="50" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlD-wp-aRU">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
@@ -1325,13 +1325,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Instructions for your Recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsg-W9-Qfd">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="200" width="374" height="81.5"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqm-JO-pYg">
-                                <rect key="frame" x="20" y="421.5" width="125.5" height="20.5"/>
+                                <rect key="frame" x="20" y="419" width="125.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1356,7 +1356,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-mD-894">
-                                <rect key="frame" x="20" y="315" width="374" height="72"/>
+                                <rect key="frame" x="20" y="312.5" width="374" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3G3-ib-6mJ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
@@ -1401,18 +1401,18 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZF-Tl-QQq">
-                                <rect key="frame" x="43" y="449.5" width="351" height="34"/>
+                                <rect key="frame" x="43" y="447" width="351" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm5-Nw-cAF">
-                                <rect key="frame" x="20" y="455.5" width="8" height="20.5"/>
+                                <rect key="frame" x="20" y="453" width="8" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-CQ-Qfl">
-                                <rect key="frame" x="149" y="421" width="22" height="22"/>
+                                <rect key="frame" x="149" y="418.5" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Lwh-Zp-Ir5"/>
                                     <constraint firstAttribute="width" constant="22" id="diH-BU-2Wh"/>
