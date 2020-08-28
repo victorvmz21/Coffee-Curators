@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import FirebaseAuth
 
 class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     
@@ -20,17 +21,28 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var menuBackgroundView: UIView!
     @IBOutlet weak var drinkSearchBar: UISearchBar!
-  
+    
     //MARK: - Properties
     var isSearchBarHidden = true
-
-      override func viewDidLoad() {
-      menuSetup()
-      super.viewDidLoad()
-      drinkSearchBar.delegate = self
-       viewsSetup()
-      }
-
+    
+    override func viewDidLoad() {
+        menuSetup()
+        super.viewDidLoad()
+        drinkSearchBar.delegate = self
+        viewsSetup()
+        buttonSetup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        buttonSetup()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+         self.menuLeftConstraint.constant = -self.view.frame.size.width
+    }
+    
     //MARK: - Methods
     func menuSetup() {
         settings.style.buttonBarBackgroundColor = .clear
@@ -75,6 +87,17 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
         return [child_1, child_2, child_3, child_4, child_5, child_6, child_7]
     }
     
+    func buttonSetup() {
+        let currentUser = Auth.auth().currentUser
+        if currentUser?.uid == nil {
+            self.signInButton.isHidden = false
+            self.signUpButton.isHidden = false
+        } else if currentUser?.uid != nil {
+           self.signInButton.isHidden = true
+           self.signUpButton.isHidden = true
+        }
+    }
+    
     //MARK: - IBActions
     @IBAction func searchButtonTapped(_ sender: UIButton) {
         isSearchBarHidden = !isSearchBarHidden
@@ -96,27 +119,25 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     
     //MARK: - MENU BUTTONS
     @IBAction func homeMenuButtonTapped(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: true)
+       let tabBarController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController
+       tabBarController?.selectedIndex = 0
     }
     
     @IBAction func makeNewCreatttionButtonTapped(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
         let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
         let createDrinkVC = storyboard.instantiateViewController(identifier: "drinkTitle")
-        self.navigationController?.pushViewController(createDrinkVC, animated: true)
+        self.present(createDrinkVC, animated: true, completion: nil)
     }
     
     @IBAction func myLibraryButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "BrowserDrinks", bundle: nil)
-        let myLibraryVC = storyboard.instantiateViewController(identifier: "myLibrary")
-        self.navigationController?.pushViewController(myLibraryVC, animated: true)
+       let tabBarController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController
+       tabBarController?.selectedIndex = 1
     }
     
     @IBAction func personalSettingsButtonTapped(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let createDrinkVC = storyboard.instantiateViewController(identifier: "profile")
-        self.navigationController?.pushViewController(createDrinkVC, animated: true)
+        self.present(createDrinkVC, animated: true, completion: nil)
     }
     
     //Segue

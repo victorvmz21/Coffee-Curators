@@ -19,19 +19,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       textFieldSetup()
     }
     
     //MARK: - IBActions
-    
     @IBAction func backButtonTapped(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
-    
-    
     
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
         emailResetAlert()
@@ -41,9 +38,7 @@ class LoginViewController: UIViewController {
           guard let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {return}
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
-            if let err = err {
-                print(err.localizedDescription)
-            }
+            if let err = err { print(err.localizedDescription) }
             
             if result != nil {
                 print("signed in")
@@ -73,5 +68,21 @@ class LoginViewController: UIViewController {
         present(controller, animated: true)
     }
     
-    
+    func textFieldSetup() {
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if emailTextField.isFirstResponder {
+            passwordTextField.becomeFirstResponder()
+            KeyboardAvoid.keyboardNotifications(view: self.view)
+        } else if passwordTextField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }
