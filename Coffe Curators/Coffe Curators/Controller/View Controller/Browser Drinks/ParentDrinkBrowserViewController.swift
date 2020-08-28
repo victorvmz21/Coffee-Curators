@@ -13,14 +13,10 @@ import FirebaseAuth
 class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     
     //MARK: - IBOutlets
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var slideMenuTopConstraint: NSLayoutConstraint!
+
     @IBOutlet weak var menuLeftConstraint: NSLayoutConstraint!
-    @IBOutlet weak var menuButtonsTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var menuBackgroundView: UIView!
-    @IBOutlet weak var drinkSearchBar: UISearchBar!
+
     
     //MARK: - Properties
     var isSearchBarHidden = true
@@ -28,14 +24,11 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     override func viewDidLoad() {
         menuSetup()
         super.viewDidLoad()
-        drinkSearchBar.delegate = self
         viewsSetup()
-        buttonSetup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        buttonSetup()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -66,11 +59,7 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     }
     
     func viewsSetup() {
-        self.searchBar.isHidden = true
-        self.slideMenuTopConstraint.constant = -30
         self.menuLeftConstraint.constant = -self.view.frame.size.width
-        self.signInButton.roundEdges()
-        self.signUpButton.roundEdges()
         self.menuBackgroundView.addShadow()
     }
     
@@ -87,23 +76,8 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
         return [child_1, child_2, child_3, child_4, child_5, child_6, child_7]
     }
     
-    func buttonSetup() {
-        let currentUser = Auth.auth().currentUser
-        if currentUser?.uid == nil {
-            self.signInButton.isHidden = false
-            self.signUpButton.isHidden = false
-        } else if currentUser?.uid != nil {
-           self.signInButton.isHidden = true
-           self.signUpButton.isHidden = true
-        }
-    }
     
     //MARK: - IBActions
-    @IBAction func searchButtonTapped(_ sender: UIButton) {
-        isSearchBarHidden = !isSearchBarHidden
-        self.searchBar.isHidden = isSearchBarHidden
-        self.slideMenuTopConstraint.constant = isSearchBarHidden ? -30 : 10
-    }
     
     @IBAction func menuButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.4) {
@@ -150,15 +124,4 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     
     
     
-}
-
-extension ParentDrinkBrowserViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = drinkSearchBar.text, !text.isEmpty else {return}
-        DrinkController.shared.drinkSearch(searchTerm: text) { (success) in
-            if success {
-                print("Fetched")
-            }
-        }
-    }
 }

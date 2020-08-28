@@ -52,6 +52,13 @@ class HomeViewController: UIViewController {
     }
     
     //MARK: - IBActions
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        UIApplication.shared.windows.first?.rootViewController as? UITabBarController
+        tabBarController?.selectedIndex = 2
+    }
+    
+    
     @IBAction func newCreationButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
         let drinkCreation = storyboard.instantiateViewController(identifier: "drinkTitle")

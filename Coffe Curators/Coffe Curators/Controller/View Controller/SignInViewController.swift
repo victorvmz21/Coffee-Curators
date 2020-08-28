@@ -126,6 +126,16 @@ class SignInViewController: UIViewController {
         googleSignIn()
     }
     
+    @IBAction func signInWithEmailButtonTapped(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyBoard.instantiateViewController(identifier: "loginWithEmail") as? LoginViewController  else {return}
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     @IBAction func  backButtonTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)

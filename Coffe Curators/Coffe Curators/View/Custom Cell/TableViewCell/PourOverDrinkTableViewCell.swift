@@ -18,6 +18,7 @@ class PourOverDrinkTableViewCell: UITableViewCell {
     static let identifier = "PourOverDrinkTableViewCell"
     var coffee: [Drink] = []
     
+    
     //MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()

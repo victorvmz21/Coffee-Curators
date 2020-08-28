@@ -68,7 +68,10 @@ extension MyLibraryViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MyLibraryViewController: ReloadTableViewDelegate {
     func reloadTableView() {
-        self.tableView.reloadData()
+//        fetchUserDrinks()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     
