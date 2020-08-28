@@ -92,7 +92,7 @@ struct UserController {
     // MARK: - Helper Methods
     
     //Check if User exists
-    func checkUser(uid: String, firstName: String, lastName: String, email: String, completion: @escaping (Bool) -> Void) {
+    func checkUser(uid: String, firstName: String, lastName: String, email: String?, completion: @escaping (Bool) -> Void) {
         let ref = db.collection("users").document(uid)
         ref.getDocument { (document, error) in
             if let document = document, document.exists {
@@ -100,13 +100,12 @@ struct UserController {
                 return completion(true)
             } else {
                 print("Added new User")
-//                UserController.sharedUserController.createUser(uid: uid, firstName: firstName, lastName: lastName, email: email)
                 
                  //Test
                 if Auth.auth().currentUser?.displayName != nil {
                     guard let displayName = Auth.auth().currentUser?.displayName?.components(separatedBy: " ") else {return completion(false)}
                     
-                    UserController.sharedUserController.createUser(uid: uid, firstName: displayName[0], lastName: displayName[1], email: email) { (success) in
+                    UserController.sharedUserController.createUser(uid: uid, firstName: displayName[0], lastName: displayName[1], email: email ?? " ") { (success) in
                         if success {
                             return completion(true)
                         } else {
@@ -114,7 +113,7 @@ struct UserController {
                         }
                     }
                 } else {
-                    UserController.sharedUserController.createUser(uid: uid, firstName: "User: \(uid)", lastName: "", email: email) { (success) in
+                    UserController.sharedUserController.createUser(uid: uid, firstName: "User: \(uid)", lastName: "", email: email ?? " ") { (success) in
                         if success {
                             return completion(true)
                         } else {

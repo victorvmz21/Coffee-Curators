@@ -21,6 +21,9 @@ class homeScreenTableViewCell: UITableViewCell {
     
     //MARK: - Properties
     var isCollapsed = true
+    var mainData: homeScreenData? {
+        didSet { updateViews() }
+    }
     
     //MARK: - View Life Cycle
     override func awakeFromNib() {
@@ -61,5 +64,13 @@ class homeScreenTableViewCell: UITableViewCell {
         } else {
             self.expandCellButton.transform = CGAffineTransform(rotationAngle: .pi / 2)
         }
+    }
+    
+    func updateViews() {
+        guard let data = mainData else { return }
+        self.cellTitle.text = data.title
+        self.imageCell.image = data.image
+        self.descriptionLabel.text = data.description
+        self.bottomCellButton.setTitle(" \(data.title)", for: .normal)
     }
 }

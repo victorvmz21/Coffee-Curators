@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var personalSettingsButton: UIButton!
     
     //MARK: - Properties
     let reusableIdentifier = "coffeeType"
@@ -41,6 +42,11 @@ class HomeViewController: UIViewController {
         nameAndButtonSetup()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.menuLeftConstraint.constant = -self.view.frame.size.width
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -49,13 +55,12 @@ class HomeViewController: UIViewController {
     @IBAction func newCreationButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
         let drinkCreation = storyboard.instantiateViewController(identifier: "drinkTitle")
-        self.navigationController?.pushViewController(drinkCreation, animated: true)
+        self.present(drinkCreation, animated: true, completion: nil)
     }
     
     @IBAction func BrowserDrinksButtonTapped(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "BrowserDrinks", bundle: nil)
-        let browserDrinks = storyboard.instantiateViewController(identifier: "parentView")
-        self.navigationController?.pushViewController(browserDrinks, animated: true)
+        let tabBarController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController
+        tabBarController?.selectedIndex = 2
     }
     
     @IBAction func hamburguerMenuButtonTapped(_ sender: UIButton) {
@@ -70,26 +75,27 @@ class HomeViewController: UIViewController {
         }
     }
     
-    //MARK: -  MENU sign in and sign up IBAction
-    @IBAction func signUpButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func signInButtonTapped(_ sender: UIButton) {
-    }
-    
     ///Menu IBAction
-    @IBAction func homeButtonTapped(_ sender: UIButton) {
-    }
     @IBAction func browserDrinksButtonTapped(_ sender: UIButton) {
+        let tabBarController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController
+        tabBarController?.selectedIndex = 2
+        
     }
+    
     @IBAction func makeNewCreationButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
+        let drinkCreation = storyboard.instantiateViewController(identifier: "drinkTitle")
+        self.present(drinkCreation, animated: true, completion: nil)
     }
+    
     @IBAction func myLibraryButtonTapped(_ sender: UIButton) {
+        let tabBarController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController
+        tabBarController?.selectedIndex = 1
     }
     
     @IBAction func personalSettingsButtonTapped(_ sender: UIButton) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyBoard.instantiateViewController(identifier: "profile") as? PersonalProfileViewController  else {return}
+        let viewController = storyBoard.instantiateViewController(identifier: "profile") 
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
@@ -97,17 +103,16 @@ class HomeViewController: UIViewController {
     //Log out action
     @IBAction func logOutButtonTapped(_ sender: Any) {
         let firebaseAuth = Auth.auth()
-            do {
-                try firebaseAuth.signOut()
-                print("signed out")
-                nameAndButtonSetup()
-            } catch let signOutError as NSError {
-                print ("Error signing out: %@", signOutError)
-            }
+        do {
+            try firebaseAuth.signOut()
+            print("signed out")
+            nameAndButtonSetup()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
     
     //MARK: - Methods
-    
     func nameAndButtonSetup() {
         let currentUser = Auth.auth().currentUser
         if currentUser?.uid == nil {
@@ -115,6 +120,7 @@ class HomeViewController: UIViewController {
             self.signInButton.isHidden = false
             self.signUpButton.isHidden = false
             self.logOutButton.isHidden = true
+            self.personalSettingsButton.isHidden = true
         } else if currentUser?.uid != nil {
             guard let uid = currentUser?.uid else {return}
             _ = UserController.sharedUserController.fetchCurrentUser(uid: uid) { (result) in
@@ -124,13 +130,14 @@ class HomeViewController: UIViewController {
                     self.signUpButton.isHidden = true
                     self.signInButton.isHidden = true
                     self.logOutButton.isHidden = false
+                    self.personalSettingsButton.isHidden = false
                 case .failure(let err):
                     print(err.localizedDescription)
                 }
             }
         }
     }
-
+    
     func tableViewSetup() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -152,7 +159,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return MainData.contentArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -166,6 +173,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if cell.viewBackground.frame.height == 336 {
             cell.hideView(isColapped: false)
         } else { cell.hideView(isColapped: true) }
+        
+        let mainCellData = MainData.contentArray[indexPath.row]
+        cell.mainData = mainCellData
         
         return cell
     }
@@ -201,7 +211,7 @@ extension HomeViewController: ReloadViewDelegate {
         if Auth.auth().currentUser?.uid != nil {
             guard let currentUser = Auth.auth().currentUser else {return}
             print("Setup")
-            UserController.sharedUserController.checkUser(uid: currentUser.uid, firstName: "", lastName: "", email: currentUser.email!) { (success) in
+            UserController.sharedUserController.checkUser(uid: currentUser.uid, firstName: "", lastName: "", email: currentUser.email) { (success) in
                 if success {
                     self.nameAndButtonSetup()
                 }

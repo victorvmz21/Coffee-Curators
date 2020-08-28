@@ -17,7 +17,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Parent Drink Browser View Controller-->
+        <!--Browser Drinks-->
         <scene sceneID="pDo-TO-ang">
             <objects>
                 <viewController storyboardIdentifier="parentView" modalPresentationStyle="fullScreen" id="Ftg-R2-bWG" customClass="ParentDrinkBrowserViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
@@ -129,6 +129,9 @@
                                                                         <real key="value" value="50"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <segue destination="bM4-Fo-btf" kind="show" id="arw-or-NuG"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0g-ul-9kM">
                                                                 <rect key="frame" x="123.5" y="0.0" width="103.5" height="30"/>
@@ -145,6 +148,9 @@
                                                                         <real key="value" value="50"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <segue destination="HFH-0t-llm" kind="show" identifier="toSignInVC" id="gvD-eH-FPE"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -259,6 +265,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ufe-zy-gwA"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Browser Drinks" image="cupOutlineIcon" selectedImage="cupIcon" id="stM-ul-f3B"/>
                     <navigationItem key="navigationItem" id="ozQ-v5-oev"/>
                     <connections>
                         <outlet property="buttonBarView" destination="8MJ-9j-FKb" id="2e5-ts-hlk"/>
@@ -275,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3GR-pc-7CR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-347.82608695652175" y="140.625"/>
+            <point key="canvasLocation" x="562.31884057971024" y="140.625"/>
         </scene>
         <!--Popular Drink Table View Controller-->
         <scene sceneID="P5C-R8-jj7">
@@ -404,7 +411,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXZ-FT-jHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="140.625"/>
+            <point key="canvasLocation" x="1208.6956521739132" y="140.625"/>
         </scene>
         <!--Drip Coffee Table View Controller-->
         <scene sceneID="gjM-yd-l8H">
@@ -547,7 +554,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfa-A8-1hj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963.76811594202911" y="140.625"/>
+            <point key="canvasLocation" x="1873.913043478261" y="140.625"/>
         </scene>
         <!--Espresso Drink Table View Controller-->
         <scene sceneID="eAJ-4g-ITZ">
@@ -673,7 +680,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ae1-VH-pKx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="140.625"/>
+            <point key="canvasLocation" x="2531.8840579710145" y="140.625"/>
         </scene>
         <!--Drink Detail Screen View Controller-->
         <scene sceneID="OwB-k7-apn">
@@ -813,12 +820,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjY-D0-EOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5202.898550724638" y="140.625"/>
+            <point key="canvasLocation" x="6113.04347826087" y="140.625"/>
         </scene>
-        <!--My Library View Controller-->
+        <!--My Library-->
         <scene sceneID="Ltr-7B-Ju8">
             <objects>
-                <viewController storyboardIdentifier="myLibrary" id="Lgk-Pv-cPX" customClass="MyLibraryViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myLibrary" modalPresentationStyle="fullScreen" id="Lgk-Pv-cPX" customClass="MyLibraryViewController" customModule="Jolt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DSM-4w-BtM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -835,17 +842,6 @@
                                                     <constraint firstAttribute="height" constant="62" id="HFY-Z1-BWq"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrR-O7-mIW">
-                                                <rect key="frame" x="20" y="25" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="2EY-ky-YZU"/>
-                                                    <constraint firstAttribute="height" constant="30" id="G8M-jt-Om5"/>
-                                                </constraints>
-                                                <state key="normal" image="brownbackbutton "/>
-                                                <connections>
-                                                    <action selector="backButtonTapped:" destination="Lgk-Pv-cPX" eventType="touchUpInside" id="tfx-Qo-n0W"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9K-ej-2DA">
                                                 <rect key="frame" x="20" y="132" width="111" height="42"/>
                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="36"/>
@@ -999,17 +995,15 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="rrR-O7-mIW" firstAttribute="top" secondItem="mtD-Eo-hDt" secondAttribute="top" constant="25" id="5JI-ge-J8g"/>
                                             <constraint firstAttribute="height" constant="1000" id="67o-XD-U2Q"/>
                                             <constraint firstItem="S4B-Ql-80G" firstAttribute="top" secondItem="t9K-ej-2DA" secondAttribute="bottom" constant="25" id="HGq-c5-Sx0"/>
                                             <constraint firstItem="t9K-ej-2DA" firstAttribute="leading" secondItem="mtD-Eo-hDt" secondAttribute="leading" constant="20" id="JNo-db-cEh"/>
                                             <constraint firstItem="OEf-hw-1SO" firstAttribute="centerX" secondItem="mtD-Eo-hDt" secondAttribute="centerX" id="MWN-Hh-Cgp"/>
                                             <constraint firstAttribute="trailing" secondItem="S4B-Ql-80G" secondAttribute="trailing" constant="20" id="Qdq-Wp-jlM"/>
-                                            <constraint firstItem="rrR-O7-mIW" firstAttribute="leading" secondItem="mtD-Eo-hDt" secondAttribute="leading" constant="20" id="Vyy-0D-ghv"/>
                                             <constraint firstItem="OEf-hw-1SO" firstAttribute="top" secondItem="mtD-Eo-hDt" secondAttribute="top" constant="20" id="m4I-gJ-p5Y"/>
-                                            <constraint firstItem="t9K-ej-2DA" firstAttribute="top" secondItem="rrR-O7-mIW" secondAttribute="bottom" constant="77" id="mYd-Oe-k6L"/>
                                             <constraint firstItem="OEf-hw-1SO" firstAttribute="width" secondItem="mtD-Eo-hDt" secondAttribute="width" multiplier="0.328502" id="pOq-N2-FUX"/>
                                             <constraint firstAttribute="bottom" secondItem="S4B-Ql-80G" secondAttribute="bottom" constant="30" id="ttA-dM-Q9P"/>
+                                            <constraint firstItem="t9K-ej-2DA" firstAttribute="top" secondItem="mtD-Eo-hDt" secondAttribute="top" constant="132" id="ze3-fa-jas"/>
                                             <constraint firstItem="S4B-Ql-80G" firstAttribute="leading" secondItem="mtD-Eo-hDt" secondAttribute="leading" constant="20" id="zsh-iU-ufH"/>
                                         </constraints>
                                     </view>
@@ -1032,13 +1026,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CYK-cj-4if"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="My Library" image="libraryOutlineIcon" selectedImage="libraryIcon" id="MHd-2p-gsC"/>
                     <connections>
                         <outlet property="tableView" destination="S4B-Ql-80G" id="8Ai-T3-Aap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ng8-ck-QU9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6010.144927536232" y="138.61607142857142"/>
+            <point key="canvasLocation" x="7830.434782608696" y="138.61607142857142"/>
         </scene>
         <!--Pour Over Drink Table View Controller-->
         <scene sceneID="ZXM-ju-Hlc">
@@ -1163,7 +1158,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAo-vp-f4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2292.753623188406" y="133.92857142857142"/>
+            <point key="canvasLocation" x="3202.898550724638" y="133.92857142857142"/>
         </scene>
         <!--French Press Drink Table View Controller-->
         <scene sceneID="SEf-ug-IdZ">
@@ -1288,7 +1283,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuk-Va-YgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2957.971014492754" y="133.92857142857142"/>
+            <point key="canvasLocation" x="3868.115942028986" y="133.92857142857142"/>
         </scene>
         <!--Cold Brew Drink Table View Controller-->
         <scene sceneID="9Qp-L0-JAW">
@@ -1412,7 +1407,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="562-23-fbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3652.1739130434785" y="133.92857142857142"/>
+            <point key="canvasLocation" x="4562.3188405797109" y="133.92857142857142"/>
         </scene>
         <!--Moka Pot Drink Table View Controller-->
         <scene sceneID="hyX-6T-RVM">
@@ -1537,7 +1532,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHj-9E-zRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4368.115942028986" y="133.92857142857142"/>
+            <point key="canvasLocation" x="5278.2608695652179" y="133.92857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cpj-Ja-sS5">
@@ -1549,12 +1544,71 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ftg-R2-bWG" kind="relationship" relationship="rootViewController" id="eJx-40-W2i"/>
+                        <segue destination="WMe-kb-Ulx" kind="relationship" relationship="rootViewController" id="eJx-40-W2i"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uJY-Hl-2Uc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1257.9710144927537" y="140.625"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hPQ-9p-w6f">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="WMe-kb-Ulx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="IEn-Hk-MRY"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KgF-r7-Xnw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="black_jolt"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ftg-R2-bWG" kind="relationship" relationship="viewControllers" id="Goc-GT-dpD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idu-DG-CLp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-347.82608695652175" y="140.625"/>
+        </scene>
+        <!--signUp-->
+        <scene sceneID="3bd-cb-YcU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="signUp" id="bM4-Fo-btf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="w5y-LR-TaT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8aZ-3A-iTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="560"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IEv-DN-tB3">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1EL-23-cMd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qy0-43-puo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="black_jolt"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Lgk-Pv-cPX" kind="relationship" relationship="viewControllers" id="PWB-8G-kZL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RC1-ja-WBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6920.289855072464" y="138.61607142857142"/>
+        </scene>
+        <!--signIn-->
+        <scene sceneID="GOw-Rn-Kjb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="signIn" id="HFH-0t-llm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oPP-Oo-vID"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTN-vC-7IE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="560"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1563,8 +1617,12 @@
     <resources>
         <image name="brownbackbutton " width="70" height="70"/>
         <image name="coffee" width="350" height="324"/>
+        <image name="cupIcon" width="23" height="22"/>
+        <image name="cupOutlineIcon" width="23" height="22"/>
         <image name="espresso" width="350" height="324"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="libraryIcon" width="20" height="19"/>
+        <image name="libraryOutlineIcon" width="20" height="19"/>
         <image name="logo" width="262" height="116"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="menuButton" width="80" height="86"/>
