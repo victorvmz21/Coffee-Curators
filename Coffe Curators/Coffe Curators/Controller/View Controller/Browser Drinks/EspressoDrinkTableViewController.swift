@@ -29,13 +29,13 @@ class EspressoDrinkTableViewController: UITableViewController {
             switch result {
             case .success(let drinks):
                 for drink in drinks {
-                    if  drink.appliance == "Espresso" && drink.drinkCategory == "Hot" {
+                    if  drink.appliance == "Espresso Coffee" && drink.drinkCategory == "Hot" {
                         self.hotDrinks.append(drink)
                         print("This is Hot Drinks \(self.hotDrinks)")
-                    } else if drink.appliance == "Espresso" && drink.drinkCategory == "Cold" {
+                    } else if drink.appliance == "Espresso Coffee" && drink.drinkCategory == "Cold" {
                         self.coldDrinks.append(drink)
                         print("This is Cold Drinks \(self.coldDrinks)")
-                    } else if drink.appliance == "Espresso" && drink.drinkCategory == "Blended" {
+                    } else if drink.appliance == "Espresso Coffee" && drink.drinkCategory == "Blended" {
                         self.blendedDrinks.append(drink)
                         print("This is Blended Drinks \(self.blendedDrinks)")
                     }

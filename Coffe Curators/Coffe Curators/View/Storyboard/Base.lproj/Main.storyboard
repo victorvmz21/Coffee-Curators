@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Recipe, Craft a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUl-rZ-YXf">
-                                <rect key="frame" x="68.5" y="238" width="277" height="27.5"/>
+                                <rect key="frame" x="59" y="238" width="296.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                                 <rect key="frame" x="87" y="110" width="240" height="128"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="N1S-Is-iPB" userLabel="Sign in stack view">
-                                <rect key="frame" x="87" y="311" width="240" height="192"/>
+                                <rect key="frame" x="87" y="311.5" width="240" height="192"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phe-oX-epz">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
@@ -134,16 +134,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fGI-Ya-IfK">
-                                <rect key="frame" x="124.5" y="533" width="165" height="65"/>
+                                <rect key="frame" x="117.5" y="533.5" width="179.5" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1m-4u-5dC">
-                                        <rect key="frame" x="0.0" y="0.0" width="165" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="32"/>
                                         <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHh-OB-awv">
-                                        <rect key="frame" x="0.0" y="33" width="165" height="32"/>
+                                        <rect key="frame" x="0.0" y="33" width="179.5" height="32"/>
                                         <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                         <state key="normal" title="Sign up with Email">
                                             <color key="titleColor" name="black_jolt"/>
@@ -188,13 +188,13 @@
                                 <rect key="frame" x="50" y="258.5" width="314" height="379"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2c-Ut-pu6">
-                                        <rect key="frame" x="3" y="149" width="93" height="28"/>
+                                        <rect key="frame" x="3" y="149" width="106.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtG-mW-X9k">
-                                        <rect key="frame" x="3" y="287" width="184" height="28"/>
+                                        <rect key="frame" x="3" y="287" width="206.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -301,7 +301,7 @@
                                         <rect key="frame" x="165.5" y="52" width="103" height="84"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find a Recipe, Craft a Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1je-GQ-1v0">
-                                        <rect key="frame" x="78.5" y="191.5" width="277" height="28"/>
+                                        <rect key="frame" x="69" y="191.5" width="296.5" height="28"/>
                                         <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
@@ -413,13 +413,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn more about coffee" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQV-SM-GBC">
-                                                <rect key="frame" x="20" y="563" width="374" height="81.5"/>
+                                                <rect key="frame" x="20" y="563" width="374" height="84"/>
                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="36"/>
                                                 <color key="textColor" red="0.23529411759999999" green="0.1058823529" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Gm-MM-qw9">
-                                                <rect key="frame" x="14" y="819" width="386" height="581"/>
+                                                <rect key="frame" x="14" y="825" width="386" height="575"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
@@ -539,7 +539,7 @@
                                                 <sections/>
                                             </tableView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZh-bH-8au">
-                                                <rect key="frame" x="32" y="671.5" width="350" height="115.5"/>
+                                                <rect key="frame" x="32" y="674" width="350" height="119"/>
                                                 <string key="text">To get the most out of your coffee, you need to know what impacts the taste like the types of beans, the methods of brewing and the incredients. With Jolt you will find how coffee lovers perfect thier morning cup and it might just become part of yours!</string>
                                                 <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="17"/>
                                                 <color key="textColor" name="black_jolt"/>
@@ -612,7 +612,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8K-l4-bN5">
-                                                        <rect key="frame" x="15" y="592" width="55" height="32"/>
+                                                        <rect key="frame" x="15" y="592" width="59" height="32"/>
                                                         <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                         <state key="normal" title="Log out">
                                                             <color key="titleColor" name="black_jolt"/>
@@ -622,7 +622,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victor Monteiro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsh-K8-izv">
-                                                        <rect key="frame" x="15" y="73" width="268.5" height="32"/>
+                                                        <rect key="frame" x="15" y="73" width="268.5" height="33"/>
                                                         <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="28"/>
                                                         <color key="textColor" name="black_jolt"/>
                                                         <nil key="highlightedColor"/>
@@ -671,7 +671,7 @@
                                                         <rect key="frame" x="15" y="204" width="263.5" height="220"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kx-vB-9nS">
-                                                                <rect key="frame" x="0.0" y="0.0" width="114" height="44"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="116" height="44"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Browser Drinks">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -681,7 +681,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQS-mR-AjT">
-                                                                <rect key="frame" x="0.0" y="59" width="145" height="43.5"/>
+                                                                <rect key="frame" x="0.0" y="59" width="150" height="43.5"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Make New Creation">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -691,7 +691,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeJ-87-Irj">
-                                                                <rect key="frame" x="0.0" y="117.5" width="82" height="44"/>
+                                                                <rect key="frame" x="0.0" y="117.5" width="81" height="44"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="My Library">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -701,7 +701,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2u-To-ien">
-                                                                <rect key="frame" x="0.0" y="176.5" width="127" height="43.5"/>
+                                                                <rect key="frame" x="0.0" y="176.5" width="134" height="43.5"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Personal Settings">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -807,22 +807,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Settings" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-D5-8ex">
-                                <rect key="frame" x="20" y="142" width="171" height="27.5"/>
+                                <rect key="frame" x="20" y="142" width="188.5" height="28"/>
                                 <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hqd-5y-pXI">
-                                <rect key="frame" x="20" y="209.5" width="142.5" height="30"/>
+                                <rect key="frame" x="20" y="210" width="148.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gs-74-uIW">
-                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Petrona-Light" family="Petrona" pointSize="24"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU3-cm-CeT">
-                                        <rect key="frame" x="112.5" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="118.5" y="0.0" width="30" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Edit"/>
                                         <connections>
@@ -832,22 +832,22 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lvb-sP-acS">
-                                <rect key="frame" x="40" y="257.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="258" width="334" height="34"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LdE-rd-2UZ">
-                                <rect key="frame" x="20" y="331.5" width="108" height="30"/>
+                                <rect key="frame" x="20" y="332" width="106.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-Mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbI-NL-dWq">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="68.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Petrona-Light" family="Petrona" pointSize="24"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Fw-1l-NYm">
-                                        <rect key="frame" x="78" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="76.5" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="Edit"/>
                                         <connections>
                                             <action selector="editEmailButtonTapped:" destination="5l3-CP-9WU" eventType="touchUpInside" id="PTI-vn-4OH"/>
@@ -856,21 +856,21 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmR-s6-S2i">
-                                <rect key="frame" x="40" y="379.5" width="334" height="34"/>
+                                <rect key="frame" x="40" y="380" width="334" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ml1-c5-J54">
-                                <rect key="frame" x="20" y="453.5" width="226.5" height="30"/>
+                                <rect key="frame" x="20" y="454" width="237.5" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evf-hh-gEp">
-                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="30"/>
                                         <fontDescription key="fontDescription" name="Petrona-Light" family="Petrona" pointSize="24"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXL-ha-5im">
-                                        <rect key="frame" x="103.5" y="0.0" width="123" height="30"/>
+                                        <rect key="frame" x="114.5" y="0.0" width="123" height="30"/>
                                         <state key="normal" title="Change Password"/>
                                         <connections>
                                             <action selector="editPasswordButtonTapped:" destination="5l3-CP-9WU" eventType="touchUpInside" id="0ie-eh-GKg"/>
@@ -890,13 +890,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihg-oe-cku">
-                                <rect key="frame" x="228.5" y="69.5" width="165.5" height="27.5"/>
+                                <rect key="frame" x="216" y="69" width="178" height="28"/>
                                 <fontDescription key="fontDescription" name="Petrona-ExtraLight" family="Petrona" pointSize="24"/>
                                 <color key="textColor" red="0.23529411759999999" green="0.1058823529" blue="0.023529411760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="**************" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqp-ck-IZO">
-                                <rect key="frame" x="40" y="501.5" width="334" height="27.5"/>
+                                <rect key="frame" x="40" y="502" width="334" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

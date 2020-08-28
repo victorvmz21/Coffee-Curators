@@ -18,7 +18,7 @@ class KeyboardAvoid {
                        object: nil, queue: .main) { notification in
                         
                         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                            view.frame.origin.y = -keyboardSize.height / 2
+                            view.frame.origin.y = -keyboardSize.height
                         }
         }
         

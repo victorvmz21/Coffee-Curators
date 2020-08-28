@@ -55,7 +55,7 @@ class HomeViewController: UIViewController {
     @IBAction func newCreationButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
         let drinkCreation = storyboard.instantiateViewController(identifier: "drinkTitle")
-        self.present(drinkCreation, animated: true, completion: nil)
+        self.navigationController?.pushViewController(drinkCreation, animated: true)
     }
     
     @IBAction func BrowserDrinksButtonTapped(_ sender: UIButton) {
@@ -85,7 +85,7 @@ class HomeViewController: UIViewController {
     @IBAction func makeNewCreationButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
         let drinkCreation = storyboard.instantiateViewController(identifier: "drinkTitle")
-        self.present(drinkCreation, animated: true, completion: nil)
+        self.navigationController?.pushViewController(drinkCreation, animated: true)
     }
     
     @IBAction func myLibraryButtonTapped(_ sender: UIButton) {

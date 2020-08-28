@@ -6,7 +6,7 @@
 //  Copyright © 2020 Atomuz. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 import FirebaseFirestoreSwift
 import FirebaseFirestore
@@ -46,8 +46,8 @@ class DrinkController {
     
     //MARK: - CRUD
     //MARK: CREATE
-    func createDrink(userId: String, drinkUID: String = UUID().uuidString, title: String, drinkCategory: String, drinkPicture: Data,
-                     appliance: String, coofeRoast: String, coffeeShot: Int, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String], instructions: [String]) {
+    func createDrink(viewcontroller: UIViewController, userId: String, drinkUID: String = UUID().uuidString, title: String, drinkCategory: String, drinkPicture: Data,
+                     appliance: String, coofeRoast: String, coffeeShot: String, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String], instructions: [String]) {
         
         let newDrinkDictionary: [String: Any] = [
             drinkConstants.userIDKey          : userId,
@@ -74,6 +74,10 @@ class DrinkController {
             } else {
                 //uploading Photo
                 self.uploadDrinkImage(image: drinkPicture, drinkID: drinkUID)
+                let alert = UIAlertController(title: "Success", message: "Drink Created Succesfully", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                alert.addAction(okAction)
+                viewcontroller.present(alert, animated: true, completion: nil)
                 print("Document successfully written!")}
         }
         

@@ -9,7 +9,7 @@
 import UIKit
 
 class DrinkTitleViewController: UIViewController {
-
+    
     //MARK: - IBOutlet
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var advanceButton: UIButton!
@@ -18,8 +18,8 @@ class DrinkTitleViewController: UIViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-       viewSetup()
-        
+        viewSetup()
+        titleTextField.addBottomBorder()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -28,13 +28,14 @@ class DrinkTitleViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func closeButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Methods
     func viewSetup() {
         self.titleTextField.delegate = self
         textFieldValidation()
+        KeyboardAvoid.keyboardNotifications(view: self.view)
     }
     
     func textFieldValidation() {
@@ -60,6 +61,10 @@ extension DrinkTitleViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
