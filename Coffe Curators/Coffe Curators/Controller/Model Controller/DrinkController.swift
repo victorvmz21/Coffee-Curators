@@ -73,7 +73,7 @@ class DrinkController {
                 print("Error writing document: \(error) - \(error.localizedDescription)")
             } else {
                 //uploading Photo
-                self.uploadDrinkImage(image: drinkPicture, drinkID: drinkUID)
+                self.uploadDrinkImage(image: drinkPicture, drinkID: drinkUID, drinkUID: drinkUID)
                 print("Document successfully written!")}
         }
         
@@ -85,7 +85,7 @@ class DrinkController {
         }
     }
     
-    func uploadDrinkImage(image: Data, drinkID: String) {
+    func uploadDrinkImage(image: Data, drinkID: String, drinkUID: String) {
         
         
         let imageRef = Storage.storage().reference().child("images").child("drink_\(drinkID)")
@@ -100,13 +100,14 @@ class DrinkController {
                 }
                 
                 guard let url = url else { return }
-                let dataReference = Firestore.firestore().collection("images").document()
+                let dataReference = Firestore.firestore().collection("images").document(drinkUID)
                 let documentUid = dataReference.documentID
                 let urlString = url.absoluteString
                 
                 let data = [
                     "uid": documentUid,
-                    "url": urlString
+                    "url": urlString,
+                    "drinkID": drinkID
                 ]
                 
                 dataReference.setData(data) { (error) in
@@ -257,6 +258,26 @@ class DrinkController {
     
     //MARK: - DELETE
     func deleteDrink(userID: String, drinkUID: String) {
+        db.collection("images").document(drinkUID).delete { (err) in
+            if let err = err {
+                print(err.localizedDescription)
+            } else {
+                print("deleted url")
+            }
+        }
+        
+        
+        let storageRef = Storage.storage().reference().child("images")
+        //Delete image
+        storageRef.child("drink_\(drinkUID)").delete { (err) in
+            if let err = err {
+                print(err.localizedDescription)
+                print("drink_\(drinkUID)")
+            } else {
+                print("Successully deleted image")
+                print("drink_\(drinkUID)")
+            }
+        }
         
         //Delete from Public Drink collection
         db.collection(drinkConstants.collectionNamekey).document(drinkUID).delete { error in
