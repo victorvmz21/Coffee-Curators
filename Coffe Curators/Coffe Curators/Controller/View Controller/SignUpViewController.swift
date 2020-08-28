@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
-
+    
     //MARK: - IBOutlet
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passowordTextField: UITextField!
@@ -21,20 +21,13 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        textFieldSetup()
     }
     
     //MARK: - IBActions
-    
     @IBAction func backButtonTapped(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
-        viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
-    
-    
-    
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, !email.isEmpty else {return}
@@ -45,10 +38,7 @@ class SignUpViewController: UIViewController {
                 if providers == nil {
                     print("Empty")
                     self.createUser()
-                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                    guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
-                    viewController.modalPresentationStyle = .fullScreen
-                    self.present(viewController, animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 } else {
                     print("Exists")
                     //Alert for email already in use
@@ -91,7 +81,7 @@ class SignUpViewController: UIViewController {
         } else {
             passwordAlert()
         }
-    } // end of create user function
+    }
     
     func passwordAlert() {
         let alertController = UIAlertController(title: nil, message: "Please make sure passwords are the same and greater than six characters in length.", preferredStyle: .alert)
@@ -114,4 +104,25 @@ class SignUpViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    func textFieldSetup() {
+        self.emailTextField.delegate = self
+        self.passowordTextField.delegate = self
+        self.reenterPasswordTextField.delegate = self
+    }
+    
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if emailTextField.isFirstResponder {
+            passowordTextField.becomeFirstResponder()
+            KeyboardAvoid.keyboardNotifications(view: self.view)
+        } else if passowordTextField.isFirstResponder {
+            reenterPasswordTextField.becomeFirstResponder()
+             KeyboardAvoid.keyboardNotifications(view: self.view)
+        } else if reenterPasswordTextField.isFirstResponder {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }

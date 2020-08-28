@@ -19,30 +19,23 @@ protocol ReloadViewDelegate {
 
 class SignInViewController: UIViewController {
     
-    @IBOutlet weak var googleSignInButton: GIDSignInButton!
-    @IBOutlet weak var appleSignInButton: UIView!
-    
+    //MARK: - Properties
     var refreshDelegate: ReloadViewDelegate!
-
+    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.signIn()
-        setUpSignInAppleButton()
         SignInViewController.checkUser()
-        GIDSignIn.sharedInstance()?.delegate = self
     }
     
     // MARK: - Helper Methods
-    
-    //setup userCheck
     static func checkUser() {
         guard let user = Auth.auth().currentUser else {return}
         let firstName = user.displayName?.components(separatedBy: " ")[0] ?? "User: \(user.uid)"
         let lastName = user.displayName?.components(separatedBy: " ")[1] ?? ""
         let email = user.email ?? ""
         let uid = user.uid
-
+        
         UserController.sharedUserController.checkUser(uid: uid, firstName: firstName, lastName: lastName, email: email) { (success) in
             if success {
                 print("User found")
@@ -52,49 +45,26 @@ class SignInViewController: UIViewController {
         }
     }
     
-    //this function Creates the button!
-    func setUpSignInAppleButton() {
-        
-        let authorizationButton = ASAuthorizationAppleIDButton()
-        authorizationButton.addTarget(self, action: #selector(handleAppleIdRequestTapped), for: .touchUpInside)
-        authorizationButton.center = appleSignInButton.center
-        
-        self.appleSignInButton.addSubview(authorizationButton)
-        NSLayoutConstraint.activate([
-            authorizationButton.centerXAnchor.constraint(equalTo: self.appleSignInButton.centerXAnchor),
-            authorizationButton.centerYAnchor.constraint(equalTo: self.appleSignInButton.centerYAnchor),
-            authorizationButton.widthAnchor.constraint(equalToConstant: self.appleSignInButton.frame.width),
-            authorizationButton.heightAnchor.constraint(equalToConstant: 44)
-        ])
+    func performSignIn() {
+        let request = createAppleIDRequest()
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
     }
     
-    @objc func handleAppleIdRequestTapped() {
-           performSignIn()
-       }
-    
-    //this function make all the wofk
-       func performSignIn() {
-           let request = createAppleIDRequest()
-           let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-           
-           authorizationController.delegate = self
-           authorizationController.presentationContextProvider = self
-           
-           authorizationController.performRequests()
-       }
-    
     func createAppleIDRequest() -> ASAuthorizationAppleIDRequest {
-          let appleIDProvider = ASAuthorizationAppleIDProvider()
-          let request = appleIDProvider.createRequest()
-          request.requestedScopes = [.fullName, .email]
-          
-          let nonce = randomNonceString()
-          request.nonce = sha256(nonce)
-          currentNonce = nonce
-          
-          return request
-      }
-
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        
+        let nonce = randomNonceString()
+        request.nonce = sha256(nonce)
+        currentNonce = nonce
+        
+        return request
+    }
+    
     private func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
         let charset: Array<Character> =
@@ -140,12 +110,27 @@ class SignInViewController: UIViewController {
         return hashString
     }
     
+    func googleSignIn() {
+        GIDSignIn.sharedInstance()
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.signIn()
+        GIDSignIn.sharedInstance()?.delegate = self
+    }
+    
     //MARK: - IBOutlet
-    @IBAction func signInWithEmailButtonTapped(_ sender: UIButton) {
-        
+    @IBAction func signInWithApple(_ sender: UIButton) {
+        performSignIn()
+    }
+    
+    @IBAction func signInWithGoogle(_ sender: UIButton) {
+        googleSignIn()
+    }
+    
+    @IBAction func  backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }
-
 
 extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
@@ -164,7 +149,6 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
                 return
             }
             
-            
             guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
                 print("unable to serialize toke string from data \(appleIDToken.debugDescription)")
                 return
@@ -176,12 +160,12 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
                     DispatchQueue.main.async {
                         self.refreshDelegate.reloadHomeView()
                     }
-                    self.navigationController?.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                     print("you're now signed in as \(user.uid) email: \(user.email), name: \(user.displayName)")
                     let firstName = user.displayName?.components(separatedBy: " ")[0] ?? "\(user.uid)"
                     let lastName = user.displayName?.components(separatedBy: " ")[1] ?? "N/A"
                     let email = user.email ?? ""
-    
+                    
                     UserController.sharedUserController.checkUser(uid: user.uid, firstName: firstName, lastName: lastName, email: email) { (success) in
                         if success {
                             print("User Found")
@@ -204,16 +188,11 @@ extension SignInViewController: GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        // ...
-        if let error = error {
-          // ...
-          return
-        }
-
+        if let error = error { return }
+        
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                          accessToken: authentication.accessToken)
-        // ...
+                                                       accessToken: authentication.accessToken)
         
         Auth.auth().signIn(with: credential) { (authResult, error) in
             if let error = error {
@@ -229,6 +208,5 @@ extension SignInViewController: GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        //...
     }
 }

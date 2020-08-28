@@ -17,31 +17,26 @@ class PersonalProfileViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
-    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var personalSettingLabel: UILabel!
     @IBOutlet weak var passLabel: UILabel!
-    
     @IBOutlet weak var passButton: UIButton!
     
-    
+    //MARK: - Properties
     var usernameIsEnabled = false
     var emailIsEnabled = false
 
-
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
-        // Do any additional setup after loading the view.
     }
     
-
     // MARK: - Actions
-    
-    @IBAction func backButtonTapped(_ sender: Any) {
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
@@ -81,10 +76,7 @@ class PersonalProfileViewController: UIViewController {
         present(controller, animated: true)
     }
     
-    
-    
     // MARK: - Methods
-    
     func updateEmail() {
         guard let email = emailTextField.text, !email.isEmpty, let user = Auth.auth().currentUser else {return}
         
@@ -112,7 +104,6 @@ class PersonalProfileViewController: UIViewController {
         }
     }
 
-    
     func updateUsername() {
         guard let uid = Auth.auth().currentUser?.uid, let name = usernameTextField.text, !name.isEmpty else {return}
         Firestore.firestore().collection(StringConstants.userContainer).document(uid).updateData([
@@ -176,15 +167,6 @@ class PersonalProfileViewController: UIViewController {
         passButton.titleLabel?.font = UIFont(name: "Petrona-ExtraLight", size: 15)
         passButton.tintColor = UIColor(named: "black_jolt")
         passButton.titleLabel?.attributedText = UAS
-        
-        
-        //NavBar
-        self.navBar.topItem?.title = currentUser.displayName
-        let attrs = [
-            NSAttributedString.Key.font: UIFont(name: "Petrona-ExtraLight", size: 24),
-            NSAttributedString.Key.foregroundColor: UIColor(named: "black_jolt")
-        ]
-        self.navBar.titleTextAttributes = attrs as [NSAttributedString.Key : Any]
         
         //Personal Settings
         personalSettingLabel.font = UIFont(name: "Petrona-SemiBold", size: 24)

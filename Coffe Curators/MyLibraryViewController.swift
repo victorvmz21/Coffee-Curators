@@ -26,11 +26,6 @@ class MyLibraryViewController: UIViewController {
          fetchUserDrinks()
     }
     
-    //MARK: - IBActions
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     //MARK: - Methods
     func tableViewSetup() {
         self.tableView.delegate = self
