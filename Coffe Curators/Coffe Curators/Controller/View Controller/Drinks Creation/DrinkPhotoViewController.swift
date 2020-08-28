@@ -9,10 +9,13 @@
 import UIKit
 
 class DrinkPhotoViewController: UIViewController  {
-
+    
     //MARK: - IBOutlet
     @IBOutlet weak var drinkImageView: UIImageView!
     @IBOutlet weak var mainTitleLabel: UILabel!
+    @IBOutlet weak var uploadDrinkLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var menuConstraint: NSLayoutConstraint!
     
     //MARK: Properties
     var drinkTitle = ""
@@ -22,65 +25,69 @@ class DrinkPhotoViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSetup()
+          print(drinkTitle)
     }
     
     //MARK: - IBActions
     @IBAction func closeButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func addPhotoButtonTapped(_ sender: UIButton) {
-        selectPictures()
+        menuConstraint.constant = -165
+    }
+    
+    @IBAction func closeOptionButton(_ sender: UIButton) {
+        menuConstraint.constant = self.view.frame.size.width
+    }
+    
+    @IBAction func openLIbraryButtonTapped(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            self.imagePicker.sourceType = .photoLibrary
+            self.imagePicker.allowsEditing = true
+            self.present(self.imagePicker, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Photo Library not available", message: "Photo Library is not available in this device", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    @IBAction func openCameraButtonTapped(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            self.imagePicker.sourceType = .camera
+            self.imagePicker.cameraDevice = .rear
+            self.imagePicker.cameraCaptureMode = .photo
+            self.imagePicker.showsCameraControls = true
+            self.present(self.imagePicker, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Camera not available", message: "camera is not available in this device", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Methods
     func viewSetup() {
         self.imagePicker.delegate = self
         self.mainTitleLabel.text = "Upload a photo for \(drinkTitle)"
-    }
-    
-    func selectPictures() {
-        let alert = UIAlertController(title: "Add a photo", message: "add a photo to your drink", preferredStyle: .actionSheet)
-        
-        let selectFromLibraryAction = UIAlertAction(title: "Select From Library", style: .default) { _ in
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                self.imagePicker.sourceType = .photoLibrary
-                self.imagePicker.allowsEditing = true
-                self.present(self.imagePicker, animated: true)
-            } else {
-                let alert = UIAlertController(title: "Photo Library not available", message: "Photo Library is not available in this device", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                
-                alert.addAction(okAction)
-                self.present(alert, animated: true)
-            }
-        }
-        
-        let takeAPictureAction = UIAlertAction(title: "Open Camera", style: .default) { _ in
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                self.imagePicker.sourceType = .camera
-                self.imagePicker.cameraDevice = .rear
-                self.imagePicker.cameraCaptureMode = .photo
-                self.imagePicker.showsCameraControls = true
-                self.present(self.imagePicker, animated: true)
-            } else {
-                let alert = UIAlertController(title: "Camera not available", message: "camera is not available in this device", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                
-                alert.addAction(okAction)
-                self.present(alert, animated: true)
-            }
-        }
-        
-        alert.addAction(selectFromLibraryAction)
-        alert.addAction(takeAPictureAction)
-        self.present(alert, animated: true)
+        uploadDrinkLabel.addBrowBorder()
+        backButton.addBrowBorder()
+         menuConstraint.constant = self.view.frame.size.width
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "photoToAppliance" {
             guard let destination = segue.destination as? DrinkApplianceViewController else { return }
-            guard let data = self.drinkImageView.image?.jpegData(compressionQuality: 0.5) else { return }
+            guard let data = self.drinkImageView.image?.jpegData(compressionQuality: 0.3) else { return }
             
             destination.drinkType = drinkType
             destination.drinkTitle = drinkTitle

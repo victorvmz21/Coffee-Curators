@@ -11,6 +11,10 @@ import UIKit
 class DrinkToppingsViewController: UIViewController {
     
     //MARK: - IBOutlet
+    @IBOutlet weak var toppingsTextField: UITextField!
+    @IBOutlet weak var toppingCell: UIView!
+    @IBOutlet weak var toppingLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     //MARK: Properties
     var drinkTitle        = ""
@@ -18,7 +22,7 @@ class DrinkToppingsViewController: UIViewController {
     var image             = Data()
     var appliance         = ""
     var coffeeRoast       = ""
-    var coffeeShot        = 0
+    var coffeeShot        = ""
     var dairy             = ""
     var sweeteners        = ""
     var sweetenersMeasure = ""
@@ -38,40 +42,38 @@ class DrinkToppingsViewController: UIViewController {
         print(sweetenersMeasure)
         print(toppings)
         print(toppingsMeasure)
+        setupView()
     }
     //MARK: - IBActions
     
     
-    @IBAction func whipeCreamButtonTapped(_ sender: UIButton) {
-        toppings = "Whipe Cream"
+    @IBAction func hideCellButtonTapped(_ sender: UIButton) {
+        self.toppingCell.isHidden = true
     }
     
-    @IBAction func cinnamonButtonTapped(_ sender: UIButton) {
-        toppings = "Cinnamon"
+    @IBAction func addTextFieldButtonTapped(_ sender: UIButton) {
+        self.toppingsTextField.isHidden = false
+        self.toppingsTextField.text = ""
     }
-    
-    @IBAction func mmButtonTapped(_ sender: UIButton) {
-        toppings = "M&M"
-    }
-    
-    @IBAction func oneTblsButtonTapped(_ sender: UIButton) {
-        toppingsMeasure = "1 TBLS"
-    }
-    
-    @IBAction func twoTblsButtonTapped(_ sender: UIButton) {
-        toppingsMeasure = "2 TBLS"
-    }
-    
-    @IBAction func threeTblsButtonTapped(_ sender: UIButton) {
-        toppingsMeasure = "3 TBLS"
-    }
-    
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     //MARK: - Methods
+    
+    func setupView() {
+        KeyboardAvoid.keyboardNotifications(view: self.view)
+        self.toppingsTextField.delegate = self
+        self.toppingsTextField.isHidden = true
+        self.toppingCell.isHidden = true
+        toppingsTextField.addBrowBorder()
+        self.backButton.addBrowBorder()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toppingsToInstruction" {
@@ -92,4 +94,21 @@ class DrinkToppingsViewController: UIViewController {
     }
     
     
+}
+
+extension DrinkToppingsViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if  toppingsTextField.isFirstResponder {
+            guard let text = textField.text else { return false }
+            self.toppings = text
+            self.toppingLabel.text = text
+            self.toppingsTextField.isHidden = true
+            self.toppingCell.isHidden = false
+            toppingsTextField.resignFirstResponder()
+        }
+        
+        return true
+    }
 }

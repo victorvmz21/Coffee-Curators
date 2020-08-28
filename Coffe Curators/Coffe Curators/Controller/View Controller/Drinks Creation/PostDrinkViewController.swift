@@ -12,6 +12,8 @@ import FirebaseAuth
 class PostDrinkViewController: UIViewController {
     
     //MARK: - IBOutlet
+    @IBOutlet weak var deleteDrink: UIButton!
+    @IBOutlet weak var drinkMainLabel: UILabel!
     
     //MARK: Properties
     var drinkTitle        = ""
@@ -19,17 +21,18 @@ class PostDrinkViewController: UIViewController {
     var image             = Data()
     var appliance         = ""
     var coffeeRoast       = ""
-    var coffeeShot        = 0
+    var coffeeShot        = ""
     var dairy             = ""
     var sweeteners        = ""
     var sweetenersMeasure = ""
     var toppings          = ""
     var toppingsMeasure   = ""
-    var instructions      = ""
+    var instructions: [String] = []
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
     }
     
     //MARK: - IBActions
@@ -37,8 +40,12 @@ class PostDrinkViewController: UIViewController {
         savePost()
     }
     
+    @IBAction func closeButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func cancelDrinkPostButtonTapped(_ sender: UIButton) {
-        navigationController?.dismiss(animated: false, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     //MARK: - Methods
@@ -46,15 +53,15 @@ class PostDrinkViewController: UIViewController {
         guard let uID = Auth.auth().currentUser?.uid else {
             print("user not logged in")
             return }
-        DrinkController.shared.createDrink(userId: uID, title: drinkTitle, drinkCategory: drinkType, drinkPicture: image, appliance: appliance, coofeRoast: coffeeRoast, coffeeShot: coffeeShot, dairy: dairy, sweetener: sweeteners, sweetenerMeasure: sweetenersMeasure, topping: [toppings], toppingMeasure: [toppingsMeasure], instructions: [instructions])
+        DrinkController.shared.createDrink(viewcontroller: self, userId: uID, title: drinkTitle, drinkCategory: drinkType, drinkPicture: image, appliance: appliance, coofeRoast: coffeeRoast, coffeeShot: coffeeShot, dairy: dairy, sweetener: sweeteners, sweetenerMeasure: sweetenersMeasure, topping: [toppings], toppingMeasure: [toppingsMeasure], instructions: instructions)
         
-        navigationController?.dismiss(animated: false, completion: nil)
         
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
-    
-    
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    func setupView() {
+        deleteDrink.addBrowBorder()
+        drinkMainLabel.text = "Do you want to post \n \(drinkTitle)"
     }
+    
 }

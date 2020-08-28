@@ -15,7 +15,7 @@ struct Drink: Codable {
     var drinkPicture: Data
     var appliance: String
     var coofeRoast:  String
-    var coffeeShot: Int
+    var coffeeShot: String
     var dairy: String
     var sweetener: String
     var sweetenerMeasure: String

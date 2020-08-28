@@ -11,6 +11,10 @@ import UIKit
 class DrinkDairyViewController: UIViewController {
     
     //MARK: - IBOutlet
+    @IBOutlet weak var dairyTextField: UITextField!
+    @IBOutlet weak var dairyCell: UIView!
+    @IBOutlet weak var dairyTitle: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     //MARK: Properties
     var drinkTitle  = ""
@@ -18,33 +22,45 @@ class DrinkDairyViewController: UIViewController {
     var image       = Data()
     var appliance   = ""
     var coffeeRoast = ""
-    var coffeeShot  = 0
+    var coffeeShot  = ""
     var dairy = ""
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
-        super.viewDidLoad()
-       
+       super.viewDidLoad()
+       setupView()
+       print(coffeeRoast)
+          print(drinkTitle)
     }
     
     //MARK: - IBActions
-    @IBAction func wholeMilkButtonTapped(_ sender: UIButton) {
-        dairy = "Whole milk"
+    @IBAction func addDairyButtonTapped(_ sender: UIButton) {
+        self.dairyTextField.isHidden = false
+        self.dairyTextField.text = ""
     }
     
-    @IBAction func oatMilkButtonTapped(_ sender: UIButton) {
-        dairy = "Oat milk"
+    @IBAction func hideCellButtonTapped(_ sender: UIButton) {
+         dairyCell.isHidden = true
     }
-    
-    @IBAction func twoPercentMilkButtonTapped(_ sender: UIButton) {
-        dairy = "2% milk"
-    }
-    
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     //MARK: - Methods
+    func setupView() {
+        self.dairyTextField.delegate = self
+        dairyCell.isHidden = true
+        dairyTextField.isHidden = true
+        KeyboardAvoid.keyboardNotifications(view: self.view)
+        self.dairyTextField.addBrowBorder()
+        self.backButton.addBrowBorder()
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dairyToSweetner" {
             guard let destination = segue.destination as? DrinkSweetenerViewController else { return }
@@ -60,4 +76,18 @@ class DrinkDairyViewController: UIViewController {
     }
     
     
+}
+
+extension DrinkDairyViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if dairyTextField.isFirstResponder {
+            guard let text = textField.text else { return false }
+            self.dairy = text
+            self.dairyTitle.text = text
+            self.dairyTextField.resignFirstResponder()
+            self.dairyTextField.isHidden = true
+            self.dairyCell.isHidden = false
+        }
+        return true
+    }
 }

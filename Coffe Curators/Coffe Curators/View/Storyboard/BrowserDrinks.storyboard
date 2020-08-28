@@ -32,6 +32,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8MJ-9j-FKb" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+
                                                 <rect key="frame" x="15" y="179" width="384" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
@@ -80,6 +81,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-2C-8fU">
+
                                                 <rect key="frame" x="15" y="209" width="384" height="791"/>
                                             </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HZ-26-tWU">
@@ -98,10 +100,11 @@
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="shk-Ci-Krq">
+
                                                         <rect key="frame" x="15" y="62" width="150" height="204"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zue-BY-fle">
-                                                                <rect key="frame" x="0.0" y="0.0" width="46" height="41.5"/>
+
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Home">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -111,7 +114,8 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-Zv-zdv">
-                                                                <rect key="frame" x="0.0" y="54.5" width="150" height="41"/>
+                                                   <rect key="frame" x="0.0" y="54.5" width="150" height="41"/>
+
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Make New Creation">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -121,7 +125,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-y2-LX2">
+
                                                                 <rect key="frame" x="0.0" y="108.5" width="81" height="41.5"/>
+
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="My Library">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -131,7 +137,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGZ-5S-Uas">
+
                                                                 <rect key="frame" x="0.0" y="163" width="134" height="41"/>
+
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Personal Settings">
                                                                     <color key="titleColor" name="black_jolt"/>
