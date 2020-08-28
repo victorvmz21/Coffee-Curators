@@ -15,50 +15,31 @@ class DripCoffeeTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: - Properties
-    static let identifier = "DripCoffeeTableViewCell"
-    var coffee: [Drink] = []
-    weak var itemTappedDelegate: CollectionItemTappedDelegate?
-    
+     static let identifier = "DripCoffeeTableViewCell"
+
     //MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate   = self
         collectionView.dataSource = self
-        reloading()
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
-    func reloading() {
-        self.collectionView.reloadData()
-    }
-    
+
 }
 extension DripCoffeeTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return coffee.count
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DripCoffeeCollectionViewCell.identifier, for: indexPath) as? DripCoffeeCollectionViewCell else { return UICollectionViewCell()}
-
-        let drink = coffee[indexPath.row]
-        self.categoryLabel.text = drink.drinkCategory
-        cell.dripDrink = drink
-        cell.addShadow()
-       
+        
         return cell
     }
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let drink = coffee[indexPath.row]
-        itemTappedDelegate?.itemWasTapped(drink: drink)
-    }
+    
 }
 
