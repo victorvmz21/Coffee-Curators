@@ -43,19 +43,24 @@ extension DripCoffeeTableViewCell: UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return coffee.count
+        return coffee.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DripCoffeeCollectionViewCell.identifier, for: indexPath) as? DripCoffeeCollectionViewCell else { return UICollectionViewCell()}
-
+        
         let drink = coffee[indexPath.row]
-        self.categoryLabel.text = drink.drinkCategory
+        if coffee.isEmpty {
+            self.categoryLabel.text = ""
+        } else {
+            self.categoryLabel.text = drink.drinkCategory
+        }
         cell.dripDrink = drink
         cell.addShadow()
-       
+        
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let drink = coffee[indexPath.row]
         itemTappedDelegate?.itemWasTapped(drink: drink)

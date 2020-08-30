@@ -26,6 +26,8 @@ class DrinkInstructionsViewController: UIViewController {
     @IBOutlet weak var numberOneButton: UIButton!
     @IBOutlet weak var buttonTwo: UIButton!
     @IBOutlet weak var buttonThree: UIButton!
+    @IBOutlet weak var mainTitleLabel: UILabel!
+    @IBOutlet weak var mainTitleLabelTopContraint: NSLayoutConstraint!
     
     //MARK: Properties
     var drinkTitle        = ""
@@ -46,6 +48,7 @@ class DrinkInstructionsViewController: UIViewController {
         super.viewDidLoad()
         viewSetup()
         print(drinkTitle)
+        changingConstraints()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -118,6 +121,17 @@ class DrinkInstructionsViewController: UIViewController {
             destination.toppingsMeasure = toppingsMeasure
             destination.instructions = instructions
         }
+    }
+    
+    func changingConstraints() {
+
+     if UIDevice().userInterfaceIdiom == .phone {
+                
+                if  UIScreen.main.nativeBounds.height == 1136 {
+                    mainTitleLabel.font = UIFont().withSize(30)
+                    mainTitleLabelTopContraint.constant = 10
+                }
+            }
     }
     
 }

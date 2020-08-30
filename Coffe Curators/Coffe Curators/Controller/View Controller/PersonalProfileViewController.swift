@@ -35,6 +35,9 @@ class PersonalProfileViewController: UIViewController {
         setupView()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     // MARK: - Actions
     @IBAction func backButtonTapped(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)

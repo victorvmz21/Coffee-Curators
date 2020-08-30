@@ -20,6 +20,11 @@ class DripCoffeeTableViewController: UITableViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resetArraysValues()
         fetch()
     }
     
@@ -29,13 +34,13 @@ class DripCoffeeTableViewController: UITableViewController {
             switch result {
             case .success(let drinks):
                 for drink in drinks {
-                    if  drink.appliance == "Drip Cofee" && drink.drinkCategory == "Hot" {
+                    if  drink.appliance == "Drip Coffee" && drink.drinkCategory == "Hot" {
                         self.hotDrinks.append(drink)
                         print("This is Hot Drinks \(self.hotDrinks)")
-                    } else if drink.appliance == "Drip Cofee" && drink.drinkCategory == "Cold" {
+                    } else if drink.appliance == "Drip Coffee" && drink.drinkCategory == "Cold" {
                         self.coldDrinks.append(drink)
                         print("This is Cold Drinks \(self.coldDrinks)")
-                    } else if drink.appliance == "Drip Cofee" && drink.drinkCategory == "Blended" {
+                    } else if drink.appliance == "Drip Coffee" && drink.drinkCategory == "Blended" {
                         self.blendedDrinks.append(drink)
                         print("This is Blended Drinks \(self.blendedDrinks)")
                     }
@@ -49,6 +54,12 @@ class DripCoffeeTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func resetArraysValues() {
+        self.hotDrinks.removeAll()
+        self.coldDrinks.removeAll()
+        self.blendedDrinks.removeAll()
     }
 
     // MARK: - Table view data source

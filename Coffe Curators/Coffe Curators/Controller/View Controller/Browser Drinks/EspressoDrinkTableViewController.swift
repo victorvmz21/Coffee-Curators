@@ -20,8 +20,13 @@ class EspressoDrinkTableViewController: UITableViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetch()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           resetArraysValues()
+           fetch()
+       }
     
     //MARK: - MEthods
     func fetch() {
@@ -51,6 +56,11 @@ class EspressoDrinkTableViewController: UITableViewController {
         }
     }
     
+    func resetArraysValues() {
+        self.hotDrinks.removeAll()
+        self.coldDrinks.removeAll()
+        self.blendedDrinks.removeAll()
+    }
     
     // MARK: - Table view data source
     

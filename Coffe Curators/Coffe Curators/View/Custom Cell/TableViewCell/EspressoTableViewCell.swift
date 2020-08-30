@@ -51,9 +51,13 @@ extension EspressoTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EspressoCoffeeCollectionViewCell.identifier, for: indexPath) as? EspressoCoffeeCollectionViewCell else { return UICollectionViewCell()}
         
         
-        let hot = coffee[indexPath.row]
-        self.categoryLabel.text = hot.drinkCategory
-        cell.espressoDrink = hot
+        let drink = coffee[indexPath.row]
+        if coffee.isEmpty {
+                   self.categoryLabel.text = ""
+               } else {
+                   self.categoryLabel.text = drink.drinkCategory
+               }
+        cell.espressoDrink = drink
         cell.addShadow()
         
         return cell

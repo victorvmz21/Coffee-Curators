@@ -32,8 +32,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8MJ-9j-FKb" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-
-                                                <rect key="frame" x="15" y="179" width="384" height="30"/>
+                                                <rect key="frame" x="15" y="178" width="384" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ieH-IC-Hm1"/>
@@ -69,20 +68,20 @@
                                                     <constraint firstAttribute="width" constant="35" id="pnf-il-GCc"/>
                                                     <constraint firstAttribute="height" constant="38" id="wcM-XZ-ZaH"/>
                                                 </constraints>
+                                                <color key="tintColor" name="black_jolt"/>
                                                 <state key="normal" image="menuButton"/>
                                                 <connections>
                                                     <action selector="menuButtonTapped:" destination="Ftg-R2-bWG" eventType="touchUpInside" id="PHv-f0-Ejj"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browser Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-A9-8aS">
-                                                <rect key="frame" x="20" y="117" width="245.5" height="42"/>
+                                                <rect key="frame" x="20" y="117" width="244.5" height="41"/>
                                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                                 <color key="textColor" name="black_jolt"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-2C-8fU">
-
-                                                <rect key="frame" x="15" y="209" width="384" height="791"/>
+                                                <rect key="frame" x="15" y="208" width="384" height="792"/>
                                             </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HZ-26-tWU">
                                                 <rect key="frame" x="147" y="20" width="247" height="286"/>
@@ -93,18 +92,17 @@
                                                             <constraint firstAttribute="height" constant="22" id="XRg-rH-eK7"/>
                                                             <constraint firstAttribute="width" constant="22" id="owL-NJ-Cz9"/>
                                                         </constraints>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" name="black_jolt"/>
                                                         <state key="normal" image="x.circle.fill" catalog="system"/>
                                                         <connections>
                                                             <action selector="closeMenuButtonTapped:" destination="Ftg-R2-bWG" eventType="touchUpInside" id="2D0-Dn-HdI"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="shk-Ci-Krq">
-
-                                                        <rect key="frame" x="15" y="62" width="150" height="204"/>
+                                                        <rect key="frame" x="15" y="62" width="145" height="204"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zue-BY-fle">
-
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="41.5"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Home">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -114,8 +112,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-Zv-zdv">
-                                                   <rect key="frame" x="0.0" y="54.5" width="150" height="41"/>
-
+                                                                <rect key="frame" x="0.0" y="54.5" width="145" height="41"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Make New Creation">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -125,9 +122,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-y2-LX2">
-
-                                                                <rect key="frame" x="0.0" y="108.5" width="81" height="41.5"/>
-
+                                                                <rect key="frame" x="0.0" y="108.5" width="82" height="41.5"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="My Library">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -137,9 +132,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGZ-5S-Uas">
-
-                                                                <rect key="frame" x="0.0" y="163" width="134" height="41"/>
-
+                                                                <rect key="frame" x="0.0" y="163" width="127" height="41"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Personal Settings">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -230,20 +223,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CollectionPopularDrinksTableViewCell" id="CA4-Xv-cCU" customClass="CollectionPopularDrinksTableViewCell" customModule="Jolt" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="231"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CA4-Xv-cCU" id="yml-Pp-ip2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZC-x1-MK3">
-                                            <rect key="frame" x="20" y="20" width="131.5" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZC-x1-MK3">
+                                            <rect key="frame" x="20" y="20" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="20"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l1T-GG-0eS">
-                                            <rect key="frame" x="20" y="51" width="374" height="180"/>
+                                            <rect key="frame" x="20" y="28" width="374" height="180"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="180" id="u2o-4p-CPJ"/>
@@ -367,14 +360,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drip Coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-cJ-Dw5">
-                                            <rect key="frame" x="15" y="20" width="102" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bu-cJ-Dw5">
+                                            <rect key="frame" x="15" y="20" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="20"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cMA-en-dC1">
-                                            <rect key="frame" x="15" y="53" width="384" height="189"/>
+                                            <rect key="frame" x="15" y="30" width="384" height="212"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cWX-BX-qbf">
                                                 <size key="itemSize" width="128" height="128"/>
@@ -384,7 +377,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DripCoffeeCollectionViewCell" id="14j-6p-3z0" customClass="DripCoffeeCollectionViewCell" customModule="Jolt" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="14.5" width="151" height="160"/>
+                                                    <rect key="frame" x="0.0" y="26" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WcH-a4-YgG">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
@@ -512,14 +505,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espresso Coffee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjx-iL-5pc">
-                                            <rect key="frame" x="15" y="20" width="147.5" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjx-iL-5pc">
+                                            <rect key="frame" x="15" y="20" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="20"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OST-HV-wnV">
-                                            <rect key="frame" x="15" y="51" width="384" height="191"/>
+                                            <rect key="frame" x="15" y="28" width="384" height="214"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KVL-WT-A6u">
                                                 <size key="itemSize" width="151" height="160"/>
@@ -529,7 +522,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EspressoCoffeeCollectionViewCell" id="iWa-oJ-sNy" customClass="EspressoCoffeeCollectionViewCell" customModule="Jolt" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="15.5" width="151" height="160"/>
+                                                    <rect key="frame" x="4" y="27" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bXQ-lU-mSe">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
@@ -636,7 +629,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVC-vD-3YV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <rect key="frame" x="0.0" y="-44" width="414" height="1200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="wOJ-DW-IIe">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
@@ -644,14 +637,14 @@
                                                     <constraint firstAttribute="height" constant="336" id="jKJ-IV-g0N"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cofee Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wC-1e-Gf4">
-                                                <rect key="frame" x="33" y="367" width="356" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Cofee Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wC-1e-Gf4">
+                                                <rect key="frame" x="33" y="367" width="356" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPH-5r-s4i">
-                                                <rect key="frame" x="32" y="405" width="28" height="25"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPH-5r-s4i">
+                                                <rect key="frame" x="32" y="413" width="28" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="LGp-k2-1b5"/>
                                                     <constraint firstAttribute="width" constant="28" id="uSv-Um-NMv"/>
@@ -661,15 +654,15 @@
                                                     <action selector="likeButtonTapped:" destination="yUB-Nd-9ib" eventType="touchUpInside" id="3bp-Fq-n6i"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQJ-O1-9Xl">
-                                                <rect key="frame" x="351" y="401" width="36" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQJ-O1-9Xl">
+                                                <rect key="frame" x="351" y="409" width="36" height="22"/>
                                                 <state key="normal" image="optionIcon"/>
                                                 <connections>
                                                     <action selector="reportButtonTapped:" destination="yUB-Nd-9ib" eventType="touchUpInside" id="zNZ-Nr-kOn"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Appliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-A4-607">
-                                                <rect key="frame" x="35" y="462" width="121" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-A4-607">
+                                                <rect key="frame" x="35" y="470" width="121" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="121" id="4DC-P6-1Mm"/>
                                                     <constraint firstAttribute="height" constant="27" id="uvs-GK-uD8"/>
@@ -678,8 +671,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Appliance name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJY-NJ-07s">
-                                                <rect key="frame" x="37" y="505" width="135" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appliance name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJY-NJ-07s">
+                                                <rect key="frame" x="37" y="513" width="135" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="Gp0-Bt-2Td"/>
                                                     <constraint firstAttribute="width" constant="135" id="Iu9-te-tn4"/>
@@ -688,8 +681,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gM3-fG-7Ed">
-                                                <rect key="frame" x="36" y="554" width="139" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gM3-fG-7Ed">
+                                                <rect key="frame" x="36" y="562" width="139" height="27"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="27" id="22m-Bw-osT"/>
                                                     <constraint firstAttribute="width" constant="139" id="Bsp-Q2-Vh3"/>
@@ -698,22 +691,22 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b2c-X2-kZQ">
-                                                <rect key="frame" x="40" y="605" width="14" height="24"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b2c-X2-kZQ">
+                                                <rect key="frame" x="40" y="613" width="14" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="14" id="VFo-9W-jPC"/>
                                                     <constraint firstAttribute="height" constant="24" id="bnp-WF-X3a"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pil-h6-dSN">
-                                                <rect key="frame" x="39" y="662" width="19" height="24"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pil-h6-dSN">
+                                                <rect key="frame" x="39" y="670" width="19" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="PFg-Ga-ToQ"/>
                                                     <constraint firstAttribute="width" constant="19" id="lJG-F9-f87"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rst-RW-W0T">
-                                                <rect key="frame" x="36" y="728" width="23" height="24"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rst-RW-W0T">
+                                                <rect key="frame" x="36" y="736" width="23" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="nF6-ch-eBf"/>
                                                     <constraint firstAttribute="width" constant="23" id="rTz-F0-WYS"/>
@@ -887,7 +880,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="JVC-vD-3YV" firstAttribute="top" secondItem="ATP-z7-VNz" secondAttribute="top" id="2sP-Wc-xIP"/>
+                                    <constraint firstItem="JVC-vD-3YV" firstAttribute="top" secondItem="ATP-z7-VNz" secondAttribute="top" constant="-44" id="2sP-Wc-xIP"/>
                                     <constraint firstItem="JVC-vD-3YV" firstAttribute="leading" secondItem="ATP-z7-VNz" secondAttribute="leading" id="3BM-5B-PAj"/>
                                     <constraint firstAttribute="trailing" secondItem="JVC-vD-3YV" secondAttribute="trailing" id="WRr-JK-uyR"/>
                                     <constraint firstItem="JVC-vD-3YV" firstAttribute="width" secondItem="ATP-z7-VNz" secondAttribute="width" id="ouL-nr-B5G"/>
@@ -963,7 +956,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RjY-D0-EOG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6113.04347826087" y="140.625"/>
+            <point key="canvasLocation" x="2249" y="2187"/>
         </scene>
         <!--My Library-->
         <scene sceneID="Ltr-7B-Ju8">
@@ -986,13 +979,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9K-ej-2DA">
-                                                <rect key="frame" x="20" y="132" width="111" height="42"/>
+                                                <rect key="frame" x="20" y="132" width="115" height="41"/>
                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="36"/>
                                                 <color key="textColor" name="black_jolt"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-Ql-80G">
-                                                <rect key="frame" x="20" y="199" width="374" height="771"/>
+                                                <rect key="frame" x="20" y="198" width="374" height="772"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="libraryCell" rowHeight="114" id="ymi-WS-nQB" customClass="myDrinksTableViewCell" customModule="Jolt" customModuleProvider="target">
@@ -1015,7 +1008,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="appliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x7-hx-42b">
-                                                                    <rect key="frame" x="132" y="62" width="65.5" height="17.5"/>
+                                                                    <rect key="frame" x="132" y="62" width="63.5" height="17"/>
                                                                     <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="15"/>
                                                                     <color key="textColor" name="black_jolt"/>
                                                                     <nil key="highlightedColor"/>
@@ -1055,6 +1048,7 @@
                                                                                     </state>
                                                                                     <connections>
                                                                                         <action selector="editButtonTapped:" destination="ymi-WS-nQB" eventType="touchUpInside" id="Snq-VD-vVO"/>
+                                                                                        <segue destination="yUB-Nd-9ib" kind="show" identifier="editToDetail" id="SQ4-an-Anq"/>
                                                                                     </connections>
                                                                                 </button>
                                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODO-fb-CFA">
@@ -1100,7 +1094,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c05-Bu-G1U">
-                                                                    <rect key="frame" x="132" y="89.5" width="51" height="15.5"/>
+                                                                    <rect key="frame" x="132" y="89" width="47.5" height="15"/>
                                                                     <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="13"/>
                                                                     <color key="textColor" name="black_jolt"/>
                                                                     <nil key="highlightedColor"/>
@@ -1176,7 +1170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ng8-ck-QU9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7830.434782608696" y="138.61607142857142"/>
+            <point key="canvasLocation" x="7068" y="141"/>
         </scene>
         <!--Pour Over Drink Table View Controller-->
         <scene sceneID="ZXM-ju-Hlc">
@@ -1194,14 +1188,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pour Over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTY-4P-SDi">
-                                            <rect key="frame" x="15" y="20" width="90.5" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTY-4P-SDi">
+                                            <rect key="frame" x="15" y="20" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="20"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KLH-KV-ijG">
-                                            <rect key="frame" x="15" y="51" width="384" height="191"/>
+                                            <rect key="frame" x="15" y="28" width="384" height="214"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xQg-9n-bND">
                                                 <size key="itemSize" width="151" height="160"/>
@@ -1211,7 +1205,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PourOverDrinkCollectionViewCell" id="RAe-QZ-qyB" userLabel="PourOverCollectionViewCell" customClass="PourOverDrinkCollectionViewCell" customModule="Jolt" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="15.5" width="151" height="160"/>
+                                                    <rect key="frame" x="4" y="27" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rv4-hN-fP4">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
@@ -1298,6 +1292,9 @@
                             <outlet property="delegate" destination="gSe-qB-PL3" id="Avj-C7-SHm"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yUB-Nd-9ib" kind="show" identifier="pourOverToDetail" id="yEu-OT-KTR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OAo-vp-f4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1319,14 +1316,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="French Press" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-WT-60a">
-                                            <rect key="frame" x="15" y="20" width="117.5" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-WT-60a">
+                                            <rect key="frame" x="15" y="20" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="20"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E82-Dy-wws">
-                                            <rect key="frame" x="15" y="51" width="384" height="191"/>
+                                            <rect key="frame" x="15" y="28" width="384" height="214"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Jf-yj-cPm">
                                                 <size key="itemSize" width="151" height="160"/>
@@ -1336,7 +1333,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FrenchPressDrinkCollectionViewCell" id="oeQ-hy-Dap" customClass="FrenchPressDrinkCollectionViewCell" customModule="Jolt" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="15.5" width="151" height="160"/>
+                                                    <rect key="frame" x="4" y="27" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JdL-Rw-dRz">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
@@ -1423,6 +1420,9 @@
                             <outlet property="delegate" destination="ehS-R8-urb" id="w4x-fu-ezj"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yUB-Nd-9ib" kind="show" identifier="frenchToDetail" id="bDf-4C-lJw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuk-Va-YgU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1444,14 +1444,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cold Brew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsM-pk-2Bu">
-                                            <rect key="frame" x="15" y="20" width="94" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsM-pk-2Bu">
+                                            <rect key="frame" x="15" y="20" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="20"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="84q-WG-jMq">
-                                            <rect key="frame" x="15" y="51" width="384" height="191"/>
+                                            <rect key="frame" x="15" y="28" width="384" height="214"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g1y-f7-kdV">
                                                 <size key="itemSize" width="151" height="160"/>
@@ -1461,7 +1461,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColdBrewCollectionViewCell" id="Rbp-dw-gHe" customClass="ColdBrewCollectionViewCell" customModule="Jolt" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="15.5" width="151" height="160"/>
+                                                    <rect key="frame" x="4" y="27" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Fn4-Wv-2rO">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
@@ -1547,6 +1547,9 @@
                             <outlet property="delegate" destination="O1x-xG-nGk" id="iBe-GQ-vdf"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yUB-Nd-9ib" kind="show" identifier="coldBrewToDetail" id="uL0-E5-Aep"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="562-23-fbd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1568,14 +1571,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="242"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moka Pot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpr-Mr-6n9">
-                                            <rect key="frame" x="15" y="20" width="86.5" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpr-Mr-6n9">
+                                            <rect key="frame" x="15" y="20" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="20"/>
                                             <color key="textColor" name="black_jolt"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z7b-v2-VqD">
-                                            <rect key="frame" x="15" y="51" width="384" height="191"/>
+                                            <rect key="frame" x="15" y="28" width="384" height="214"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lcT-o0-4sG">
                                                 <size key="itemSize" width="151" height="160"/>
@@ -1585,7 +1588,7 @@
                                             </collectionViewFlowLayout>
                                             <cells>
                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MokaPotDrinkCollectionViewCell" id="k2N-CW-ja2" customClass="MokaPotDrinkCollectionViewCell" customModule="Jolt" customModuleProvider="target">
-                                                    <rect key="frame" x="4" y="15.5" width="151" height="160"/>
+                                                    <rect key="frame" x="4" y="27" width="151" height="160"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7vL-DR-Oxv">
                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="160"/>
@@ -1672,6 +1675,9 @@
                             <outlet property="delegate" destination="wZC-S5-Exy" id="2Kf-fB-Oj8"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="yUB-Nd-9ib" kind="show" identifier="mokaPotToDetail" id="OB1-b2-adk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHj-9E-zRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1714,16 +1720,6 @@
             </objects>
             <point key="canvasLocation" x="-347.82608695652175" y="140.625"/>
         </scene>
-        <!--signUp-->
-        <scene sceneID="3bd-cb-YcU">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="signUp" id="bM4-Fo-btf" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="w5y-LR-TaT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8aZ-3A-iTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="278" y="560"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IEv-DN-tB3">
             <objects>
@@ -1741,21 +1737,11 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RC1-ja-WBC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6920.289855072464" y="138.61607142857142"/>
-        </scene>
-        <!--signIn-->
-        <scene sceneID="GOw-Rn-Kjb">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="signIn" id="HFH-0t-llm" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="oPP-Oo-vID"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aTN-vC-7IE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="807" y="560"/>
+            <point key="canvasLocation" x="6236" y="141"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4Ag-8l-wyp"/>
+        <segue reference="SQ4-an-Anq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brownbackbutton " width="70" height="70"/>
@@ -1776,7 +1762,7 @@
         <image name="x.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="black_jolt">
-            <color red="0.23529411764705882" green="0.10588235294117647" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23499999940395355" green="0.10599999874830246" blue="0.024000000208616257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

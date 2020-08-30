@@ -55,7 +55,11 @@ extension CollectionPopularDrinksTableViewCell: UICollectionViewDelegate, UIColl
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularDrinkCollectionViewCell.identifier, for: indexPath) as? PopularDrinkCollectionViewCell else { return UICollectionViewCell()}
         
         let drink = coffee[indexPath.row]
-        self.categoryLabel.text = drink.drinkCategory
+       if coffee.isEmpty {
+                   self.categoryLabel.text = ""
+               } else {
+                   self.categoryLabel.text = drink.drinkCategory
+               }
         cell.popularDrink = drink
         cell.addShadow()
         

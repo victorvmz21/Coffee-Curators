@@ -13,6 +13,10 @@ protocol ReloadTableViewDelegate {
     func reloadTableView()
 }
 
+protocol EditScreenProtocol {
+    func gotToDetailScreen(withDrink: Drink)
+}
+
 class myDrinksTableViewCell: UITableViewCell {
 
     //MARK: - IBOutlet
@@ -27,14 +31,15 @@ class myDrinksTableViewCell: UITableViewCell {
     var myDrinks: Drink? {
         didSet{ updateViews() }
     }
-    
+    var editDelegate: EditScreenProtocol?
+    var delegate: ReloadTableViewDelegate?
     //MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
     }
     
-    var delegate: ReloadTableViewDelegate?
+    
 
     //MARK: - IBActions
     @IBAction func optionButtonTapped(_ sender: UIButton) {
@@ -42,13 +47,14 @@ class myDrinksTableViewCell: UITableViewCell {
     }
     
     @IBAction func editButtonTapped(_ sender: UIButton) {
+        guard let drink = myDrinks else { return }
+        editDelegate?.gotToDetailScreen(withDrink: drink)
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         guard let drink = myDrinks else { return }
         DrinkController.shared.deleteDrink(userID: uid, drinkUID: drink.drinkID)
-//        deleteAlert()
         delegate?.reloadTableView()
         
     }
@@ -59,21 +65,6 @@ class myDrinksTableViewCell: UITableViewCell {
     
     
     //MARK: - Methods
-//    func deleteAlert() {
-//        let controller = UIAlertController(title: "Delete?", message: "Are you sure you want to delete this drink?", preferredStyle: .alert)
-//        let deleteAction = UIAlertAction(title: "Delete", style: .default) { (_) in
-//            print("Deleted")
-//            guard let uid = Auth.auth().currentUser?.uid else { return }
-//            guard let drink = self.myDrinks else { return }
-//            DrinkController.shared.deleteDrink(userID: uid, drinkUID: drink.drinkID)
-//            self.delegate?.reloadTableView()
-//        }
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//        controller.addAction(deleteAction)
-//        controller.addAction(cancelAction)
-//        MyLibraryViewController().present(controller, animated: true)
-//    }
-    
     func updateViews() {
         guard let mydrinks = myDrinks else { return }
         self.drinkImage.image = UIImage(data: mydrinks.drinkPicture)

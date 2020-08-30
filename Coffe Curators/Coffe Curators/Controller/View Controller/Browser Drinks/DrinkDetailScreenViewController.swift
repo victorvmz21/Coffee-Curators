@@ -24,25 +24,16 @@ class DrinkDetailScreenViewController: UIViewController, MFMailComposeViewContro
     @IBOutlet weak var sweetnerImageView: UIImageView!
     @IBOutlet weak var toppingImageView: UIImageView!
     @IBOutlet weak var reportButton: UIButton!
-    
     @IBOutlet weak var leftButton: UIButton!
-    
     @IBOutlet weak var numberLabel: UILabel!
-    
     @IBOutlet weak var instructionLabel: UILabel!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var instructionView: UIView!
-    
     @IBOutlet weak var howToLabel: UILabel!
-    
     @IBOutlet weak var dairyTextField: UITextField!
-    
     @IBOutlet weak var sweetnerTextField: UITextField!
-    
     @IBOutlet weak var toppingsTextField: UITextField!
-    
     @IBOutlet weak var saveButton: UIButton!
-    
     @IBOutlet weak var cancelButton: UIButton!
     
     //Landing pad
@@ -123,23 +114,14 @@ class DrinkDetailScreenViewController: UIViewController, MFMailComposeViewContro
                 rightButton.isEnabled = true
             }
         }
-//        if let arrayCount = drinkLandingPad?.instructions.count, count == arrayCount {
-//            rightButton.isEnabled = false
-//        } else {
-//            rightButton.isEnabled = true
-//        }
+
     }
     
     func instructions(index: Int) {
-        if let drink = drinkLandingPad {
-            self.numberLabel.text = "\(instructionCount)"
-            self.instructionLabel.text = drink.instructions[index]
-        }
+        guard let drink  = drinkLandingPad else { return }
+        self.numberLabel.text = "\(instructionCount)"
+        self.instructionLabel.text = drink.instructions[index]
     }
-    
-    
-    
-    
     
     @IBAction func reportButtonTapped(_ sender: Any) {
         report()
@@ -162,13 +144,6 @@ class DrinkDetailScreenViewController: UIViewController, MFMailComposeViewContro
     }
     
     // MARK: - Methods
-//    func instructions() {
-//        if let drink = drinkLandingPad {
-//
-//        }
-//    }
-    
-    
     func report() {
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let editAction = UIAlertAction(title: "Edit Drink", style: .default) { (_) in
@@ -192,12 +167,6 @@ class DrinkDetailScreenViewController: UIViewController, MFMailComposeViewContro
                     "message": "Drink, \(drink.drinkID) has been reported by a user"
                 ])
             }
-//            if MFMailComposeViewController.canSendMail() {
-//                let mail = MFMailComposeViewController()
-//                mail.mailComposeDelegate = self
-//                mail.setToRecipients(["connor.bluejay2020@gmail.com"])
-//
-//            }
            
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -206,8 +175,6 @@ class DrinkDetailScreenViewController: UIViewController, MFMailComposeViewContro
         controller.addAction(cancelAction)
         present(controller, animated: true)
     }
-    
-    
     
     func setupViews() {
         design()
@@ -231,13 +198,8 @@ class DrinkDetailScreenViewController: UIViewController, MFMailComposeViewContro
             self.dairyTextField.text = drink.dairy
             self.toppingsTextField.text = toppingsList()
             self.sweetnerTextField.text = "\(drink.sweetener) - \(drink.sweetenerMeasure)"
-//            self.instructionsLabel.text = instructionsList()?\
-//            self.ingredientLabel.text = "\(milkImage) \(drink.dairy)\n\(sweetnerImage) \(drink.sweetener) - \(drink.sweetenerMeasure)\nT\(image) \(toppingsList())"
-            
         }
     }
-    
-    
     
     func toppingsList() -> String {
         var toppings = ""
@@ -272,11 +234,9 @@ class DrinkDetailScreenViewController: UIViewController, MFMailComposeViewContro
             }
             
             if let document = document, document.exists {
-//                self.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
                 let image = #imageLiteral(resourceName: "heart-fill")
                 self.likeButton.setImage(image, for: .normal)
             } else {
-//                self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
                 let image = #imageLiteral(resourceName: "Heart")
                 self.likeButton.setImage(image, for: .normal)
             }
@@ -344,16 +304,6 @@ class DrinkDetailScreenViewController: UIViewController, MFMailComposeViewContro
 
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

@@ -78,7 +78,6 @@ class ParentDrinkBrowserViewController: ButtonBarPagerTabStripViewController {
     
     
     //MARK: - IBActions
-    
     @IBAction func menuButtonTapped(_ sender: UIButton) {
         UIView.animate(withDuration: 0.4) {
             self.menuLeftConstraint.constant = 20

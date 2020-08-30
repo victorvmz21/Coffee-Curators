@@ -74,7 +74,7 @@ class DrinkController {
             } else {
                 //uploading Photo
 
-                self.uploadDrinkImage(image: drinkPicture, drinkID: drinkUID)
+                self.uploadDrinkImage(image: drinkPicture, drinkID: drinkUID, drinkUID: drinkUID)
                 let alert = UIAlertController(title: "Success", message: "Drink Created Succesfully", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                 alert.addAction(okAction)

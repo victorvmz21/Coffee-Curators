@@ -16,7 +16,7 @@ struct LoginStringConstants {
 
 
 class LoginViewController: UIViewController {
-
+    
     //MARK: - IBOutlet
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -30,17 +30,19 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       textFieldSetup()
+        textFieldSetup()
         setupViews()
+        changingConstraints()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     //MARK: - IBActions
     @IBAction func backButtonTapped(_ sender: Any) {
-//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
-//        viewController.modalPresentationStyle = .fullScreen
-//        self.present(viewController, animated: true, completion: nil)
         dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func forgotPasswordTapped(_ sender: UIButton) {
@@ -48,23 +50,20 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-          guard let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {return}
+        guard let email = emailTextField.text, !email.isEmpty, let password = passwordTextField.text, !password.isEmpty else {return}
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
             if let err = err { print(err.localizedDescription) }
             
             if result != nil {
                 print("signed in")
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                guard let viewController = storyBoard.instantiateViewController(identifier: "homeScreen") as? HomeViewController  else {return}
-                viewController.modalPresentationStyle = .fullScreen
-                self.present(viewController, animated: true, completion: nil)
+                self.navigationController?.popToRootViewController(animated: true)
             } else {
                 print("No user")
             }
             
         }
-      
+        
     }
     
     //MARK: - Methods
@@ -105,7 +104,20 @@ class LoginViewController: UIViewController {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
     }
+    
+    func changingConstraints() {
+        
+        if UIDevice().userInterfaceIdiom == .phone {
+            
+            if  UIScreen.main.nativeBounds.height == 1136 {
+                self.titleLabel.isHidden = true
+            } else {
+                self.titleLabel.isHidden = false
+            }
+        }
+    }
 }
+
 
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

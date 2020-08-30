@@ -15,10 +15,17 @@ class FrenchPressDrinkTableViewController: UITableViewController {
     var hotDrinks: [Drink] = []
     var coldDrinks: [Drink] = []
     var blendedDrinks: [Drink] = []
+    var selectedDrink: Drink?
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resetArraysValues()
         fetch()
     }
     
@@ -50,6 +57,12 @@ class FrenchPressDrinkTableViewController: UITableViewController {
         }
     }
     
+    func resetArraysValues() {
+        self.hotDrinks.removeAll()
+        self.coldDrinks.removeAll()
+        self.blendedDrinks.removeAll()
+    }
+    
     
     // MARK: - Table view data source
     
@@ -67,22 +80,43 @@ class FrenchPressDrinkTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FrenchPressDrinkTableViewCell.identifier, for: indexPath) as? FrenchPressDrinkTableViewCell else { return UITableViewCell()}
         if indexPath.section == 0 {
+            
             cell.coffee = hotDrinks
             cell.reloading()
         } else if indexPath.section == 1 {
+              cell.itemTappedDelegate = self
             cell.coffee = coldDrinks
             cell.reloading()
         } else if indexPath.section == 2 {
+            cell.itemTappedDelegate = self
             cell.coffee = blendedDrinks
             cell.reloading()
         }
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "frenchToDetail" {
+                guard let destination = segue.destination as? DrinkDetailScreenViewController else {return}
+                destination.drinkLandingPad = selectedDrink
+            }
+        }
 }
 
 extension FrenchPressDrinkTableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "French Press")
+        return IndicatorInfo(title: "Frech Press")
     }
 }
+
+extension FrenchPressDrinkTableViewController: CollectionItemTappedDelegate {
+    func itemWasTapped(drink: Drink) {
+        self.selectedDrink = drink
+        self.performSegue(withIdentifier: "frenchToDetail", sender: nil)
+        print("nao trocou de tela")
+    }
+    
+}
+
+

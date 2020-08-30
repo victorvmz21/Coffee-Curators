@@ -58,7 +58,6 @@ class HomeViewController: UIViewController {
         tabBarController?.selectedIndex = 2
     }
     
-    
     @IBAction func newCreationButtonTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "DrinkCreation", bundle: nil)
         let drinkCreation = storyboard.instantiateViewController(identifier: "drinkTitle")
@@ -83,6 +82,7 @@ class HomeViewController: UIViewController {
     }
     
     ///Menu IBAction
+    
     @IBAction func browserDrinksButtonTapped(_ sender: UIButton) {
         let tabBarController = UIApplication.shared.windows.first?.rootViewController as? UITabBarController
         tabBarController?.selectedIndex = 2

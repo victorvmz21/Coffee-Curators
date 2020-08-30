@@ -9,7 +9,9 @@
 import UIKit
 import FirebaseAuth
 
-class MyLibraryViewController: UIViewController {
+class MyLibraryViewController: UIViewController, EditScreenProtocol {
+    
+    
 
     //MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
@@ -18,12 +20,20 @@ class MyLibraryViewController: UIViewController {
     //MARK: Properties
     var identifier = "libraryCell"
     var drinks: [Drink] = []
+    var selectedDrink: Drink?
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-         tableViewSetup()
-         fetchUserDrinks()
+        tableViewSetup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        drinks.removeAll()
+        fetchUserDrinks()
+        tableView.reloadData()
     }
     
     //MARK: - Methods
@@ -47,6 +57,24 @@ class MyLibraryViewController: UIViewController {
             }
         }
     }
+    
+    func gotToDetailScreen(withDrink: Drink) {
+        selectedDrink = withDrink
+        performSegue(withIdentifier: "editToDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editToDetail" {
+            guard let destination = segue.destination as? DrinkDetailScreenViewController else {return}
+            
+            destination.drinkLandingPad = selectedDrink
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedDrink = selectedDrink else { return }
+        gotToDetailScreen(withDrink: selectedDrink)
+    }
 }
 
 extension MyLibraryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -58,6 +86,7 @@ extension MyLibraryViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? myDrinksTableViewCell else { return UITableViewCell()}
         
         cell.delegate = self
+        cell.editDelegate = self
         let myDrinks = drinks[indexPath.row]
         cell.myDrinks = myDrinks
         
@@ -68,11 +97,11 @@ extension MyLibraryViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MyLibraryViewController: ReloadTableViewDelegate {
     func reloadTableView() {
-//        fetchUserDrinks()
+        self.drinks.removeAll()
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+        fetchUserDrinks()
     }
-    
-    
 }
+

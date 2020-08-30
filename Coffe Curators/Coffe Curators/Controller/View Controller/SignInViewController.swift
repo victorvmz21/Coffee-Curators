@@ -20,7 +20,7 @@ protocol ReloadViewDelegate {
 class SignInViewController: UIViewController {
     
     //MARK: - Properties
-    var refreshDelegate: ReloadViewDelegate!
+    var refreshDelegate: ReloadViewDelegate?
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -130,10 +130,8 @@ class SignInViewController: UIViewController {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyBoard.instantiateViewController(identifier: "loginWithEmail") as? LoginViewController  else {return}
         viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
-    
-    
     
     
     @IBAction func  backButtonTapped(_ sender: UIButton) {
@@ -168,7 +166,7 @@ extension SignInViewController: ASAuthorizationControllerDelegate, ASAuthorizati
             Auth.auth().signIn(with: credential) { (result, error) in
                 if let user = result?.user {
                     DispatchQueue.main.async {
-                        self.refreshDelegate.reloadHomeView()
+                        self.refreshDelegate?.reloadHomeView()
                     }
                     self.dismiss(animated: true, completion: nil)
                     print("you're now signed in as \(user.uid) email: \(user.email), name: \(user.displayName)")
@@ -210,7 +208,7 @@ extension SignInViewController: GIDSignInDelegate {
             } else {
                 print("Signed In")
                 DispatchQueue.main.async {
-                    self.refreshDelegate.reloadHomeView()
+                    self.refreshDelegate?.reloadHomeView()
                 }
                 self.navigationController?.dismiss(animated: true, completion: nil)
             }

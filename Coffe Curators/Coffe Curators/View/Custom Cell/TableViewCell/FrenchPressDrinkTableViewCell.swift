@@ -17,6 +17,7 @@ class FrenchPressDrinkTableViewCell: UITableViewCell {
     //MARK: - Properties
     static let identifier = "FrenchPressDrinkTableViewCell"
     var coffee: [Drink] = []
+    weak var itemTappedDelegate: CollectionItemTappedDelegate?
     
     //MARK: - View Life Cycle
     override func awakeFromNib() {
@@ -49,11 +50,20 @@ extension FrenchPressDrinkTableViewCell: UICollectionViewDelegate, UICollectionV
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FrenchPressDrinkCollectionViewCell.identifier, for: indexPath) as? FrenchPressDrinkCollectionViewCell else { return UICollectionViewCell()}
         
         let drink = coffee[indexPath.row]
-        self.categoryLabel.text = drink.drinkCategory
+        if coffee.isEmpty {
+            self.categoryLabel.text = ""
+        } else {
+            self.categoryLabel.text = drink.drinkCategory
+        }
         cell.frenchPressDrink = drink
         cell.addShadow()
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let drink = coffee[indexPath.row]
+        itemTappedDelegate?.itemWasTapped(drink: drink)
     }
 }
 

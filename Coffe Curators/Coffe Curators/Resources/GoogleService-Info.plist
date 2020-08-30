@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>373686806847-9c1jahcou2e04snoqbae41eogir6pqlr.apps.googleusercontent.com</string>
+	<string>732009810930-kfl9jckeku2g9erbic5ik93jr3222eei.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.373686806847-9c1jahcou2e04snoqbae41eogir6pqlr</string>
+	<string>com.googleusercontent.apps.732009810930-kfl9jckeku2g9erbic5ik93jr3222eei</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBkMZ9Qpyz9Syh55jQuwJBcY_FCXIKooqQ</string>
+	<string>AIzaSyCRgcgWD26fNA1TvrI6vOtXcS68g73JyBI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>373686806847</string>
+	<string>732009810930</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>io.atomuz.Coffe-Curators</string>
+	<string>io.atomuz.Joult</string>
 	<key>PROJECT_ID</key>
-	<string>coffee-curators</string>
+	<string>jolt-coffee-b69f0</string>
 	<key>STORAGE_BUCKET</key>
-	<string>coffee-curators.appspot.com</string>
+	<string>jolt-coffee-b69f0.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:373686806847:ios:da5f5382ccbc93f7dbcb8a</string>
+	<string>1:732009810930:ios:a949fef6039db57223396b</string>
 	<key>DATABASE_URL</key>
-	<string>https://coffee-curators.firebaseio.com</string>
+	<string>https://jolt-coffee-b69f0.firebaseio.com</string>
 </dict>
 </plist>

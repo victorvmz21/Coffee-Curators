@@ -20,6 +20,11 @@ class PopularDrinkTableViewController: UITableViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resetArraysValues()
         fetch()
     }
     
@@ -49,6 +54,12 @@ class PopularDrinkTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func resetArraysValues() {
+        self.hotDrinks.removeAll()
+        self.coldDrinks.removeAll()
+        self.blendedDrinks.removeAll()
     }
     
     // MARK: - Table view data source

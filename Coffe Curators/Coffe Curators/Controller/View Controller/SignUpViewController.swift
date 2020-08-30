@@ -24,6 +24,10 @@ class SignUpViewController: UIViewController {
         textFieldSetup()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     //MARK: - IBActions
     @IBAction func backButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)

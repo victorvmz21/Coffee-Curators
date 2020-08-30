@@ -607,7 +607,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="gdD-XC-lq9" secondAttribute="bottom" constant="10" id="3EO-93-HSK"/>
                                     <constraint firstItem="L85-io-oU8" firstAttribute="leading" secondItem="gdD-XC-lq9" secondAttribute="trailing" constant="9" id="MD4-LI-SWb"/>
@@ -799,7 +799,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="wAG-jQ-hH9" firstAttribute="top" secondItem="Dz3-3b-7MY" secondAttribute="top" constant="12" id="4rl-ZG-2c2"/>
                                     <constraint firstItem="9Me-HW-i71" firstAttribute="centerY" secondItem="Sud-nS-rv2" secondAttribute="centerY" id="8C1-dw-Js2"/>
@@ -1024,7 +1024,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="aaO-Qb-JOy" firstAttribute="leading" secondItem="ZvF-PH-diP" secondAttribute="trailing" constant="9" id="5Cx-wj-tu2"/>
                                     <constraint firstAttribute="bottom" secondItem="ZvF-PH-diP" secondAttribute="bottom" constant="10" id="8bO-CF-8tn"/>
@@ -1131,13 +1131,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose what sweeteners youll be using for cofee recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH3-Q9-rRE">
-                                <rect key="frame" x="20" y="181" width="374" height="126"/>
-                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <rect key="frame" x="20" y="161" width="374" height="108.5"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="31"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sweeteners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydp-ue-9cy">
-                                <rect key="frame" x="20" y="332" width="90" height="20.5"/>
+                                <rect key="frame" x="20" y="294.5" width="90" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1162,7 +1162,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-R9-ovC">
-                                <rect key="frame" x="118" y="332.5" width="20" height="20"/>
+                                <rect key="frame" x="118" y="295" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="V11-05-UP7"/>
                                     <constraint firstAttribute="width" constant="20" id="q9r-7v-9LK"/>
@@ -1174,13 +1174,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Caramel syrup, Sugar, Honey)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Pa-cr-yDf">
-                                <rect key="frame" x="20" y="360" width="231" height="20"/>
+                                <rect key="frame" x="20" y="322.5" width="231" height="20"/>
                                 <fontDescription key="fontDescription" name="Petrona-Light" family="Petrona" pointSize="17"/>
                                 <color key="textColor" red="0.5196054819" green="0.5196054819" blue="0.5196054819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-gF-Upf">
-                                <rect key="frame" x="20" y="400" width="256" height="43"/>
+                                <rect key="frame" x="20" y="362.5" width="256" height="43"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zl-hQ-p4e">
                                         <rect key="frame" x="5" y="12.5" width="22" height="20"/>
@@ -1210,7 +1210,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="0zl-hQ-p4e" secondAttribute="bottom" constant="10" id="1qJ-sy-TO8"/>
                                     <constraint firstItem="iGb-ob-tJB" firstAttribute="centerY" secondItem="0zl-hQ-p4e" secondAttribute="centerY" id="AW8-mK-uzY"/>
@@ -1222,13 +1222,13 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a Sweetener" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POp-jC-n7A">
-                                <rect key="frame" x="20" y="477" width="189" height="29"/>
+                                <rect key="frame" x="20" y="439.5" width="189" height="29"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TBLSP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nO-ct-Obe">
-                                <rect key="frame" x="234" y="474.5" width="106" height="34"/>
+                                <rect key="frame" x="234" y="437" width="106" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="next"/>
                                 <userDefinedRuntimeAttributes>
@@ -1265,7 +1265,7 @@
                             <constraint firstItem="POp-jC-n7A" firstAttribute="width" secondItem="gjo-4p-ptO" secondAttribute="width" multiplier="0.456522" id="aN7-Rs-LDQ"/>
                             <constraint firstItem="1Pa-cr-yDf" firstAttribute="leading" secondItem="Ydp-ue-9cy" secondAttribute="leading" id="d43-nH-O2N"/>
                             <constraint firstItem="cFx-WW-dAs" firstAttribute="trailing" secondItem="VU8-ph-Tdi" secondAttribute="trailing" constant="20" id="dst-jq-ShY"/>
-                            <constraint firstItem="lH3-Q9-rRE" firstAttribute="top" secondItem="VU8-ph-Tdi" secondAttribute="bottom" constant="60" id="fXs-Fm-qYu"/>
+                            <constraint firstItem="lH3-Q9-rRE" firstAttribute="top" secondItem="VU8-ph-Tdi" secondAttribute="bottom" constant="40" id="fXs-Fm-qYu"/>
                             <constraint firstItem="lH3-Q9-rRE" firstAttribute="leading" secondItem="cFx-WW-dAs" secondAttribute="leading" constant="20" id="fdi-T9-8Bp"/>
                             <constraint firstItem="cFx-WW-dAs" firstAttribute="trailing" secondItem="lH3-Q9-rRE" secondAttribute="trailing" constant="20" id="jDi-Rh-OSe"/>
                             <constraint firstItem="AnV-R9-ovC" firstAttribute="centerY" secondItem="Ydp-ue-9cy" secondAttribute="centerY" id="lY3-7c-EQ2"/>
@@ -1346,13 +1346,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose what toppings youll be using for cofee recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-LW-LXI">
-                                <rect key="frame" x="20" y="181" width="374" height="126"/>
-                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
+                                <rect key="frame" x="20" y="161" width="374" height="108.5"/>
+                                <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="31"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toppings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lha-0r-lp2">
-                                <rect key="frame" x="20" y="332" width="70.5" height="20.5"/>
+                                <rect key="frame" x="20" y="294.5" width="70.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1377,7 +1377,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-Sd-lNv">
-                                <rect key="frame" x="100.5" y="332.5" width="20" height="20"/>
+                                <rect key="frame" x="100.5" y="295" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dWf-oJ-eJW"/>
                                     <constraint firstAttribute="height" constant="20" id="ov6-8P-tWI"/>
@@ -1389,19 +1389,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Wipe Cream, Cinnamon, M&amp;M)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkF-Dg-l2s">
-                                <rect key="frame" x="20" y="360" width="240" height="20"/>
+                                <rect key="frame" x="20" y="322.5" width="240" height="20"/>
                                 <fontDescription key="fontDescription" name="Petrona-Light" family="Petrona" pointSize="17"/>
                                 <color key="textColor" red="0.5196054819" green="0.5196054819" blue="0.5196054819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type one topping" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mVB-AO-Tez">
-                                <rect key="frame" x="20" y="462" width="374" height="29"/>
+                                <rect key="frame" x="20" y="424.5" width="374" height="29"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKC-t7-nC8">
-                                <rect key="frame" x="20" y="402" width="206" height="43"/>
+                                <rect key="frame" x="20" y="364.5" width="206" height="43"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwU-Sk-cvB">
                                         <rect key="frame" x="5" y="12.5" width="22" height="20"/>
@@ -1425,7 +1425,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="PO3-ua-h1A" firstAttribute="leading" secondItem="AwU-Sk-cvB" secondAttribute="trailing" constant="9" id="52l-aW-mfS"/>
                                     <constraint firstItem="AwU-Sk-cvB" firstAttribute="top" secondItem="oKC-t7-nC8" secondAttribute="top" constant="12" id="57g-ra-59L"/>
@@ -1459,7 +1459,7 @@
                             <constraint firstItem="VkF-Dg-l2s" firstAttribute="top" secondItem="Lha-0r-lp2" secondAttribute="bottom" constant="7.5" id="gbE-oZ-6V3"/>
                             <constraint firstItem="fZf-eM-WBe" firstAttribute="leading" secondItem="HYO-mc-d8a" secondAttribute="leading" constant="20" id="h8n-mP-JHt"/>
                             <constraint firstItem="mVB-AO-Tez" firstAttribute="top" secondItem="oKC-t7-nC8" secondAttribute="bottom" constant="17" id="jDM-lm-lF4"/>
-                            <constraint firstItem="Xtd-LW-LXI" firstAttribute="top" secondItem="ilp-uG-DQQ" secondAttribute="bottom" constant="60" id="qpb-h3-qrO"/>
+                            <constraint firstItem="Xtd-LW-LXI" firstAttribute="top" secondItem="ilp-uG-DQQ" secondAttribute="bottom" constant="40" id="qpb-h3-qrO"/>
                             <constraint firstItem="VkF-Dg-l2s" firstAttribute="leading" secondItem="Lha-0r-lp2" secondAttribute="leading" id="vcd-dJ-D7d"/>
                             <constraint firstItem="xTs-Sd-lNv" firstAttribute="centerY" secondItem="Lha-0r-lp2" secondAttribute="centerY" id="zbd-Ej-ocT"/>
                         </constraints>
@@ -1532,13 +1532,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Instructions for your Recipe" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsg-W9-Qfd">
-                                <rect key="frame" x="20" y="200" width="374" height="84"/>
+                                <rect key="frame" x="20" y="161" width="374" height="84"/>
                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqm-JO-pYg">
-                                <rect key="frame" x="20" y="421.5" width="125.5" height="20.5"/>
+                                <rect key="frame" x="20" y="355" width="125.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1562,8 +1562,8 @@
                                     <segue destination="BRv-Kb-UIL" kind="show" identifier="instructionsToPost" id="Jek-nb-hWe"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-mD-894">
-                                <rect key="frame" x="20" y="315" width="374" height="72"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-mD-894">
+                                <rect key="frame" x="20" y="276" width="374" height="59"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3G3-ib-6mJ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
@@ -1589,7 +1589,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="p6T-S8-evv">
-                                        <rect key="frame" x="0.0" y="51.5" width="297" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="38.5" width="297" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caramel Syrup 3 TBLS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-hd-43s">
                                                 <rect key="frame" x="0.0" y="0.0" width="173" height="20.5"/>
@@ -1608,7 +1608,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-CQ-Qfl">
-                                <rect key="frame" x="149" y="421" width="22" height="22"/>
+                                <rect key="frame" x="149" y="354.5" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="Lwh-Zp-Ir5"/>
                                     <constraint firstAttribute="width" constant="22" id="diH-BU-2Wh"/>
@@ -1620,13 +1620,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Make Coffee, Add dairy, add Sweetener)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKV-vJ-OS7">
-                                <rect key="frame" x="20" y="444.5" width="311.5" height="20"/>
+                                <rect key="frame" x="20" y="378" width="311.5" height="20"/>
                                 <fontDescription key="fontDescription" name="Petrona-Light" family="Petrona" pointSize="17"/>
                                 <color key="textColor" red="0.5196054819" green="0.5196054819" blue="0.5196054819" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcz-Ck-Di6">
-                                <rect key="frame" x="20" y="485" width="284" height="45"/>
+                                <rect key="frame" x="20" y="413" width="284" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSM-8b-jGQ">
                                         <rect key="frame" x="5" y="12.5" width="22" height="20"/>
@@ -1663,12 +1663,13 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espresso Coffee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j44-b0-J3F">
                                         <rect key="frame" x="88" y="0.0" width="194" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="14"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="KSM-8b-jGQ" firstAttribute="leading" secondItem="kcz-Ck-Di6" secondAttribute="leading" constant="5" id="5PL-y4-6Ou"/>
                                     <constraint firstItem="KSM-8b-jGQ" firstAttribute="centerY" secondItem="kcz-Ck-Di6" secondAttribute="centerY" id="7Hr-u7-UvQ"/>
@@ -1682,7 +1683,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAW-uK-30p">
-                                <rect key="frame" x="23" y="540" width="284" height="45"/>
+                                <rect key="frame" x="23" y="466" width="284" height="45"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gn9-aR-9lA">
                                         <rect key="frame" x="5" y="12.5" width="22" height="20.5"/>
@@ -1720,12 +1721,13 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espresso Coffee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B6-QS-4qF">
                                         <rect key="frame" x="88" y="0.0" width="191" height="45"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="14"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="9B6-QS-4qF" firstAttribute="top" secondItem="lAW-uK-30p" secondAttribute="top" id="G4w-5N-ChB"/>
                                     <constraint firstItem="OFU-R2-PTS" firstAttribute="centerY" secondItem="Gn9-aR-9lA" secondAttribute="centerY" id="Ja7-2C-5p6"/>
@@ -1739,7 +1741,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uh8-na-C6s">
-                                <rect key="frame" x="23" y="595" width="210" height="34"/>
+                                <rect key="frame" x="23" y="521" width="210" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ck-yh-3zA">
                                         <rect key="frame" x="4" y="7" width="22" height="20.5"/>
@@ -1777,12 +1779,13 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espresso Coffee" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGu-hv-Scg">
                                         <rect key="frame" x="87" y="0.0" width="118" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="14"/>
                                         <color key="textColor" name="black_jolt"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="PGu-hv-Scg" firstAttribute="leading" secondItem="XY2-WL-IBV" secondAttribute="trailing" constant="28" id="1m0-yF-ZTX"/>
                                     <constraint firstItem="PGu-hv-Scg" firstAttribute="top" secondItem="Uh8-na-C6s" secondAttribute="top" id="3Of-xn-BTX"/>
@@ -1796,7 +1799,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type an Instruction" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OZF-Tl-QQq">
-                                <rect key="frame" x="20" y="652" width="374" height="21.5"/>
+                                <rect key="frame" x="20" y="571" width="374" height="21.5"/>
                                 <color key="textColor" name="black_jolt"/>
                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done"/>
@@ -1811,21 +1814,20 @@
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="OZF-Tl-QQq" secondAttribute="trailing" constant="20" id="D5U-ur-6dk"/>
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="T5e-9C-YOt" secondAttribute="trailing" constant="20" id="DQH-9j-CQC"/>
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="PB1-Ir-DYT" secondAttribute="trailing" constant="20" id="EYn-4c-bEc"/>
-                            <constraint firstItem="lAW-uK-30p" firstAttribute="top" secondItem="kcz-Ck-Di6" secondAttribute="bottom" constant="10" id="Eqn-NW-CMr"/>
+                            <constraint firstItem="lAW-uK-30p" firstAttribute="top" secondItem="kcz-Ck-Di6" secondAttribute="bottom" constant="8" id="Eqn-NW-CMr"/>
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="EYq-mD-894" secondAttribute="trailing" constant="20" id="FuC-JA-piV"/>
                             <constraint firstItem="Zqm-JO-pYg" firstAttribute="leading" secondItem="Jsg-W9-Qfd" secondAttribute="leading" id="K7b-5O-hxf"/>
                             <constraint firstItem="AXF-KY-Rvz" firstAttribute="bottom" secondItem="49j-qK-xEb" secondAttribute="bottom" constant="10" id="MxN-ME-dOC"/>
-                            <constraint firstItem="Zqm-JO-pYg" firstAttribute="top" secondItem="Jsg-W9-Qfd" secondAttribute="bottom" constant="137.5" id="PUv-GZ-x0I"/>
                             <constraint firstItem="V8S-CQ-Qfl" firstAttribute="leading" secondItem="Zqm-JO-pYg" secondAttribute="trailing" constant="3.5" id="PXu-Z9-QcV"/>
                             <constraint firstItem="Jsg-W9-Qfd" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="QDR-iz-Ex0"/>
                             <constraint firstItem="crx-5P-iEj" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="UK5-cR-sKe"/>
                             <constraint firstItem="lAW-uK-30p" firstAttribute="width" secondItem="bt8-bC-JfZ" secondAttribute="width" multiplier="0.68599" id="Vgd-sL-qlP"/>
                             <constraint firstItem="Uh8-na-C6s" firstAttribute="width" secondItem="bt8-bC-JfZ" secondAttribute="width" multiplier="0.507246" id="XJG-rN-neI"/>
-                            <constraint firstItem="kcz-Ck-Di6" firstAttribute="top" secondItem="cKV-vJ-OS7" secondAttribute="bottom" constant="20.5" id="Xgq-aA-PD1"/>
-                            <constraint firstItem="OZF-Tl-QQq" firstAttribute="top" secondItem="PGu-hv-Scg" secondAttribute="bottom" constant="23" id="XvX-QZ-NUD"/>
+                            <constraint firstItem="kcz-Ck-Di6" firstAttribute="top" secondItem="cKV-vJ-OS7" secondAttribute="bottom" constant="15" id="Xgq-aA-PD1"/>
+                            <constraint firstItem="OZF-Tl-QQq" firstAttribute="top" secondItem="PGu-hv-Scg" secondAttribute="bottom" constant="16" id="XvX-QZ-NUD"/>
                             <constraint firstItem="kcz-Ck-Di6" firstAttribute="leading" secondItem="cKV-vJ-OS7" secondAttribute="leading" id="ZEh-6h-ZBS"/>
                             <constraint firstItem="PB1-Ir-DYT" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="ZWe-xs-spV"/>
-                            <constraint firstItem="Jsg-W9-Qfd" firstAttribute="top" secondItem="PB1-Ir-DYT" secondAttribute="bottom" constant="79" id="bXg-oA-di3"/>
+                            <constraint firstItem="Jsg-W9-Qfd" firstAttribute="top" secondItem="PB1-Ir-DYT" secondAttribute="bottom" constant="40" id="bXg-oA-di3"/>
                             <constraint firstItem="AXF-KY-Rvz" firstAttribute="centerY" secondItem="T5e-9C-YOt" secondAttribute="centerY" id="d3V-9Y-r81"/>
                             <constraint firstItem="crx-5P-iEj" firstAttribute="top" secondItem="49j-qK-xEb" secondAttribute="top" constant="10" id="dR6-t8-Ywf"/>
                             <constraint firstItem="lAW-uK-30p" firstAttribute="leading" secondItem="kcz-Ck-Di6" secondAttribute="trailing" constant="-281" id="e1u-dF-yCs"/>
@@ -1833,6 +1835,7 @@
                             <constraint firstItem="PB1-Ir-DYT" firstAttribute="top" secondItem="crx-5P-iEj" secondAttribute="bottom" constant="5" id="hYe-Yv-RS9"/>
                             <constraint firstItem="AXF-KY-Rvz" firstAttribute="leading" secondItem="49j-qK-xEb" secondAttribute="leading" constant="20" id="iWk-rE-o5g"/>
                             <constraint firstItem="lAW-uK-30p" firstAttribute="height" secondItem="bt8-bC-JfZ" secondAttribute="height" multiplier="0.0502232" id="jUx-ks-bsG"/>
+                            <constraint firstItem="Zqm-JO-pYg" firstAttribute="top" secondItem="EYq-mD-894" secondAttribute="bottom" constant="20" id="kTJ-AI-q18"/>
                             <constraint firstItem="kcz-Ck-Di6" firstAttribute="height" secondItem="bt8-bC-JfZ" secondAttribute="height" multiplier="0.0502232" id="l1V-fX-SJW"/>
                             <constraint firstItem="49j-qK-xEb" firstAttribute="trailing" secondItem="Jsg-W9-Qfd" secondAttribute="trailing" constant="20" id="oXs-9g-F5I"/>
                             <constraint firstItem="T5e-9C-YOt" firstAttribute="bottom" secondItem="49j-qK-xEb" secondAttribute="bottom" constant="-15" id="pig-Cw-tQV"/>
@@ -1858,6 +1861,8 @@
                         <outlet property="labelInstruction01" destination="j44-b0-J3F" id="aZx-fK-qPA"/>
                         <outlet property="labelInstruction02" destination="9B6-QS-4qF" id="QHW-Et-tZz"/>
                         <outlet property="labelInstruction03" destination="PGu-hv-Scg" id="RFP-cl-jTc"/>
+                        <outlet property="mainTitleLabel" destination="Jsg-W9-Qfd" id="dlF-cf-5ms"/>
+                        <outlet property="mainTitleLabelTopContraint" destination="bXg-oA-di3" id="ypD-iQ-cVN"/>
                         <outlet property="numberOneButton" destination="cwQ-CS-say" id="ZYI-p7-3bU"/>
                         <outlet property="sweetenerLabel" destination="pzW-hd-43s" id="i1Z-bU-El8"/>
                         <outlet property="toppingsLabel" destination="sPg-8p-p7F" id="ZAY-hj-aua"/>
@@ -1879,8 +1884,12 @@
                                 <rect key="frame" x="54.5" y="299.5" width="305" height="297"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZsQ-7T-vuU">
-                                        <rect key="frame" x="183" y="254" width="112" height="34"/>
+                                        <rect key="frame" x="183" y="253" width="112" height="34"/>
                                         <color key="backgroundColor" name="orange_jolt"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="8RP-S5-VDt"/>
+                                            <constraint firstAttribute="width" constant="112" id="ghK-li-kfi"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Post drink">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1913,7 +1922,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-eO-q5D">
-                                        <rect key="frame" x="12" y="255" width="65" height="33"/>
+                                        <rect key="frame" x="12" y="255" width="43" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="43" id="6al-a6-9d8"/>
+                                            <constraint firstAttribute="height" constant="33" id="ZZq-Yf-zEB"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="15"/>
                                         <state key="normal" title="delete">
                                             <color key="titleColor" name="black_jolt"/>
@@ -1925,20 +1938,16 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="ZsQ-7T-vuU" firstAttribute="height" secondItem="ioB-o6-7Y5" secondAttribute="height" multiplier="0.114478" id="1Qd-fd-H2D"/>
                                     <constraint firstItem="AqY-4m-94f" firstAttribute="leading" secondItem="ioB-o6-7Y5" secondAttribute="leading" constant="12" id="20f-bB-hCz"/>
-                                    <constraint firstItem="KlI-eO-q5D" firstAttribute="width" secondItem="ioB-o6-7Y5" secondAttribute="width" multiplier="0.213115" id="8bX-cv-GKG"/>
                                     <constraint firstItem="gZb-Un-SXc" firstAttribute="centerY" secondItem="ioB-o6-7Y5" secondAttribute="centerY" id="JHD-RW-a9A"/>
                                     <constraint firstItem="gZb-Un-SXc" firstAttribute="height" secondItem="ioB-o6-7Y5" secondAttribute="height" multiplier="0.542088" id="QdP-HD-OOu"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZsQ-7T-vuU" secondAttribute="trailing" constant="10" id="RzD-Rs-jYZ"/>
                                     <constraint firstAttribute="bottom" secondItem="KlI-eO-q5D" secondAttribute="bottom" constant="9" id="W1N-lf-C4m"/>
                                     <constraint firstItem="AqY-4m-94f" firstAttribute="top" secondItem="ioB-o6-7Y5" secondAttribute="top" constant="12" id="b8o-cy-542"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZsQ-7T-vuU" secondAttribute="bottom" constant="10" id="d1q-7a-bN6"/>
                                     <constraint firstItem="gZb-Un-SXc" firstAttribute="width" secondItem="ioB-o6-7Y5" secondAttribute="width" multiplier="0.665574" id="edc-Oz-wYi"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZsQ-7T-vuU" secondAttribute="trailing" constant="10" id="ezj-aA-ObI"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZsQ-7T-vuU" secondAttribute="bottom" constant="9" id="gti-M7-lVA"/>
-                                    <constraint firstItem="ZsQ-7T-vuU" firstAttribute="width" secondItem="ioB-o6-7Y5" secondAttribute="width" multiplier="0.367213" id="k4H-6F-o0V"/>
                                     <constraint firstItem="KlI-eO-q5D" firstAttribute="leading" secondItem="ioB-o6-7Y5" secondAttribute="leading" constant="12" id="m3X-Rs-ZIr"/>
                                     <constraint firstItem="gZb-Un-SXc" firstAttribute="centerX" secondItem="ioB-o6-7Y5" secondAttribute="centerX" id="uwh-Wc-PWq"/>
-                                    <constraint firstItem="KlI-eO-q5D" firstAttribute="height" secondItem="ioB-o6-7Y5" secondAttribute="height" multiplier="0.111111" id="ytX-Zw-IMh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1989,10 +1998,10 @@
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="black_jolt">
-            <color red="0.23529411764705882" green="0.10588235294117647" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23499999940395355" green="0.10599999874830246" blue="0.024000000208616257" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="orange_jolt">
-            <color red="0.96862745098039216" green="0.59215686274509804" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96899998188018799" green="0.59200000762939453" blue="0.31400001049041748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
