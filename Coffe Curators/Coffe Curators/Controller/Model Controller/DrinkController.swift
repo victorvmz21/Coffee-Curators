@@ -28,7 +28,6 @@ struct drinkConstants {
     static let sweetenerMeasureKey = "sweetenerMeasure"
     static let toppingKey          = "topping"
     static let toppingMeasureKey   = "toppingMeasure"
-    static let instructionsKey     = "instructions"
     static let drinkUid = "uid"
 }
 
@@ -47,7 +46,7 @@ class DrinkController {
     //MARK: - CRUD
     //MARK: CREATE
     func createDrink(viewcontroller: UIViewController, userId: String, drinkUID: String = UUID().uuidString, title: String, drinkCategory: String, drinkPicture: Data,
-                     appliance: String, coofeRoast: String, coffeeShot: String, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String], instructions: [String]) {
+                     appliance: String, coofeRoast: String, coffeeShot: String, dairy: String, sweetener: String, sweetenerMeasure: String, topping: [String], toppingMeasure: [String]) {
         
         let newDrinkDictionary: [String: Any] = [
             drinkConstants.userIDKey          : userId,
@@ -62,9 +61,7 @@ class DrinkController {
             drinkConstants.sweetenerKey       : sweetener,
             drinkConstants.sweetenerMeasureKey: sweetenerMeasure,
             drinkConstants.toppingKey         : topping,
-            drinkConstants.toppingMeasureKey  : toppingMeasure,
-            drinkConstants.instructionsKey    : instructions
-
+            drinkConstants.toppingMeasureKey  : toppingMeasure
         ]
         
         //Creating drink in public collection
@@ -243,8 +240,7 @@ class DrinkController {
             drinkConstants.dairyKey          : dairy,
             drinkConstants.sweetenerKey      : sweetener,
             drinkConstants.toppingKey        : topping,
-            drinkConstants.toppingMeasureKey : toppingMeasure,
-            drinkConstants.instructionsKey   : instructions
+            drinkConstants.toppingMeasureKey : toppingMeasure
         ]
         
         //Update Public drinks

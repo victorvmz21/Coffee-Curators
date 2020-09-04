@@ -53,7 +53,7 @@ class PostDrinkViewController: UIViewController {
         guard let uID = Auth.auth().currentUser?.uid else {
             print("user not logged in")
             return }
-        DrinkController.shared.createDrink(viewcontroller: self, userId: uID, title: drinkTitle, drinkCategory: drinkType, drinkPicture: image, appliance: appliance, coofeRoast: coffeeRoast, coffeeShot: coffeeShot, dairy: dairy, sweetener: sweeteners, sweetenerMeasure: sweetenersMeasure, topping: [toppings], toppingMeasure: [toppingsMeasure], instructions: instructions)
+        DrinkController.shared.createDrink(viewcontroller: self, userId: uID, title: drinkTitle, drinkCategory: drinkType, drinkPicture: image, appliance: appliance, coofeRoast: coffeeRoast, coffeeShot: coffeeShot, dairy: dairy, sweetener: sweeteners, sweetenerMeasure: sweetenersMeasure, topping: [toppings], toppingMeasure: [toppingsMeasure])
         
         
         self.navigationController?.popToRootViewController(animated: true)

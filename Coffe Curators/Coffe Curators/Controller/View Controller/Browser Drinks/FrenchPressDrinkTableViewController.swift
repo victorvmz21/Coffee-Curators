@@ -106,7 +106,7 @@ class FrenchPressDrinkTableViewController: UITableViewController {
 
 extension FrenchPressDrinkTableViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Frech Press")
+        return IndicatorInfo(title: "French Press")
     }
 }
 

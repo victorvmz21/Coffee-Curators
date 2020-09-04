@@ -21,6 +21,5 @@ struct Drink: Codable {
     var sweetenerMeasure: String
     var topping: [String]
     var toppingMeasure: [String]
-    var instructions: [String]
     var drinkID: String
 }

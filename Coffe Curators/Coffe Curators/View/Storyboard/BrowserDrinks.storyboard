@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8MJ-9j-FKb" customClass="ButtonBarView" customModule="XLPagerTabStrip">
-                                                <rect key="frame" x="15" y="178" width="384" height="30"/>
+                                                <rect key="frame" x="15" y="179" width="384" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ieH-IC-Hm1"/>
@@ -75,13 +75,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Browser Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFS-A9-8aS">
-                                                <rect key="frame" x="20" y="117" width="244.5" height="41"/>
+                                                <rect key="frame" x="20" y="117" width="245.5" height="42"/>
                                                 <fontDescription key="fontDescription" name="Petrona-Medium" family="Petrona" pointSize="36"/>
                                                 <color key="textColor" name="black_jolt"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-2C-8fU">
-                                                <rect key="frame" x="15" y="208" width="384" height="792"/>
+                                                <rect key="frame" x="15" y="209" width="384" height="791"/>
                                             </scrollView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HZ-26-tWU">
                                                 <rect key="frame" x="147" y="20" width="247" height="286"/>
@@ -99,10 +99,10 @@
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="shk-Ci-Krq">
-                                                        <rect key="frame" x="15" y="62" width="145" height="204"/>
+                                                        <rect key="frame" x="15" y="62" width="150" height="204"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zue-BY-fle">
-                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="41.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="46" height="41.5"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Home">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -112,7 +112,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggh-Zv-zdv">
-                                                                <rect key="frame" x="0.0" y="54.5" width="145" height="41"/>
+                                                                <rect key="frame" x="0.0" y="54.5" width="150" height="41"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Make New Creation">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -122,7 +122,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-y2-LX2">
-                                                                <rect key="frame" x="0.0" y="108.5" width="82" height="41.5"/>
+                                                                <rect key="frame" x="0.0" y="108.5" width="81" height="41.5"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="My Library">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -132,7 +132,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGZ-5S-Uas">
-                                                                <rect key="frame" x="0.0" y="163" width="127" height="41"/>
+                                                                <rect key="frame" x="0.0" y="163" width="134" height="41"/>
                                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="17"/>
                                                                 <state key="normal" title="Personal Settings">
                                                                     <color key="titleColor" name="black_jolt"/>
@@ -979,13 +979,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9K-ej-2DA">
-                                                <rect key="frame" x="20" y="132" width="115" height="41"/>
+                                                <rect key="frame" x="20" y="132" width="111" height="42"/>
                                                 <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="36"/>
                                                 <color key="textColor" name="black_jolt"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S4B-Ql-80G">
-                                                <rect key="frame" x="20" y="198" width="374" height="772"/>
+                                                <rect key="frame" x="20" y="199" width="374" height="771"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="libraryCell" rowHeight="114" id="ymi-WS-nQB" customClass="myDrinksTableViewCell" customModule="Jolt" customModuleProvider="target">
@@ -1008,7 +1008,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="appliance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x7-hx-42b">
-                                                                    <rect key="frame" x="132" y="62" width="63.5" height="17"/>
+                                                                    <rect key="frame" x="132" y="62" width="65.5" height="17.5"/>
                                                                     <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="15"/>
                                                                     <color key="textColor" name="black_jolt"/>
                                                                     <nil key="highlightedColor"/>
@@ -1094,7 +1094,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c05-Bu-G1U">
-                                                                    <rect key="frame" x="132" y="89" width="47.5" height="15"/>
+                                                                    <rect key="frame" x="132" y="89.5" width="51" height="15.5"/>
                                                                     <fontDescription key="fontDescription" name="Petrona-Regular" family="Petrona" pointSize="13"/>
                                                                     <color key="textColor" name="black_jolt"/>
                                                                     <nil key="highlightedColor"/>
@@ -1741,7 +1741,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SQ4-an-Anq"/>
+        <segue reference="OB1-b2-adk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brownbackbutton " width="70" height="70"/>
