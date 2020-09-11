@@ -50,13 +50,19 @@ class PostDrinkViewController: UIViewController {
     
     //MARK: - Methods
     func savePost() {
-        guard let uID = Auth.auth().currentUser?.uid else {
-            print("user not logged in")
-            return }
-        DrinkController.shared.createDrink(viewcontroller: self, userId: uID, title: drinkTitle, drinkCategory: drinkType, drinkPicture: image, appliance: appliance, coofeRoast: coffeeRoast, coffeeShot: coffeeShot, dairy: dairy, sweetener: sweeteners, sweetenerMeasure: sweetenersMeasure, topping: [toppings], toppingMeasure: [toppingsMeasure])
-        
-        
-        self.navigationController?.popToRootViewController(animated: true)
+        if Auth.auth().currentUser?.uid == nil {
+            print("User not signed in")
+            let controller = UIAlertController(title: nil, message: "Please sign in to be able to create drinks", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+            controller.addAction(okAction)
+            present(controller, animated: true)
+        } else if Auth.auth().currentUser?.uid != nil {
+            print("Signed In")
+            DrinkController.shared.createDrink(viewcontroller: self, userId: Auth.auth().currentUser!.uid, title: drinkTitle, drinkCategory: drinkType, drinkPicture: image, appliance: appliance, coofeRoast: coffeeRoast, coffeeShot: coffeeShot, dairy: dairy, sweetener: sweeteners, sweetenerMeasure: sweetenersMeasure, topping: [toppings], toppingMeasure: [toppingsMeasure])
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     func setupView() {
